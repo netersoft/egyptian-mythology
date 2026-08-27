@@ -2,6 +2,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_starter/core/helpers/router/navigation_helper.dart';
 import 'package:flutter_starter/core/services/audio/audio_service.dart';
 import 'package:flutter_starter/core/services/di/locator.dart';
+import 'package:flutter_starter/core/services/documentation/documentation_service.dart';
 import 'package:flutter_starter/core/services/hive/service.dart';
 import 'package:flutter_starter/core/services/shared_preferences/service.dart';
 import 'package:mocktail/mocktail.dart';
@@ -17,6 +18,7 @@ Future<void> setupTestLocator({
   NavigationHelper? navigationHelper,
   HiveService? hiveService,
   AudioService? audioService,
+  DocumentationService? documentationService,
 }) async {
   await dotenv.load();
 
@@ -44,6 +46,10 @@ Future<void> setupTestLocator({
     }
     locator.registerSingleton<AudioService>(audio);
   }
+
+  if (!locator.isRegistered<DocumentationService>()) {
+    locator.registerSingleton<DocumentationService>(documentationService ?? DocumentationService());
+  }
 }
 
 void teardownTestLocator() {
@@ -58,5 +64,8 @@ void teardownTestLocator() {
   }
   if (locator.isRegistered<AudioService>()) {
     locator.unregister<AudioService>();
+  }
+  if (locator.isRegistered<DocumentationService>()) {
+    locator.unregister<DocumentationService>();
   }
 }
