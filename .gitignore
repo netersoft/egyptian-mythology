@@ -62,3 +62,6 @@ gradlew-signing-report
 *.config.dart
 *.mocks.dart
 lib/generated/
+
+# Custom
+legacy
