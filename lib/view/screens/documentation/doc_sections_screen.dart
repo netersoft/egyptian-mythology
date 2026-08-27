@@ -6,6 +6,7 @@ import '../../../core/routes/app_route.dart';
 import '../../../core/services/audio/audio_service.dart';
 import '../../../core/services/di/locator.dart';
 import '../../../core/services/i18n/translations.g.dart';
+import '../../components/backgrounds/pyramid_background.dart';
 import '../../components/buttons/menu_button.dart';
 import '../../themes/app_colors.dart';
 
@@ -24,14 +25,7 @@ class DocSectionsScreen extends StatelessWidget {
       backgroundColor: AppColors.black,
       foregroundColor: AppColors.goldenYellow,
     ),
-    body: DecoratedBox(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [AppColors.black, AppColors.blackRussian],
-        ),
-      ),
+    body: PyramidBackground(
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,

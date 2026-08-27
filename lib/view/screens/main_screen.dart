@@ -8,6 +8,7 @@ import '../../core/routes/app_route.dart';
 import '../../core/services/audio/audio_service.dart';
 import '../../core/services/di/locator.dart';
 import '../../core/services/i18n/translations.g.dart';
+import '../components/backgrounds/pyramid_background.dart';
 import '../components/buttons/menu_button.dart';
 import '../themes/app_colors.dart';
 import '../themes/app_theme.dart';
@@ -63,14 +64,7 @@ class _MainScreenState extends State<MainScreen> {
       }
     },
     child: Scaffold(
-      body: DecoratedBox(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [AppColors.black, AppColors.blackRussian],
-          ),
-        ),
+      body: PyramidBackground(
         child: SafeArea(
           child: Column(
             children: [
