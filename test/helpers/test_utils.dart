@@ -1,5 +1,6 @@
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_starter/core/helpers/router/navigation_helper.dart';
+import 'package:flutter_starter/core/services/audio/audio_service.dart';
 import 'package:flutter_starter/core/services/di/locator.dart';
 import 'package:flutter_starter/core/services/hive/service.dart';
 import 'package:flutter_starter/core/services/shared_preferences/service.dart';
@@ -9,10 +10,13 @@ class MockSharedPreferencesService extends Mock implements SharedPreferencesServ
 
 class MockNavigationHelper extends Mock implements NavigationHelper {}
 
+class MockAudioService extends Mock implements AudioService {}
+
 Future<void> setupTestLocator({
   SharedPreferencesService? sharedPreferencesService,
   NavigationHelper? navigationHelper,
   HiveService? hiveService,
+  AudioService? audioService,
 }) async {
   await dotenv.load();
 
@@ -31,6 +35,15 @@ Future<void> setupTestLocator({
   if (hiveService != null && !locator.isRegistered<HiveService>()) {
     locator.registerSingleton<HiveService>(hiveService);
   }
+
+  if (!locator.isRegistered<AudioService>()) {
+    final audio = audioService ?? MockAudioService();
+    if (audio is MockAudioService) {
+      when(audio.startMusic).thenAnswer((_) async {});
+      when(audio.playClick).thenAnswer((_) async {});
+    }
+    locator.registerSingleton<AudioService>(audio);
+  }
 }
 
 void teardownTestLocator() {
@@ -42,5 +55,8 @@ void teardownTestLocator() {
   }
   if (locator.isRegistered<HiveService>()) {
     locator.unregister<HiveService>();
+  }
+  if (locator.isRegistered<AudioService>()) {
+    locator.unregister<AudioService>();
   }
 }

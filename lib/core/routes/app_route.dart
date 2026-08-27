@@ -3,8 +3,11 @@ import 'package:go_router/go_router.dart';
 
 import '../../view/redirection.dart';
 import '../../view/screens/account/settings_screen.dart';
-import '../../view/screens/main/home_screen.dart';
+import '../../view/screens/documentation/doc_sections_screen.dart';
 import '../../view/screens/main_screen.dart';
+import '../../view/screens/other/about_screen.dart';
+import '../../view/screens/quiz/instructions_screen.dart';
+import '../../view/screens/stats/stats_screen.dart';
 import 'swipeable_page_route.dart';
 
 part 'app_route.g.dart';
@@ -28,8 +31,11 @@ class RedirectionRoute extends GoRouteData with $RedirectionRoute {
 @TypedGoRoute<MainRoute>(
   path: '/main',
   routes: [
-    TypedGoRoute<HomeRoute>(path: 'home'),
     TypedGoRoute<SettingsRoute>(path: 'other/settings'),
+    TypedGoRoute<AboutRoute>(path: 'other/about'),
+    TypedGoRoute<DocSectionsRoute>(path: 'doc'),
+    TypedGoRoute<InstructionsRoute>(path: 'quiz/instructions'),
+    TypedGoRoute<StatsRoute>(path: 'stats'),
   ],
 )
 class MainRoute extends GoRouteData with $MainRoute {
@@ -39,20 +45,37 @@ class MainRoute extends GoRouteData with $MainRoute {
   Widget build(BuildContext context, GoRouterState state) => const MainScreen();
 }
 
-class HomeRoute extends GoRouteData with $HomeRoute {
-  const HomeRoute();
-
-  @override
-  CustomTransitionPage<void> buildPage(BuildContext context, GoRouterState state) => CustomTransitionPage<void>(
-    key: state.pageKey,
-    child: const HomeScreen(),
-    transitionsBuilder: (context, animation, secondaryAnimation, child) => FadeTransition(opacity: animation, child: child),
-  );
-}
-
 class SettingsRoute extends GoRouteData with $SettingsRoute {
   const SettingsRoute();
 
   @override
   Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(builder: (context) => const SettingsScreen());
+}
+
+class AboutRoute extends GoRouteData with $AboutRoute {
+  const AboutRoute();
+
+  @override
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(builder: (context) => const AboutScreen());
+}
+
+class DocSectionsRoute extends GoRouteData with $DocSectionsRoute {
+  const DocSectionsRoute();
+
+  @override
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(builder: (context) => const DocSectionsScreen());
+}
+
+class InstructionsRoute extends GoRouteData with $InstructionsRoute {
+  const InstructionsRoute();
+
+  @override
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(builder: (context) => const InstructionsScreen());
+}
+
+class StatsRoute extends GoRouteData with $StatsRoute {
+  const StatsRoute();
+
+  @override
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(builder: (context) => const StatsScreen());
 }
