@@ -8,6 +8,8 @@ import '../../core/routes/app_route.dart';
 import '../../core/services/audio/audio_service.dart';
 import '../../core/services/di/locator.dart';
 import '../../core/services/i18n/translations.g.dart';
+import '../components/backgrounds/pyramid_background.dart';
+import '../components/buttons/menu_button.dart';
 import '../themes/app_colors.dart';
 import '../themes/app_theme.dart';
 
@@ -62,14 +64,7 @@ class _MainScreenState extends State<MainScreen> {
       }
     },
     child: Scaffold(
-      body: DecoratedBox(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [AppColors.black, AppColors.blackRussian],
-          ),
-        ),
+      body: PyramidBackground(
         child: SafeArea(
           child: Column(
             children: [
@@ -79,27 +74,27 @@ class _MainScreenState extends State<MainScreen> {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      _MenuButton(
+                      MenuButton(
                         icon: Icons.import_contacts,
                         label: context.t.documentation,
                         onTap: () => _navigate(() => const DocSectionsRoute().push(context)),
                       ),
-                      _MenuButton(
+                      MenuButton(
                         icon: Icons.extension,
                         label: context.t.quiz,
                         onTap: () => _navigate(() => const InstructionsRoute().push(context)),
                       ),
-                      _MenuButton(
+                      MenuButton(
                         icon: Icons.assessment,
                         label: context.t.stats,
                         onTap: () => _navigate(() => const StatsRoute().push(context)),
                       ),
-                      _MenuButton(
+                      MenuButton(
                         icon: Icons.build,
                         label: context.t.settings,
                         onTap: () => _navigate(() => const SettingsRoute().push(context)),
                       ),
-                      _MenuButton(
+                      MenuButton(
                         icon: Icons.info_outline,
                         label: context.t.about,
                         onTap: () => _navigate(() => const AboutRoute().push(context)),
@@ -189,62 +184,6 @@ class _TypewriterTextState extends State<_TypewriterText> {
 
   @override
   Widget build(BuildContext context) => Text(_shown, style: widget.style);
-}
-
-class _MenuButton extends StatelessWidget {
-  final IconData icon;
-  final String label;
-  final VoidCallback onTap;
-
-  const _MenuButton({required this.icon, required this.label, required this.onTap});
-
-  @override
-  Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.only(top: 16),
-    child: Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Container(
-          width: 5,
-          height: 52,
-          decoration: BoxDecoration(color: AppColors.goldenYellow, borderRadius: BorderRadius.circular(42)),
-        ),
-        const SizedBox(width: 8),
-        Material(
-          color: Colors.transparent,
-          child: InkWell(
-            borderRadius: BorderRadius.circular(25),
-            onTap: onTap,
-            child: Container(
-              width: 250,
-              padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 15),
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [AppColors.goldenYellow, AppColors.goldenRod],
-                ),
-                borderRadius: BorderRadius.circular(25),
-              ),
-              child: Row(
-                children: [
-                  Icon(icon, color: Colors.black),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Text(
-                      label,
-                      style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w600),
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
 }
 
 class _AnkhFooter extends StatefulWidget {

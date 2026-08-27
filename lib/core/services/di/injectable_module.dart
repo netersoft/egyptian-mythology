@@ -2,6 +2,7 @@ import 'package:injectable/injectable.dart';
 
 import '../../helpers/router/navigation_helper.dart';
 import '../audio/audio_service.dart';
+import '../documentation/documentation_service.dart';
 import '../hive/service.dart';
 import '../quiz/quiz_service.dart';
 import '../scores/scores_repository.dart';
@@ -22,6 +23,9 @@ abstract class AppModule {
 
   @singleton
   QuizService get quizService => QuizService();
+
+  @singleton
+  DocumentationService get documentationService => DocumentationService();
 
   @singleton
   ScoresRepository get scoresRepository => ScoresRepository();
