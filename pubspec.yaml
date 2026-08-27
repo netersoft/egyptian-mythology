@@ -30,7 +30,6 @@ dependencies:
   json_annotation: ^4.12.0
   package_info_plus: ^10.2.0
   flutter_easyloading: ^3.0.5
-  introduction_screen: ^4.0.0
   shared_preferences: ^2.5.5
   flutter_native_splash: ^2.4.8 # dart run flutter_native_splash:create
   flutter_dotenv: ^6.0.1
@@ -147,18 +146,44 @@ flutter:
     - assets/images/launcher/icon_reverse.svg
     # IMAGES
     - assets/images/
+    - assets/images/egyptian/
     # ANIMATIONS
     - assets/animations/
     # I18N
     - assets/i18n/
     # DOCS
-    - assets/docs/fr/
-    - assets/docs/en/
+    - assets/docs/fr/gods/
+    - assets/docs/fr/cosmogonies/
+    - assets/docs/fr/myths/
+    - assets/docs/fr/privacy_policy.html
+    - assets/docs/fr/terms_of_use.html
+    - assets/docs/en/gods/
+    - assets/docs/en/cosmogonies/
+    - assets/docs/en/myths/
+    - assets/docs/en/privacy_policy.html
+    - assets/docs/en/terms_of_use.html
+    - assets/docs/res/fonts/papyrus/
+    - assets/docs/res/pictures/gods/
+    - assets/docs/res/pictures/cosmogonies/
+    - assets/docs/res/pictures/myths/
+    - assets/docs/res/styles/
+    # QUIZ
+    - assets/quiz/
+    # AUDIO
+    - assets/audio/
 
   fonts:
     - family: proxima_nova
       fonts:
         - asset: assets/fonts/proxima_nova.otf
+
+    - family: papyrus
+      fonts:
+        - asset: assets/fonts/egyptian/papyrus.ttf
+
+    - family: cambria
+      fonts:
+        - asset: assets/fonts/egyptian/cambria.ttf
 
     - family: montserrat
       fonts:

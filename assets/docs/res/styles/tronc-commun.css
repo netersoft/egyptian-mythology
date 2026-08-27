@@ -1,0 +1,31 @@
+@font-face { 
+	font-family: 'Papyrus-Regular'; 
+	src: url('../../res/fonts/papyrus/Papyrus-Regular.eot?#iefix') format('embedded-opentype'), 
+		 url('../../res/fonts/papyrus/Papyrus-Regular.woff') format('woff'), 
+		 url('../../res/fonts/papyrus/Papyrus-Regular.ttf') format('truetype'), 
+		 url('../../res/fonts/papyrus/Papyrus-Regular.svg#Papyrus-Regular') format('svg'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+
+body{
+	font-family: 'Papyrus-Regular', Arial, Verdana, sans-serif !important;
+	background:black;
+	color: yellow;
+	opacity: 0.8;
+}
+
+#banner{
+	width:100%;
+	text-align:center;
+}
+
+p{
+	padding: 1%;
+	text-align: justify;
+	font-size: 1.2em;
+}
+
+section{
+	text-align: center;
+}

@@ -1,7 +1,10 @@
 import 'package:injectable/injectable.dart';
 
 import '../../helpers/router/navigation_helper.dart';
+import '../audio/audio_service.dart';
 import '../hive/service.dart';
+import '../quiz/quiz_service.dart';
+import '../scores/scores_repository.dart';
 import '../shared_preferences/service.dart';
 
 @module
@@ -16,4 +19,13 @@ abstract class AppModule {
   @singleton
   @preResolve
   Future<HiveService> get hive async => (await HiveService.getInstance())!;
+
+  @singleton
+  QuizService get quizService => QuizService();
+
+  @singleton
+  ScoresRepository get scoresRepository => ScoresRepository();
+
+  @singleton
+  AudioService get audioService => AudioService();
 }

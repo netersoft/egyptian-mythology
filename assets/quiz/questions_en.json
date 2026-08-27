@@ -1,0 +1,1113 @@
+[
+  {
+    "id": 1,
+    "question": "Who is the sovereign god and supreme judge of the Kingdom of the Dead",
+    "answer": "Osiris",
+    "choices": [
+      "Osiris",
+      "Anubis",
+      "Onasis",
+      "Thot"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Who is the god at the top of the great ennead of the nine main gods",
+    "answer": "Ra",
+    "choices": [
+      "Ra",
+      "Anubis",
+      "Osiris",
+      "Thot"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "What is the name of the primordial ocean from which everything emerged?",
+    "answer": "The Nun",
+    "choices": [
+      "The Nun",
+      "The Nil",
+      "The Ren",
+      "The Ben"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "What is the dark snake that the sun god must face every night",
+    "answer": "Apophis",
+    "choices": [
+      "Apophis",
+      "Yormungand",
+      "Aido-Wedo",
+      "Waagal"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "What is the name of the solar disk above the god Ra",
+    "answer": "Horakhty",
+    "choices": [
+      "Horakhty",
+      "Mehen",
+      "Heqa",
+      "Duat"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "What is the name given to the afterlife in Egyptian mythology",
+    "answer": "La Duat",
+    "choices": [
+      "La Duat",
+      "The Nun",
+      "La Tuad",
+      "La Heqa"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "What is the name of the primordial hill",
+    "answer": "The Benben",
+    "choices": [
+      "The Benben",
+      "The Nun",
+      "The Horakhty",
+      "The Ren"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "What is the god of dry air",
+    "answer": "Shu",
+    "choices": [
+      "Shu",
+      "Seth",
+      "Thot",
+      "Mehen"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "What is the goddess of humid air",
+    "answer": "Tefnut",
+    "choices": [
+      "Tefnut",
+      "Nut",
+      "Nephtys",
+      "Sekhmet"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "What is the god of the earth",
+    "answer": "Geb",
+    "choices": [
+      "Geb",
+      "Nut",
+      "Shu",
+      "Tefnut"
+    ]
+  },
+  {
+    "id": 11,
+    "question": "What is the goddess of heaven",
+    "answer": "Nut",
+    "choices": [
+      "Nut",
+      "Geb",
+      "Isis",
+      "Maat"
+    ]
+  },
+  {
+    "id": 12,
+    "question": "What is the name of Osiris' wife",
+    "answer": "Isis",
+    "choices": [
+      "Isis",
+      "Nephtys",
+      "Neith",
+      "Selkis"
+    ]
+  },
+  {
+    "id": 13,
+    "question": "What is the name of the wife of the god Seth",
+    "answer": "Nephtys",
+    "choices": [
+      "Nephtys",
+      "Isis",
+      "Selkis",
+      "Neith"
+    ]
+  },
+  {
+    "id": 14,
+    "question": "How many gods have Geb and Nut given birth",
+    "answer": "5",
+    "choices": [
+      "5",
+      "6",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "id": 15,
+    "question": "What is the name of the magician goddess and wife of Osiris",
+    "answer": "Isis",
+    "choices": [
+      "Isis",
+      "Sekhmet",
+      "Maat",
+      "Hathor"
+    ]
+  },
+  {
+    "id": 16,
+    "question": "What is the name of the sun god when he is the rising sun",
+    "answer": "Khepri",
+    "choices": [
+      "Khepri",
+      "Atum",
+      "Ra",
+      "Aten"
+    ]
+  },
+  {
+    "id": 17,
+    "question": "What is the name of the sun god when he is the midday sun",
+    "answer": "Ra",
+    "choices": [
+      "Ra",
+      "Amun",
+      "Khepri",
+      "Aten"
+    ]
+  },
+  {
+    "id": 18,
+    "question": "What is the name of the sun god when he is the setting sun",
+    "answer": "Atum",
+    "choices": [
+      "Atum",
+      "Aten",
+      "Ra",
+      "Khepri"
+    ]
+  },
+  {
+    "id": 19,
+    "question": "What is the god of evil, anger and uncontrolled passions",
+    "answer": "Seth",
+    "choices": [
+      "Seth",
+      "Apophis",
+      "Apep",
+      "Anubis"
+    ]
+  },
+  {
+    "id": 20,
+    "question": "What is the goddess wife of Seth and protector of the dead",
+    "answer": "Nephtys",
+    "choices": [
+      "Nephtys",
+      "Isis",
+      "Hathor",
+      "Bastet"
+    ]
+  },
+  {
+    "id": 21,
+    "question": "What god is the result of the union of Osiris and Nephthys",
+    "answer": "Anubis",
+    "choices": [
+      "Anubis",
+      "Thot",
+      "Amun",
+      "Seth"
+    ]
+  },
+  {
+    "id": 22,
+    "question": "How many pieces is Osiris' body cut up by his brother Seth",
+    "answer": "14",
+    "choices": [
+      "14",
+      "21",
+      "12",
+      "16"
+    ]
+  },
+  {
+    "id": 23,
+    "question": "What god is the result of the union of Osiris and Isis",
+    "answer": "Horus",
+    "choices": [
+      "Horus",
+      "Beerus",
+      "Thot",
+      "Atum"
+    ]
+  },
+  {
+    "id": 24,
+    "question": "What is the god of craftsmen and architects",
+    "answer": "Ptah",
+    "choices": [
+      "Ptah",
+      "Min",
+      "Bes",
+      "Khonsu"
+    ]
+  },
+  {
+    "id": 25,
+    "question": "Who is the god who personifies the protective magic",
+    "answer": "Heqa",
+    "choices": [
+      "Heqa",
+      "Sia",
+      "Hu",
+      "upuaut"
+    ]
+  },
+  {
+    "id": 26,
+    "question": "Who is the god who personifies knowledge",
+    "answer": "Sia",
+    "choices": [
+      "Sia",
+      "Heqa",
+      "Hu",
+      "upuaut"
+    ]
+  },
+  {
+    "id": 27,
+    "question": "Who is the god who personifies the creative verb",
+    "answer": "Hu",
+    "choices": [
+      "Hu",
+      "Sia",
+      "Heqa",
+      "upuaut"
+    ]
+  },
+  {
+    "id": 28,
+    "question": "What is the god of paths",
+    "answer": "upuaut",
+    "choices": [
+      "upuaut",
+      "Hu",
+      "Sia",
+      "Heqa"
+    ]
+  },
+  {
+    "id": 29,
+    "question": "How many hours does the sun god take to cross the river of heaven",
+    "answer": "12h",
+    "choices": [
+      "12h",
+      "6h",
+      "8h",
+      "4h"
+    ]
+  },
+  {
+    "id": 30,
+    "question": "Which is the beneficial snake that protects the sun god at the sixth hour of the crossing of the heavenly river",
+    "answer": "Mehen",
+    "choices": [
+      "Mehen",
+      "Apophis",
+      "Apep",
+      "Yormungand"
+    ]
+  },
+  {
+    "id": 31,
+    "question": "What goddess succeeds in obtaining the secret name of the god Ra",
+    "answer": "Isis",
+    "choices": [
+      "Isis",
+      "Maat",
+      "uadjet",
+      "Nephtys"
+    ]
+  },
+  {
+    "id": 32,
+    "question": "What is the name of the protective goddess that the sun god carries on his forehead",
+    "answer": "Mut",
+    "choices": [
+      "Mut",
+      "uadjet",
+      "Bastet",
+      "Sekhmet"
+    ]
+  },
+  {
+    "id": 33,
+    "question": "What is the name of the demiurge who emerged from the Nun to create everything",
+    "answer": "Atum",
+    "choices": [
+      "Atum",
+      "Amun",
+      "Aten",
+      "Osiris"
+    ]
+  },
+  {
+    "id": 34,
+    "question": "Who are the first children of Tem",
+    "answer": "Chu and Tefnut",
+    "choices": [
+      "Chu and Tefnut",
+      "Geb and Nut",
+      "Osiris and Isis",
+      "Nephtys and Set"
+    ]
+  },
+  {
+    "id": 35,
+    "question": "What goddess swallows Ra in the evening to bring him into the world in the early morning",
+    "answer": "Nut",
+    "choices": [
+      "Nut",
+      "Shu",
+      "Heqa",
+      "Hathor"
+    ]
+  },
+  {
+    "id": 36,
+    "question": "What is the god of death and rebirth",
+    "answer": "Osiris",
+    "choices": [
+      "Osiris",
+      "Beerus",
+      "Thot",
+      "Anubis"
+    ]
+  },
+  {
+    "id": 37,
+    "question": "Which god replaces the sun god at night and is called the lunar god",
+    "answer": "Thot",
+    "choices": [
+      "Thot",
+      "Anubis",
+      "Osiris",
+      "Ptah"
+    ]
+  },
+  {
+    "id": 38,
+    "question": "What is the cross called as a symbol of life?",
+    "answer": "Ankh",
+    "choices": [
+      "Ankh",
+      "uadjet",
+      "Horakhty",
+      "Duat"
+    ]
+  },
+  {
+    "id": 39,
+    "question": "Which god was the very first to be mommified",
+    "answer": "Osiris",
+    "choices": [
+      "Osiris",
+      "Anubis",
+      "Hakai",
+      "Horus"
+    ]
+  },
+  {
+    "id": 40,
+    "question": "What is the animal representative of the goddess Hathor",
+    "answer": "The cow",
+    "choices": [
+      "The cow",
+      "The calf",
+      "The dog",
+      "The cat"
+    ]
+  },
+  {
+    "id": 41,
+    "question": "What is the animal representative of the goddess Bastet",
+    "answer": "The cat",
+    "choices": [
+      "The cat",
+      "The cow",
+      "The dog",
+      "The lion"
+    ]
+  },
+  {
+    "id": 42,
+    "question": "What is the representative animal of the goddess Sekhmet",
+    "answer": "The lioness",
+    "choices": [
+      "The lioness",
+      "The dog",
+      "The cat",
+      "The tiger"
+    ]
+  },
+  {
+    "id": 43,
+    "question": "What is the most common cosmogony?",
+    "answer": "Heliopolis",
+    "choices": [
+      "Heliopolis",
+      "Hermopolis",
+      "Thebes",
+      "Syene"
+    ]
+  },
+  {
+    "id": 44,
+    "question": "What does the Djet correspond to in the individual?",
+    "answer": "The body",
+    "choices": [
+      "The body",
+      "The soul",
+      "The spirit",
+      "The consciousness"
+    ]
+  },
+  {
+    "id": 45,
+    "question": "What does Ka correspond to in the individual?",
+    "answer": "The soul",
+    "choices": [
+      "The soul",
+      "The body",
+      "The spirit",
+      "The consciousness"
+    ]
+  },
+  {
+    "id": 46,
+    "question": "What ceremony allows the deceased's journey to the afterlife",
+    "answer": "Embalming",
+    "choices": [
+      "Embalming",
+      "The funeral",
+      "Mummification",
+      "The bandage"
+    ]
+  },
+  {
+    "id": 47,
+    "question": "What is the representative symbol of the goddess Ma'at",
+    "answer": "The feather",
+    "choices": [
+      "The feather",
+      "The balance",
+      "The sword",
+      "The ankh"
+    ]
+  },
+  {
+    "id": 48,
+    "question": "What is the animal representative of the god Horus",
+    "answer": "The hawk",
+    "choices": [
+      "The hawk",
+      "The eagle",
+      "The raven",
+      "The sparrowhawk"
+    ]
+  },
+  {
+    "id": 49,
+    "question": "What is the other animal representative of the god Thoth besides the ibis",
+    "answer": "The baboon",
+    "choices": [
+      "The baboon",
+      "The jackal",
+      "The dog",
+      "The eagle"
+    ]
+  },
+  {
+    "id": 50,
+    "question": "What is the name given to the winged beetle pushing the solar disk",
+    "answer": "Khepri",
+    "choices": [
+      "Khepri",
+      "Atum",
+      "Bes",
+      "Nut"
+    ]
+  },
+  {
+    "id": 51,
+    "question": "What goddess personifies the cosmic harmony put in place by the demiurge Tem",
+    "answer": "Maat",
+    "choices": [
+      "Maat",
+      "Isis",
+      "Sekhmet",
+      "Hathor"
+    ]
+  },
+  {
+    "id": 52,
+    "question": "Which goddess is in charge of devouring unworthy souls when weighing the heart",
+    "answer": "Amemet",
+    "choices": [
+      "Amemet",
+      "Caulifla",
+      "Sekhmet",
+      "Tauret"
+    ]
+  },
+  {
+    "id": 53,
+    "question": "What is the god of water and fertility",
+    "answer": "Sobek",
+    "choices": [
+      "Sobek",
+      "Isis",
+      "Champa",
+      "Bes"
+    ]
+  },
+  {
+    "id": 54,
+    "question": "Which goddess whose representative animal is the hippopotamus",
+    "answer": "Tauret",
+    "choices": [
+      "Tauret",
+      "Amemet",
+      "Sekhmet",
+      "Bastet"
+    ]
+  },
+  {
+    "id": 55,
+    "question": "Which goddess whose representative animal is the cobra",
+    "answer": "uadjet",
+    "choices": [
+      "uadjet",
+      "Maat",
+      "Hathor",
+      "Isis"
+    ]
+  },
+  {
+    "id": 56,
+    "question": "Which god is at the centre of the myth of day and night",
+    "answer": "Ra",
+    "choices": [
+      "Ra",
+      "Osiris",
+      "Aten",
+      "Ptah"
+    ]
+  },
+  {
+    "id": 57,
+    "question": "Which god is considered as the first of the pharaohs",
+    "answer": "Horus",
+    "choices": [
+      "Horus",
+      "Ra",
+      "Thot",
+      "Seth"
+    ]
+  },
+  {
+    "id": 58,
+    "question": "Which god replaces Tem in the cosmogony of memphis",
+    "answer": "Ptah",
+    "choices": [
+      "Ptah",
+      "Aten",
+      "Amun",
+      "Hakaishin"
+    ]
+  },
+  {
+    "id": 59,
+    "question": "Who is the wife of the god Horus",
+    "answer": "Hathor",
+    "choices": [
+      "Hathor",
+      "Isis",
+      "Nephtys",
+      "Bastet"
+    ]
+  },
+  {
+    "id": 60,
+    "question": "What is the god of tombs, necropolises and protector of embalmers",
+    "answer": "Anubis",
+    "choices": [
+      "Anubis",
+      "Osiris",
+      "Seth",
+      "Horus"
+    ]
+  },
+  {
+    "id": 61,
+    "question": "In what form does the sun god reborn every morning",
+    "answer": "Khepri",
+    "choices": [
+      "Khepri",
+      "Atum",
+      "Ra",
+      "Thot"
+    ]
+  },
+  {
+    "id": 62,
+    "question": "Which member of Osiris' body was swallowed by a fish",
+    "answer": "His phallus",
+    "choices": [
+      "His phallus",
+      "His head",
+      "His leg",
+      "His arm"
+    ]
+  },
+  {
+    "id": 63,
+    "question": "In the form of what mythical bird Tem emerged from the Nun",
+    "answer": "The Bennu",
+    "choices": [
+      "The Bennu",
+      "The Ibis",
+      "The hawk",
+      "The eagle"
+    ]
+  },
+  {
+    "id": 64,
+    "question": "Which god was in charge of the separation of heaven from earth by Re",
+    "answer": "Chu",
+    "choices": [
+      "Chu",
+      "Nut",
+      "Geb",
+      "Atum"
+    ]
+  },
+  {
+    "id": 65,
+    "question": "How many gods form the hermopolis ogdoad",
+    "answer": "8",
+    "choices": [
+      "8",
+      "9",
+      "12",
+      "6"
+    ]
+  },
+  {
+    "id": 66,
+    "question": "How many couple of gods form the hermopolis ogdoad",
+    "answer": "4",
+    "choices": [
+      "4",
+      "8",
+      "2",
+      "6"
+    ]
+  },
+  {
+    "id": 67,
+    "question": "The goddesses of the hermopolis ogdoad were represented as",
+    "answer": "Snakes",
+    "choices": [
+      "Snakes",
+      "Frogs",
+      "Monkeys",
+      "Hawks"
+    ]
+  },
+  {
+    "id": 68,
+    "question": "The gods of the hermopolis ogdoad were represented as",
+    "answer": "Frogs",
+    "choices": [
+      "Frogs",
+      "Snakes",
+      "Hawks",
+      "Monkeys"
+    ]
+  },
+  {
+    "id": 69,
+    "question": "What did the couple Nun and Nunet represent in the cosmogony of Hermopolis",
+    "answer": "The water",
+    "choices": [
+      "The water",
+      "The mysterious",
+      "The infinite",
+      "The darkness"
+    ]
+  },
+  {
+    "id": 70,
+    "question": "What did the couple Amun and Amunet represent in the cosmogony of Hermopolis",
+    "answer": "The mysterious",
+    "choices": [
+      "The mysterious",
+      "The water",
+      "The infinite",
+      "The darkness"
+    ]
+  },
+  {
+    "id": 71,
+    "question": "What did the couple Heh and Hehet represent in the cosmogony of Hermopolis",
+    "answer": "The infinite",
+    "choices": [
+      "The infinite",
+      "The water",
+      "The mysterious",
+      "The darkness"
+    ]
+  },
+  {
+    "id": 72,
+    "question": "What did the couple Kek and Keket represent in the cosmogony of Hermopolis",
+    "answer": "The darkness",
+    "choices": [
+      "The darkness",
+      "The water",
+      "The mysterious",
+      "The infinite"
+    ]
+  },
+  {
+    "id": 73,
+    "question": "What name is given to the eye of Re whose tears gave birth to human beings",
+    "answer": "udjat",
+    "choices": [
+      "udjat",
+      "Khnum",
+      "Ankh",
+      "Nekhbet"
+    ]
+  },
+  {
+    "id": 74,
+    "question": "What a goddess the sun god sent to massacre the rebels who stood against him",
+    "answer": "Sekhmet",
+    "choices": [
+      "Sekhmet",
+      "Bastet",
+      "Hathor",
+      "Selkis"
+    ]
+  },
+  {
+    "id": 75,
+    "question": "Through what ordeal must the deceased go through in order to access eternal life",
+    "answer": "Weighing the heart",
+    "choices": [
+      "Weighing the heart",
+      "The celestial race",
+      "The struggle of the gods",
+      "The great illusion"
+    ]
+  },
+  {
+    "id": 76,
+    "question": "What is the god of the sun at dawn and dusk",
+    "answer": "Harmakhis",
+    "choices": [
+      "Harmakhis",
+      "Khepri",
+      "Atum",
+      "Ra"
+    ]
+  },
+  {
+    "id": 77,
+    "question": "With which Ptah created man in the cosmogony of memphis",
+    "answer": "The silt",
+    "choices": [
+      "The silt",
+      "The dust",
+      "The ashes",
+      "The water"
+    ]
+  },
+  {
+    "id": 78,
+    "question": "Which divinity represents the language of Ptah in the cosmogony of memphis",
+    "answer": "Thot",
+    "choices": [
+      "Thot",
+      "Anubis",
+      "Apep",
+      "Khnum"
+    ]
+  },
+  {
+    "id": 79,
+    "question": "What do you call a headless demon from Hellenistic Egypt",
+    "answer": "The Akephalos",
+    "choices": [
+      "The Akephalos",
+      "The sphinx",
+      "The griffin",
+      "The Sphinge"
+    ]
+  },
+  {
+    "id": 80,
+    "question": "What is the name of the cobra divinity whose function is to protect the pharaoh",
+    "answer": "Uraeus",
+    "choices": [
+      "Uraeus",
+      "Nekhbet",
+      "Ankh",
+      "Duat"
+    ]
+  },
+  {
+    "id": 81,
+    "question": "What is the name of the chimera with a lion's body and a human head",
+    "answer": "The sphinx",
+    "choices": [
+      "The sphinx",
+      "The Nekhbet",
+      "The Akephalos",
+      "The Uraeus"
+    ]
+  },
+  {
+    "id": 82,
+    "question": "What do you call a deceased person who has passed the heart weighing test",
+    "answer": "Akh",
+    "choices": [
+      "Akh",
+      "Sphinx",
+      "Khnum",
+      "Khonsu"
+    ]
+  },
+  {
+    "id": 83,
+    "question": "What does an individual's Ren mean?",
+    "answer": "His name",
+    "choices": [
+      "His name",
+      "His soul",
+      "His body",
+      "His virtue"
+    ]
+  },
+  {
+    "id": 84,
+    "question": "What does the word \"Amun\" mean?",
+    "answer": "The hidden",
+    "choices": [
+      "The hidden",
+      "The invisible",
+      "The King",
+      "The former"
+    ]
+  },
+  {
+    "id": 85,
+    "question": "What is the animal representative of the god anubis",
+    "answer": "The jackal",
+    "choices": [
+      "The jackal",
+      "The dog",
+      "The cat",
+      "The wolf"
+    ]
+  },
+  {
+    "id": 86,
+    "question": "What is the protective god of the family",
+    "answer": "Bes",
+    "choices": [
+      "Bes",
+      "Hapi",
+      "Thot",
+      "Khnum"
+    ]
+  },
+  {
+    "id": 87,
+    "question": "Which god brought abundance and ensured the annual flood of the Nile which fertilized the earth",
+    "answer": "Hapi",
+    "choices": [
+      "Hapi",
+      "Apophis",
+      "Neith",
+      "Min"
+    ]
+  },
+  {
+    "id": 88,
+    "question": "What god resulted from the union of the couple Amun and Mut",
+    "answer": "Khonsu",
+    "choices": [
+      "Khonsu",
+      "Min",
+      "Khnum",
+      "Hapi"
+    ]
+  },
+  {
+    "id": 89,
+    "question": "Which god is represented with an erect phallus and a crown surmounted by two feathers",
+    "answer": "Min",
+    "choices": [
+      "Min",
+      "Khonsu",
+      "Hapi",
+      "Apep"
+    ]
+  },
+  {
+    "id": 90,
+    "question": "What was the counterpart of the cobra goddess Ouadjet in Upper Egypt",
+    "answer": "Nekhbet",
+    "choices": [
+      "Nekhbet",
+      "Maat",
+      "Duat",
+      "Selkis"
+    ]
+  },
+  {
+    "id": 91,
+    "question": "Which god gave the Egyptians the concept of Maat",
+    "answer": "Re",
+    "choices": [
+      "Re",
+      "Osiris",
+      "Thot",
+      "Horus"
+    ]
+  },
+  {
+    "id": 92,
+    "question": "What other goddess guards the royal sarcophagi and canopic chests with Isis, Nephthys and Neith",
+    "answer": "Selkis",
+    "choices": [
+      "Selkis",
+      "Hathor",
+      "Bastet",
+      "Sekhmet"
+    ]
+  },
+  {
+    "id": 93,
+    "question": "What goddess was the protector of women in childbirth",
+    "answer": "Tueris",
+    "choices": [
+      "Tueris",
+      "Nephtys",
+      "Isis",
+      "Neith"
+    ]
+  },
+  {
+    "id": 94,
+    "question": "What other goddess guards the royal sarcophagi and canopic chests with Isis, Nephthys and Selkis",
+    "answer": "Neith",
+    "choices": [
+      "Neith",
+      "Sekhmet",
+      "Hathor",
+      "Maat"
+    ]
+  },
+  {
+    "id": 95,
+    "question": "Which Egyptian goddess is often represented as a woman breastfeeding a child",
+    "answer": "Isis",
+    "choices": [
+      "Isis",
+      "Nephtys",
+      "Neith",
+      "Selkis"
+    ]
+  },
+  {
+    "id": 96,
+    "question": "What god taught men hieroglyphics",
+    "answer": "Thot",
+    "choices": [
+      "Thot",
+      "Anubis",
+      "Kaio",
+      "Hapi"
+    ]
+  },
+  {
+    "id": 97,
+    "question": "Which is the god whose name means \"he who is above\" and also \"he who is far away\"?",
+    "answer": "Horus",
+    "choices": [
+      "Horus",
+      "Osiris",
+      "Amun",
+      "Ptah"
+    ]
+  },
+  {
+    "id": 98,
+    "question": "Which ram-headed god with horizontal horns is often depicted shaping humans on his turn",
+    "answer": "Khnum",
+    "choices": [
+      "Khnum",
+      "Hathor",
+      "Anubis",
+      "Min"
+    ]
+  },
+  {
+    "id": 99,
+    "question": "What is psychostasy in Egyptian mythology",
+    "answer": "The weighing of the soul",
+    "choices": [
+      "The weighing of the soul",
+      "The journey of the soul",
+      "The death of the soul",
+      "The prison of the soul"
+    ]
+  },
+  {
+    "id": 100,
+    "question": "What goddess fought Apophis in the Duat after Re's death",
+    "answer": "Bastet",
+    "choices": [
+      "Bastet",
+      "Sekhmet",
+      "Isis",
+      "Hathor"
+    ]
+  },
+  {
+    "id": 101,
+    "question": "Under the reign of which pharaoh the cult of Aten supplanted that of the other gods",
+    "answer": "Akhenaton",
+    "choices": [
+      "Akhenaton",
+      "Ramses",
+      "Tutankhamon",
+      "Sethi"
+    ]
+  }
+]

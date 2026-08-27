@@ -1,0 +1,1113 @@
+[
+  {
+    "id": 1,
+    "question": "Quel est le dieu souverain et juge suprême du royaume des Morts",
+    "answer": "Osiris",
+    "choices": [
+      "Osiris",
+      "Anubis",
+      "Onasis",
+      "Thot"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Quel est le dieu au sommet de la grande énneade des neufs dieux principaux",
+    "answer": "Râ",
+    "choices": [
+      "Râ",
+      "Anubis",
+      "Osiris",
+      "Thot"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Quel est le nom de l'océan primordial d'où toute chose a émergé",
+    "answer": "Le Noun",
+    "choices": [
+      "Le Noun",
+      "Le Nil",
+      "Le Ren",
+      "Le Ben"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Quel est le serpent ténébreux que le dieu soleil doit affronté toutes les nuits",
+    "answer": "Apophis",
+    "choices": [
+      "Apophis",
+      "Yormungand",
+      "Aido-Wedo",
+      "Waagal"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Quel est le nom du disque solaire surmontant le dieu Râ",
+    "answer": "Horakhty",
+    "choices": [
+      "Horakhty",
+      "Mehen",
+      "Heqa",
+      "Douat"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Quel est le nom donné à l'au délà dans la mythologie égyptienne",
+    "answer": "La Douat",
+    "choices": [
+      "La Douat",
+      "Le Noun",
+      "La Touad",
+      "La Heqa"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Quel est le nom de la colline primordiale",
+    "answer": "Le Benben",
+    "choices": [
+      "Le Benben",
+      "Le Noun",
+      "Le Horakhty",
+      "Le Ren"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Quel est le dieu de l'air sec",
+    "answer": "Shou",
+    "choices": [
+      "Shou",
+      "Seth",
+      "Thot",
+      "Mehen"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Quelle est le la déesse de l'air humide",
+    "answer": "Tefnout",
+    "choices": [
+      "Tefnout",
+      "Nout",
+      "Nephtys",
+      "Sekhmet"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Quel est le dieu de la terre",
+    "answer": "Geb",
+    "choices": [
+      "Geb",
+      "Nout",
+      "Shou",
+      "Tefnout"
+    ]
+  },
+  {
+    "id": 11,
+    "question": "Quelle est le la déesse du ciel",
+    "answer": "Nout",
+    "choices": [
+      "Nout",
+      "Geb",
+      "Isis",
+      "Maât"
+    ]
+  },
+  {
+    "id": 12,
+    "question": "Quel est le nom de l'épouse d'osiris",
+    "answer": "Isis",
+    "choices": [
+      "Isis",
+      "Nephtys",
+      "Neith",
+      "Selkis"
+    ]
+  },
+  {
+    "id": 13,
+    "question": "Quel est le nom de l'épouse du dieu Seth",
+    "answer": "Nephtys",
+    "choices": [
+      "Nephtys",
+      "Isis",
+      "Selkis",
+      "Neith"
+    ]
+  },
+  {
+    "id": 14,
+    "question": "Combien de dieux Geb et Nout ont-ils conçu",
+    "answer": "5",
+    "choices": [
+      "5",
+      "6",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "id": 15,
+    "question": "Quel est le nom de la déesse magicienne et épouse d'Osiris",
+    "answer": "Isis",
+    "choices": [
+      "Isis",
+      "Sekhmet",
+      "Maât",
+      "Hathor"
+    ]
+  },
+  {
+    "id": 16,
+    "question": "Quel est le nom du dieu soleil lorsqu'il est le soleil levant",
+    "answer": "Khepri",
+    "choices": [
+      "Khepri",
+      "Atoum",
+      "Râ",
+      "Aton"
+    ]
+  },
+  {
+    "id": 17,
+    "question": "Quel est le nom du dieu soleil lorsqu'il est le soleil de midi",
+    "answer": "Râ",
+    "choices": [
+      "Râ",
+      "Amon",
+      "Khepri",
+      "Aton"
+    ]
+  },
+  {
+    "id": 18,
+    "question": "Quel est le nom du dieu soleil lorsqu'il est le soleil couchant",
+    "answer": "Atoum",
+    "choices": [
+      "Atoum",
+      "Aton",
+      "Râ",
+      "Khepri"
+    ]
+  },
+  {
+    "id": 19,
+    "question": "Quel est le dieu du mal, de la colère et des passions incontrôlées",
+    "answer": "Seth",
+    "choices": [
+      "Seth",
+      "Apophis",
+      "Apep",
+      "Anubis"
+    ]
+  },
+  {
+    "id": 20,
+    "question": "Quelle est la déesse protectrice des morts et épouse de Seth",
+    "answer": "Nephtys",
+    "choices": [
+      "Nephtys",
+      "Isis",
+      "Hathor",
+      "Bastet"
+    ]
+  },
+  {
+    "id": 21,
+    "question": "Quel dieu est issu de l'union d'Osiris et de Nephtys",
+    "answer": "Anubis",
+    "choices": [
+      "Anubis",
+      "Thot",
+      "Amon",
+      "Seth"
+    ]
+  },
+  {
+    "id": 22,
+    "question": "En combien de morceau est découpé le corps d'Osiris par son frère Seth",
+    "answer": "14",
+    "choices": [
+      "14",
+      "21",
+      "12",
+      "16"
+    ]
+  },
+  {
+    "id": 23,
+    "question": "Quel dieu est issu de l'union d'Osiris et d'Isis",
+    "answer": "Horus",
+    "choices": [
+      "Horus",
+      "Beerus",
+      "Thot",
+      "Atoum"
+    ]
+  },
+  {
+    "id": 24,
+    "question": "Quel est le dieu des artisans et des architectes",
+    "answer": "Ptah",
+    "choices": [
+      "Ptah",
+      "Min",
+      "Bès",
+      "Khonsou"
+    ]
+  },
+  {
+    "id": 25,
+    "question": "Quel est le dieu qui personnifie la magie protectrice",
+    "answer": "Heqa",
+    "choices": [
+      "Heqa",
+      "Sia",
+      "Hou",
+      "Oupouaout"
+    ]
+  },
+  {
+    "id": 26,
+    "question": "Quel est le dieu qui personnifie la connaissance",
+    "answer": "Sia",
+    "choices": [
+      "Sia",
+      "Heqa",
+      "Hou",
+      "Oupouaout"
+    ]
+  },
+  {
+    "id": 27,
+    "question": "Quel est le dieu qui personnifie verbe créateur",
+    "answer": "Hou",
+    "choices": [
+      "Hou",
+      "Sia",
+      "Heqa",
+      "Oupouaout"
+    ]
+  },
+  {
+    "id": 28,
+    "question": "Quel est le dieu des chemins",
+    "answer": "Oupouaout",
+    "choices": [
+      "Oupouaout",
+      "Hou",
+      "Sia",
+      "Heqa"
+    ]
+  },
+  {
+    "id": 29,
+    "question": "Combien d'heures le dieu soleil met-il pour traverser le fleuve des cieux",
+    "answer": "12h",
+    "choices": [
+      "12h",
+      "6h",
+      "8h",
+      "4h"
+    ]
+  },
+  {
+    "id": 30,
+    "question": "Quel est le serpent bienfaisant qui protège le dieu soleil à la sixième heure de la traversée du fleuve célèste",
+    "answer": "Mehen",
+    "choices": [
+      "Mehen",
+      "Apophis",
+      "Apep",
+      "Yormungand"
+    ]
+  },
+  {
+    "id": 31,
+    "question": "Quelle déesse réussit à obtenir le nom secret du dieu Râ",
+    "answer": "Isis",
+    "choices": [
+      "Isis",
+      "Maât",
+      "Ouadjet",
+      "Nephtys"
+    ]
+  },
+  {
+    "id": 32,
+    "question": "Quel est le nom de la déesse protectrice que le dieu soleil porte à son front",
+    "answer": "Mout",
+    "choices": [
+      "Mout",
+      "Ouadjet",
+      "Bastet",
+      "Sekhmet"
+    ]
+  },
+  {
+    "id": 33,
+    "question": "Quel est le nom du démiurge qui a émergé du Noun pour tout créer",
+    "answer": "Atoum",
+    "choices": [
+      "Atoum",
+      "Amon",
+      "Aton",
+      "Osiris"
+    ]
+  },
+  {
+    "id": 34,
+    "question": "Quels sont les premiers enfants d'Atoum",
+    "answer": "Chou et Tefnout",
+    "choices": [
+      "Chou et Tefnout",
+      "Geb et Nout",
+      "Osiris et Isis",
+      "Nephtys et Seth"
+    ]
+  },
+  {
+    "id": 35,
+    "question": "Quelle déesse avale Râ le soir pour le mettre au monde au petit matin",
+    "answer": "Nout",
+    "choices": [
+      "Nout",
+      "Shou",
+      "Heqa",
+      "Hathor"
+    ]
+  },
+  {
+    "id": 36,
+    "question": "Quel est le dieu de la mort et de la rennaissance",
+    "answer": "Osiris",
+    "choices": [
+      "Osiris",
+      "Beerus",
+      "Thot",
+      "Anubis"
+    ]
+  },
+  {
+    "id": 37,
+    "question": "Quel dieu remplace le dieu soleil la nuit et est appelé dieu lunaire",
+    "answer": "Thot",
+    "choices": [
+      "Thot",
+      "Anubis",
+      "Osiris",
+      "Ptah"
+    ]
+  },
+  {
+    "id": 38,
+    "question": "Comment appelle t-on la croix symbole de vie",
+    "answer": "Ankh",
+    "choices": [
+      "Ankh",
+      "Ouadjet",
+      "Horakhty",
+      "Douat"
+    ]
+  },
+  {
+    "id": 39,
+    "question": "Quel dieu fut le tout premier à être mommifié",
+    "answer": "Osiris",
+    "choices": [
+      "Osiris",
+      "Anubis",
+      "Hakai",
+      "Horus"
+    ]
+  },
+  {
+    "id": 40,
+    "question": "Quel est l'animal représentatif de la déesse Hathor",
+    "answer": "La vache",
+    "choices": [
+      "La vache",
+      "Le veau",
+      "Le chien",
+      "Le chat"
+    ]
+  },
+  {
+    "id": 41,
+    "question": "Quel est l'animal représentatif de la déesse Bastet",
+    "answer": "Le chat",
+    "choices": [
+      "Le chat",
+      "La vache",
+      "Le chien",
+      "Le lion"
+    ]
+  },
+  {
+    "id": 42,
+    "question": "Quel est l'animal représentatif de la déesse Sekhmet",
+    "answer": "La lionne",
+    "choices": [
+      "La lionne",
+      "Le chien",
+      "Le chat",
+      "Le tigre"
+    ]
+  },
+  {
+    "id": 43,
+    "question": "Quel est la cosmogonie de la mythologie égyptienne la plus répandue ? Celle de",
+    "answer": "Héliopolis",
+    "choices": [
+      "Héliopolis",
+      "Hermopolis",
+      "Thèbes",
+      "Syène"
+    ]
+  },
+  {
+    "id": 44,
+    "question": "A quoi correspond le Djet chez l'individu",
+    "answer": "Le corps",
+    "choices": [
+      "Le corps",
+      "L'âme",
+      "L'esprit",
+      "La conscience"
+    ]
+  },
+  {
+    "id": 45,
+    "question": "A quoi correspond le Ka chez l'individu",
+    "answer": "L'âme",
+    "choices": [
+      "L'âme",
+      "Le corps",
+      "L'esprit",
+      "La conscience"
+    ]
+  },
+  {
+    "id": 46,
+    "question": "Quelle cérémonie permet le voyage du défunt vers l'au-delà",
+    "answer": "L'embaumement",
+    "choices": [
+      "L'embaumement",
+      "L'enterrement",
+      "La momification",
+      "Le bandage"
+    ]
+  },
+  {
+    "id": 47,
+    "question": "Quel est le symbole représentatif de la déesse Maât",
+    "answer": "La plume",
+    "choices": [
+      "La plume",
+      "La balance",
+      "Le glaive",
+      "L'ankh"
+    ]
+  },
+  {
+    "id": 48,
+    "question": "Quel est l'animal représentatif du dieu Horus",
+    "answer": "Le faucon",
+    "choices": [
+      "Le faucon",
+      "L'aigle",
+      "Le corbeau",
+      "L'épervier"
+    ]
+  },
+  {
+    "id": 49,
+    "question": "Quel est l'autre animal représentatif du dieu Thot à part l'ibis",
+    "answer": "Le babouin",
+    "choices": [
+      "Le babouin",
+      "Le chacal",
+      "Le chien",
+      "L'aigle"
+    ]
+  },
+  {
+    "id": 50,
+    "question": "Quel nom donne t-on au scarabée ailé poussant le disque solaire",
+    "answer": "Khepri",
+    "choices": [
+      "Khepri",
+      "Atoum",
+      "Bès",
+      "Nout"
+    ]
+  },
+  {
+    "id": 51,
+    "question": "Quelle déesse personnifie l'harmonie cosmique mise en place par le démiurge Atoum",
+    "answer": "Maât",
+    "choices": [
+      "Maât",
+      "Isis",
+      "Sekhmet",
+      "Hathor"
+    ]
+  },
+  {
+    "id": 52,
+    "question": "Quelle est la déesse chargée de dévorer les âmes indignes lors de la pesée du coeur",
+    "answer": "Amémet",
+    "choices": [
+      "Amémet",
+      "Caulifla",
+      "Sekhmet",
+      "Taouret"
+    ]
+  },
+  {
+    "id": 53,
+    "question": "Quel est le dieu de l'eau et de la fertilité",
+    "answer": "Sobek",
+    "choices": [
+      "Sobek",
+      "Isis",
+      "Champa",
+      "Bès"
+    ]
+  },
+  {
+    "id": 54,
+    "question": "Quelle est la déesse dont l'animal représentatif est l'hippopotame",
+    "answer": "Taouret",
+    "choices": [
+      "Taouret",
+      "Amémet",
+      "Sekhmet",
+      "Bastet"
+    ]
+  },
+  {
+    "id": 55,
+    "question": "Quelle est la déesse dont l'animal représentatif est le cobra",
+    "answer": "Ouadjet",
+    "choices": [
+      "Ouadjet",
+      "Maât",
+      "Hathor",
+      "Isis"
+    ]
+  },
+  {
+    "id": 56,
+    "question": "Quel dieu se trouve au centre du mythe du jour et de la nuit",
+    "answer": "Râ",
+    "choices": [
+      "Râ",
+      "Osiris",
+      "Aton",
+      "Ptah"
+    ]
+  },
+  {
+    "id": 57,
+    "question": "Quel dieu est considéré comme le premier des pharaons",
+    "answer": "Horus",
+    "choices": [
+      "Horus",
+      "Râ",
+      "Thot",
+      "Seth"
+    ]
+  },
+  {
+    "id": 58,
+    "question": "Quel dieu remplace Atoum dans la cosmogonie de memphis",
+    "answer": "Ptah",
+    "choices": [
+      "Ptah",
+      "Aton",
+      "Amon",
+      "Hakaishin"
+    ]
+  },
+  {
+    "id": 59,
+    "question": "Quelle est l'épouse du dieu Horus",
+    "answer": "Hathor",
+    "choices": [
+      "Hathor",
+      "Isis",
+      "Nephtys",
+      "Bastet"
+    ]
+  },
+  {
+    "id": 60,
+    "question": "Quel est le dieu des tombes, nécropoles et protecteur des embaumeurs",
+    "answer": "Anubis",
+    "choices": [
+      "Anubis",
+      "Osiris",
+      "Seth",
+      "Horus"
+    ]
+  },
+  {
+    "id": 61,
+    "question": "Sous quel forme le dieu soleil renaît-il chaque matin",
+    "answer": "Khepri",
+    "choices": [
+      "Khepri",
+      "Atoum",
+      "Râ",
+      "Thot"
+    ]
+  },
+  {
+    "id": 62,
+    "question": "Quel membre du corps d'Osiris a été avalé par un poisson",
+    "answer": "Son phallus",
+    "choices": [
+      "Son phallus",
+      "Sa tête",
+      "Sa jambe",
+      "Son bras"
+    ]
+  },
+  {
+    "id": 63,
+    "question": "Sous la forme de quel oiseau mythique Atoum émergea t-il du Noun",
+    "answer": "Le Bennou",
+    "choices": [
+      "Le Bennou",
+      "L'Ibis",
+      "Le Faucon",
+      "L'Aigle"
+    ]
+  },
+  {
+    "id": 64,
+    "question": "Quel dieu fut chargé par Rê de la séparation du ciel de la terre",
+    "answer": "Chou",
+    "choices": [
+      "Chou",
+      "Nout",
+      "Geb",
+      "Atoum"
+    ]
+  },
+  {
+    "id": 65,
+    "question": "De combien de dieux est formé l'ogdoade d'hermopolis",
+    "answer": "8",
+    "choices": [
+      "8",
+      "9",
+      "12",
+      "6"
+    ]
+  },
+  {
+    "id": 66,
+    "question": "De combien de couple de dieux est formé l'ogdoade d'hermopolis",
+    "answer": "4",
+    "choices": [
+      "4",
+      "8",
+      "2",
+      "6"
+    ]
+  },
+  {
+    "id": 67,
+    "question": "Les déesses de l'ogdoade d'hermopolis étaient représentés comme",
+    "answer": "Des serpents",
+    "choices": [
+      "Des serpents",
+      "Des grenouilles",
+      "Des singes",
+      "Des faucons"
+    ]
+  },
+  {
+    "id": 68,
+    "question": "Les dieux de l'ogdoade d'hermopolis étaient représentés comme",
+    "answer": "Des grenouilles",
+    "choices": [
+      "Des grenouilles",
+      "Des serpents",
+      "Des faucons",
+      "Des singes"
+    ]
+  },
+  {
+    "id": 69,
+    "question": "Que représentait le couple Noun et Nounet dans la cosmogonie d'Hermopolis",
+    "answer": "L'eau",
+    "choices": [
+      "L'eau",
+      "Le mystérieux",
+      "L'infini",
+      "Les ténèbres"
+    ]
+  },
+  {
+    "id": 70,
+    "question": "Que représentait le couple Amon et Amonet dans la cosmogonie d'Hermopolis",
+    "answer": "Le mystérieux",
+    "choices": [
+      "Le mystérieux",
+      "L'eau",
+      "L'infini",
+      "Les ténèbres"
+    ]
+  },
+  {
+    "id": 71,
+    "question": "Que représentait le couple Heh et Hehet dans la cosmogonie d'Hermopolis",
+    "answer": "L'infini",
+    "choices": [
+      "L'infini",
+      "L'eau",
+      "Le mystérieux",
+      "Les ténèbres"
+    ]
+  },
+  {
+    "id": 72,
+    "question": "Que représentait le couple Kek et Keket dans la cosmogonie d'Hermopolis",
+    "answer": "Les ténèbres",
+    "choices": [
+      "Les ténèbres",
+      "L'eau",
+      "Le mystérieux",
+      "L'infini"
+    ]
+  },
+  {
+    "id": 73,
+    "question": "Quel nom donne t-on à l'oeil de Rê dont les larmes donnèrent naissance aux êtres humains",
+    "answer": "Oudjat",
+    "choices": [
+      "Oudjat",
+      "Khnoum",
+      "Ankh",
+      "Nekhbet"
+    ]
+  },
+  {
+    "id": 74,
+    "question": "Quelle déesse le dieu soleil envoya massacrer les rebelles qui se dressaient contre lui",
+    "answer": "Sekhmet",
+    "choices": [
+      "Sekhmet",
+      "Bastet",
+      "Hathor",
+      "Selkis"
+    ]
+  },
+  {
+    "id": 75,
+    "question": "Par quelle épreuve doit passer le défunt pour accéder à la vie éternelle",
+    "answer": "La pesée du coeur",
+    "choices": [
+      "La pesée du coeur",
+      "La course céleste",
+      "La lutte des dieux",
+      "La grande illusion"
+    ]
+  },
+  {
+    "id": 76,
+    "question": "Quel est le dieu du soleil à l'aube et au crépuscule",
+    "answer": "Harmakhis",
+    "choices": [
+      "Harmakhis",
+      "Khepri",
+      "Atoum",
+      "Râ"
+    ]
+  },
+  {
+    "id": 77,
+    "question": "Avec quoi Ptah créa l'homme dans la cosmogonie de memphis",
+    "answer": "Le limon",
+    "choices": [
+      "Le limon",
+      "La poussière",
+      "La cendre",
+      "L'eau"
+    ]
+  },
+  {
+    "id": 78,
+    "question": "Quel divinité représente la langue de Ptah dans la cosmogonie de memphis",
+    "answer": "Thot",
+    "choices": [
+      "Thot",
+      "Anubis",
+      "Apep",
+      "Khnoum"
+    ]
+  },
+  {
+    "id": 79,
+    "question": "Comment appelle t-on un démon sans tête de l'Égypte hellénistique",
+    "answer": "L'Akephalos",
+    "choices": [
+      "L'Akephalos",
+      "Le sphinx",
+      "Le griffon",
+      "Le sphinge"
+    ]
+  },
+  {
+    "id": 80,
+    "question": "Comment nomme t-on la divinité cobra qui a pour fonction de protéger le pharaon",
+    "answer": "Uraeus",
+    "choices": [
+      "Uraeus",
+      "Nekhbet",
+      "Ankh",
+      "Douat"
+    ]
+  },
+  {
+    "id": 81,
+    "question": "Comment appelle t-on la chimère a corps de lion et à tête humaine",
+    "answer": "Le sphinx",
+    "choices": [
+      "Le sphinx",
+      "Le Nekhbet",
+      "L'Akephalos",
+      "L'Uraeus"
+    ]
+  },
+  {
+    "id": 82,
+    "question": "Comment appelle t-on un défunt qui a réussit l'épreuve de la pesée du coeur",
+    "answer": "Akh",
+    "choices": [
+      "Akh",
+      "Sphinx",
+      "Khnoum",
+      "Khonsou"
+    ]
+  },
+  {
+    "id": 83,
+    "question": "Que désigne le Ren d'un individu",
+    "answer": "Son nom",
+    "choices": [
+      "Son nom",
+      "Son âme",
+      "Son corps",
+      "Sa vertu"
+    ]
+  },
+  {
+    "id": 84,
+    "question": "Que signifie le mot «Amon»",
+    "answer": "Le caché",
+    "choices": [
+      "Le caché",
+      "L'invisible",
+      "Le roi",
+      "L'ancien"
+    ]
+  },
+  {
+    "id": 85,
+    "question": "Quel est l'animal représentatif du dieu anubis",
+    "answer": "Le chacal",
+    "choices": [
+      "Le chacal",
+      "Le chien",
+      "Le chat",
+      "Le loup"
+    ]
+  },
+  {
+    "id": 86,
+    "question": "Quel est le dieu protecteur de la famille",
+    "answer": "Bès",
+    "choices": [
+      "Bès",
+      "Hâpî",
+      "Thot",
+      "Khnoum"
+    ]
+  },
+  {
+    "id": 87,
+    "question": "Quel dieu apportait l’abondance et assurait la crue annuelle du Nil qui fertilisait la terre",
+    "answer": "Hâpî",
+    "choices": [
+      "Hâpî",
+      "Apophis",
+      "Neith",
+      "Min"
+    ]
+  },
+  {
+    "id": 88,
+    "question": "Quel dieu résultait de l'union du couple Amon et Mout",
+    "answer": "Khonsou",
+    "choices": [
+      "Khonsou",
+      "Min",
+      "Khnoum",
+      "Hâpî"
+    ]
+  },
+  {
+    "id": 89,
+    "question": "Quel dieu est représenté avec un phallus en érection et une couronne surmontée de deux plumes",
+    "answer": "Min",
+    "choices": [
+      "Min",
+      "Khonsou",
+      "Hâpî",
+      "Apep"
+    ]
+  },
+  {
+    "id": 90,
+    "question": "Quel était l'homologue de la déesse cobra Ouadjet en haute égypte",
+    "answer": "Nekhbet",
+    "choices": [
+      "Nekhbet",
+      "Maât",
+      "Douat",
+      "Selkis"
+    ]
+  },
+  {
+    "id": 91,
+    "question": "Quel dieu donna aux égyptiens le concept de Maât",
+    "answer": "Rê",
+    "choices": [
+      "Rê",
+      "Osiris",
+      "Thot",
+      "Horus"
+    ]
+  },
+  {
+    "id": 92,
+    "question": "Quelle autre déesse garde les sarcophages et les coffres canopes royaux avec Isis, Nephtys et Neith",
+    "answer": "Selkis",
+    "choices": [
+      "Selkis",
+      "Hathor",
+      "Bastet",
+      "Sekhmet"
+    ]
+  },
+  {
+    "id": 93,
+    "question": "Quelle déesse était la protectrice des femmes en couches",
+    "answer": "Touèris",
+    "choices": [
+      "Touèris",
+      "Nephtys",
+      "Isis",
+      "Neith"
+    ]
+  },
+  {
+    "id": 94,
+    "question": "Quelle autre déesse garde les sarcophages et les coffres canopes royaux avec Isis, Nephtys et Selkis",
+    "answer": "Neith",
+    "choices": [
+      "Neith",
+      "Sekhmet",
+      "Hathor",
+      "Maât"
+    ]
+  },
+  {
+    "id": 95,
+    "question": "Quelle déesse égyptienne est souvent représenté comme une femme allaitant un enfant",
+    "answer": "Isis",
+    "choices": [
+      "Isis",
+      "Nephtys",
+      "Neith",
+      "Selkis"
+    ]
+  },
+  {
+    "id": 96,
+    "question": "Quel dieu enseigna aux hommes les hiéroglyphes",
+    "answer": "Thot",
+    "choices": [
+      "Thot",
+      "Anubis",
+      "Kaio",
+      "Hâpî"
+    ]
+  },
+  {
+    "id": 97,
+    "question": "Quel est le dieu dont le nom signifie « celui qui est au-dessus » et aussi « celui qui est loin »",
+    "answer": "Horus",
+    "choices": [
+      "Horus",
+      "Osiris",
+      "Amon",
+      "Ptah"
+    ]
+  },
+  {
+    "id": 98,
+    "question": "Quel dieu à tête de bélier aux cornes horizontales est souvent figuré en train de façonner des humains sur son tour",
+    "answer": "Khnoum",
+    "choices": [
+      "Khnoum",
+      "Hathor",
+      "Anubis",
+      "Min"
+    ]
+  },
+  {
+    "id": 99,
+    "question": "Qu'est ce que la psychostasie dans la mythologie égyptienne",
+    "answer": "La pesée de l'âme",
+    "choices": [
+      "La pesée de l'âme",
+      "Le voyage de l'âme",
+      "La mort de l'âme",
+      "La prison de l'âme"
+    ]
+  },
+  {
+    "id": 100,
+    "question": "Quelle déesse combatit Apophis dans le Douat après la mort de Rê",
+    "answer": "Bastet",
+    "choices": [
+      "Bastet",
+      "Sekhmet",
+      "Isis",
+      "Hathor"
+    ]
+  },
+  {
+    "id": 101,
+    "question": "Sous le règne de quel pharaon le culte d'Aton supplanta celui des autres dieux",
+    "answer": "Akhenaton",
+    "choices": [
+      "Akhenaton",
+      "Ramsès",
+      "Toutankhamon",
+      "Sethi"
+    ]
+  }
+]
