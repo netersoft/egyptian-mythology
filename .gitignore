@@ -47,6 +47,7 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 /android/app/.cxx
+/android/.kotlin/
 
 # Signing material and reports (never commit real keystores or their fingerprints)
 *.jks
@@ -64,4 +65,4 @@ gradlew-signing-report
 lib/generated/
 
 # Custom
-legacy
+.legacy
