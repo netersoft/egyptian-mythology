@@ -151,5 +151,22 @@ jobs:
       # side still compiles -- it does not produce an installable/distributable
       # .ipa. Add signing (Fastlane match, App Store Connect API key, etc.) once
       # a downstream project has its own Apple Developer credentials.
+      #
+      # Retried: Xcode's own SPM package-graph resolution has a known, non-deterministic
+      # crash (IDESwiftPackageCore's sortedInsert, an internal "count of array differs
+      # from count of index set" exception) that shows up on a cold package cache with
+      # a large graph -- this project's Firebase plugins alone pull in ~15 transitive
+      # SPM packages. Reproduced locally outside CI and confirmed transient: the exact
+      # same `xcodebuild -resolvePackageDependencies` command failed once, then
+      # succeeded on every immediate retry with no changes. Nothing in this project's
+      # config causes it, so a retry is the correct mitigation rather than a code fix.
       - name: Build iOS (no code signing)
-        run: flutter build ios --release --no-codesign
+        run: |
+          for attempt in 1 2 3; do
+            echo "Attempt $attempt/3"
+            if flutter build ios --release --no-codesign; then
+              exit 0
+            fi
+            echo "Attempt $attempt failed, retrying..."
+          done
+          exit 1
