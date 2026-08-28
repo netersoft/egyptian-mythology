@@ -1,5 +1,5 @@
-name: flutter_starter
-description: 'A reusable Flutter starter with auth, routing, local storage, i18n, REST API helpers, and common UI components.'
+name: egyptian_mythology
+description: 'Egyptian Mythology: an offline reference and quiz app about Egyptian gods, cosmogonies, and myths.'
 publish_to: 'none'
 
 ####################################################################################################

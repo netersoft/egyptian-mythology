@@ -1,6 +1,6 @@
-import 'package:flutter_starter/core/models/doc_category.dart';
-import 'package:flutter_starter/core/services/documentation/documentation_service.dart';
-import 'package:flutter_starter/core/services/i18n/translations.g.dart';
+import 'package:egyptian_mythology/core/models/doc_category.dart';
+import 'package:egyptian_mythology/core/services/documentation/documentation_service.dart';
+import 'package:egyptian_mythology/core/services/i18n/translations.g.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

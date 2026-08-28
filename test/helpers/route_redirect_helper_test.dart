@@ -1,6 +1,6 @@
+import 'package:egyptian_mythology/core/helpers/router/route_redirect_helper.dart';
+import 'package:egyptian_mythology/core/routes/app_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/core/helpers/router/route_redirect_helper.dart';
-import 'package:flutter_starter/core/routes/app_route.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
