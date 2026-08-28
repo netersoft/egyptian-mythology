@@ -12,6 +12,7 @@ import '../../../core/services/di/locator.dart';
 import '../../../core/services/i18n/translations.g.dart';
 import '../../components/backgrounds/pyramid_background.dart';
 import '../../components/buttons/icon_action_button.dart';
+import '../../components/misc/centered_scrollable.dart';
 import '../../components/text/typewriter_text.dart';
 import '../../themes/app_colors.dart';
 
@@ -60,9 +61,10 @@ class AboutScreen extends StatelessWidget {
           child: Column(
             children: [
               Expanded(
-                child: SingleChildScrollView(
+                child: CenteredScrollable(
                   padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                   child: Column(
+                    mainAxisSize: MainAxisSize.min,
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15),

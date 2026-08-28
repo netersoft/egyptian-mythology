@@ -20,7 +20,6 @@ class MenuButton extends StatelessWidget {
           height: 52,
           decoration: BoxDecoration(color: AppColors.goldenYellow, borderRadius: BorderRadius.circular(42)),
         ),
-        const SizedBox(width: 8),
         Material(
           color: Colors.transparent,
           child: InkWell(
