@@ -1,4 +1,8 @@
-# Flutter Starter - Agent Guide
+# Egyptian Mythology - Agent Guide
+
+Offline reference/quiz app about Egyptian mythology, a Flutter rewrite of a legacy
+native Android app (`.legacy/`, package `com.neteru.ankh`). No backend, no auth —
+see `README.md` for the full feature/architecture overview.
 
 ## Project Setup
 
@@ -19,19 +23,13 @@ flutter run
 ## Essential Commands
 
 ```bash
-# Rename app (all displays)
-dart run rename_app:main all="My App Name"
-
-# Change Android/iOS package name
-dart run change_app_package_name:main com.new.package.name
-
-# Generate launcher icons (from assets/images/launcher/icon.png)
+# Regenerate launcher icons (from assets/images/launcher/icon.png + related)
 dart run icons_launcher:create
 
-# Generate splash screen
+# Regenerate splash screen (from assets/images/launcher/splash_logo.png + splash_background.png)
 dart run flutter_native_splash:create
 
-# Remove default splash
+# Remove native splash
 dart run flutter_native_splash:remove
 ```
 
@@ -49,12 +47,12 @@ dart format .
 ## Architecture
 
 - **Entry point**: `lib/main.dart`
-- **Core layer** (`lib/core/`): providers, services, models, routes, helpers, data
-- **View layer** (`lib/view/`): screens, components, layouts, themes
+- **Core layer** (`lib/core/`): providers, services, models, routes, helpers
+- **View layer** (`lib/view/`): screens, components, themes
 - **State management**: Riverpod with code generation (`riverpod_generator`)
-- **Routing**: go_router
-- **Local storage**: Hive CE + SharedPreferences
-- **API**: REST with json_serializable
+- **Routing**: go_router (`go_router_builder`)
+- **Local storage**: Hive CE (score history) + SharedPreferences (settings)
+- **Content**: bundled JSON (quiz) and HTML (documentation) assets, no REST API
 
 ## Environment
 
@@ -63,9 +61,11 @@ dart format .
 
 ## Testing
 
-Unit tests live under `test/` (`api/`, `helpers/`, `providers/`), using `mocktail` with a
-GetIt test-locator override (`test/helpers/test_utils.dart`) to mock infrastructure
-singletons. There are no widget, golden, or integration tests yet.
+Tests live under `test/` (`helpers/`, `models/`, `providers/`, `screens/`, `services/`),
+using `mocktail` with a GetIt test-locator override (`test/helpers/test_utils.dart`) to
+mock infrastructure singletons. Widget tests navigating through `MainRoute` (infinite
+ankh-shake animation) or a screen with a real repeating `Timer` must never call
+`pumpAndSettle()` — use a bounded `pump()`/`pump(duration)` pair instead.
 
 ```bash
 flutter test
