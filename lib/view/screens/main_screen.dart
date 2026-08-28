@@ -10,6 +10,7 @@ import '../../core/services/di/locator.dart';
 import '../../core/services/i18n/translations.g.dart';
 import '../components/backgrounds/pyramid_background.dart';
 import '../components/buttons/menu_button.dart';
+import '../components/misc/app_header_card.dart';
 import '../themes/app_colors.dart';
 import '../themes/app_theme.dart';
 
@@ -68,7 +69,7 @@ class _MainScreenState extends State<MainScreen> {
         child: SafeArea(
           child: Column(
             children: [
-              const _MainMenuHeader(),
+              AppHeaderCard(title: context.t.mainMenu),
               Expanded(
                 child: Center(
                   child: Column(
@@ -110,80 +111,6 @@ class _MainScreenState extends State<MainScreen> {
       ),
     ),
   );
-}
-
-class _MainMenuHeader extends StatelessWidget {
-  const _MainMenuHeader();
-
-  @override
-  Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 8),
-    child: TweenAnimationBuilder<double>(
-      tween: Tween(begin: 0, end: 1),
-      duration: const Duration(milliseconds: 2160),
-      curve: Curves.easeIn,
-      builder: (context, value, child) => Opacity(opacity: value, child: child),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset('assets/images/egyptian/ankh_launcher.png', width: 100, height: 100),
-          const SizedBox(width: 12),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-            decoration: BoxDecoration(color: AppColors.yellow, borderRadius: BorderRadius.circular(8)),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(context.t.appNameAlt, style: const TextStyle(color: AppColors.gray, fontSize: 12)),
-                _TypewriterText(
-                  text: context.t.mainMenu,
-                  style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    ),
-  );
-}
-
-class _TypewriterText extends StatefulWidget {
-  final String text;
-  final TextStyle? style;
-
-  const _TypewriterText({required this.text, this.style});
-
-  @override
-  State<_TypewriterText> createState() => _TypewriterTextState();
-}
-
-class _TypewriterTextState extends State<_TypewriterText> {
-  String _shown = '';
-  Timer? _timer;
-
-  @override
-  void initState() {
-    super.initState();
-    var charCount = 0;
-    _timer = Timer.periodic(const Duration(milliseconds: 75), (timer) {
-      if (charCount >= widget.text.length) {
-        timer.cancel();
-        return;
-      }
-      charCount++;
-      if (mounted) setState(() => _shown = widget.text.substring(0, charCount));
-    });
-  }
-
-  @override
-  void dispose() {
-    _timer?.cancel();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) => Text(_shown, style: widget.style);
 }
 
 class _AnkhFooter extends StatefulWidget {

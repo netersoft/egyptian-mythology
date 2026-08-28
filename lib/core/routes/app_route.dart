@@ -7,7 +7,9 @@ import '../../view/screens/documentation/doc_sections_screen.dart';
 import '../../view/screens/documentation/doc_viewer_screen.dart';
 import '../../view/screens/main_screen.dart';
 import '../../view/screens/other/about_screen.dart';
+import '../../view/screens/quiz/game_over_screen.dart';
 import '../../view/screens/quiz/instructions_screen.dart';
+import '../../view/screens/quiz/quiz_play_screen.dart';
 import '../../view/screens/stats/stats_screen.dart';
 import '../models/doc_category.dart';
 import 'swipeable_page_route.dart';
@@ -44,6 +46,8 @@ class RedirectionRoute extends GoRouteData with $RedirectionRoute {
       ],
     ),
     TypedGoRoute<InstructionsRoute>(path: 'quiz/instructions'),
+    TypedGoRoute<QuizPlayRoute>(path: 'quiz/play'),
+    TypedGoRoute<GameOverRoute>(path: 'quiz/game-over'),
     TypedGoRoute<StatsRoute>(path: 'stats'),
   ],
 )
@@ -104,6 +108,26 @@ class InstructionsRoute extends GoRouteData with $InstructionsRoute {
 
   @override
   Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(builder: (context) => const InstructionsScreen());
+}
+
+class QuizPlayRoute extends GoRouteData with $QuizPlayRoute {
+  const QuizPlayRoute();
+
+  @override
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(builder: (context) => const QuizPlayScreen());
+}
+
+class GameOverRoute extends GoRouteData with $GameOverRoute {
+  const GameOverRoute({required this.score, required this.finish, required this.isRecord});
+
+  final int score;
+  final bool finish;
+  final bool isRecord;
+
+  @override
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(
+    builder: (context) => GameOverScreen(score: score, finish: finish, isRecord: isRecord),
+  );
 }
 
 class StatsRoute extends GoRouteData with $StatsRoute {
