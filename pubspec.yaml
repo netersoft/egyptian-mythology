@@ -21,7 +21,6 @@ dependencies:
   path: ^1.9.1
   intl: ^0.20.2
   get_it: ^9.2.1
-  lottie: ^3.4.0
   logger: ^2.7.0
   share_plus: ^13.2.0
   collection: ^1.19.1
@@ -140,8 +139,6 @@ flutter:
     # IMAGES
     - assets/images/
     - assets/images/egyptian/
-    # ANIMATIONS
-    - assets/animations/
     # I18N
     - assets/i18n/
     # DOCS
