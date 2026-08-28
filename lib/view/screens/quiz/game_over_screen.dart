@@ -8,6 +8,7 @@ import '../../../core/services/audio/audio_service.dart';
 import '../../../core/services/di/locator.dart';
 import '../../../core/services/i18n/translations.g.dart';
 import '../../components/backgrounds/pyramid_background.dart';
+import '../../components/buttons/icon_action_button.dart';
 import '../../components/text/typewriter_text.dart';
 import '../../themes/app_colors.dart';
 
@@ -93,17 +94,17 @@ class GameOverScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      _ActionButton(
+                      IconActionButton(
                         icon: Icons.replay,
                         tooltip: t.replay,
                         onTap: () => _navigate(context, () => const QuizPlayRoute().go(context)),
                       ),
-                      _ActionButton(
+                      IconActionButton(
                         icon: Icons.home,
                         tooltip: t.mainMenu,
                         onTap: () => _navigate(context, () => const MainRoute().go(context)),
                       ),
-                      _ActionButton(
+                      IconActionButton(
                         icon: Icons.timeline,
                         tooltip: t.stats,
                         onTap: () => _navigate(context, () => const StatsRoute().go(context)),
@@ -118,38 +119,4 @@ class GameOverScreen extends StatelessWidget {
       ),
     );
   }
-}
-
-class _ActionButton extends StatelessWidget {
-  final IconData icon;
-  final String tooltip;
-  final VoidCallback onTap;
-
-  const _ActionButton({required this.icon, required this.tooltip, required this.onTap});
-
-  @override
-  Widget build(BuildContext context) => Material(
-    color: Colors.transparent,
-    child: InkWell(
-      borderRadius: BorderRadius.circular(16),
-      onTap: onTap,
-      child: Container(
-        width: 75,
-        height: 60,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [AppColors.goldenYellow, AppColors.goldenRod],
-          ),
-          borderRadius: BorderRadius.circular(16),
-        ),
-        child: Semantics(
-          label: tooltip,
-          child: Icon(icon, color: Colors.black),
-        ),
-      ),
-    ),
-  );
 }

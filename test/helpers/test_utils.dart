@@ -51,6 +51,10 @@ Future<void> setupTestLocator({
     if (audio is MockAudioService) {
       when(audio.startMusic).thenAnswer((_) async {});
       when(audio.playClick).thenAnswer((_) async {});
+      when(() => audio.isMusicEnabled).thenReturn(true);
+      when(() => audio.isSoundEnabled).thenReturn(true);
+      when(() => audio.setMusicEnabled(any())).thenAnswer((_) async {});
+      when(() => audio.setSoundEnabled(any())).thenAnswer((_) async {});
     }
     locator.registerSingleton<AudioService>(audio);
   }

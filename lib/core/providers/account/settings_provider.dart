@@ -1,12 +1,5 @@
-import 'dart:async';
-import 'dart:io';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:share_plus/share_plus.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../enums/app_brightness.dart';
 import '../../helpers/router/navigation_helper.dart';
@@ -26,61 +19,6 @@ class Settings extends _$Settings {
   SettingsState build() => const SettingsState();
 
   final SharedPreferencesService prefs = locator<SharedPreferencesService>();
-
-  String get _shareMessage {
-    var ctx = _navigationHelper.navigatorKey.currentContext;
-    if (ctx == null) return '';
-    return t.installApp;
-  }
-
-  String get _sharePlayStoreUrl => 'https://play.google.com/store/apps/details?id=com.example.app';
-
-  Future<void> share(ShareOptions options) async {
-    try {
-      switch (options) {
-        case ShareOptions.whatsapp:
-          unawaited(
-            launchUrl(
-              Uri.parse(
-                "whatsapp:${Platform.isIOS ? '//wa.me/' : '//send?'}text=${Uri.encodeFull('$_shareMessage\n$_sharePlayStoreUrl')}",
-              ),
-            ),
-          );
-        case ShareOptions.email:
-          Uri emailLaunchUri = Uri(
-            scheme: 'mailto',
-            queryParameters: {
-              'subject': 'App',
-              'body': '$_shareMessage\n$_sharePlayStoreUrl',
-            },
-          );
-          unawaited(launchUrl(emailLaunchUri));
-        case ShareOptions.sms:
-          Uri smsLaunchUri = Uri(
-            scheme: 'sms',
-            queryParameters: {'body': '$_shareMessage\n$_sharePlayStoreUrl'},
-          );
-          unawaited(launchUrl(smsLaunchUri));
-        case ShareOptions.free:
-          var ctx = _navigationHelper.navigatorKey.currentContext;
-          if (ctx != null) {
-            final box = ctx.findRenderObject() as RenderBox?;
-            await SharePlus.instance.share(
-              ShareParams(
-                text: '$_shareMessage\n$_sharePlayStoreUrl',
-                subject: t.share,
-                sharePositionOrigin: box!.localToGlobal(Offset.zero) & box.size,
-              ),
-            );
-          }
-      }
-    } catch (e) {
-      var ctx = _navigationHelper.navigatorKey.currentContext;
-      if (ctx != null && ctx.mounted) {
-        unawaited(EasyLoading.showError(t.anErrorOccurred));
-      }
-    }
-  }
 
   void toggleEnableNotificationsState(bool newState) {
     prefs.setBool(PrefKeys.enableNotifications, newState);
@@ -129,5 +67,3 @@ class SettingsState {
 
   SettingsState copyWith({bool? isLoading}) => SettingsState(isLoading: isLoading ?? this.isLoading);
 }
-
-enum ShareOptions { whatsapp, email, free, sms }
