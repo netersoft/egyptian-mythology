@@ -1,22 +1,23 @@
-# Flutter Starter
+# Egyptian Mythology
 
-[![Flutter CI](https://github.com/edpage-hq/flutter-starter/actions/workflows/flutter.yml/badge.svg)](https://github.com/edpage-hq/flutter-starter/actions/workflows/flutter.yml)
+[![Flutter CI](https://github.com/netersoft/egyptian-mythology/actions/workflows/flutter.yml/badge.svg)](https://github.com/netersoft/egyptian-mythology/actions/workflows/flutter.yml)
 
 ## Description
 
-A reusable Flutter starter for quickly launching production-oriented mobile apps at edpage-hq. It already includes routing, authentication screens, local encrypted storage, REST API helpers, i18n, theming, onboarding, common form inputs, image/media utilities, paginated lists, and reusable layout/components — see [Optional Feature Packs](#optional-feature-packs) for what to keep or strip per project.
+A fully offline reference and quiz app about Egyptian mythology: a documentation viewer (Gods, Cosmogonies, Myths), a 20-second-per-question quiz with a 3-life system, score history with a progress chart, and settings for language/music/sound — available in French and English.
 
-> This repo is the **starter** itself, cloned to bootstrap new projects (see [`project-guidelines`](https://github.com/edpage-hq/project-guidelines) → `startup-checklist.md`). The [`PROJECT_README_TEMPLATE.md`](https://github.com/edpage-hq/project-guidelines/blob/master/templates/PROJECT_README_TEMPLATE.md) sections below are filled in for the starter itself; a downstream project should rewrite them for its own scope.
+This is a Flutter rewrite of a legacy native Android app (`com.neteru.ankh`, kept for reference under `.legacy/`), built on [edpage-hq/flutter-starter](https://github.com/edpage-hq/flutter-starter) with its authentication/REST API layer stripped out, since this app has no backend.
 
 ## Tech stack
 
 - Mobile: Flutter, Dart SDK `>=3.8.0 <4.0.0`
 - State management: Riverpod (`riverpod_generator`, code-gen)
 - Routing: go_router (`go_router_builder`)
-- Local storage: Hive CE + SharedPreferences
-- API: REST with `json_serializable`
+- Local storage: Hive CE (score history) + SharedPreferences (settings, best score)
+- Content: bundled JSON (quiz questions) and HTML assets (`flutter_widget_from_html_core`, documentation)
 - i18n: [Slang](https://pub.dev/packages/slang)
-- Crash reporting / analytics / push notifications: Firebase (Crashlytics + Analytics + Cloud Messaging)
+- Audio: `audioplayers` (looping background music + click SFX)
+- Crash reporting / analytics: Firebase (Crashlytics + Analytics), no-op until a real Firebase project is configured
 
 ## Prerequisites
 
@@ -35,21 +36,15 @@ flutter run
 
 ## Environment variables
 
-The `.env` file is bundled as an asset and loaded at runtime — treat every value in it as **public** (API base URL, OAuth client IDs, theme colors), never a real secret. Use backend-issued tokens, secure storage, remote config, or platform build systems for anything sensitive.
+The `.env` file is bundled as an asset and loaded at runtime — treat every value in it as **public** (there is no backend to talk to, only theme colors).
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `APP_API_BASE_URL` | Base URL of the backend REST API | `http://localhost:8000` |
-| `APP_GOOGLE_AUTH_IOS_CLIENT_ID` | Google Sign-In OAuth client ID for iOS | `xxx.apps.googleusercontent.com` |
-| `APP_GOOGLE_AUTH_IOS_CLIENT_ID_REVERSE` | Reversed form of the iOS client ID, used for the iOS URL scheme | `com.googleusercontent.apps.xxx` |
-| `APP_GOOGLE_AUTH_ANDROID_DEBUG_CLIENT_ID` | Google Sign-In OAuth client ID for Android debug builds | `xxx.apps.googleusercontent.com` |
-| `APP_GOOGLE_AUTH_ANDROID_RELEASE_CLIENT_ID` | Google Sign-In OAuth client ID for Android release builds (set once a release keystore exists) | *(empty until release signing is configured)* |
-| `APP_GOOGLE_AUTH_WEB_CLIENT_ID` | Google Sign-In OAuth web client ID (used as the `serverClientId` on mobile) | `xxx.apps.googleusercontent.com` |
-| `APP_PRIMARY_COLOR` | Primary theme color, hex | `#0000CD` |
-| `APP_SECONDARY_COLOR` | Secondary theme color, hex | `#009ee3` |
-| `APP_ACCENT_COLOR` | Accent theme color, hex | `#f5f5f5` |
+| Variable | Description | Value |
+|----------|-------------|-------|
+| `APP_PRIMARY_COLOR` | Primary theme color, hex — golden yellow | `#FFD700` |
+| `APP_SECONDARY_COLOR` | Secondary theme color, hex — goldenrod | `#DAA520` |
+| `APP_ACCENT_COLOR` | Accent theme color, hex — black | `#000000` |
 
-The Google client IDs shipped in `.env.example` point to a shared placeholder Google Cloud project for out-of-the-box Google Sign-In testing — replace them with your own project's IDs before shipping.
+These mirror the legacy app's `colors.xml` palette (`goldenYellow`/`goldenRod`/`black`).
 
 ## Running tests
 
@@ -61,71 +56,30 @@ flutter test --coverage
 
 ## Environments
 
-Not applicable to this repo — it is the starter, not a deployed project. Fill in this table in the README of each project cloned from it:
+Not applicable — this is a fully offline app with no backend and no staging/production deployment targets. See [Release Builds](#release-builds) for how builds are produced.
 
-| Env        | URL | Deployment |
-|------------|-----|------------|
-| Staging    |     |            |
-| Production |     |            |
+## Enabling crash reporting / analytics (optional)
 
-## Contacts
+Firebase is wired up but ships with a placeholder `lib/firebase_options.dart`, so `CrashReportingService`/`AnalyticsService` stay safe no-ops until configured:
 
-Not applicable to this repo. Fill in for each project cloned from it:
+```bash
+dart pub global activate flutterfire_cli
+flutterfire configure
+```
 
-- Tech lead:
-- Product owner:
-
-## New Project Checklist
-
-1. Update `.env` with public app configuration only. Do not put real secrets in a mobile app bundle.
-2. Rename the visible app name:
-
-    ```bash
-    dart run rename_app:main all="My App Name"
-    ```
-
-3. Change package identifiers:
-
-    ```bash
-    dart run change_app_package_name:main com.company.product
-    ```
-
-4. Replace launcher assets under `assets/images/launcher/`.
-5. Regenerate launcher icons and splash:
-
-    ```bash
-    dart run icons_launcher:create
-    dart run flutter_native_splash:create
-    ```
-
-6. Set up crash reporting for your own Firebase project:
-
-    ```bash
-    dart pub global activate flutterfire_cli
-    flutterfire configure
-    ```
-
-    This overwrites the placeholder `lib/firebase_options.dart`. Until you do this, `CrashReportingService` detects the placeholder and skips initialization instead of reporting to a project that doesn't exist -- see [Firebase (Crash Reporting + Analytics + Push Notifications)](#firebase-crash-reporting--analytics--push-notifications).
-
-7. Run quality checks:
-
-    ```bash
-    dart format .
-    flutter analyze
-    flutter test
-    ```
+See [Firebase (Crash Reporting + Analytics)](#firebase-crash-reporting--analytics).
 
 ## Architecture
 
 The app is split into two main layers:
 
-- `lib/core/`: state, services, routing, models, helpers, data access, storage, and cross-cutting logic.
-- `lib/view/`: screens, layouts, reusable widgets, and themes.
+- `lib/core/`: state, services, routing, models, helpers, storage, and cross-cutting logic.
+- `lib/view/`: screens, reusable widgets, and themes.
 
 Runtime composition starts from:
 
 - `lib/main.dart`: entry point only.
-- `lib/core/bootstrap/app_bootstrap.dart`: Flutter, env, Hive, DI, locale, and query-cache bootstrap.
+- `lib/core/bootstrap/app_bootstrap.dart`: Flutter, env, Firebase, Hive, DI, and locale bootstrap.
 - `lib/app.dart`: root app widget, theme, and router view.
 - `lib/core/lifecycle/app_lifecycle_layer.dart`: app lifecycle side effects.
 
@@ -139,24 +93,24 @@ lib/
 ├── app.dart                           # MaterialApp.router + TranslationProvider
 ├── core/
 │   ├── bootstrap/                     # App initialisation (env, Hive, DI, locale)
-│   ├── services/                      # API, auth, DI, Hive, i18n, location, media
+│   ├── services/                      # DI, Hive, i18n, audio, quiz, scores, documentation, firebase
 │   ├── routes/                        # go_router_builder route defs + GoRouter factory
-│   ├── providers/                     # Riverpod providers (auth, settings, navigation, etc.)
-│   ├── data/                          # Queries + mutations (CachedQuery)
-│   ├── models/                        # JSON-serializable models (json_annotation)
+│   ├── providers/                     # Riverpod providers (account/settings, navigation, quiz)
+│   ├── models/                        # JSON-serializable + plain models (quiz, docs, scores)
 │   ├── enums/                         # Typed constants
-│   ├── helpers/                       # Auth, connectivity, device info, dialogs, etc.
-│   ├── extensions/                    # String, Color, DateTime extensions
+│   ├── helpers/                       # Router redirection, logging
 │   └── tools/                         # Utils, formatters, constants
 ├── view/
 │   ├── themes/                        # AppTheme, AppColors (from .env)
-│   ├── screens/                       # Auth, account, content, onboarding, main
-│   ├── components/                    # Reusable widgets (inputs, lists, loaders, etc.)
-│   └── layouts/                       # Main layout (connectivity checks, toasts)
+│   ├── screens/                       # Documentation, quiz, stats, account (settings), other (about), main
+│   └── components/                    # Reusable widgets (backgrounds, buttons, containers, text, etc.)
 ├── assets/
 │   ├── i18n/                          # Translation source files (*.i18n.json)
-│   └── images/                        # Launcher icons, splash, Lottie animations
-└── test/                              # Unit tests
+│   ├── docs/                          # Documentation HTML (gods/cosmogonies/myths, fr+en)
+│   ├── quiz/                          # Quiz questions JSON (fr+en)
+│   ├── audio/                         # Background music + click SFX
+│   └── images/                        # Launcher icons, splash, Egyptian artwork
+└── test/                              # Unit + widget tests
 ```
 
 Generated files (`*.g.dart`, `*.config.dart`) are excluded from git — they are rebuilt via `dart run build_runner build`.
@@ -169,51 +123,26 @@ All providers use `@riverpod` code generation. Riverpod is the app-facing state 
 
 ## Routing
 
-Routes are centralized in `lib/core/routes/app_route.dart` (type-safe `go_router_builder` definitions) and `lib/core/routes/router.dart` (GoRouter factory).
+Routes are centralized in `lib/core/routes/app_route.dart` (type-safe `go_router_builder` definitions) and `lib/core/routes/router.dart` (GoRouter factory). There is no auth/access guard — every route is reachable directly, matching the legacy app.
 
-Use `createRouter()` when a test or alternate app shell needs injectable auth/access dependencies. The default exported `router` is kept for normal runtime usage.
+`QuizPlayRoute`/`GameOverRoute` are deliberately direct children of `MainRoute` (siblings of `InstructionsRoute`, not nested under it) so `context.go()` from `GameOverScreen` rebuilds a minimal `[Main, Play]`/`[Main, GameOver]` stack — matching the legacy app's `FLAG_ACTIVITY_CLEAR_TASK` behavior. The normal Instructions → Play flow still uses `context.push()`.
 
-`appRouteRedirect` (in `router.dart`) handles two guards: `authPaths` (redirects logged-out users away from routes like `ProfileRoute`) and `accessRequiredPaths`, a permission-based guard that ships empty by default. To lock a route behind a permission, add its `.location` to `accessRequiredPaths` — the guard then checks a `page-<location-with-dashes>` permission via `AccessHelper.userHasAccessTo`.
-
-## API Layer
-
-Queries, mutations, and other call sites go through the `ApiService` static facade, which just forwards to an `ApiClient` instance resolved from DI (`locator<ApiClient>()`, registered as a singleton in `AppModule`). This keeps existing call sites (`ApiService.makeRequest(...)`, `ApiService.getItem(...)`, etc.) unchanged while `ApiClient` itself is a normal, constructor-injectable class — no static mutable state.
-
-`ApiClient` supports:
-
-- Central base URL from `.env`.
-- Default JSON/mobile headers.
-- Constructor-injected HTTP client and token provider (for tests, construct `ApiClient(client: ..., tokenProvider: ...)` directly, or register a fake in GetIt via `setupTestLocator(apiClient: ...)`).
-- Request timeout through `ApiConfig.requestTimeout`.
-- Basic `ApiResponse` normalization.
-
-Queries and mutations live under `lib/core/data/queries/` and `lib/core/data/mutations/`.
-
-## Firebase (Crash Reporting + Analytics + Push Notifications)
-
-Uses Firebase (Crashlytics + Analytics + Cloud Messaging) over Sentry/Amplitude/Mixpanel/OneSignal: all free at unlimited volume, which matters more here than a richer dashboard since this starter is meant to be reused across many projects that would otherwise all share one paid-tier quota, and all three share the same project/config.
+## Firebase (Crash Reporting + Analytics)
 
 - `lib/core/services/firebase/service.dart` (`FirebaseSetup`) is the shared entry point: `FirebaseSetup.ensureInitialized()` calls `Firebase.initializeApp()` once, called early in `bootstrapApp()`. `FirebaseSetup.isConfigured` detects whether `lib/firebase_options.dart` is still the shipped placeholder (no real Firebase project) and gates every Firebase-backed service on it.
 - **Crash reporting**: `CrashReportingService.init()` (`lib/core/services/crash_reporting/service.dart`) wires `FlutterError.onError`/`PlatformDispatcher.instance.onError` to Crashlytics for uncaught errors. `LogHelper.e`/`LogHelper.f` also forward to Crashlytics as non-fatal errors, so caught-and-logged exceptions across the app get reported too.
 - **Analytics**: `AnalyticsService` (`lib/core/services/analytics/service.dart`) wraps `FirebaseAnalytics` (`logEvent`, `logScreenView`, `setUserId`, `setUserProperty`) -- every method is a silent no-op when unconfigured, so call sites never need to check `isConfigured` themselves. Screen views are tracked automatically through a `FirebaseAnalyticsObserver` added to the router's observers (see `lib/core/routes/router.dart`).
-- **Push notifications**: `PushNotificationsService.init()` (`lib/core/services/push_notifications/service.dart`) requests notification permission, registers a background message handler, and wires `onMessage`/`onMessageOpenedApp`/`getInitialMessage` (currently just logged -- add navigation and, for a foreground heads-up banner on Android, `flutter_local_notifications` at those hook points once a project needs it). `PushNotificationsService.getToken()` is sent to the backend as `UserDeviceModel.fcmToken` alongside device info, from the same `/user-devices` call sites used for login/register/social auth/app-resume (see `lib/core/lifecycle/app_lifecycle_layer.dart` and `lib/core/providers/auth/`) -- there is no separate registration path to keep in sync.
-  - **Android**: works out of the box (`POST_NOTIFICATIONS` permission already in the manifest).
-  - **iOS**: `Runner.entitlements` and `Info.plist` are already set up (APNs entitlement, `remote-notification` background mode), but Xcode still needs the **Push Notifications** capability enabled once under Signing & Capabilities before a real device can register -- and, like Crashlytics/Analytics, this needs a real Apple Developer account, which a shared starter template can't ship with.
-- Until you run `flutterfire configure` (see the New Project Checklist), everything above stays a safe no-op instead of reporting to a project that doesn't exist.
+- Until `flutterfire configure` is run (see [Enabling crash reporting / analytics](#enabling-crash-reporting--analytics-optional)), everything above stays a safe no-op instead of reporting to a project that doesn't exist.
 
-## Optional Feature Packs
+## Features
 
-This starter intentionally includes more than a minimal app. For a new project, decide which packs to keep:
+Ported screen-for-screen from the legacy Android app (`.legacy/`):
 
-- Auth: login, registration, forgot password, Google, Apple, phone auth.
-- Account: profile, profile item, settings.
-- Content: news, ads, pages, useful information.
-- Media: image picker/crop/compress and video compression.
-- Location: permissions, location, geocoding, device activity.
-- Storage: Hive CE, secure storage, shared preferences.
-- UI kit: inputs, paginated lists, loaders, shimmers, status widgets.
-
-If a project does not need a pack, remove its screens, providers, routes, models, services, assets, and dependencies together.
+- **Documentation** (`view/screens/documentation/`) — browse Gods, Cosmogonies, and Myths as native-rendered HTML (`flutter_widget_from_html_core`), fr/en.
+- **Quiz** (`view/screens/quiz/`) — 20s-per-question, 3-life state machine (`QuizController`), score persisted to Hive on game over.
+- **Stats** (`view/screens/stats/`) — score history, best score, `fl_chart` progress graph, clear history.
+- **Settings** (`view/screens/account/settings_screen.dart`) — language, theme, music/sound toggles.
+- **About** (`view/screens/other/about_screen.dart`) — credits, contact (`mailto:`), rate (`in_app_review`), share (`share_plus`).
 
 ## Quality
 
@@ -234,7 +163,7 @@ Generated files (`*.g.dart`) must **not** be edited manually. They are regenerat
 
 ## Build Flavors (dev / staging / prod)
 
-Flavors here only separate **app identity** (so dev/staging/prod can be installed side by side on the same device/simulator) — environment *configuration* (API URLs, keys) still comes from a single `.env`, provided at build time exactly as today (`cp .env.example .env` locally, `echo "$ENV_FILE" > .env` in CI). Point that `.env` at whichever backend a given build should talk to; there's no separate `.env.dev`/`.env.staging`/`.env.prod` file to keep in sync. A project that genuinely needs the env content itself to differ per installed build can extend this later.
+Flavors separate **app identity** only (so dev/staging/prod can be installed side by side on the same device/simulator) — there's a single `.env` (`cp .env.example .env` locally, `echo "$ENV_FILE" > .env` in CI), no separate `.env.dev`/`.env.staging`/`.env.prod` file to keep in sync.
 
 - **Android** — ready to use, verified with a real build:
 
@@ -260,6 +189,6 @@ Flavors here only separate **app identity** (so dev/staging/prod can be installe
 Pushing a `v*` tag (or running the workflow manually) triggers two build jobs in CI, after the quality job passes:
 
 - **Android**: `flutter build apk --release --flavor prod`, uploaded as a workflow artifact. Signed with the debug key until the project has its own `key.properties` + keystore (see `android/app/build.gradle`) — good for smoke-testing and manual QA, not for a Play Store release.
-- **iOS**: `flutter build ios --release --no-codesign` — verifies the iOS side still compiles. It does not produce an installable `.ipa`; that requires real Apple Developer signing (Fastlane match, an App Store Connect API key, etc.), which a shared starter template can't ship with. Not flavor-aware yet, per the manual iOS step above.
+- **iOS**: `flutter build ios --release --no-codesign` — verifies the iOS side still compiles. It does not produce an installable `.ipa`; that requires real Apple Developer signing (Fastlane match, an App Store Connect API key, etc.), not set up yet. Not flavor-aware yet, per the manual iOS step above.
 
-Add your own signing and store-publishing steps once a downstream project has its own Android keystore and Apple Developer account.
+Add real signing (an Android keystore, an Apple Developer account) and store-publishing steps once this app is ready to ship.

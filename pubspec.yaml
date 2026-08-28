@@ -111,25 +111,22 @@ icons_launcher:
       enable: false
       image_path: assets/images/launcher/icon.png
 
-# Splash logo have size 1440x1440
+# Splash logo have size 1440x1440, splash background have size 1440x2560
 flutter_native_splash:
   image: assets/images/launcher/splash_logo.png
-  color: '#0000CD'
-  #background_image: assets/background.png
-  #branding: assets/dart.png
+  color: '#000000'
+  background_image: assets/images/launcher/splash_background.png
   image_dark: assets/images/launcher/splash_logo.png
-  color_dark: '#262626'
-  #background_image_dark: assets/dark_background.png
-  #branding_dark: assets/dark_dart.png
-  #branding_mode: bottom
+  color_dark: '#000000'
+  background_image_dark: assets/images/launcher/splash_background.png
   fullscreen: true
   android_12:
     image: assets/images/launcher/splash_logo.png
-    icon_background_color: '#0000CD'
-    color: '#0000CD'
+    icon_background_color: '#000000'
+    color: '#000000'
     image_dark: assets/images/launcher/splash_logo.png
-    icon_background_color_dark: '#262626'
-    color_dark: '#262626'
+    icon_background_color_dark: '#000000'
+    color_dark: '#000000'
 
 flutter:
   uses-material-design: true
@@ -138,13 +135,8 @@ flutter:
     - .env
     #LAUNCHER
     - assets/images/launcher/splash_logo.png
-    - assets/images/launcher/logo.png
-    - assets/images/launcher/logo.svg
-    - assets/images/launcher/logo_reverse.svg
+    - assets/images/launcher/splash_background.png
     - assets/images/launcher/icon.png
-    - assets/images/launcher/icon.jpg
-    - assets/images/launcher/icon.svg
-    - assets/images/launcher/icon_reverse.svg
     # IMAGES
     - assets/images/
     - assets/images/egyptian/
