@@ -1,14 +1,13 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 import 'package:settings_ui/settings_ui.dart';
 
 import '../../../core/enums/app_brightness.dart';
-import '../../../core/helpers/ui/dialog_helper.dart';
 import '../../../core/providers/account/settings_provider.dart';
+import '../../../core/services/audio/audio_service.dart';
+import '../../../core/services/di/locator.dart';
 import '../../../core/services/i18n/config.dart';
 import '../../../core/services/i18n/translations.g.dart';
 import '../../components/misc/floating_modal.dart';
@@ -37,11 +36,21 @@ class SettingsScreen extends StatelessWidget {
   );
 }
 
-class SettingsListWrapper extends ConsumerWidget {
+class SettingsListWrapper extends ConsumerStatefulWidget {
   const SettingsListWrapper({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<SettingsListWrapper> createState() => _SettingsListWrapperState();
+}
+
+class _SettingsListWrapperState extends ConsumerState<SettingsListWrapper> {
+  final _audioService = locator<AudioService>();
+
+  late bool _musicEnabled = _audioService.isMusicEnabled;
+  late bool _soundEnabled = _audioService.isSoundEnabled;
+
+  @override
+  Widget build(BuildContext context) {
     final settings = ref.read(settingsProvider.notifier);
 
     var currentLang = I18nConfig.langItems.firstWhereOrNull(
@@ -148,125 +157,25 @@ class SettingsListWrapper extends ConsumerWidget {
             ),
           ],
         ),
-        /* SettingsSection(
-          title: Text('notifications'.tr()),
-          tiles: <SettingsTile>[
-            SettingsTile.switchTile(
-              onToggle: (value) => settings.toggleEnableNotificationsState(value),
-              initialValue: settings.getEnableNotificationsState()!,
-              leading: Icon(
-                settings.getEnableNotificationsState()! ? Icons.notifications_on : Icons.notifications_off,
-              ),
-              title: Text('enableNotifications'.tr()),
-              activeSwitchColor: AppTheme.secondaryColor,
-            ),
-          ],
-        ), */
         SettingsSection(
           tiles: <SettingsTile>[
-            SettingsTile.navigation(
-              leading: const Icon(Icons.info),
-              trailing: const Icon(Icons.chevron_right),
-              title: Text(context.t.about),
-              onPressed: (context) => {
-                DialogHelper.showContent(
-                  context,
-                  title: Text(
-                    context.t.about,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16.0,
-                    ),
-                  ),
-                  content: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      SvgPicture.asset(
-                        AppTheme.pickByTheme(
-                          light: 'assets/images/launcher/logo.svg',
-                          dark: 'assets/images/launcher/logo_reverse.svg',
-                        ),
-                        width: 160.0,
-                      ),
-                      Text(
-                        context.t.appNameAlt,
-                        style: const TextStyle(fontSize: 16.0),
-                      ),
-                      FutureBuilder<PackageInfo>(
-                        future: PackageInfo.fromPlatform(),
-                        builder: (ctx, snapshot) {
-                          if (snapshot.hasData) {
-                            return Text(
-                              'Version ${snapshot.data!.version}',
-                              style: const TextStyle(fontSize: 14.0),
-                            );
-                          }
-                          return const SizedBox.shrink();
-                        },
-                      ),
-                      const SizedBox(height: 25),
-                      Text(
-                        context.t.appDescription,
-                        style: const TextStyle(fontSize: 16.0),
-                        textAlign: TextAlign.justify,
-                      ),
-                    ],
-                  ),
-                ),
+            SettingsTile.switchTile(
+              initialValue: _musicEnabled,
+              onToggle: (value) {
+                setState(() => _musicEnabled = value);
+                _audioService.setMusicEnabled(value);
               },
+              leading: Icon(_musicEnabled ? Icons.music_note : Icons.music_off),
+              title: Text(context.t.music),
             ),
-            SettingsTile.navigation(
-              leading: const Icon(Icons.campaign),
-              trailing: const Icon(Icons.chevron_right),
-              title: Text(context.t.recommandApp),
-              onPressed: (context) => {
-                showFloatingModalBottomSheet(
-                  context: context,
-                  builder: (context) => Material(
-                    child: SafeArea(
-                      top: false,
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          ListTile(
-                            title: Text(context.t.byWhatsapp),
-                            trailing: SvgPicture.asset(
-                              'assets/images/whatsapp.svg',
-                              width: 21.0,
-                              height: 21.0,
-                            ),
-                            onTap: () => settings.share(ShareOptions.whatsapp),
-                          ),
-                          ListTile(
-                            title: Text(context.t.byEmail),
-                            trailing: const Icon(
-                              Icons.email,
-                              size: 21.0,
-                            ),
-                            onTap: () => settings.share(ShareOptions.email),
-                          ),
-                          ListTile(
-                            title: Text(context.t.bySms),
-                            trailing: const Icon(
-                              Icons.sms,
-                              size: 21.0,
-                            ),
-                            onTap: () => settings.share(ShareOptions.sms),
-                          ),
-                          ListTile(
-                            title: Text(context.t.share),
-                            trailing: const Icon(
-                              Icons.share,
-                              size: 21.0,
-                            ),
-                            onTap: () => settings.share(ShareOptions.free),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+            SettingsTile.switchTile(
+              initialValue: _soundEnabled,
+              onToggle: (value) {
+                setState(() => _soundEnabled = value);
+                _audioService.setSoundEnabled(value);
               },
+              leading: Icon(_soundEnabled ? Icons.volume_up : Icons.volume_off),
+              title: Text(context.t.song),
             ),
           ],
         ),
