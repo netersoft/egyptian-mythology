@@ -10,29 +10,40 @@ import '../../../core/services/audio/audio_service.dart';
 import '../../../core/services/di/locator.dart';
 import '../../../core/services/i18n/config.dart';
 import '../../../core/services/i18n/translations.g.dart';
+import '../../components/backgrounds/pyramid_background.dart';
+import '../../components/misc/app_header_card.dart';
 import '../../components/misc/floating_modal.dart';
-import '../../themes/app_theme.dart';
+import '../../themes/app_colors.dart';
+
+// Mirrors the legacy activity_settings.xml: pyramid backdrop, Thot portrait,
+// gold-on-black rows -- rather than settings_ui's default Material list.
+const _egyptianSettingsTheme = SettingsThemeData(
+  settingsListBackground: Colors.transparent,
+  settingsSectionBackground: Color(0x99000000),
+  dividerColor: AppColors.goldenRod,
+  titleTextColor: AppColors.yellow,
+  settingsTileTextColor: AppColors.yellow,
+  trailingTextColor: AppColors.goldenRod,
+  leadingIconsColor: AppColors.goldenYellow,
+);
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(
-      elevation: 0.0,
-      title: Text(
-        context.t.settings,
-        style: const TextStyle(color: Colors.white),
-      ),
-      backgroundColor: AppTheme.getAppbarBgColor(),
-      leading: IconButton(
-        icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
-        onPressed: () {
-          context.pop();
-        },
+    body: PyramidBackground(
+      child: SafeArea(
+        child: Column(
+          children: [
+            AppHeaderCard(title: context.t.settings),
+            Image.asset('assets/images/egyptian/thot.png', height: 140, fit: BoxFit.contain),
+            const SizedBox(height: 16),
+            const Expanded(child: SettingsListWrapper()),
+          ],
+        ),
       ),
     ),
-    body: const SettingsListWrapper(),
   );
 }
 
@@ -58,6 +69,8 @@ class _SettingsListWrapperState extends ConsumerState<SettingsListWrapper> {
     );
 
     return SettingsList(
+      lightTheme: _egyptianSettingsTheme,
+      darkTheme: _egyptianSettingsTheme,
       sections: [
         SettingsSection(
           tiles: <SettingsTile>[
