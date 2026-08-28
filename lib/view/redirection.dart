@@ -2,11 +2,11 @@ import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:lottie/lottie.dart';
 
 import '../core/providers/navigation/redirection_provider.dart';
+import '../core/services/i18n/translations.g.dart';
+import 'components/backgrounds/pyramid_background.dart';
 import 'themes/app_colors.dart';
-import 'themes/app_theme.dart';
 
 /// Redirection screen
 class Redirection extends ConsumerStatefulWidget {
@@ -24,15 +24,11 @@ class RedirectionState extends ConsumerState<Redirection> {
     FlutterNativeSplash.remove();
   }
 
-  /// Builds a FlutterSplashScreen widget with a centered Lottie animation.
+  /// Builds a FlutterSplashScreen widget mirroring the legacy activity_splash.xml:
+  /// pyramid backdrop, "EGYPTIAN" / "MYTHOLOGY" title, indeterminate loading bar.
   ///
-  /// The splash screen has a blue background color and a duration of 2000 milliseconds.
   /// When the splash screen ends, it calls the [redirect] method of the [redirectionProvider]
   /// with the current [BuildContext].
-  ///
-  /// Returns a [Widget] representing the splash screen.
-  /// But if you don't use animation, just return a [Container] widget like this:
-  /// Container(color: isLightTheme() ? Colors.white : AppColors.raisinBlack);
   @override
   Widget build(BuildContext context) {
     ref.watch(redirectionProvider);
@@ -40,16 +36,41 @@ class RedirectionState extends ConsumerState<Redirection> {
     return FlutterSplashScreen(
       useImmersiveMode: true,
       duration: const Duration(milliseconds: 2000),
-      backgroundColor: AppTheme.pickColor(
-        light: AppTheme.primaryColor,
-        dark: AppColors.raisinBlack,
-      ),
-      splashScreenBody: Center(
-        child: Lottie.asset(
-          'assets/animations/logo.json',
-          repeat: false,
-          height: 200,
-          width: 200,
+      splashScreenBody: PyramidBackground(
+        child: SafeArea(
+          child: Column(
+            children: [
+              const SizedBox(height: 24),
+              Text(
+                context.t.splashTitleLine1,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontFamily: 'cambria',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 42,
+                  color: AppColors.white,
+                ),
+              ),
+              Text(
+                context.t.splashTitleLine2,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontFamily: 'papyrus',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 21,
+                  color: AppColors.white,
+                ),
+              ),
+              const Spacer(),
+              const Padding(
+                padding: EdgeInsets.all(24),
+                child: LinearProgressIndicator(
+                  color: AppColors.yellow,
+                  backgroundColor: Colors.transparent,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       onInit: () {},
