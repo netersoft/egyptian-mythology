@@ -12,6 +12,7 @@ import '../../../core/services/i18n/config.dart';
 import '../../../core/services/i18n/translations.g.dart';
 import '../../components/backgrounds/pyramid_background.dart';
 import '../../components/misc/app_header_card.dart';
+import '../../components/misc/centered_scrollable.dart';
 import '../../components/misc/floating_modal.dart';
 import '../../themes/app_colors.dart';
 
@@ -39,7 +40,7 @@ class SettingsScreen extends StatelessWidget {
             AppHeaderCard(title: context.t.settings),
             Image.asset('assets/images/egyptian/thot.png', height: 140, fit: BoxFit.contain),
             const SizedBox(height: 16),
-            const Expanded(child: SettingsListWrapper()),
+            const Expanded(child: CenteredScrollable(child: SettingsListWrapper())),
           ],
         ),
       ),
@@ -69,6 +70,8 @@ class _SettingsListWrapperState extends ConsumerState<SettingsListWrapper> {
     );
 
     return SettingsList(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       lightTheme: _egyptianSettingsTheme,
       darkTheme: _egyptianSettingsTheme,
       sections: [

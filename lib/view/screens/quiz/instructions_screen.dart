@@ -9,6 +9,7 @@ import '../../../core/services/i18n/translations.g.dart';
 import '../../components/backgrounds/pyramid_background.dart';
 import '../../components/buttons/menu_button.dart';
 import '../../components/misc/app_header_card.dart';
+import '../../components/misc/centered_scrollable.dart';
 import '../../themes/app_colors.dart';
 
 class InstructionsScreen extends StatelessWidget {
@@ -27,7 +28,7 @@ class InstructionsScreen extends StatelessWidget {
           children: [
             AppHeaderCard(title: context.t.quiz),
             Expanded(
-              child: SingleChildScrollView(
+              child: CenteredScrollable(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Text(
                   context.t.instructions,
