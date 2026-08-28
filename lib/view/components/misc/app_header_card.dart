@@ -30,7 +30,10 @@ class AppHeaderCard extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(context.t.appNameAlt, style: const TextStyle(color: AppColors.gray, fontSize: 12)),
+                Text(
+                  context.t.appNameAlt,
+                  style: const TextStyle(color: AppColors.gray, fontSize: 12, fontWeight: FontWeight.w300),
+                ),
                 TypewriterText(
                   text: title,
                   style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
