@@ -1,4 +1,4 @@
-import 'package:flutter_starter/core/services/quiz/quiz_service.dart';
+import 'package:egyptian_mythology/core/services/quiz/quiz_service.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

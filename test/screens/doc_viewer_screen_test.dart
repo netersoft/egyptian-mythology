@@ -1,8 +1,8 @@
+import 'package:egyptian_mythology/core/routes/app_route.dart';
+import 'package:egyptian_mythology/core/routes/router.dart';
+import 'package:egyptian_mythology/core/services/i18n/translations.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_starter/core/routes/app_route.dart';
-import 'package:flutter_starter/core/routes/router.dart';
-import 'package:flutter_starter/core/services/i18n/translations.g.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../helpers/test_utils.dart';

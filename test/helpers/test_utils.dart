@@ -1,10 +1,10 @@
+import 'package:egyptian_mythology/core/helpers/router/navigation_helper.dart';
+import 'package:egyptian_mythology/core/services/audio/audio_service.dart';
+import 'package:egyptian_mythology/core/services/di/locator.dart';
+import 'package:egyptian_mythology/core/services/documentation/documentation_service.dart';
+import 'package:egyptian_mythology/core/services/hive/service.dart';
+import 'package:egyptian_mythology/core/services/shared_preferences/service.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:flutter_starter/core/helpers/router/navigation_helper.dart';
-import 'package:flutter_starter/core/services/audio/audio_service.dart';
-import 'package:flutter_starter/core/services/di/locator.dart';
-import 'package:flutter_starter/core/services/documentation/documentation_service.dart';
-import 'package:flutter_starter/core/services/hive/service.dart';
-import 'package:flutter_starter/core/services/shared_preferences/service.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockSharedPreferencesService extends Mock implements SharedPreferencesService {}

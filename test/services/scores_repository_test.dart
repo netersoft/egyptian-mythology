@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:flutter_starter/core/services/hive/hive_registrar.g.dart';
-import 'package:flutter_starter/core/services/hive/keys.dart';
-import 'package:flutter_starter/core/services/hive/service.dart';
-import 'package:flutter_starter/core/services/scores/scores_repository.dart';
-import 'package:flutter_starter/core/services/shared_preferences/keys.dart';
+import 'package:egyptian_mythology/core/services/hive/hive_registrar.g.dart';
+import 'package:egyptian_mythology/core/services/hive/keys.dart';
+import 'package:egyptian_mythology/core/services/hive/service.dart';
+import 'package:egyptian_mythology/core/services/scores/scores_repository.dart';
+import 'package:egyptian_mythology/core/services/shared_preferences/keys.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hive_ce/hive.dart';
 import 'package:mocktail/mocktail.dart';

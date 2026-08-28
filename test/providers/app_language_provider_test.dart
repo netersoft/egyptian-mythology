@@ -1,4 +1,4 @@
-import 'package:flutter_starter/core/services/i18n/translations.g.dart';
+import 'package:egyptian_mythology/core/services/i18n/translations.g.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

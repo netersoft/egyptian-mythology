@@ -1,7 +1,7 @@
+import 'package:egyptian_mythology/core/enums/app_brightness.dart';
+import 'package:egyptian_mythology/core/providers/account/settings_provider.dart';
+import 'package:egyptian_mythology/core/services/shared_preferences/keys.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_starter/core/enums/app_brightness.dart';
-import 'package:flutter_starter/core/providers/account/settings_provider.dart';
-import 'package:flutter_starter/core/services/shared_preferences/keys.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
