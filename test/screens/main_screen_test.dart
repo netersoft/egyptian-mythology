@@ -4,12 +4,17 @@ import 'package:egyptian_mythology/core/services/i18n/translations.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
 
 import '../helpers/test_utils.dart';
 
 void main() {
   setUp(() async {
-    await setupTestLocator();
+    final mockScoresRepository = MockScoresRepository();
+    when(mockScoresRepository.getAll).thenReturn([]);
+    when(mockScoresRepository.getBestScore).thenReturn(0);
+
+    await setupTestLocator(scoresRepository: mockScoresRepository);
     await LocaleSettings.setLocaleRaw('en');
   });
 

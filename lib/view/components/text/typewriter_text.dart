@@ -27,6 +27,20 @@ class _TypewriterTextState extends State<TypewriterText> {
   @override
   void initState() {
     super.initState();
+    _startTyping();
+  }
+
+  @override
+  void didUpdateWidget(TypewriterText oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.text != widget.text) {
+      _shown = '';
+      _startTyping();
+    }
+  }
+
+  void _startTyping() {
+    _timer?.cancel();
     var charCount = 0;
     _timer = Timer.periodic(widget.characterDelay, (timer) {
       if (charCount >= widget.text.length) {
