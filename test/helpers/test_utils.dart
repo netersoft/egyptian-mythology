@@ -3,6 +3,8 @@ import 'package:egyptian_mythology/core/services/audio/audio_service.dart';
 import 'package:egyptian_mythology/core/services/di/locator.dart';
 import 'package:egyptian_mythology/core/services/documentation/documentation_service.dart';
 import 'package:egyptian_mythology/core/services/hive/service.dart';
+import 'package:egyptian_mythology/core/services/quiz/quiz_service.dart';
+import 'package:egyptian_mythology/core/services/scores/scores_repository.dart';
 import 'package:egyptian_mythology/core/services/shared_preferences/service.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:mocktail/mocktail.dart';
@@ -13,12 +15,18 @@ class MockNavigationHelper extends Mock implements NavigationHelper {}
 
 class MockAudioService extends Mock implements AudioService {}
 
+class MockQuizService extends Mock implements QuizService {}
+
+class MockScoresRepository extends Mock implements ScoresRepository {}
+
 Future<void> setupTestLocator({
   SharedPreferencesService? sharedPreferencesService,
   NavigationHelper? navigationHelper,
   HiveService? hiveService,
   AudioService? audioService,
   DocumentationService? documentationService,
+  QuizService? quizService,
+  ScoresRepository? scoresRepository,
 }) async {
   await dotenv.load();
 
@@ -50,6 +58,14 @@ Future<void> setupTestLocator({
   if (!locator.isRegistered<DocumentationService>()) {
     locator.registerSingleton<DocumentationService>(documentationService ?? DocumentationService());
   }
+
+  if (!locator.isRegistered<QuizService>()) {
+    locator.registerSingleton<QuizService>(quizService ?? QuizService());
+  }
+
+  if (!locator.isRegistered<ScoresRepository>()) {
+    locator.registerSingleton<ScoresRepository>(scoresRepository ?? ScoresRepository());
+  }
 }
 
 void teardownTestLocator() {
@@ -67,5 +83,11 @@ void teardownTestLocator() {
   }
   if (locator.isRegistered<DocumentationService>()) {
     locator.unregister<DocumentationService>();
+  }
+  if (locator.isRegistered<QuizService>()) {
+    locator.unregister<QuizService>();
+  }
+  if (locator.isRegistered<ScoresRepository>()) {
+    locator.unregister<ScoresRepository>();
   }
 }
