@@ -191,4 +191,14 @@ Pushing a `v*` tag (or running the workflow manually) triggers two build jobs in
 - **Android**: `flutter build apk --release --flavor prod`, uploaded as a workflow artifact. Signed with the debug key until the project has its own `key.properties` + keystore (see `android/app/build.gradle`) — good for smoke-testing and manual QA, not for a Play Store release.
 - **iOS**: `flutter build ios --release --no-codesign` — verifies the iOS side still compiles. It does not produce an installable `.ipa`; that requires real Apple Developer signing (Fastlane match, an App Store Connect API key, etc.), not set up yet. Not flavor-aware yet, per the manual iOS step above.
 
-Add real signing (an Android keystore, an Apple Developer account) and store-publishing steps once this app is ready to ship.
+### Android release signing
+
+To build a properly signed Android release (e.g. for a Play Store upload):
+
+1. Drop the release keystore somewhere under `android/` (e.g. `android/app/upload-keystore.jks`).
+2. `cp android/key.properties.example android/key.properties` and fill in `storePassword`, `keyPassword`, `keyAlias`, and `storeFile`.
+3. `flutter build appbundle --release --flavor prod` (or `apk`). `key.properties` is gitignored and read automatically by `android/app/build.gradle`, which then signs with this keystore instead of the debug key.
+
+This app was previously published as `com.neteru.ankh`; reusing the original upload key (or an app-signing-managed equivalent from the Play Console) is required for updates to land on the existing store listing rather than a new one.
+
+Add real signing (an Apple Developer account) and store-publishing steps once this app is ready to ship on iOS.
