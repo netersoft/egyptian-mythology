@@ -90,6 +90,7 @@
   "amon": "Amon",
   "amonRe": "Amon-Rê",
   "anubis": "Anubis",
+  "apophis": "Apophis",
   "aton": "Aton",
   "bastet": "Bastet",
   "bes": "Bès",
@@ -104,6 +105,7 @@
   "maat": "Maât",
   "min": "Min",
   "mout": "Mout",
+  "nefertem": "Nefertoum",
   "neith": "Neith",
   "nekhbet": "Nekhbet",
   "nephtys": "Nephtys",
@@ -115,6 +117,8 @@
   "selkis": "Selkis",
   "seth": "Seth",
   "sobek": "Sobek",
+  "sokar": "Sokar",
   "thot": "Thot",
-  "toueris": "Touèris"
+  "toueris": "Touèris",
+  "wepwawet": "Wepwawet"
 }

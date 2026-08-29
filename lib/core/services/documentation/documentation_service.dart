@@ -79,6 +79,7 @@ class DocumentationService {
     'amon' => t.amon,
     'amon_re' => t.amonRe,
     'anubis' => t.anubis,
+    'apophis' => t.apophis,
     'aton' => t.aton,
     'bastet' => t.bastet,
     'bes' => t.bes,
@@ -93,6 +94,7 @@ class DocumentationService {
     'maat' => t.maat,
     'min' => t.min,
     'mout' => t.mout,
+    'nefertem' => t.nefertem,
     'neith' => t.neith,
     'nekhbet' => t.nekhbet,
     'nephtys' => t.nephtys,
@@ -104,8 +106,10 @@ class DocumentationService {
     'selkis' => t.selkis,
     'seth' => t.seth,
     'sobek' => t.sobek,
+    'sokar' => t.sokar,
     'thot' => t.thot,
     'toueris' => t.toueris,
+    'wepwawet' => t.wepwawet,
     _ => id,
   };
 }
