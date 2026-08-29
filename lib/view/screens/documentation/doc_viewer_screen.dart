@@ -11,6 +11,7 @@ import '../../../core/services/di/locator.dart';
 import '../../../core/services/documentation/documentation_service.dart';
 import '../../../core/services/i18n/translations.g.dart';
 import '../../themes/app_colors.dart';
+import '../../themes/app_decorations.dart';
 import 'doc_widget_factory.dart';
 
 // Mirrors the legacy app's Play Store share link; there's no publish target
@@ -88,6 +89,7 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+    backgroundColor: AppColors.black,
     appBar: AppBar(
       backgroundColor: AppColors.black,
       foregroundColor: AppColors.goldenYellow,
@@ -101,45 +103,45 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
       ],
     ),
     drawer: Drawer(
-      backgroundColor: AppColors.black,
-      child: _items == null
-          ? const Center(child: CircularProgressIndicator(color: AppColors.goldenYellow))
-          : ListView(
-              children: [
-                DrawerHeader(
-                  decoration: const BoxDecoration(color: AppColors.blackRussian),
-                  child: Center(
-                    child: Text(
-                      widget.category.title(t),
-                      style: const TextStyle(color: AppColors.goldenYellow, fontSize: 22, fontWeight: FontWeight.bold),
+      backgroundColor: Colors.transparent,
+      child: DecoratedBox(
+        decoration: AppDecorations.darkGradientBox,
+        child: _items == null
+            ? const Center(child: CircularProgressIndicator(color: AppColors.goldenYellow))
+            : ListView(
+                children: [
+                  DrawerHeader(
+                    decoration: const BoxDecoration(color: AppColors.blackRussian),
+                    child: Center(
+                      child: Text(
+                        widget.category.title(t),
+                        style: const TextStyle(color: AppColors.goldenYellow, fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
-                ),
-                for (final item in _items!)
-                  ListTile(
-                    title: Text(
-                      item.title,
-                      style: TextStyle(color: item.id == _selected?.id ? AppColors.goldenYellow : Colors.white),
+                  for (final item in _items!)
+                    ListTile(
+                      title: Text(
+                        item.title,
+                        style: TextStyle(color: item.id == _selected?.id ? AppColors.goldenYellow : Colors.white),
+                      ),
+                      selected: item.id == _selected?.id,
+                      onTap: () => _onSelect(item),
                     ),
-                    selected: item.id == _selected?.id,
-                    onTap: () => _onSelect(item),
-                  ),
-              ],
-            ),
-    ),
-    body: DecoratedBox(
-      decoration: const BoxDecoration(color: AppColors.black),
-      child: _html == null
-          ? const Center(child: CircularProgressIndicator(color: AppColors.goldenYellow))
-          : SingleChildScrollView(
-              controller: _scrollController,
-              padding: const EdgeInsets.all(16),
-              child: HtmlWidget(
-                _html!,
-                factoryBuilder: DocWidgetFactory.new,
-                textStyle: const TextStyle(fontFamily: 'papyrus', color: AppColors.goldenYellow, fontSize: 16),
+                ],
               ),
-            ),
+      ),
     ),
+    body: _html == null
+        ? const Center(child: CircularProgressIndicator(color: AppColors.goldenYellow))
+        : SingleChildScrollView(
+            controller: _scrollController,
+            padding: const EdgeInsets.all(16),
+            child: HtmlWidget(
+              _html!,
+              factoryBuilder: DocWidgetFactory.new,
+              textStyle: const TextStyle(color: AppColors.goldenYellow, fontSize: 16),
+            ),
+          ),
   );
 }

@@ -11,6 +11,7 @@ import '../../components/buttons/menu_button.dart';
 import '../../components/misc/app_header_card.dart';
 import '../../components/misc/centered_scrollable.dart';
 import '../../themes/app_colors.dart';
+import '../../themes/app_decorations.dart';
 
 class InstructionsScreen extends StatelessWidget {
   const InstructionsScreen({super.key});
@@ -29,11 +30,15 @@ class InstructionsScreen extends StatelessWidget {
             AppHeaderCard(title: context.t.quiz),
             Expanded(
               child: CenteredScrollable(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: Text(
-                  context.t.instructions,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(color: AppColors.yellow, fontSize: 16, height: 1.5),
+                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+                  decoration: AppDecorations.darkGradientBox,
+                  child: Text(
+                    context.t.instructions,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(color: AppColors.yellow, fontSize: 16, height: 1.5),
+                  ),
                 ),
               ),
             ),

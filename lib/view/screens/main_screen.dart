@@ -10,6 +10,7 @@ import '../../core/services/di/locator.dart';
 import '../../core/services/i18n/translations.g.dart';
 import '../components/backgrounds/pyramid_background.dart';
 import '../components/buttons/menu_button.dart';
+import '../components/dialogs/egyptian_alert_dialog.dart';
 import '../components/misc/app_header_card.dart';
 import '../themes/app_colors.dart';
 import '../themes/app_theme.dart';
@@ -32,17 +33,17 @@ class _MainScreenState extends State<MainScreen> {
   Future<bool> _confirmExit() async {
     final result = await showDialog<bool>(
       context: context,
-      builder: (dialogContext) => AlertDialog(
-        title: Text(dialogContext.t.exitTitle),
-        content: Text(dialogContext.t.exitMsg),
+      builder: (dialogContext) => EgyptianAlertDialog(
+        title: dialogContext.t.exitTitle,
+        content: dialogContext.t.exitMsg,
         actions: [
-          TextButton(
+          EgyptianDialogAction(
+            label: dialogContext.t.cancel,
             onPressed: () => Navigator.of(dialogContext).pop(false),
-            child: Text(dialogContext.t.cancel),
           ),
-          TextButton(
+          EgyptianDialogAction(
+            label: dialogContext.t.yes,
             onPressed: () => Navigator.of(dialogContext).pop(true),
-            child: Text(dialogContext.t.yes),
           ),
         ],
       ),

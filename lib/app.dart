@@ -62,7 +62,14 @@ class AppRouterView extends StatelessWidget {
         ],
         routerConfig: router,
         onGenerateTitle: (ctx) => t.appNameAlt,
-        builder: EasyLoading.init(),
+        // Papyrus (the app-wide default font, matching the legacy app's global
+        // Calligraphy override) reads smaller than a standard UI sans at the same
+        // point size, so scale all text up to compensate -- as the legacy app's
+        // hand-picked sp values already did per-screen.
+        builder: (context, child) => MediaQuery(
+          data: MediaQuery.of(context).copyWith(textScaler: const TextScaler.linear(1.2)),
+          child: EasyLoading.init()(context, child),
+        ),
       ),
     ),
   );

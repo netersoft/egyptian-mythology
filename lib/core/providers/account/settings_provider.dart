@@ -1,7 +1,6 @@
 import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../enums/app_brightness.dart';
 import '../../helpers/router/navigation_helper.dart';
 import '../../routes/app_route.dart';
 import '../../services/di/locator.dart';
@@ -29,6 +28,7 @@ class Settings extends _$Settings {
   Future<void> changeLanguage(String newValue) async {
     final navigator = _navigationHelper.navigatorKey.currentState;
     await LocaleSettings.setLocaleRaw(newValue);
+    await prefs.setString(PrefKeys.locale, newValue);
 
     try {
       _navigationHelper.go(const SettingsRoute().location);
@@ -37,25 +37,6 @@ class Settings extends _$Settings {
       }
     } catch (e) {
       _navigationHelper.pushReplacement(const RedirectionRoute().location);
-    }
-  }
-
-  String? getAppBrightness() => prefs.getString(
-    PrefKeys.brightness,
-    defaultValue: AppBrightness.system.name,
-  );
-
-  void setAppBrightness(String appBrightness, {bool relaunch = true}) {
-    prefs.setString(PrefKeys.brightness, appBrightness);
-
-    if (relaunch) {
-      try {
-        _navigationHelper.go(const SettingsRoute().location);
-        var ctx = _navigationHelper.navigatorKey.currentContext;
-        if (ctx != null) Phoenix.rebirth(ctx);
-      } catch (e) {
-        _navigationHelper.pushReplacement(const RedirectionRoute().location);
-      }
     }
   }
 }

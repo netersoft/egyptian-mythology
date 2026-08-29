@@ -3,16 +3,6 @@
 # Check in to version control
 nextTypeId: 139
 types:
-  AppBrightness:
-    typeId: 118
-    nextIndex: 3
-    fields:
-      light:
-        index: 0
-      dark:
-        index: 1
-      system:
-        index: 2
   ScoreEntryModel:
     typeId: 138
     nextIndex: 2

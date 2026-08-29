@@ -48,7 +48,10 @@ class DocumentationService {
     }
 
     for (final match in RegExp(r'<section id="([^"]+)">([\s\S]*?)</section>').allMatches(raw)) {
-      map[match.group(1)!] = _rewriteImageSrcs(match.group(2)!);
+      // Each section opens with an <h2> repeating the deity's name -- already
+      // shown as the AppBar title, so drop it here rather than duplicate it.
+      final body = match.group(2)!.replaceFirst(RegExp(r'^\s*<h2>.*?</h2>\s*', dotAll: true), '');
+      map[match.group(1)!] = _rewriteImageSrcs(body);
     }
 
     _godsContentCache[locale] = map;

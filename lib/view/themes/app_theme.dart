@@ -3,11 +3,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-import '../../core/enums/app_brightness.dart';
 import '../../core/extensions/color_extension.dart';
-import '../../core/services/di/locator.dart';
-import '../../core/services/shared_preferences/keys.dart';
-import '../../core/services/shared_preferences/service.dart';
 import '../../core/tools/constants/delays.dart';
 import '../../core/tools/functions/color_functions.dart';
 import 'app_colors.dart';
@@ -23,22 +19,9 @@ abstract class AppTheme {
     dotenv.get('APP_ACCENT_COLOR'),
   );
 
-  static const String _fontFamily = 'montserrat';
+  static const String _fontFamily = 'papyrus';
 
-  static final SharedPreferencesService prefs = locator<SharedPreferencesService>();
-
-  static bool isLight() {
-    String? brightness = prefs.getString(
-      PrefKeys.brightness,
-      defaultValue: AppBrightness.system.name,
-    );
-
-    if (brightness == AppBrightness.light.name) return true;
-
-    if (brightness == AppBrightness.dark.name) return false;
-
-    return SchedulerBinding.instance.platformDispatcher.platformBrightness == Brightness.light;
-  }
+  static bool isLight() => SchedulerBinding.instance.platformDispatcher.platformBrightness == Brightness.light;
 
   static Color getContentRelativeColor(Color color) {
     if (color == primaryColor) return Colors.white;
