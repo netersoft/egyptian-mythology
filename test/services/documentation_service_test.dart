@@ -13,14 +13,18 @@ void main() {
   });
 
   group('DocumentationService', () {
-    test('loads all 32 god items (intro + 31 deities) with resolved titles', () async {
+    test('loads all 36 god items (intro + 35 deities) with resolved titles', () async {
       final items = await docs.loadItems(DocCategory.gods, 'en', t);
 
-      expect(items.length, 32);
+      expect(items.length, 36);
       expect(items.first.id, 'intro');
       expect(items.first.title, 'Introduction');
       expect(items.firstWhere((i) => i.id == 'anubis').title, 'Anubis');
       expect(items.firstWhere((i) => i.id == 'amon_re').title, 'Amun-Re');
+      expect(items.firstWhere((i) => i.id == 'apophis').title, 'Apophis');
+      expect(items.firstWhere((i) => i.id == 'nefertem').title, 'Nefertem');
+      expect(items.firstWhere((i) => i.id == 'sokar').title, 'Sokar');
+      expect(items.firstWhere((i) => i.id == 'wepwawet').title, 'Wepwawet');
     });
 
     test('loads all 5 cosmogony items with resolved titles', () async {

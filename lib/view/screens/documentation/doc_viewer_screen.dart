@@ -136,7 +136,7 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
         ? const Center(child: CircularProgressIndicator(color: AppColors.goldenYellow))
         : SingleChildScrollView(
             controller: _scrollController,
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 48),
             child: HtmlWidget(
               _html!,
               factoryBuilder: DocWidgetFactory.new,
