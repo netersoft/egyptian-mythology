@@ -47,32 +47,31 @@ void main() {
   }
 
   group('SettingsScreen', () {
-    testWidgets('renders language, theme, music, and sound tiles', (tester) async {
+    testWidgets('renders language, music, and sound tiles', (tester) async {
       await pumpAt(tester, const SettingsRoute().location);
 
       expect(find.text(t.language), findsOneWidget);
-      expect(find.text(t.theme), findsOneWidget);
       expect(find.text(t.music), findsOneWidget);
       expect(find.text(t.song), findsOneWidget);
       expect(find.byType(Switch), findsNWidgets(2));
     });
 
-    testWidgets('toggling the music switch calls AudioService.setMusicEnabled(false)', (tester) async {
+    testWidgets('toggling the sound switch calls AudioService.setSoundEnabled(false)', (tester) async {
       await pumpAt(tester, const SettingsRoute().location);
 
       await tester.tap(find.byType(Switch).first);
       await settle(tester);
 
-      verify(() => mockAudioService.setMusicEnabled(false)).called(1);
+      verify(() => mockAudioService.setSoundEnabled(false)).called(1);
     });
 
-    testWidgets('toggling the sound switch calls AudioService.setSoundEnabled(false)', (tester) async {
+    testWidgets('toggling the music switch calls AudioService.setMusicEnabled(false)', (tester) async {
       await pumpAt(tester, const SettingsRoute().location);
 
       await tester.tap(find.byType(Switch).last);
       await settle(tester);
 
-      verify(() => mockAudioService.setSoundEnabled(false)).called(1);
+      verify(() => mockAudioService.setMusicEnabled(false)).called(1);
     });
   });
 

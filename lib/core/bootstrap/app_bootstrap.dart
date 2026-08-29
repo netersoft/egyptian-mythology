@@ -8,6 +8,8 @@ import '../services/crash_reporting/service.dart';
 import '../services/di/locator.dart';
 import '../services/firebase/service.dart';
 import '../services/i18n/translations.g.dart';
+import '../services/shared_preferences/keys.dart';
+import '../services/shared_preferences/service.dart';
 
 class AppBootstrapConfig {
   final String envFileName;
@@ -41,5 +43,10 @@ Future<void> bootstrapApp({
 
   await setupLocator();
 
-  await LocaleSettings.useDeviceLocale();
+  final savedLocale = locator<SharedPreferencesService>().getString(PrefKeys.locale);
+  if (savedLocale != null) {
+    await LocaleSettings.setLocaleRaw(savedLocale);
+  } else {
+    await LocaleSettings.useDeviceLocale();
+  }
 }

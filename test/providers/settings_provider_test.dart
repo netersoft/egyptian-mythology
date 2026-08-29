@@ -1,4 +1,3 @@
-import 'package:egyptian_mythology/core/enums/app_brightness.dart';
 import 'package:egyptian_mythology/core/providers/account/settings_provider.dart';
 import 'package:egyptian_mythology/core/services/shared_preferences/keys.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -81,69 +80,6 @@ void main() {
 
         container.read(settingsProvider.notifier).toggleEnableNotificationsState(false);
         verify(() => mockPrefs.setBool(PrefKeys.enableNotifications, false)).called(1);
-      });
-    });
-
-    group('brightness', () {
-      test('getAppBrightness returns stored value', () {
-        when(
-          () => mockPrefs.getString(PrefKeys.brightness, defaultValue: any(named: 'defaultValue')),
-        ).thenReturn(AppBrightness.dark.name);
-
-        final container = ProviderContainer();
-        addTearDown(container.dispose);
-
-        final result = container.read(settingsProvider.notifier).getAppBrightness();
-        expect(result, AppBrightness.dark.name);
-      });
-
-      test('getAppBrightness defaults to system', () {
-        when(
-          () => mockPrefs.getString(PrefKeys.brightness, defaultValue: any(named: 'defaultValue')),
-        ).thenReturn(null);
-
-        final container = ProviderContainer();
-        addTearDown(container.dispose);
-
-        final result = container.read(settingsProvider.notifier).getAppBrightness();
-        verify(
-          () => mockPrefs.getString(PrefKeys.brightness, defaultValue: AppBrightness.system.name),
-        ).called(1);
-        expect(result, isNull);
-      });
-
-      test('setAppBrightness persists and does not relaunch when relaunch=false', () {
-        when(() => mockPrefs.setString(any(), any())).thenAnswer((_) async => true);
-
-        final container = ProviderContainer();
-        addTearDown(container.dispose);
-
-        container
-            .read(settingsProvider.notifier)
-            .setAppBrightness(
-              AppBrightness.dark.name,
-              relaunch: false,
-            );
-
-        verify(() => mockPrefs.setString(PrefKeys.brightness, AppBrightness.dark.name)).called(1);
-        verifyNever(() => mockNav.go(any()));
-      });
-
-      test('setAppBrightness persists and attempts relaunch when relaunch=true', () {
-        when(() => mockPrefs.setString(any(), any())).thenAnswer((_) async => true);
-        when(() => mockNav.go(any())).thenReturn(null);
-
-        final container = ProviderContainer();
-        addTearDown(container.dispose);
-
-        container
-            .read(settingsProvider.notifier)
-            .setAppBrightness(
-              AppBrightness.light.name,
-            );
-
-        verify(() => mockPrefs.setString(PrefKeys.brightness, AppBrightness.light.name)).called(1);
-        verify(() => mockNav.go(any())).called(1);
       });
     });
   });

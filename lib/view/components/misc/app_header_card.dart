@@ -32,11 +32,11 @@ class AppHeaderCard extends StatelessWidget {
               children: [
                 Text(
                   context.t.appNameAlt,
-                  style: const TextStyle(color: AppColors.gray, fontSize: 12, fontWeight: FontWeight.w300),
+                  style: const TextStyle(color: AppColors.dimGray, fontSize: 13, fontWeight: FontWeight.w600),
                 ),
                 TypewriterText(
                   text: title,
-                  style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                  style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 16),
                 ),
               ],
             ),

@@ -44,6 +44,7 @@ class RedirectionState extends ConsumerState<Redirection> {
               Text(
                 context.t.splashTitleLine1,
                 textAlign: TextAlign.center,
+                textScaler: TextScaler.noScaling,
                 style: const TextStyle(
                   fontFamily: 'cambria',
                   fontWeight: FontWeight.bold,
