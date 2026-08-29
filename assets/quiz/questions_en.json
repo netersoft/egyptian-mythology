@@ -210,13 +210,13 @@
   },
   {
     "id": 20,
-    "question": "What is the goddess wife of Seth and protector of the dead",
-    "answer": "Nephtys",
+    "question": "Which organ does Nephthys protect among the canopic jars",
+    "answer": "The lungs",
     "choices": [
-      "Nephtys",
-      "Isis",
-      "Hathor",
-      "Bastet"
+      "The lungs",
+      "The liver",
+      "The stomach",
+      "The intestines"
     ]
   },
   {
@@ -247,8 +247,8 @@
     "answer": "Horus",
     "choices": [
       "Horus",
-      "Beerus",
-      "Thot",
+      "Khonsu",
+      "Thoth",
       "Atum"
     ]
   },
@@ -566,7 +566,7 @@
     "answer": "Amemet",
     "choices": [
       "Amemet",
-      "Caulifla",
+      "Nekhbet",
       "Sekhmet",
       "Tauret"
     ]
@@ -634,7 +634,7 @@
       "Ptah",
       "Aten",
       "Amun",
-      "Hakaishin"
+      "Khnum"
     ]
   },
   {
@@ -771,35 +771,35 @@
   },
   {
     "id": 71,
-    "question": "What did the couple Heh and Hehet represent in the cosmogony of Hermopolis",
-    "answer": "The infinite",
+    "question": "Where was Ptah's main sanctuary, seat of royal power from the first dynasty onward",
+    "answer": "Memphis",
     "choices": [
-      "The infinite",
-      "The water",
-      "The mysterious",
-      "The darkness"
+      "Memphis",
+      "Thebes",
+      "Heliopolis",
+      "Abydos"
     ]
   },
   {
     "id": 72,
-    "question": "What did the couple Kek and Keket represent in the cosmogony of Hermopolis",
-    "answer": "The darkness",
+    "question": "Which sacred animal was Ptah's cult associated with at Memphis, regarded as his living incarnation",
+    "answer": "The Apis bull",
     "choices": [
-      "The darkness",
-      "The water",
-      "The mysterious",
-      "The infinite"
+      "The Apis bull",
+      "The sacred cat",
+      "The sacred crocodile",
+      "The sacred falcon"
     ]
   },
   {
     "id": 73,
-    "question": "What name is given to the eye of Re whose tears gave birth to human beings",
-    "answer": "udjat",
+    "question": "According to the Heliopolitan cosmogony, what were the first humans born from",
+    "answer": "The demiurge's tears",
     "choices": [
-      "udjat",
-      "Khnum",
-      "Ankh",
-      "Nekhbet"
+      "The demiurge's tears",
+      "Re's sweat",
+      "Nile mud",
+      "Shu's breath"
     ]
   },
   {
@@ -1090,13 +1090,13 @@
   },
   {
     "id": 100,
-    "question": "What goddess fought Apophis in the Duat after Re's death",
-    "answer": "Bastet",
+    "question": "Which goddess furiously stops an attack by Apophis during Re's nightly journey",
+    "answer": "Serket (Selkis)",
     "choices": [
+      "Serket (Selkis)",
       "Bastet",
-      "Sekhmet",
-      "Isis",
-      "Hathor"
+      "Neith",
+      "Maat"
     ]
   },
   {
@@ -1109,5 +1109,478 @@
       "Tutankhamon",
       "Sethi"
     ]
+  },
+  {
+    "question": "Where does Isis take refuge to hide the infant Horus",
+    "answer": "The marshes of Chemmis",
+    "choices": [
+      "The marshes of Chemmis",
+      "The temple of Philae",
+      "The city of Byblos",
+      "The oasis of Siwa"
+    ],
+    "id": 102
+  },
+  {
+    "question": "Into what animal form do Horus and Seth transform for their duel in the Nile",
+    "answer": "Hippopotamuses",
+    "choices": [
+      "Hippopotamuses",
+      "Crocodiles",
+      "Serpents",
+      "Bulls"
+    ],
+    "id": 103
+  },
+  {
+    "question": "Who tears out Horus' eyes during their struggle for the throne",
+    "answer": "Seth",
+    "choices": [
+      "Seth",
+      "Apophis",
+      "Sobek",
+      "Thoth"
+    ],
+    "id": 104
+  },
+  {
+    "question": "Which goddess heals Horus' eyes after Seth tears them out",
+    "answer": "Hathor",
+    "choices": [
+      "Hathor",
+      "Isis",
+      "Neith",
+      "Maat"
+    ],
+    "id": 105
+  },
+  {
+    "question": "What is the protective symbol born from the healing of Horus' eye called",
+    "answer": "The Eye of Horus (Wedjat)",
+    "choices": [
+      "The Eye of Horus (Wedjat)",
+      "The Ankh",
+      "The Uraeus",
+      "The Djed"
+    ],
+    "id": 106
+  },
+  {
+    "question": "What trick allows Horus to win the stone-boat race against Seth",
+    "answer": "He uses a wooden boat coated in plaster",
+    "choices": [
+      "He uses a wooden boat coated in plaster",
+      "He sinks Seth's boat with Sobek's help",
+      "He steals Seth's boat during the night",
+      "He asks Thoth to summon a storm"
+    ],
+    "id": 107
+  },
+  {
+    "question": "Who threatens the divine tribunal with sending messengers if Horus is not crowned",
+    "answer": "Osiris",
+    "choices": [
+      "Osiris",
+      "Isis",
+      "Nephthys",
+      "Anubis"
+    ],
+    "id": 108
+  },
+  {
+    "question": "For how many years does the divine tribunal hesitate between Horus and Seth",
+    "answer": "80 years",
+    "choices": [
+      "80 years",
+      "28 years",
+      "12 years",
+      "400 years"
+    ],
+    "id": 109
+  },
+  {
+    "question": "What role is Seth given after Horus' coronation",
+    "answer": "Protecting Re's barque from Apophis",
+    "choices": [
+      "Protecting Re's barque from Apophis",
+      "Ruling over the kingdom of the dead",
+      "Becoming the new messenger of the gods",
+      "Guarding the gates of the Duat"
+    ],
+    "id": 110
+  },
+  {
+    "question": "How many scorpions escort Isis as she flees through the delta with Horus",
+    "answer": "7",
+    "choices": [
+      "7",
+      "4",
+      "12",
+      "3"
+    ],
+    "id": 111
+  },
+  {
+    "question": "On which magical stela was Isis' spell against scorpion venom copied",
+    "answer": "The Metternich Stela",
+    "choices": [
+      "The Metternich Stela",
+      "The Rosetta Stone",
+      "The Shabaka Stone",
+      "The Palermo Stone"
+    ],
+    "id": 112
+  },
+  {
+    "question": "Why can Apophis never be permanently destroyed",
+    "answer": "Because he was never created",
+    "choices": [
+      "Because he was never created",
+      "Because he lives in the Nun, out of reach",
+      "Because he regenerates through Re",
+      "Because he is protected by Seth"
+    ],
+    "id": 113
+  },
+  {
+    "question": "What is the daily temple ritual meant to help Re defeat Apophis called",
+    "answer": "The Book of Overthrowing Apophis",
+    "choices": [
+      "The Book of Overthrowing Apophis",
+      "The Book of the Dead",
+      "The Book of Gates",
+      "The Book of Thoth"
+    ],
+    "id": 114
+  },
+  {
+    "question": "Nefertem is the god of which flower",
+    "answer": "The blue lotus",
+    "choices": [
+      "The blue lotus",
+      "The papyrus",
+      "The lily",
+      "The white water lily"
+    ],
+    "id": 115
+  },
+  {
+    "question": "Who are Nefertem's parents in the Memphite triad",
+    "answer": "Ptah and Sekhmet",
+    "choices": [
+      "Ptah and Sekhmet",
+      "Amun and Mut",
+      "Osiris and Isis",
+      "Re and Hathor"
+    ],
+    "id": 116
+  },
+  {
+    "question": "What crown does the god Sokar wear",
+    "answer": "The atef crown",
+    "choices": [
+      "The atef crown",
+      "The double crown",
+      "The red crown",
+      "The white crown"
+    ],
+    "id": 117
+  },
+  {
+    "question": "What is the name of Sokar's sacred barque carried in procession during his feast",
+    "answer": "The Henu",
+    "choices": [
+      "The Henu",
+      "The Barque of Millions of Years",
+      "The Neshmet",
+      "The Mesektet"
+    ],
+    "id": 118
+  },
+  {
+    "question": "What does the name of the god Wepwawet mean",
+    "answer": "Opener of the ways",
+    "choices": [
+      "Opener of the ways",
+      "Guardian of the dead",
+      "Judge of souls",
+      "Bearer of light"
+    ],
+    "id": 119
+  },
+  {
+    "question": "Where was Wepwawet's main cult centre located",
+    "answer": "Asyut",
+    "choices": [
+      "Asyut",
+      "Buto",
+      "Sais",
+      "Edfu"
+    ],
+    "id": 120
+  },
+  {
+    "question": "Which god takes the place of demiurge in the Theban cosmogony",
+    "answer": "Amun",
+    "choices": [
+      "Amun",
+      "Ptah",
+      "Thoth",
+      "Re"
+    ],
+    "id": 121
+  },
+  {
+    "question": "What is the name of the winged serpent from which Amun is said to have emerged at the dawn of the world",
+    "answer": "Kematef",
+    "choices": [
+      "Kematef",
+      "Apophis",
+      "Mehen",
+      "Irta"
+    ],
+    "id": 122
+  },
+  {
+    "question": "Which god, brought forth by Amun, shaped the earth and the Ogdoad in the Theban cosmogony",
+    "answer": "Irta",
+    "choices": [
+      "Irta",
+      "Kematef",
+      "Ptah",
+      "Shu"
+    ],
+    "id": 123
+  },
+  {
+    "question": "Which temple became the largest religious complex ever built in Egypt under the New Kingdom",
+    "answer": "Karnak",
+    "choices": [
+      "Karnak",
+      "Abu Simbel",
+      "Luxor",
+      "Edfu"
+    ],
+    "id": 124
+  },
+  {
+    "question": "Where was Isis' great cult centre, active until the 6th century CE",
+    "answer": "Philae",
+    "choices": [
+      "Philae",
+      "Bubastis",
+      "Sais",
+      "Edfu"
+    ],
+    "id": 125
+  },
+  {
+    "question": "Where was Khnum's main sanctuary located",
+    "answer": "Elephantine",
+    "choices": [
+      "Elephantine",
+      "Kom Ombo",
+      "Asyut",
+      "Thebes"
+    ],
+    "id": 126
+  },
+  {
+    "question": "Where was Bastet's great cult centre, described in festival by Herodotus",
+    "answer": "Bubastis",
+    "choices": [
+      "Bubastis",
+      "Memphis",
+      "Heliopolis",
+      "Sais"
+    ],
+    "id": 127
+  },
+  {
+    "question": "What are Sobek's two great cult centres",
+    "answer": "Kom Ombo and the Faiyum",
+    "choices": [
+      "Kom Ombo and the Faiyum",
+      "Elephantine and Asyut",
+      "Bubastis and Sais",
+      "Thebes and Memphis"
+    ],
+    "id": 128
+  },
+  {
+    "question": "Which pharaoh held Sobek in particular devotion in the Faiyum",
+    "answer": "Amenemhat III",
+    "choices": [
+      "Amenemhat III",
+      "Akhenaten",
+      "Seti I",
+      "Ramesses II"
+    ],
+    "id": 129
+  },
+  {
+    "question": "Where was Neith's cult centre, capital of the 26th Dynasty",
+    "answer": "Sais",
+    "choices": [
+      "Sais",
+      "Bubastis",
+      "Buto",
+      "Nekheb"
+    ],
+    "id": 130
+  },
+  {
+    "question": "Where was the sanctuary of Nekhbet, the vulture goddess",
+    "answer": "Nekheb (El Kab)",
+    "choices": [
+      "Nekheb (El Kab)",
+      "Buto",
+      "Sais",
+      "Elephantine"
+    ],
+    "id": 131
+  },
+  {
+    "question": "Where was the cult centre of Wadjet, the cobra goddess",
+    "answer": "Buto",
+    "choices": [
+      "Buto",
+      "Nekheb",
+      "Sais",
+      "Kom Ombo"
+    ],
+    "id": 132
+  },
+  {
+    "question": "Which pharaoh proudly bore the name of Seth before the god's later vilification",
+    "answer": "Seti I",
+    "choices": [
+      "Seti I",
+      "Akhenaten",
+      "Tutankhamun",
+      "Amenemhat III"
+    ],
+    "id": 133
+  },
+  {
+    "question": "Which Greek god was linked with Thoth at Hermopolis from the Greco-Roman period onward",
+    "answer": "Hermes",
+    "choices": [
+      "Hermes",
+      "Zeus",
+      "Apollo",
+      "Hades"
+    ],
+    "id": 134
+  },
+  {
+    "question": "Which deity represents Ptah's 'Thought' in Memphite theology",
+    "answer": "Horus",
+    "choices": [
+      "Horus",
+      "Thoth",
+      "Sekhmet",
+      "Nefertem"
+    ],
+    "id": 135
+  },
+  {
+    "question": "On which ancient monument, rediscovered at the British Museum, was Memphite theology engraved",
+    "answer": "The Shabaka Stone",
+    "choices": [
+      "The Shabaka Stone",
+      "The Rosetta Stone",
+      "The Metternich Stela",
+      "The Narmer Palette"
+    ],
+    "id": 136
+  },
+  {
+    "question": "What composite deity results from the fusion of Ptah, Sokar, and Osiris",
+    "answer": "Ptah-Sokar-Osiris",
+    "choices": [
+      "Ptah-Sokar-Osiris",
+      "Amun-Re",
+      "Re-Horakhty",
+      "Osiris-Re"
+    ],
+    "id": 137
+  },
+  {
+    "question": "How do the gods manage to stop Sekhmet's rampage",
+    "answer": "By spreading beer dyed red across the land",
+    "choices": [
+      "By spreading beer dyed red across the land",
+      "By locking her in the Duat",
+      "By having Thoth put her to sleep",
+      "By offering her the throne of Egypt"
+    ],
+    "id": 138
+  },
+  {
+    "question": "On the back of which celestial animal does Re rise into the sky after this episode",
+    "answer": "The celestial cow Nut",
+    "choices": [
+      "The celestial cow Nut",
+      "The falcon Horus",
+      "The scarab Khepri",
+      "The ram Khnum"
+    ],
+    "id": 139
+  },
+  {
+    "question": "Which goddess bears the epithet 'great of magic,' for having wrested his secret name from Re",
+    "answer": "Isis",
+    "choices": [
+      "Isis",
+      "Hathor",
+      "Maat",
+      "Sekhmet"
+    ],
+    "id": 140
+  },
+  {
+    "question": "What does the name of the goddess Nephthys mean",
+    "answer": "Lady of the mansion",
+    "choices": [
+      "Lady of the mansion",
+      "Opener of the ways",
+      "Great of magic",
+      "She who is powerful"
+    ],
+    "id": 141
+  },
+  {
+    "question": "What profession did the priests of Sekhmet claim in ancient Egypt",
+    "answer": "Physicians",
+    "choices": [
+      "Physicians",
+      "Architects",
+      "Scribes",
+      "Embalmers"
+    ],
+    "id": 142
+  },
+  {
+    "question": "Which divine triad does Khnum form at Elephantine",
+    "answer": "Khnum, Satet, and Anuket",
+    "choices": [
+      "Khnum, Satet, and Anuket",
+      "Ptah, Sekhmet, and Nefertem",
+      "Amun, Mut, and Khonsu",
+      "Osiris, Isis, and Horus"
+    ],
+    "id": 143
+  },
+  {
+    "question": "Which god did Wepwawet gradually become confused with, due to their shared funerary role",
+    "answer": "Anubis",
+    "choices": [
+      "Anubis",
+      "Thoth",
+      "Sokar",
+      "Osiris"
+    ],
+    "id": 144
   }
 ]

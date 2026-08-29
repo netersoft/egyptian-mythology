@@ -7,11 +7,11 @@ void main() {
   final quizService = QuizService();
 
   group('QuizService', () {
-    test('loads all 101 English questions with 4 choices each, answer included', () async {
+    test('loads all 144 English questions with 4 choices each, answer included', () async {
       final questions = await quizService.loadQuestions(localeCode: 'en');
 
-      expect(questions.length, 101);
-      expect(questions.map((q) => q.id).toSet(), List.generate(101, (i) => i + 1).toSet());
+      expect(questions.length, 144);
+      expect(questions.map((q) => q.id).toSet(), List.generate(144, (i) => i + 1).toSet());
       for (final q in questions) {
         expect(q.choices.length, 4);
         expect(q.choices, contains(q.answer));
@@ -19,10 +19,10 @@ void main() {
       }
     });
 
-    test('loads all 101 French questions with 4 choices each, answer included', () async {
+    test('loads all 144 French questions with 4 choices each, answer included', () async {
       final questions = await quizService.loadQuestions(localeCode: 'fr');
 
-      expect(questions.length, 101);
+      expect(questions.length, 144);
       for (final q in questions) {
         expect(q.choices.length, 4);
         expect(q.choices, contains(q.answer));
