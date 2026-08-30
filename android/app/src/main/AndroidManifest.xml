@@ -1,6 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="com.neteru.ankh">
     <!-- Required to fetch data from the internet. -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- This app has no ads and doesn't use the advertising ID. firebase_analytics
+         merges these permissions in by default for ad-campaign attribution, so opt back
+         out explicitly (see https://firebase.google.com/docs/analytics/configure-data-collection#android).
+         The ADSERVICES ones are the Android 13+ Privacy Sandbox equivalent of AD_ID. -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" tools:node="remove"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" tools:node="remove"/>
     <queries>
         <!-- If your app checks for SMS support -->
         <intent>
