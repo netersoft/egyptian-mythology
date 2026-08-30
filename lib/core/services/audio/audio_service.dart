@@ -27,8 +27,12 @@ class AudioService {
 
   Future<void> setSoundEnabled(bool enabled) => _prefs.setBool(PrefKeys.soundEnabled, enabled);
 
+  // Mirrors legacy MusicService.onStartCommand(), which MainActivity.onStart()
+  // re-triggers every time the app returns to the foreground (not just on
+  // first launch): starting an already-playing MediaPlayer is a no-op there,
+  // so guard the same way here instead of restarting with a new random track.
   Future<void> startMusic() async {
-    if (!isMusicEnabled) return;
+    if (!isMusicEnabled || _musicPlayer.state == PlayerState.playing) return;
     final track = Random().nextBool() ? 'audio/egypt_1.mp3' : 'audio/egypt_2.mp3';
     await _musicPlayer.play(AssetSource(track));
   }
