@@ -74,6 +74,7 @@ class _AppLifecycleLayerState extends ConsumerState<AppLifecycleLayer> {
 
   void _onPaused() {
     LogHelper.i('App paused');
+    unawaited(locator<AudioService>().stopMusic());
   }
 
   Future<AppExitResponse> _onExitRequested() async => AppExitResponse.exit;
