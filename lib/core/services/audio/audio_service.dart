@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:audioplayers/audioplayers.dart';
@@ -9,6 +10,14 @@ import '../shared_preferences/service.dart';
 class AudioService {
   final AudioPlayer _musicPlayer = AudioPlayer()..setReleaseMode(ReleaseMode.loop);
   final AudioPlayer _clickPlayer = AudioPlayer();
+
+  AudioService() {
+    // audioplayers requests exclusive audio focus (AndroidAudioFocus.gain) by
+    // default on every play() call, so without this, each click SFX preempts
+    // and kills the looping background music on _musicPlayer -- mixWithOthers
+    // lets the click layer over the music instead of stealing focus from it.
+    unawaited(_clickPlayer.setAudioContext(AudioContextConfig(focus: AudioContextConfigFocus.mixWithOthers).build()));
+  }
 
   SharedPreferencesService get _prefs => locator<SharedPreferencesService>();
 
