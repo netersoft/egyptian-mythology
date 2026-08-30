@@ -31,7 +31,11 @@ class _QuizPlayScreenState extends ConsumerState<QuizPlayScreen> {
 
     ref.listen(quizControllerProvider, (previous, next) {
       if (next.phase == QuizPhase.gameOver) {
-        GameOverRoute(score: next.score, finish: next.allQuestionsAnswered, isRecord: next.isRecord).go(context);
+        GameOverRoute(
+          score: next.score,
+          finish: next.allQuestionsAnswered,
+          isRecord: next.isRecord,
+        ).pushReplacement(context);
       }
     });
 
@@ -42,7 +46,10 @@ class _QuizPlayScreenState extends ConsumerState<QuizPlayScreen> {
               ? const Center(child: CircularProgressIndicator(color: AppColors.goldenYellow))
               : Column(
                   children: [
-                    Image.asset('assets/images/egyptian/play_banner.png', height: 140, width: double.infinity, fit: BoxFit.cover),
+                    AspectRatio(
+                      aspectRatio: 1280 / 821,
+                      child: Image.asset('assets/images/egyptian/play_banner.png', width: double.infinity, fit: BoxFit.contain),
+                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                       child: Row(
