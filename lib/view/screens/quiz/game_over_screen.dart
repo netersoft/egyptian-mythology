@@ -47,7 +47,9 @@ class GameOverScreen extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         const SizedBox(height: 16),
-                        SvgPicture.asset('assets/images/egyptian/ic_anubis.svg', width: 200, height: 200),
+                        Center(
+                          child: SvgPicture.asset('assets/images/egyptian/ic_anubis.svg', width: 260, height: 260),
+                        ),
                         if (showCongrat)
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 16),

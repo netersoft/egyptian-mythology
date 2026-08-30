@@ -1,9 +1,12 @@
+import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../helpers/logging/log_helper.dart';
+import '../services/audio/audio_service.dart';
+import '../services/di/locator.dart';
 
 class AppLifecycleLayer extends ConsumerStatefulWidget {
   final Widget child;
@@ -58,6 +61,7 @@ class _AppLifecycleLayerState extends ConsumerState<AppLifecycleLayer> {
 
   void _onResumed() {
     LogHelper.i('App resumed');
+    unawaited(locator<AudioService>().startMusic());
   }
 
   void _onInactive() {

@@ -62,21 +62,24 @@ class SettingsRoute extends GoRouteData with $SettingsRoute {
   const SettingsRoute();
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(builder: (context) => const SettingsScreen());
+  Page<void> buildPage(BuildContext context, GoRouterState state) =>
+      SwipeablePage<void>(key: state.pageKey, builder: (context) => const SettingsScreen());
 }
 
 class AboutRoute extends GoRouteData with $AboutRoute {
   const AboutRoute();
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(builder: (context) => const AboutScreen());
+  Page<void> buildPage(BuildContext context, GoRouterState state) =>
+      SwipeablePage<void>(key: state.pageKey, builder: (context) => const AboutScreen());
 }
 
 class DocSectionsRoute extends GoRouteData with $DocSectionsRoute {
   const DocSectionsRoute();
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(builder: (context) => const DocSectionsScreen());
+  Page<void> buildPage(BuildContext context, GoRouterState state) =>
+      SwipeablePage<void>(key: state.pageKey, builder: (context) => const DocSectionsScreen());
 }
 
 class GodsDocRoute extends GoRouteData with $GodsDocRoute {
@@ -84,7 +87,7 @@ class GodsDocRoute extends GoRouteData with $GodsDocRoute {
 
   @override
   Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(builder: (context) => const DocViewerScreen(category: DocCategory.gods));
+      SwipeablePage<void>(key: state.pageKey, builder: (context) => const DocViewerScreen(category: DocCategory.gods));
 }
 
 class CosmogoniesDocRoute extends GoRouteData with $CosmogoniesDocRoute {
@@ -92,7 +95,7 @@ class CosmogoniesDocRoute extends GoRouteData with $CosmogoniesDocRoute {
 
   @override
   Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(builder: (context) => const DocViewerScreen(category: DocCategory.cosmogonies));
+      SwipeablePage<void>(key: state.pageKey, builder: (context) => const DocViewerScreen(category: DocCategory.cosmogonies));
 }
 
 class MythsDocRoute extends GoRouteData with $MythsDocRoute {
@@ -100,21 +103,23 @@ class MythsDocRoute extends GoRouteData with $MythsDocRoute {
 
   @override
   Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(builder: (context) => const DocViewerScreen(category: DocCategory.myths));
+      SwipeablePage<void>(key: state.pageKey, builder: (context) => const DocViewerScreen(category: DocCategory.myths));
 }
 
 class InstructionsRoute extends GoRouteData with $InstructionsRoute {
   const InstructionsRoute();
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(builder: (context) => const InstructionsScreen());
+  Page<void> buildPage(BuildContext context, GoRouterState state) =>
+      SwipeablePage<void>(key: state.pageKey, builder: (context) => const InstructionsScreen());
 }
 
 class QuizPlayRoute extends GoRouteData with $QuizPlayRoute {
   const QuizPlayRoute();
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(builder: (context) => const QuizPlayScreen());
+  Page<void> buildPage(BuildContext context, GoRouterState state) =>
+      SwipeablePage<void>(key: state.pageKey, builder: (context) => const QuizPlayScreen());
 }
 
 class GameOverRoute extends GoRouteData with $GameOverRoute {
@@ -126,6 +131,12 @@ class GameOverRoute extends GoRouteData with $GameOverRoute {
 
   @override
   Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(
+    key: state.pageKey,
+    // GameOverScreen's PopScope(canPop: false) blocks the back button/gesture,
+    // but the swipe-anywhere-to-go-back detector on SwipeablePage runs
+    // independently of that -- disable it too, or a stray drag can pop this
+    // route straight back into a fresh QuizPlayScreen.
+    canSwipe: false,
     builder: (context) => GameOverScreen(score: score, finish: finish, isRecord: isRecord),
   );
 }
@@ -134,5 +145,6 @@ class StatsRoute extends GoRouteData with $StatsRoute {
   const StatsRoute();
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(builder: (context) => const StatsScreen());
+  Page<void> buildPage(BuildContext context, GoRouterState state) =>
+      SwipeablePage<void>(key: state.pageKey, builder: (context) => const StatsScreen());
 }
