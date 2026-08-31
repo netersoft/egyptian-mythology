@@ -4,7 +4,7 @@ publish_to: 'none'
 
 ####################################################################################################
 
-version: 2.0.0+10
+version: 2.0.1+11
 # changelog generator : auto-changelog --template keepachangelog --hide-credit -v [version-name]
 
 environment:
@@ -152,6 +152,21 @@ flutter:
     - assets/docs/en/myths/
     - assets/docs/en/privacy_policy.html
     - assets/docs/en/terms_of_use.html
+    - assets/docs/de/gods/
+    - assets/docs/de/cosmogonies/
+    - assets/docs/de/myths/
+    - assets/docs/de/privacy_policy.html
+    - assets/docs/de/terms_of_use.html
+    - assets/docs/es/gods/
+    - assets/docs/es/cosmogonies/
+    - assets/docs/es/myths/
+    - assets/docs/es/privacy_policy.html
+    - assets/docs/es/terms_of_use.html
+    - assets/docs/pt/gods/
+    - assets/docs/pt/cosmogonies/
+    - assets/docs/pt/myths/
+    - assets/docs/pt/privacy_policy.html
+    - assets/docs/pt/terms_of_use.html
     - assets/docs/res/fonts/papyrus/
     - assets/docs/res/pictures/gods/
     - assets/docs/res/pictures/cosmogonies/
