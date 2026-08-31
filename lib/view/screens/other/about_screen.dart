@@ -38,16 +38,23 @@ class AboutScreen extends StatelessWidget {
     unawaited(locator<AudioService>().playClick());
     final uri = Uri(
       scheme: 'mailto',
-      path: 'neterustudio@gmail.com',
+      path: 'support.netersoft@gmail.com',
       queryParameters: {'subject': '${context.t.appNameAlt} - Feedback'},
     );
     await launchUrl(uri);
   }
 
+  // requestReview() also silently no-ops once Google's per-app review quota
+  // is hit -- there's no callback to detect that, so the only thing app code
+  // can do is make sure isAvailable() == false (e.g. a sideloaded, non-Play
+  // Store install) doesn't leave the button doing nothing: fall back to the
+  // Play Store listing itself, where the user can leave a review directly.
   Future<void> _rate() async {
     unawaited(locator<AudioService>().playClick());
     if (await InAppReview.instance.isAvailable()) {
       await InAppReview.instance.requestReview();
+    } else {
+      await InAppReview.instance.openStoreListing();
     }
   }
 

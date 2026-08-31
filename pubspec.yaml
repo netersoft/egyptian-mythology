@@ -4,7 +4,7 @@ publish_to: 'none'
 
 ####################################################################################################
 
-version: 2.0.1+11
+version: 2.0.2+12
 # changelog generator : auto-changelog --template keepachangelog --hide-credit -v [version-name]
 
 environment:
