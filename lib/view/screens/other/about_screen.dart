@@ -44,18 +44,18 @@ class AboutScreen extends StatelessWidget {
     await launchUrl(uri);
   }
 
-  // requestReview() also silently no-ops once Google's per-app review quota
-  // is hit -- there's no callback to detect that, so the only thing app code
-  // can do is make sure isAvailable() == false (e.g. a sideloaded, non-Play
-  // Store install) doesn't leave the button doing nothing: fall back to the
-  // Play Store listing itself, where the user can leave a review directly.
+  // Google's own guidance is to never gate a manual call-to-action (like this
+  // button) behind requestReview(): a user who already hit their per-app
+  // review quota gets a silent no-op with no way to tell, which is exactly
+  // what happened when this was tried -- isAvailable()/requestReview() both
+  // reported success but no dialog ever appeared. requestReview() is meant to
+  // be triggered automatically at a good moment (e.g. after a completed
+  // quiz), not from an explicit "Rate us" button -- so this always goes
+  // straight to the Play Store listing instead.
+  // https://developer.android.com/guide/playcore/in-app-review
   Future<void> _rate() async {
     unawaited(locator<AudioService>().playClick());
-    if (await InAppReview.instance.isAvailable()) {
-      await InAppReview.instance.requestReview();
-    } else {
-      await InAppReview.instance.openStoreListing();
-    }
+    await InAppReview.instance.openStoreListing();
   }
 
   @override
