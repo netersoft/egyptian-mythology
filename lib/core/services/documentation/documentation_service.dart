@@ -65,7 +65,8 @@ class DocumentationService {
           for (final alias in entry.aliases) alias: '$glossaryLinkPrefix${entry.id}',
       for (final MapEntry(key: name, value: godId) in _godNames(t).entries) name: '$godLinkPrefix$godId',
     };
-    return linkMentions(html, links, exclude: {if (category == DocCategory.gods) '$godLinkPrefix$id'});
+    final linked = linkMentions(html, links, exclude: {if (category == DocCategory.gods) '$godLinkPrefix$id'});
+    return locale == 'fr' ? frenchSpacing(linked) : linked;
   }
 
   // The glossary of [locale], sorted by term as the reader would expect.
@@ -74,8 +75,11 @@ class DocumentationService {
     if (cached != null) return cached;
 
     final raw = await _loadWithFallback(_glossaryPath, locale);
-    final entries = (jsonDecode(raw) as List<dynamic>).map((e) => GlossaryEntry.fromJson(e as Map<String, dynamic>)).toList()
-      ..sort((a, b) => foldForSearch(a.term).compareTo(foldForSearch(b.term)));
+    final entries = (jsonDecode(raw) as List<dynamic>).map((e) {
+      final entry = GlossaryEntry.fromJson(e as Map<String, dynamic>);
+      if (locale != 'fr') return entry;
+      return GlossaryEntry(id: entry.id, term: entry.term, aliases: entry.aliases, definition: frenchSpacing(entry.definition));
+    }).toList()..sort((a, b) => foldForSearch(a.term).compareTo(foldForSearch(b.term)));
     return _glossaryCache[locale] = entries;
   }
 
@@ -181,6 +185,17 @@ class DocumentationService {
     }
     return out.toString();
   }
+
+  // French puts a space inside guillemets and before : ; ! ? -- a plain one
+  // lets the line wrap right there, leaving a lone "»" or ":" at the start of
+  // a line. Make those spaces non-breaking, in text only (never in tags).
+  static final _breakableFrenchSpace = RegExp('(«) +| +([»:;!?])');
+
+  static String frenchSpacing(String html) => html.replaceAllMapped(_tagOrText, (m) {
+    final text = m.group(2);
+    if (text == null) return m.group(0)!;
+    return text.replaceAllMapped(_breakableFrenchSpace, (s) => s.group(1) != null ? '${s.group(1)}\u00A0' : '\u00A0${s.group(2)}');
+  });
 
   // Links schemes handled by DocViewerScreen: doc:gods/<god id> opens a god's
   // page, glossary:<entry id> shows the definition of a glossary term.

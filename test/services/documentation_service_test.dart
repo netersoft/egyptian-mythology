@@ -233,5 +233,28 @@ void main() {
         expect(german, isNot(contains(DocumentationService.glossaryLinkPrefix)));
       });
     });
+
+    group('frenchSpacing', () {
+      test('makes the spaces inside guillemets and before : ; ! ? non-breaking, in text only', () {
+        expect(
+          DocumentationService.frenchSpacing('<p title="a : b">« Maât » : ordre ; vrai ! non ?</p>'),
+          '<p title="a : b">«\u00A0Maât\u00A0»\u00A0: ordre\u00A0; vrai\u00A0! non\u00A0?</p>',
+        );
+      });
+
+      test('French pages no longer let a lone » or : start a line', () async {
+        final fr = await AppLocale.fr.build();
+        final html = await docs.loadContent(DocCategory.cosmogonies, 'heliopolis', 'fr', fr);
+
+        expect(html, isNot(contains(' »')));
+        expect(html, isNot(contains(' :')));
+      });
+
+      test('other languages are left alone', () async {
+        final html = await docs.loadContent(DocCategory.cosmogonies, 'heliopolis', 'en', t);
+
+        expect(html, isNot(contains('\u00A0')));
+      });
+    });
   });
 }
