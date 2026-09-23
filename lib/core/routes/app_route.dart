@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../view/redirection.dart';
 import '../../view/screens/account/settings_screen.dart';
+import '../../view/screens/documentation/doc_search_screen.dart';
 import '../../view/screens/documentation/doc_sections_screen.dart';
 import '../../view/screens/documentation/doc_viewer_screen.dart';
 import '../../view/screens/main_screen.dart';
@@ -43,6 +44,7 @@ class RedirectionRoute extends GoRouteData with $RedirectionRoute {
         TypedGoRoute<GodsDocRoute>(path: 'gods'),
         TypedGoRoute<CosmogoniesDocRoute>(path: 'cosmogonies'),
         TypedGoRoute<MythsDocRoute>(path: 'myths'),
+        TypedGoRoute<DocSearchRoute>(path: 'search'),
       ],
     ),
     TypedGoRoute<InstructionsRoute>(path: 'quiz/instructions'),
@@ -83,8 +85,8 @@ class DocSectionsRoute extends GoRouteData with $DocSectionsRoute {
 }
 
 class GodsDocRoute extends GoRouteData with $GodsDocRoute {
-  // Opens straight on one god's page (?item=anubis) -- used by the god-name
-  // links inside documentation pages -- instead of resuming the last read one.
+  // Opens straight on one page (?item=anubis) -- used by god-name links and
+  // search results -- instead of resuming the last read one.
   const GodsDocRoute({this.item});
 
   final String? item;
@@ -97,19 +99,35 @@ class GodsDocRoute extends GoRouteData with $GodsDocRoute {
 }
 
 class CosmogoniesDocRoute extends GoRouteData with $CosmogoniesDocRoute {
-  const CosmogoniesDocRoute();
+  const CosmogoniesDocRoute({this.item});
+
+  final String? item;
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(key: state.pageKey, builder: (context) => const DocViewerScreen(category: DocCategory.cosmogonies));
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(
+    key: state.pageKey,
+    builder: (context) => DocViewerScreen(category: DocCategory.cosmogonies, initialItemId: item),
+  );
 }
 
 class MythsDocRoute extends GoRouteData with $MythsDocRoute {
-  const MythsDocRoute();
+  const MythsDocRoute({this.item});
+
+  final String? item;
+
+  @override
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(
+    key: state.pageKey,
+    builder: (context) => DocViewerScreen(category: DocCategory.myths, initialItemId: item),
+  );
+}
+
+class DocSearchRoute extends GoRouteData with $DocSearchRoute {
+  const DocSearchRoute();
 
   @override
   Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(key: state.pageKey, builder: (context) => const DocViewerScreen(category: DocCategory.myths));
+      SwipeablePage<void>(key: state.pageKey, builder: (context) => const DocSearchScreen());
 }
 
 class InstructionsRoute extends GoRouteData with $InstructionsRoute {

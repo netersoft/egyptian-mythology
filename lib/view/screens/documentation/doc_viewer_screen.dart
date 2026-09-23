@@ -177,6 +177,14 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
         child: Text(_selected?.title ?? widget.category.title(t)),
       ),
       actions: [
+        IconButton(
+          icon: const Icon(Icons.search),
+          tooltip: t.search,
+          onPressed: () {
+            unawaited(locator<AudioService>().playClick());
+            unawaited(const DocSearchRoute().push<void>(context));
+          },
+        ),
         IconButton(icon: const Icon(Icons.share), tooltip: t.share, onPressed: _share),
       ],
     ),
