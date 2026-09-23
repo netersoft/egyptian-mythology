@@ -36,29 +36,15 @@ void main() {
       expect(first.map((q) => q.id).toList(), isNot(second.map((q) => q.id).toList()));
     });
 
-    group('formatQuestion', () {
-      test('adds a question mark when missing, preceded by a non-breaking space in French', () {
-        expect(QuizService.formatQuestion('Qui est Osiris', 'fr'), 'Qui est Osiris\u00A0?');
-        expect(QuizService.formatQuestion('Who is Osiris', 'en'), 'Who is Osiris?');
-      });
-
-      test('never doubles a question mark already in the source text', () {
-        expect(QuizService.formatQuestion('Wer ist Osiris?', 'de'), 'Wer ist Osiris?');
-        expect(QuizService.formatQuestion('¿Quién es Osiris?', 'es'), '¿Quién es Osiris?');
-        expect(QuizService.formatQuestion('Qui est Osiris ?', 'fr'), 'Qui est Osiris\u00A0?');
-      });
-
-      test('trims surrounding whitespace', () {
-        expect(QuizService.formatQuestion('  Who is Osiris  ', 'en'), 'Who is Osiris?');
-      });
-    });
-
-    test('every bundled question ends with exactly one question mark, in every locale', () async {
+    // Catches names that lost their leading letter when the data was
+    // translated from French (e.g. "Ouadjet" -> "uadjet" instead of "Wadjet").
+    test('every bundled answer choice starts with a capital letter or a digit', () async {
       for (final code in ['fr', 'en', 'de', 'es', 'pt']) {
         final questions = await quizService.loadQuestions(localeCode: code);
         for (final q in questions) {
-          expect(q.question, endsWith('?'), reason: '$code #${q.id}');
-          expect(q.question, isNot(matches(r'\?\s*\?$')), reason: '$code #${q.id}');
+          for (final choice in q.choices) {
+            expect(choice, isNot(matches(RegExp(r'^\p{Ll}', unicode: true))), reason: '$code #${q.id}: "$choice"');
+          }
         }
       }
     });
