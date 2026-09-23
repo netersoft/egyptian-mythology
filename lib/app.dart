@@ -6,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'core/lifecycle/app_lifecycle_layer.dart';
 import 'core/routes/router.dart';
 import 'core/services/i18n/translations.g.dart';
+import 'view/themes/app_text_scaler.dart';
 import 'view/themes/app_theme.dart';
 
 class App extends StatelessWidget {
@@ -62,12 +63,8 @@ class AppRouterView extends StatelessWidget {
         ],
         routerConfig: router,
         onGenerateTitle: (ctx) => t.appNameAlt,
-        // Papyrus (the app-wide default font, matching the legacy app's global
-        // Calligraphy override) reads smaller than a standard UI sans at the same
-        // point size, so scale all text up to compensate -- as the legacy app's
-        // hand-picked sp values already did per-screen.
         builder: (context, child) => MediaQuery(
-          data: MediaQuery.of(context).copyWith(textScaler: const TextScaler.linear(1.2)),
+          data: MediaQuery.of(context).copyWith(textScaler: AppTextScaler(MediaQuery.textScalerOf(context))),
           child: EasyLoading.init()(context, child),
         ),
       ),
