@@ -8,7 +8,8 @@
       "Anubis",
       "Thot",
       "Horus"
-    ]
+    ],
+    "explanation": "Assassiné par Seth puis ramené à la vie, Osiris règne sur l’au-delà et y juge les défunts."
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
       "Osiris",
       "Thot",
       "Anubis"
-    ]
+    ],
+    "explanation": "Le démiurge Atoum, souvent confondu avec Rê sous le nom de Rê-Atoum, se tient à la tête des neuf dieux de l’Ennéade."
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
       "Le Nil",
       "Le Ren",
       "Le Benben"
-    ]
+    ],
+    "explanation": "Avant la Création n’existait que le Noun, un océan inerte et obscur, qui entoure toujours le monde."
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
       "Mehen",
       "Kematef",
       "Irta"
-    ]
+    ],
+    "explanation": "Chaque nuit, le serpent Apophis attaque la barque de Rê dans le monde souterrain pour engloutir le soleil."
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
       "Atoum",
       "Khépri",
       "Amon"
-    ]
+    ],
+    "explanation": "Aton est le disque solaire lui-même, représenté avec des rayons terminés par de petites mains."
   },
   {
     "id": 6,
@@ -63,7 +68,8 @@
       "Le Noun",
       "Le Benben",
       "L’Ogdoade"
-    ]
+    ],
+    "explanation": "La Douat est le monde souterrain que le soleil traverse chaque nuit et où voyage le défunt."
   },
   {
     "id": 7,
@@ -74,7 +80,8 @@
       "Le Bennou",
       "Le Djed",
       "Le Ren"
-    ]
+    ],
+    "explanation": "Atoum fit surgir des eaux du Noun une butte de terre, le Benben, pour pouvoir s’y tenir."
   },
   {
     "id": 8,
@@ -85,7 +92,8 @@
       "Seth",
       "Thot",
       "Geb"
-    ]
+    ],
+    "explanation": "Né de l’éternuement d’Atoum, Chou est le dieu de l’air et de la lumière qui soutient le ciel."
   },
   {
     "id": 9,
@@ -96,7 +104,8 @@
       "Nout",
       "Nephtys",
       "Sekhmet"
-    ]
+    ],
+    "explanation": "Tefnout, née du crachat d’Atoum, est la déesse de l’humidité, sœur et épouse de Chou."
   },
   {
     "id": 10,
@@ -107,7 +116,8 @@
       "Nout",
       "Chou",
       "Tefnout"
-    ]
+    ],
+    "explanation": "Geb est la terre, représentée allongée sous le corps arqué de Nout ; on disait que les séismes étaient son rire."
   },
   {
     "id": 11,
@@ -118,7 +128,8 @@
       "Geb",
       "Isis",
       "Maât"
-    ]
+    ],
+    "explanation": "Nout est le ciel : une femme au corps couvert d’étoiles, arquée au-dessus de la terre."
   },
   {
     "id": 12,
@@ -129,7 +140,8 @@
       "Nephtys",
       "Neith",
       "Selkis"
-    ]
+    ],
+    "explanation": "Isis est la sœur et l’épouse d’Osiris, dont elle rassembla le corps démembré."
   },
   {
     "id": 13,
@@ -140,7 +152,8 @@
       "Isis",
       "Selkis",
       "Neith"
-    ]
+    ],
+    "explanation": "Nephtys est l’épouse de Seth, mais elle prit le parti d’Osiris après son meurtre."
   },
   {
     "id": 14,
@@ -151,7 +164,8 @@
       "6",
       "2",
       "3"
-    ]
+    ],
+    "explanation": "Pendant les cinq jours épagomènes naquirent Osiris, Horus l’Ancien, Seth, Isis et Nephtys."
   },
   {
     "id": 15,
@@ -162,7 +176,8 @@
       "Le croissant de lune",
       "La plume",
       "Le scorpion"
-    ]
+    ],
+    "explanation": "Le nom d’Isis s’écrit avec le signe du trône, qu’elle porte sur la tête."
   },
   {
     "id": 16,
@@ -173,7 +188,8 @@
       "Atoum",
       "Rê",
       "Aton"
-    ]
+    ],
+    "explanation": "Le matin, le soleil est Khépri, le scarabée qui pousse le disque solaire dans le ciel."
   },
   {
     "id": 17,
@@ -184,7 +200,8 @@
       "Amon",
       "Khépri",
       "Atoum"
-    ]
+    ],
+    "explanation": "Le soleil est Khépri le matin, Rê à midi dans toute sa puissance, et Atoum le soir."
   },
   {
     "id": 18,
@@ -195,7 +212,8 @@
       "Aton",
       "Rê",
       "Khépri"
-    ]
+    ],
+    "explanation": "Le soir, le soleil devient Atoum, le vieux créateur qui se couche à l’occident."
   },
   {
     "id": 19,
@@ -206,7 +224,8 @@
       "Apophis",
       "Sobek",
       "Anubis"
-    ]
+    ],
+    "explanation": "Seth est le dieu du désert, des orages et du désordre, associé à la couleur rouge."
   },
   {
     "id": 20,
@@ -217,7 +236,8 @@
       "Le foie",
       "L’estomac",
       "Les intestins"
-    ]
+    ],
+    "explanation": "Nephtys veillait sur le vase canope des poumons, gardé par Hâpy, le fils d’Horus à tête de babouin."
   },
   {
     "id": 21,
@@ -228,7 +248,8 @@
       "Thot",
       "Horus",
       "Seth"
-    ]
+    ],
+    "explanation": "Selon la tradition la plus répandue, Anubis est le fils d’Osiris et de Nephtys, élevé par Isis."
   },
   {
     "id": 22,
@@ -239,7 +260,8 @@
       "21",
       "12",
       "7"
-    ]
+    ],
+    "explanation": "Seth découpa le corps d’Osiris en quatorze morceaux, qu’il dispersa dans toute l’Égypte."
   },
   {
     "id": 23,
@@ -250,7 +272,8 @@
       "Khonsou",
       "Thot",
       "Atoum"
-    ]
+    ],
+    "explanation": "Isis conçut Horus d’Osiris ranimé par sa magie, puis le cacha dans les marais de Chemmis."
   },
   {
     "id": 24,
@@ -261,7 +284,8 @@
       "Min",
       "Bès",
       "Khonsou"
-    ]
+    ],
+    "explanation": "Ptah, le dieu créateur de Memphis, est le patron des artisans, des sculpteurs et des architectes."
   },
   {
     "id": 25,
@@ -272,7 +296,8 @@
       "Sia",
       "Hou",
       "Oupouaout"
-    ]
+    ],
+    "explanation": "Heka, la magie, voyage dans la barque de Rê avec Sia et Hou."
   },
   {
     "id": 26,
@@ -283,7 +308,8 @@
       "Heka",
       "Hou",
       "Oupouaout"
-    ]
+    ],
+    "explanation": "Sia, la connaissance, accompagne Rê dans sa barque avec Heka et Hou."
   },
   {
     "id": 27,
@@ -294,7 +320,8 @@
       "Sia",
       "Heka",
       "Oupouaout"
-    ]
+    ],
+    "explanation": "Hou, la parole créatrice, fait partie de l’équipage divin de la barque de Rê."
   },
   {
     "id": 28,
@@ -305,7 +332,8 @@
       "Les champs d’Ialou",
       "Les marais de Chemmis",
       "L’île de la Flamme"
-    ]
+    ],
+    "explanation": "Aux quatrième et cinquième heures, la barque traverse le désert de Sokar et doit être halée sur le sable."
   },
   {
     "id": 29,
@@ -316,7 +344,8 @@
       "6 heures",
       "8 heures",
       "24 heures"
-    ]
+    ],
+    "explanation": "Le soleil traverse le ciel en douze heures le jour, puis le monde souterrain en douze heures la nuit."
   },
   {
     "id": 30,
@@ -327,7 +356,8 @@
       "Apophis",
       "Kematef",
       "Irta"
-    ]
+    ],
+    "explanation": "Le serpent Mehen enroule ses anneaux autour de Rê pour le protéger au moment le plus profond de la nuit."
   },
   {
     "id": 31,
@@ -338,7 +368,8 @@
       "Maât",
       "Ouadjet",
       "Nephtys"
-    ]
+    ],
+    "explanation": "Isis façonna un serpent qui mordit Rê, puis ne le guérit qu’en échange de son nom secret."
   },
   {
     "id": 32,
@@ -349,7 +380,8 @@
       "Mout",
       "Bastet",
       "Sekhmet"
-    ]
+    ],
+    "explanation": "Ouadjet, la déesse cobra, se dresse sous la forme de l’uræus sur le front des rois et des dieux."
   },
   {
     "id": 33,
@@ -360,7 +392,8 @@
       "Amon",
       "Aton",
       "Osiris"
-    ]
+    ],
+    "explanation": "Atoum émergea seul du Noun et tira de lui-même le premier couple divin."
   },
   {
     "id": 34,
@@ -371,7 +404,8 @@
       "Geb et Nout",
       "Osiris et Isis",
       "Seth et Nephtys"
-    ]
+    ],
+    "explanation": "Atoum tira de lui-même Chou et Tefnout, le premier couple de la Création."
   },
   {
     "id": 35,
@@ -382,7 +416,8 @@
       "Tefnout",
       "Neith",
       "Maât"
-    ]
+    ],
+    "explanation": "Chaque soir, Nout avale le soleil, qui traverse son corps pendant la nuit et renaît au matin."
   },
   {
     "id": 36,
@@ -393,7 +428,8 @@
       "Seth",
       "Thot",
       "Anubis"
-    ]
+    ],
+    "explanation": "Dieu mort et ressuscité, Osiris incarnait aussi la végétation qui renaît après chaque crue."
   },
   {
     "id": 37,
@@ -404,7 +440,8 @@
       "Anubis",
       "Osiris",
       "Ptah"
-    ]
+    ],
+    "explanation": "Pendant que Rê traverse la Douat, c’est la lune de Thot qui éclaire la nuit."
   },
   {
     "id": 38,
@@ -415,7 +452,8 @@
       "Le djed",
       "L’oudjat",
       "Le ouas"
-    ]
+    ],
+    "explanation": "L’ankh, la croix surmontée d’une boucle, signifie « vie » ; les rayons d’Aton la tendent au roi."
   },
   {
     "id": 39,
@@ -426,7 +464,8 @@
       "Anubis",
       "Horus",
       "Rê"
-    ]
+    ],
+    "explanation": "Anubis enduisit, purifia et enveloppa le corps d’Osiris : ce fut la première momie."
   },
   {
     "id": 40,
@@ -437,7 +476,8 @@
       "La chatte",
       "La lionne",
       "L’hippopotame"
-    ]
+    ],
+    "explanation": "Hathor apparaît en vache, en femme aux oreilles de vache ou coiffée de cornes enserrant le disque solaire."
   },
   {
     "id": 41,
@@ -448,7 +488,8 @@
       "La vache",
       "Le vautour",
       "L’hippopotame"
-    ]
+    ],
+    "explanation": "Bastet est la déesse chatte du foyer ; à l’origine lionne, la chatte est sa forme apaisée."
   },
   {
     "id": 42,
@@ -459,7 +500,8 @@
       "La chatte",
       "La vache",
       "Le vautour"
-    ]
+    ],
+    "explanation": "Sekhmet, « la puissante », est une déesse à tête de lionne, incarnation de la colère divine."
   },
   {
     "id": 43,
@@ -470,7 +512,8 @@
       "Hermopolis",
       "Memphis",
       "Thèbes"
-    ]
+    ],
+    "explanation": "La cosmogonie d’Héliopolis, dont le créateur est Atoum, est la plus répandue d’Égypte."
   },
   {
     "id": 44,
@@ -481,7 +524,8 @@
       "L’âme",
       "La force vitale",
       "Le nom"
-    ]
+    ],
+    "explanation": "Le djet est le corps, que l’embaumement devait préserver pour que le ka et le ba y reviennent."
   },
   {
     "id": 45,
@@ -492,7 +536,8 @@
       "Le corps",
       "L’ombre",
       "Le nom"
-    ]
+    ],
+    "explanation": "Le ka est la force vitale, née avec l’individu et nourrie après sa mort par les offrandes."
   },
   {
     "id": 46,
@@ -503,7 +548,8 @@
       "La pesée du cœur",
       "La confession négative",
       "Le bandelettage"
-    ]
+    ],
+    "explanation": "L’ouverture de la bouche rendait au défunt l’usage de ses sens, pour parler, voir et manger dans l’au-delà."
   },
   {
     "id": 47,
@@ -514,7 +560,8 @@
       "La balance",
       "Le sistre",
       "L’ankh"
-    ]
+    ],
+    "explanation": "Maât est coiffée d’une plume d’autruche, pesée face au cœur du défunt lors du jugement."
   },
   {
     "id": 48,
@@ -525,7 +572,8 @@
       "Le vautour",
       "L’ibis",
       "Le chacal"
-    ]
+    ],
+    "explanation": "Horus est le dieu faucon ; son œil droit était le soleil, son œil gauche la lune."
   },
   {
     "id": 49,
@@ -536,7 +584,8 @@
       "Le chacal",
       "Le chat",
       "Le faucon"
-    ]
+    ],
+    "explanation": "Thot est représenté en homme à tête d’ibis ou sous la forme d’un babouin."
   },
   {
     "id": 50,
@@ -547,7 +596,8 @@
       "L’abeille",
       "Le scorpion",
       "La mante religieuse"
-    ]
+    ],
+    "explanation": "Khépri est le scarabée : le bousier poussant sa boule évoquait le soleil poussé dans le ciel."
   },
   {
     "id": 51,
@@ -558,7 +608,8 @@
       "Isis",
       "Sekhmet",
       "Hathor"
-    ]
+    ],
+    "explanation": "Maât est l’ordre du monde établi par le créateur : la vérité, la justice et l’équilibre."
   },
   {
     "id": 52,
@@ -569,7 +620,8 @@
       "Nekhbet",
       "Sekhmet",
       "Touéris"
-    ]
+    ],
+    "explanation": "Amémet, « la Dévoreuse », mange le cœur trop lourd des défunts, qui disparaissent à jamais."
   },
   {
     "id": 53,
@@ -580,7 +632,8 @@
       "Anubis",
       "Khnoum",
       "Bès"
-    ]
+    ],
+    "explanation": "Sobek, le dieu crocodile, incarne la puissance redoutable du Nil et la fertilité qu’il apporte."
   },
   {
     "id": 54,
@@ -591,7 +644,8 @@
       "Selkis",
       "Maât",
       "Mout"
-    ]
+    ],
+    "explanation": "Déesse de la guerre et de la chasse, Neith a pour emblème un arc et deux flèches croisées."
   },
   {
     "id": 55,
@@ -602,7 +656,8 @@
       "Neith",
       "Maât",
       "Hathor"
-    ]
+    ],
+    "explanation": "Selkis porte un scorpion sur la tête et protégeait des piqûres et des morsures venimeuses."
   },
   {
     "id": 56,
@@ -613,7 +668,8 @@
       "Osiris",
       "Ptah",
       "Min"
-    ]
+    ],
+    "explanation": "Le mythe du cycle du jour suit Rê dans le ciel le jour et dans le monde souterrain la nuit."
   },
   {
     "id": 57,
@@ -624,7 +680,8 @@
       "Thot",
       "Seth",
       "Ptah"
-    ]
+    ],
+    "explanation": "Après sa victoire sur Seth, Horus devint le modèle des pharaons, qui régnaient comme un « Horus vivant »."
   },
   {
     "id": 58,
@@ -635,7 +692,8 @@
       "Aton",
       "Amon",
       "Khnoum"
-    ]
+    ],
+    "explanation": "À Memphis, Ptah crée le monde par la pensée de son cœur et la parole de sa langue."
   },
   {
     "id": 59,
@@ -646,7 +704,8 @@
       "Isis",
       "Nephtys",
       "Bastet"
-    ]
+    ],
+    "explanation": "Hathor est l’épouse d’Horus d’Edfou ; on célébrait chaque année leurs retrouvailles."
   },
   {
     "id": 60,
@@ -657,7 +716,8 @@
       "Osiris",
       "Seth",
       "Horus"
-    ]
+    ],
+    "explanation": "Anubis momifia Osiris : lors des embaumements, le chef des prêtres portait son masque de chacal."
   },
   {
     "id": 61,
@@ -668,7 +728,8 @@
       "Un homme à tête de faucon",
       "Un scarabée",
       "Un enfant dans un lotus"
-    ]
+    ],
+    "explanation": "La nuit, dans le monde souterrain, Rê prend la forme d’un homme à tête de bélier."
   },
   {
     "id": 62,
@@ -679,7 +740,8 @@
       "Sa tête",
       "Son cœur",
       "Son bras"
-    ]
+    ],
+    "explanation": "Isis retrouva tout le corps d’Osiris sauf son phallus, avalé par un poisson du Nil."
   },
   {
     "id": 63,
@@ -690,7 +752,8 @@
       "L’ibis",
       "Le faucon",
       "Le vautour"
-    ]
+    ],
+    "explanation": "Atoum apparut sur le Benben sous la forme du Bennou, un oiseau que les Grecs rapprochèrent du phénix."
   },
   {
     "id": 64,
@@ -701,7 +764,8 @@
       "Nout",
       "Geb",
       "Thot"
-    ]
+    ],
+    "explanation": "Sur l’ordre d’Atoum, Chou souleva Nout au-dessus de Geb, séparant le ciel de la terre."
   },
   {
     "id": 65,
@@ -712,7 +776,8 @@
       "9",
       "12",
       "6"
-    ]
+    ],
+    "explanation": "L’Ogdoade d’Hermopolis compte huit divinités, formant quatre couples."
   },
   {
     "id": 66,
@@ -723,7 +788,8 @@
       "8",
       "2",
       "3"
-    ]
+    ],
+    "explanation": "Noun et Nounet, Heh et Hehet, Kek et Keket, Amon et Amonet forment les quatre couples de l’Ogdoade."
   },
   {
     "id": 67,
@@ -734,7 +800,8 @@
       "Une tête de grenouille",
       "Une tête de babouin",
       "Une tête de faucon"
-    ]
+    ],
+    "explanation": "Les déesses de l’Ogdoade avaient une tête de serpent, les dieux une tête de grenouille."
   },
   {
     "id": 68,
@@ -745,7 +812,8 @@
       "Une tête de serpent",
       "Une tête de faucon",
       "Une tête de babouin"
-    ]
+    ],
+    "explanation": "Les dieux de l’Ogdoade avaient une tête de grenouille, animal qui semble naître de la boue du Nil."
   },
   {
     "id": 69,
@@ -756,7 +824,8 @@
       "Ce qui est caché",
       "L’espace sans limites",
       "Les ténèbres"
-    ]
+    ],
+    "explanation": "Noun et Nounet incarnent les eaux primordiales du chaos."
   },
   {
     "id": 70,
@@ -767,7 +836,8 @@
       "Les eaux primordiales",
       "L’espace sans limites",
       "Les ténèbres"
-    ]
+    ],
+    "explanation": "Amon et Amonet incarnent ce qui est caché, invisible."
   },
   {
     "id": 71,
@@ -778,7 +848,8 @@
       "Thèbes",
       "Héliopolis",
       "Abydos"
-    ]
+    ],
+    "explanation": "Memphis était la ville de Ptah ; le nom de son temple, Hout-ka-Ptah, a donné le mot « Égypte »."
   },
   {
     "id": 72,
@@ -789,7 +860,8 @@
       "Le chat de Bubastis",
       "Le crocodile du Fayoum",
       "L’ibis d’Hermopolis"
-    ]
+    ],
+    "explanation": "Le taureau Apis était l’incarnation vivante de Ptah ; il était enterré au Sérapéum de Saqqarah."
   },
   {
     "id": 73,
@@ -800,7 +872,8 @@
       "De la sueur de Rê",
       "Du limon du Nil",
       "Du souffle de Chou"
-    ]
+    ],
+    "explanation": "Atoum pleura en retrouvant Chou et Tefnout, et ses larmes (<i>remyt</i>) devinrent les hommes (<i>remetch</i>)."
   },
   {
     "id": 74,
@@ -811,7 +884,8 @@
       "Bastet",
       "Selkis",
       "Neith"
-    ]
+    ],
+    "explanation": "L’Œil de Rê, sous la forme d’Hathor, se changea en lionne Sekhmet pour massacrer les hommes révoltés."
   },
   {
     "id": 75,
@@ -822,7 +896,8 @@
       "La course des barques",
       "Le combat contre Apophis",
       "La traversée du Noun"
-    ]
+    ],
+    "explanation": "Le cœur du défunt était pesé face à la plume de Maât ; trop lourd, il était dévoré par Amémet."
   },
   {
     "id": 76,
@@ -833,7 +908,8 @@
       "Khépri",
       "Atoum",
       "Aton"
-    ]
+    ],
+    "explanation": "Le grand Sphinx de Gizeh était vénéré comme Harmakhis, « Horus dans l’horizon », une forme du soleil."
   },
   {
     "id": 77,
@@ -844,7 +920,8 @@
       "En modelant l’argile sur son tour",
       "En couvant un œuf",
       "En s’unissant à lui-même"
-    ]
+    ],
+    "explanation": "Selon la pierre de Chabaka, tout existe d’abord comme pensée dans le cœur de Ptah, puis naît de sa parole."
   },
   {
     "id": 78,
@@ -855,7 +932,8 @@
       "Horus",
       "Anubis",
       "Khnoum"
-    ]
+    ],
+    "explanation": "Dans la théologie memphite, le cœur de Ptah est Horus et sa langue est Thot."
   },
   {
     "id": 79,
@@ -866,7 +944,8 @@
       "Min",
       "Hâpî",
       "Khnoum"
-    ]
+    ],
+    "explanation": "Bès, nain au visage grimaçant, faisait fuir les démons et protégeait le sommeil et les naissances."
   },
   {
     "id": 80,
@@ -877,7 +956,8 @@
       "L’ankh",
       "Le djed",
       "L’oudjat"
-    ]
+    ],
+    "explanation": "L’uræus est le cobra dressé sur le front des pharaons, image de la déesse Ouadjet."
   },
   {
     "id": 81,
@@ -888,7 +968,8 @@
       "Le griffon",
       "Le Bennou",
       "L’uræus"
-    ]
+    ],
+    "explanation": "Le sphinx a un corps de lion et une tête humaine ; celui de Gizeh était vénéré comme Harmakhis."
   },
   {
     "id": 82,
@@ -899,7 +980,8 @@
       "Le ka",
       "Le ba",
       "Le ren"
-    ]
+    ],
+    "explanation": "Après un jugement favorable, le ka et le ba se réunissent pour former l’akh, l’esprit immortel."
   },
   {
     "id": 83,
@@ -910,7 +992,8 @@
       "Son ombre",
       "Son corps",
       "Sa force vitale"
-    ]
+    ],
+    "explanation": "Le ren est le nom : tant qu’on le prononçait, le défunt continuait d’exister."
   },
   {
     "id": 84,
@@ -921,7 +1004,8 @@
       "Le lumineux",
       "Le roi",
       "L’ancien"
-    ]
+    ],
+    "explanation": "Amon, « le caché », est un créateur invisible, présent partout mais que nul ne peut voir."
   },
   {
     "id": 85,
@@ -932,7 +1016,8 @@
       "Le lion",
       "Le babouin",
       "Le bélier"
-    ]
+    ],
+    "explanation": "Les chacals rôdaient autour des cimetières : les Égyptiens firent de cet animal le gardien des tombes."
   },
   {
     "id": 86,
@@ -943,7 +1028,8 @@
       "12",
       "42",
       "7"
-    ]
+    ],
+    "explanation": "Avec soixante-douze complices, Seth enferma Osiris dans un coffre à sa mesure et le jeta dans le Nil."
   },
   {
     "id": 87,
@@ -954,7 +1040,8 @@
       "Apophis",
       "Neith",
       "Min"
-    ]
+    ],
+    "explanation": "Hâpî incarne la crue du Nil, qui recouvrait chaque été les champs d’un limon fertile."
   },
   {
     "id": 88,
@@ -965,7 +1052,8 @@
       "Min",
       "Khnoum",
       "Hâpî"
-    ]
+    ],
+    "explanation": "Khonsou, dieu de la lune, est le fils d’Amon et de Mout, avec qui il forme la triade thébaine."
   },
   {
     "id": 89,
@@ -976,7 +1064,8 @@
       "Khonsou",
       "Hâpî",
       "Ptah"
-    ]
+    ],
+    "explanation": "Min, dieu de la fertilité, est coiffé de deux hautes plumes et lève le bras droit tenant un fouet."
   },
   {
     "id": 90,
@@ -987,7 +1076,8 @@
       "Maât",
       "Selkis",
       "Neith"
-    ]
+    ],
+    "explanation": "Nekhbet, la déesse vautour du Sud, formait avec Ouadjet les « Deux Maîtresses » protectrices du roi."
   },
   {
     "id": 91,
@@ -998,7 +1088,8 @@
       "Osiris",
       "Thot",
       "Horus"
-    ]
+    ],
+    "explanation": "Fille de Rê, Maât incarne l’ordre du monde tel que le créateur l’a établi."
   },
   {
     "id": 92,
@@ -1009,7 +1100,8 @@
       "Celui du foie",
       "Celui des poumons",
       "Celui de l’estomac"
-    ]
+    ],
+    "explanation": "Selkis veillait sur le vase canope des intestins, gardé par Qebehsenouf à tête de faucon."
   },
   {
     "id": 93,
@@ -1020,7 +1112,8 @@
       "Amémet",
       "Sekhmet",
       "Nephtys"
-    ]
+    ],
+    "explanation": "Touéris, déesse hippopotame au ventre de femme enceinte, protégeait les accouchements."
   },
   {
     "id": 94,
@@ -1031,7 +1124,8 @@
       "Sekhmet",
       "Hathor",
       "Maât"
-    ]
+    ],
+    "explanation": "Neith veillait avec Isis, Nephtys et Selkis sur les vases canopes, en particulier celui de l’estomac."
   },
   {
     "id": 95,
@@ -1042,7 +1136,8 @@
       "Nephtys",
       "Neith",
       "Selkis"
-    ]
+    ],
+    "explanation": "Isis est souvent représentée allaitant son fils Horus, image de la mère protectrice."
   },
   {
     "id": 96,
@@ -1053,7 +1148,8 @@
       "Anubis",
       "Ptah",
       "Hâpî"
-    ]
+    ],
+    "explanation": "Thot passait pour l’inventeur des hiéroglyphes, des mathématiques et du calendrier."
   },
   {
     "id": 97,
@@ -1064,7 +1160,8 @@
       "Osiris",
       "Amon",
       "Ptah"
-    ]
+    ],
+    "explanation": "Le nom d’Horus évoque le faucon qui plane haut dans le ciel : « celui qui est au-dessus »."
   },
   {
     "id": 98,
@@ -1075,7 +1172,8 @@
       "Amon",
       "Anubis",
       "Min"
-    ]
+    ],
+    "explanation": "Khnoum, le « divin potier », modelait sur son tour les enfants et leur ka."
   },
   {
     "id": 99,
@@ -1086,7 +1184,8 @@
       "La confession négative",
       "L’ouverture de la bouche",
       "L’Amdouat"
-    ]
+    ],
+    "explanation": "La pesée du cœur du défunt face à la plume de Maât porte aussi le nom de psychostasie."
   },
   {
     "id": 100,
@@ -1097,7 +1196,8 @@
       "Bastet",
       "Neith",
       "Maât"
-    ]
+    ],
+    "explanation": "À la septième heure de la nuit, Selkis immobilise Apophis tandis que la magie d’Isis l’affaiblit."
   },
   {
     "id": 101,
@@ -1108,7 +1208,8 @@
       "Ramsès II",
       "Toutânkhamon",
       "Séthi Ier"
-    ]
+    ],
+    "explanation": "Le pharaon Amenhotep IV fit d’Aton le seul dieu de l’Égypte et prit le nom d’Akhenaton."
   },
   {
     "id": 102,
@@ -1119,7 +1220,8 @@
       "Dans le temple de Philae",
       "Dans la ville de Byblos",
       "Dans l’oasis de Siwa"
-    ]
+    ],
+    "explanation": "Isis cacha Horus dans les marais de Chemmis, au cœur du delta, pour le protéger de Seth."
   },
   {
     "id": 103,
@@ -1130,7 +1232,8 @@
       "En crocodiles",
       "En serpents",
       "En taureaux"
-    ]
+    ],
+    "explanation": "Changés en hippopotames, Horus et Seth plongèrent dans le Nil : le premier à remonter perdrait."
   },
   {
     "id": 104,
@@ -1141,7 +1244,8 @@
       "Apophis",
       "Sobek",
       "Thot"
-    ]
+    ],
+    "explanation": "Pendant leur lutte pour le trône, Seth arracha les yeux d’Horus et les enterra."
   },
   {
     "id": 105,
@@ -1152,7 +1256,8 @@
       "Isis",
       "Neith",
       "Maât"
-    ]
+    ],
+    "explanation": "Hathor rendit la vue à Horus en versant du lait de gazelle sur ses yeux."
   },
   {
     "id": 106,
@@ -1163,7 +1268,8 @@
       "L’ankh",
       "L’uræus",
       "Le djed"
-    ]
+    ],
+    "explanation": "L’œil d’Horus restauré, l’oudjat, devint l’une des amulettes les plus répandues d’Égypte."
   },
   {
     "id": 107,
@@ -1174,7 +1280,8 @@
       "Il fit couler le bateau de Seth avec l’aide de Sobek",
       "Il vola le bateau de Seth pendant la nuit",
       "Il demanda à Thot de déclencher une tempête"
-    ]
+    ],
+    "explanation": "Horus construisit un bateau en bois de cèdre recouvert de plâtre ; celui de Seth, en vraie pierre, coula."
   },
   {
     "id": 108,
@@ -1185,7 +1292,8 @@
       "Isis",
       "Nephtys",
       "Anubis"
-    ]
+    ],
+    "explanation": "Depuis le monde des morts, Osiris menaça d’envoyer ses démons si son fils n’était pas couronné."
   },
   {
     "id": 109,
@@ -1196,7 +1304,8 @@
       "28 ans",
       "12 ans",
       "400 ans"
-    ]
+    ],
+    "explanation": "Le tribunal des dieux, présidé par Rê, hésita pendant quatre-vingts ans entre Horus et Seth."
   },
   {
     "id": 110,
@@ -1207,7 +1316,8 @@
       "Régner sur le monde des morts",
       "Devenir le messager des dieux",
       "Garder les portes de la Douat"
-    ]
+    ],
+    "explanation": "Seth rejoignit Rê dans le ciel : depuis la proue de la barque solaire, il repousse Apophis."
   },
   {
     "id": 111,
@@ -1218,7 +1328,8 @@
       "4",
       "12",
       "3"
-    ]
+    ],
+    "explanation": "Sept scorpions escortaient Isis : Tefen, Befen, Mestet, Mestetef, Petet, Tjetet et Matet."
   },
   {
     "id": 112,
@@ -1229,7 +1340,8 @@
       "La pierre de Rosette",
       "La pierre de Chabaka",
       "La pierre de Palerme"
-    ]
+    ],
+    "explanation": "Les formules d’Isis et de Thot furent recopiées sur des stèles magiques comme celle de Metternich."
   },
   {
     "id": 113,
@@ -1240,7 +1352,8 @@
       "Parce qu’il vit dans le Noun, hors d’atteinte",
       "Parce qu’il se régénère grâce à Rê",
       "Parce qu’il est protégé par Seth"
-    ]
+    ],
+    "explanation": "Apophis existait avant la Création et n’a jamais été créé : il ne peut donc pas être détruit."
   },
   {
     "id": 114,
@@ -1251,7 +1364,8 @@
       "Le Livre des Morts",
       "Le Livre de l’Amdouat",
       "Les Textes des Pyramides"
-    ]
+    ],
+    "explanation": "Les prêtres façonnaient une figurine d’Apophis en cire, puis la piétinaient, la transperçaient et la brûlaient."
   },
   {
     "id": 115,
@@ -1262,7 +1376,8 @@
       "Le papyrus",
       "Le lys",
       "La rose"
-    ]
+    ],
+    "explanation": "Nefertoum est le dieu du lotus bleu, la fleur qui s’ouvre à l’aube, et des parfums."
   },
   {
     "id": 116,
@@ -1273,7 +1388,8 @@
       "Amon et Mout",
       "Osiris et Isis",
       "Rê et Hathor"
-    ]
+    ],
+    "explanation": "À Memphis, Nefertoum forme une triade avec ses parents, Ptah et Sekhmet."
   },
   {
     "id": 117,
@@ -1284,7 +1400,8 @@
       "La double couronne",
       "La couronne rouge",
       "La couronne blanche"
-    ]
+    ],
+    "explanation": "Sokar, dieu faucon de la nécropole de Memphis, est coiffé de la couronne atef."
   },
   {
     "id": 118,
@@ -1295,7 +1412,8 @@
       "La barque des millions d’années",
       "La Neshmet",
       "La Mesektet"
-    ]
+    ],
+    "explanation": "Lors de la fête de Sokar, sa barque sacrée, la Henou, était portée autour des murs de Memphis."
   },
   {
     "id": 119,
@@ -1306,7 +1424,8 @@
       "Celui qui garde les morts",
       "Celui qui juge les âmes",
       "Celui qui porte la lumière"
-    ]
+    ],
+    "explanation": "Oupouaout ouvrait la voie au roi dans les cortèges, et aux morts vers l’au-delà."
   },
   {
     "id": 120,
@@ -1317,7 +1436,8 @@
       "Bouto",
       "Saïs",
       "Edfou"
-    ]
+    ],
+    "explanation": "Oupouaout était vénéré à Assiout, que les Grecs appelaient Lycopolis, « la ville du loup »."
   },
   {
     "id": 121,
@@ -1328,7 +1448,8 @@
       "Ptah",
       "Thot",
       "Rê"
-    ]
+    ],
+    "explanation": "À Thèbes, Amon « le caché » se forma lui-même au commencement ; tous les dieux sont ses manifestations."
   },
   {
     "id": 122,
@@ -1339,7 +1460,8 @@
       "Apophis",
       "Mehen",
       "Irta"
-    ]
+    ],
+    "explanation": "Selon des textes tardifs, Amon apparut sous la forme du serpent Kematef, « celui qui a accompli son temps »."
   },
   {
     "id": 123,
@@ -1350,7 +1472,8 @@
       "Mehen",
       "Apophis",
       "Ouadjet"
-    ]
+    ],
+    "explanation": "Kematef engendra Irta, « celui qui a fait la terre », qui créa à son tour l’Ogdoade."
   },
   {
     "id": 124,
@@ -1361,7 +1484,8 @@
       "Abou Simbel",
       "Louxor",
       "Edfou"
-    ]
+    ],
+    "explanation": "Agrandi pendant près de deux mille ans, le temple d’Amon à Karnak est le plus vaste d’Égypte."
   },
   {
     "id": 125,
@@ -1372,7 +1496,8 @@
       "Bubastis",
       "Saïs",
       "Edfou"
-    ]
+    ],
+    "explanation": "Le temple d’Isis à Philae resta ouvert jusqu’au VIe siècle, bien après la fin des autres cultes."
   },
   {
     "id": 126,
@@ -1383,7 +1508,8 @@
       "Kom Ombo",
       "Assiout",
       "Thèbes"
-    ]
+    ],
+    "explanation": "Khnoum était vénéré sur l’île d’Éléphantine, où il formait une triade avec Satis et Anouket."
   },
   {
     "id": 127,
@@ -1394,7 +1520,8 @@
       "Memphis",
       "Héliopolis",
       "Saïs"
-    ]
+    ],
+    "explanation": "Hérodote décrit la fête de Bastet à Bubastis, qui attirait des centaines de milliers de pèlerins."
   },
   {
     "id": 128,
@@ -1405,7 +1532,8 @@
       "Éléphantine et Assiout",
       "Bubastis et Saïs",
       "Thèbes et Memphis"
-    ]
+    ],
+    "explanation": "Sobek partageait un temple double à Kom Ombo et régnait sur le Fayoum, où l’on élevait des crocodiles sacrés."
   },
   {
     "id": 129,
@@ -1416,7 +1544,8 @@
       "Akhenaton",
       "Séthi Ier",
       "Ramsès II"
-    ]
+    ],
+    "explanation": "Le pharaon Amenemhat III, du Moyen Empire, favorisa particulièrement le culte de Sobek dans le Fayoum."
   },
   {
     "id": 130,
@@ -1427,7 +1556,8 @@
       "Bubastis",
       "Bouto",
       "Nekheb"
-    ]
+    ],
+    "explanation": "Neith était la grande déesse de Saïs, capitale de l’Égypte sous la XXVIe dynastie."
   },
   {
     "id": 131,
@@ -1438,7 +1568,8 @@
       "Bouto",
       "Saïs",
       "Éléphantine"
-    ]
+    ],
+    "explanation": "Le sanctuaire de Nekhbet se trouvait à Nekheb, l’actuelle El-Kab, en Haute-Égypte."
   },
   {
     "id": 132,
@@ -1449,7 +1580,8 @@
       "Nekheb",
       "Saïs",
       "Kom Ombo"
-    ]
+    ],
+    "explanation": "Le centre de culte d’Ouadjet, Bouto, se situait dans le delta du Nil."
   },
   {
     "id": 133,
@@ -1460,7 +1592,8 @@
       "Akhenaton",
       "Toutânkhamon",
       "Amenemhat III"
-    ]
+    ],
+    "explanation": "Longtemps respecté pour sa force, Seth a donné son nom aux pharaons Séthi Ier et Séthi II."
   },
   {
     "id": 134,
@@ -1471,7 +1604,8 @@
       "Zeus",
       "Apollon",
       "Hadès"
-    ]
+    ],
+    "explanation": "Les Grecs identifièrent Thot à Hermès, messager des dieux et patron des lettres."
   },
   {
     "id": 135,
@@ -1482,7 +1616,8 @@
       "Thot",
       "Sekhmet",
       "Nefertoum"
-    ]
+    ],
+    "explanation": "Dans la théologie memphite, Horus est le cœur de Ptah, siège de la pensée, et Thot sa langue."
   },
   {
     "id": 136,
@@ -1493,7 +1628,8 @@
       "La pierre de Rosette",
       "La stèle de Metternich",
       "La palette de Narmer"
-    ]
+    ],
+    "explanation": "La pierre de Chabaka fut offerte au British Museum en 1805, quand personne ne savait lire les hiéroglyphes."
   },
   {
     "id": 137,
@@ -1504,7 +1640,8 @@
       "Amon-Rê",
       "Rê-Horakhty",
       "Sobek-Rê"
-    ]
+    ],
+    "explanation": "Ptah fusionna avec Sokar et Osiris pour former Ptah-Sokar-Osiris, dieu de la création, de la mort et de la renaissance."
   },
   {
     "id": 138,
@@ -1515,7 +1652,8 @@
       "En l’enfermant dans la Douat",
       "En demandant à Thot de l’endormir",
       "En lui offrant le trône d’Égypte"
-    ]
+    ],
+    "explanation": "Rê fit répandre de la bière teintée d’ocre rouge ; Sekhmet la but, s’enivra et oublia sa colère."
   },
   {
     "id": 139,
@@ -1526,7 +1664,8 @@
       "Le faucon Horus",
       "Le scarabée Khépri",
       "Le bélier Khnoum"
-    ]
+    ],
+    "explanation": "Las de gouverner, Rê monta sur le dos de Nout, changée en vache céleste, et quitta la terre."
   },
   {
     "id": 140,
@@ -1537,7 +1676,8 @@
       "De la cire d’abeille",
       "Une plume de Maât",
       "Les larmes de Nout"
-    ]
+    ],
+    "explanation": "Isis mélangea à de la terre la salive que Rê, vieillissant, laissait couler, et en façonna un serpent."
   },
   {
     "id": 141,
@@ -1548,7 +1688,8 @@
       "Celle qui ouvre les chemins",
       "La grande de magie",
       "La puissante"
-    ]
+    ],
+    "explanation": "Nephtys porte sur la tête les hiéroglyphes de son nom : une maison surmontée d’une corbeille."
   },
   {
     "id": 142,
@@ -1559,7 +1700,8 @@
       "Les architectes",
       "Les scribes",
       "Les embaumeurs"
-    ]
+    ],
+    "explanation": "Responsable des épidémies, Sekhmet pouvait aussi les guérir : les médecins se plaçaient sous sa protection."
   },
   {
     "id": 143,
@@ -1570,7 +1712,8 @@
       "Ptah, Sekhmet et Nefertoum",
       "Amon, Mout et Khonsou",
       "Osiris, Isis et Horus"
-    ]
+    ],
+    "explanation": "À Éléphantine, Khnoum formait une triade avec les déesses Satis et Anouket."
   },
   {
     "id": 144,
@@ -1581,6 +1724,7 @@
       "Thot",
       "Sokar",
       "Osiris"
-    ]
+    ],
+    "explanation": "Oupouaout ouvrait le chemin des morts vers l’au-delà, un rôle qui le rapprocha d’Anubis."
   }
 ]

@@ -11,10 +11,18 @@ class QuizService {
     final code = localeCode ?? LocaleSettings.instance.currentLocale.languageCode;
     final raw = await rootBundle.loadString('assets/quiz/questions_$code.json', cache: false);
     final data = jsonDecode(raw) as List<dynamic>;
+    final refs = jsonDecode(await rootBundle.loadString('assets/quiz/question_refs.json', cache: false)) as Map<String, dynamic>;
 
     final questions = data.map((e) {
       final q = QuizQuestionModel.fromJson(e as Map<String, dynamic>);
-      return QuizQuestionModel(id: q.id, question: formatQuestion(q.question, code), answer: q.answer, choices: q.choices);
+      return QuizQuestionModel(
+        id: q.id,
+        question: formatQuestion(q.question, code),
+        answer: q.answer,
+        choices: q.choices,
+        explanation: q.explanation,
+        ref: refs['${q.id}'] as String?,
+      );
     }).toList()..shuffle(Random());
 
     return questions;
