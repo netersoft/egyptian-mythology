@@ -14,13 +14,13 @@ class ScoresRepository {
 
   List<ScoreEntryModel> getAll() {
     final raw = _box.get(HiveKeys.scoresList, defaultValue: <ScoreEntryModel>[]) as List;
-    return raw.cast<ScoreEntryModel>();
+    return raw.cast<ScoreEntryModel>().map(_withPlayedAt).toList();
   }
 
   int getBestScore() => _prefs.getInt(PrefKeys.bestScore, defaultValue: 0) ?? 0;
 
   Future<void> add(int score) async {
-    final entries = getAll()..add(ScoreEntryModel(date: _formatNow(), score: score));
+    final entries = getAll()..add(ScoreEntryModel(score: score, playedAt: DateTime.now()));
     await _box.put(HiveKeys.scoresList, entries);
 
     if (score > getBestScore()) {
@@ -33,12 +33,16 @@ class ScoresRepository {
     await _prefs.setInt(PrefKeys.bestScore, 0);
   }
 
-  static const _weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  // Entries saved up to 2.0.3 only carry the legacy "E dd.MM.yyyy '-' HH:mm"
+  // string (always an English weekday); recover the DateTime from it so they
+  // can be displayed in the current app language like newer ones.
+  static final _legacyDate = RegExp(r'^\w+ (\d{2})\.(\d{2})\.(\d{4}) - (\d{2}):(\d{2})$');
 
-  // Mirrors the legacy app's "E dd.MM.yyyy '-' HH:mm" score timestamp format.
-  String _formatNow() {
-    final now = DateTime.now();
-    String two(int n) => n.toString().padLeft(2, '0');
-    return '${_weekdays[now.weekday - 1]} ${two(now.day)}.${two(now.month)}.${now.year} - ${two(now.hour)}:${two(now.minute)}';
+  static ScoreEntryModel _withPlayedAt(ScoreEntryModel entry) {
+    if (entry.playedAt != null) return entry;
+    final match = _legacyDate.firstMatch(entry.date.trim());
+    if (match == null) return entry;
+    final [day, month, year, hour, minute] = [for (var i = 1; i <= 5; i++) int.parse(match.group(i)!)];
+    return ScoreEntryModel(score: entry.score, playedAt: DateTime(year, month, day, hour, minute), date: entry.date);
   }
 }
