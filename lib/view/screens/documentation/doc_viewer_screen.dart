@@ -33,6 +33,9 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
 
   List<DocItem>? _items;
   DocItem? _selected;
+  // Last item asked for -- guards against an older, slower load resolving
+  // after a newer one (e.g. tapping "next" twice quickly) and overwriting it.
+  DocItem? _requested;
   String? _html;
   bool _showTitle = true;
 
@@ -62,8 +65,9 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
   }
 
   Future<void> _selectItem(DocItem item) async {
+    _requested = item;
     final html = await _docs.loadContent(widget.category, item.id, LocaleSettings.instance.currentLocale.languageCode);
-    if (!mounted) return;
+    if (!mounted || !identical(item, _requested)) return;
     if (_scrollController.hasClients) _scrollController.jumpTo(0);
     setState(() {
       _selected = item;
@@ -74,6 +78,11 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
 
   void _onSelect(DocItem item) {
     Navigator.of(context).pop();
+    unawaited(locator<AudioService>().playClick());
+    unawaited(_selectItem(item));
+  }
+
+  void _onPage(DocItem item) {
     unawaited(locator<AudioService>().playClick());
     unawaited(_selectItem(item));
   }
@@ -137,11 +146,116 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
         : SingleChildScrollView(
             controller: _scrollController,
             padding: const EdgeInsets.fromLTRB(16, 16, 16, 48),
-            child: HtmlWidget(
-              _html!,
-              factoryBuilder: DocWidgetFactory.new,
-              textStyle: const TextStyle(color: AppColors.goldenYellow, fontSize: 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                HtmlWidget(
+                  _html!,
+                  factoryBuilder: DocWidgetFactory.new,
+                  textStyle: const TextStyle(color: AppColors.goldenYellow, fontSize: 16),
+                ),
+                _buildPager(),
+              ],
             ),
           ),
   );
+
+  // Previous/next cards at the end of the content, docs-site style: shown
+  // once the page has been read rather than as a fixed bar eating reading
+  // space. Not a horizontal swipe -- SwipeablePage already claims
+  // swipe-anywhere for back navigation.
+  Widget _buildPager() {
+    final items = _items;
+    final index = items == null || _selected == null ? -1 : items.indexWhere((item) => item.id == _selected!.id);
+    if (index < 0) return const SizedBox.shrink();
+
+    final previous = index > 0 ? items![index - 1] : null;
+    final next = index < items!.length - 1 ? items[index + 1] : null;
+
+    return Padding(
+      padding: const EdgeInsets.only(top: 32),
+      child: IntrinsicHeight(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              child: previous == null
+                  ? const SizedBox.shrink()
+                  : _DocPageCard(
+                      key: const ValueKey('doc_previous_page'),
+                      label: t.previous,
+                      title: previous.title,
+                      isNext: false,
+                      onTap: () => _onPage(previous),
+                    ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: next == null
+                  ? const SizedBox.shrink()
+                  : _DocPageCard(
+                      key: const ValueKey('doc_next_page'),
+                      label: t.next,
+                      title: next.title,
+                      isNext: true,
+                      onTap: () => _onPage(next),
+                    ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _DocPageCard extends StatelessWidget {
+  final String label;
+  final String title;
+  final bool isNext;
+  final VoidCallback onTap;
+
+  const _DocPageCard({required this.label, required this.title, required this.isNext, required this.onTap, super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final alignment = isNext ? CrossAxisAlignment.end : CrossAxisAlignment.start;
+    final textAlign = isNext ? TextAlign.end : TextAlign.start;
+
+    return Material(
+      color: AppColors.blackRussian,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        side: const BorderSide(color: AppColors.goldenRod),
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+          child: Column(
+            crossAxisAlignment: alignment,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (!isNext) const Icon(Icons.chevron_left, color: AppColors.goldenRod, size: 18),
+                  Text(label, style: const TextStyle(color: AppColors.goldenRod, fontSize: 12)),
+                  if (isNext) const Icon(Icons.chevron_right, color: AppColors.goldenRod, size: 18),
+                ],
+              ),
+              const SizedBox(height: 4),
+              Text(
+                title,
+                textAlign: textAlign,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(color: AppColors.goldenYellow, fontSize: 15, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }

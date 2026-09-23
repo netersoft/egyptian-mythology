@@ -9,6 +9,8 @@
   "legalInformation": "Informações legais",
   "settings": "Configurações",
   "share": "Compartilhar",
+  "previous": "Anterior",
+  "next": "Próximo",
   "anErrorOccurred": "Ocorreu um erro",
   "connectionErrorContent": "Não foi possível atualizar os dados do servidor",
   "connectionErrorTitle": "Erro de conexão",
