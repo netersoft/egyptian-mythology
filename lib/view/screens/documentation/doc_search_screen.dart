@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../core/models/doc_category.dart';
 import '../../../core/models/doc_search_result.dart';
@@ -125,7 +126,7 @@ class _ResultTile extends StatelessWidget {
     final snippet = result.snippet;
     return ListTile(
       onTap: onTap,
-      leading: Icon(_icon, color: AppColors.goldenRod),
+      leading: _Thumbnail(result: result, fallback: _icon),
       title: Text(
         result.item.title,
         style: const TextStyle(color: AppColors.goldenYellow, fontWeight: FontWeight.bold),
@@ -147,6 +148,55 @@ class _ResultTile extends StatelessWidget {
               maxLines: 3,
               overflow: TextOverflow.ellipsis,
             ),
+    );
+  }
+}
+
+// The page's own illustration, cropped to a square: gods are full-length
+// portraits, so the crop keeps the top (head and crown, what identifies
+// them); cosmogony/myth banners are landscape, so it keeps the centre.
+// Falls back to the category icon if a page has no illustration.
+class _Thumbnail extends StatelessWidget {
+  final DocSearchResult result;
+  final IconData fallback;
+
+  const _Thumbnail({required this.result, required this.fallback});
+
+  static const _size = 48.0;
+
+  @override
+  Widget build(BuildContext context) {
+    final asset = result.imageAsset;
+    final alignment = result.category == DocCategory.gods ? Alignment.topCenter : Alignment.center;
+    final icon = Icon(fallback, color: AppColors.goldenRod);
+
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(8),
+      child: Container(
+        width: _size,
+        height: _size,
+        color: AppColors.blackRussian,
+        alignment: Alignment.center,
+        child: asset == null
+            ? icon
+            : asset.toLowerCase().endsWith('.svg')
+            // Sized by the parent, not width/height: SvgPicture shrinks its
+            // own box to the picture's aspect ratio when given both, which
+            // leaves nothing for BoxFit.cover to crop.
+            ? SizedBox.square(
+                dimension: _size,
+                child: SvgPicture.asset(asset, fit: BoxFit.cover, alignment: alignment),
+              )
+            : Image.asset(
+                asset,
+                width: _size,
+                height: _size,
+                fit: BoxFit.cover,
+                alignment: alignment,
+                cacheWidth: 144,
+                errorBuilder: (context, error, stackTrace) => icon,
+              ),
+      ),
     );
   }
 }

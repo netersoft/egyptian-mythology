@@ -139,6 +139,15 @@ void main() {
         await LocaleSettings.setLocaleRaw('en');
       });
 
+      test("carries each page's first illustration for the result thumbnail", () async {
+        final results = await docs.search('heliopolis', 'en', t);
+
+        final god = (await docs.search('anubis', 'en', t)).first;
+        expect(god.imageAsset, 'assets/docs/res/pictures/gods/anubis.svg');
+        final cosmogony = results.firstWhere((r) => r.item.id == 'heliopolis');
+        expect(cosmogony.imageAsset, 'assets/docs/res/pictures/cosmogonies/heliopolis_banner.jpg');
+      });
+
       test('returns nothing for an unknown word', () async {
         expect(await docs.search('xylophone', 'en', t), isEmpty);
       });

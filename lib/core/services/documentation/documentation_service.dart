@@ -55,7 +55,7 @@ class DocumentationService {
 
     for (final page in pages) {
       if (page.foldedTitle.contains(needle)) {
-        byTitle.add(DocSearchResult(category: page.category, item: page.item));
+        byTitle.add(DocSearchResult(category: page.category, item: page.item, imageAsset: page.imageAsset));
         continue;
       }
       final at = page.foldedText.indexOf(needle);
@@ -71,6 +71,7 @@ class DocumentationService {
         DocSearchResult(
           category: page.category,
           item: page.item,
+          imageAsset: page.imageAsset,
           snippet: '$prefix$excerpt${end >= 0 && end < page.text.length ? '…' : ''}',
           matchStart: prefix.length + at - start,
           matchEnd: prefix.length + at - start + needle.length,
@@ -89,7 +90,8 @@ class DocumentationService {
       for (final item in await loadItems(category, locale, t)) {
         final html = await loadContent(category, item.id, locale, t);
         final text = htmlToText(html);
-        pages.add(_IndexedPage(category, item, text, foldForSearch(item.title), foldForSearch(text)));
+        final image = _firstAssetImage.firstMatch(html)?.group(1);
+        pages.add(_IndexedPage(category, item, text, foldForSearch(item.title), foldForSearch(text), image));
       }
     }
     return _searchIndexCache[locale] = pages;
@@ -99,6 +101,7 @@ class DocumentationService {
   // without a trace; any other tag separates blocks, so becomes a space.
   static final _inlineTags = RegExp(r'</?(a|b|i|em|strong|span|sup|sub|small)\b[^>]*>', caseSensitive: false);
   static final _tags = RegExp('<[^>]*>');
+  static final _firstAssetImage = RegExp(r'<img[^>]*\bsrc="asset:([^"]+)"');
   static final _spaces = RegExp(r'\s+');
   static const _entities = {'&nbsp;': ' ', '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#39;': "'", '&rsquo;': '’'};
 
@@ -272,6 +275,7 @@ class _IndexedPage {
   final String text;
   final String foldedTitle;
   final String foldedText;
+  final String? imageAsset;
 
-  const _IndexedPage(this.category, this.item, this.text, this.foldedTitle, this.foldedText);
+  const _IndexedPage(this.category, this.item, this.text, this.foldedTitle, this.foldedText, this.imageAsset);
 }
