@@ -109,8 +109,8 @@ void main() {
       expect(osiris, contains('${DocumentationService.godLinkPrefix}isis'));
       expect(osiris, isNot(contains('${DocumentationService.godLinkPrefix}osiris')));
 
-      final chouTefnout = await docs.loadContent(DocCategory.cosmogonies, 'heliopolis', 'en', t);
-      expect(chouTefnout, contains('<a href="${DocumentationService.godLinkPrefix}chou_tefnout">Chu</a>'));
+      final heliopolis = await docs.loadContent(DocCategory.cosmogonies, 'heliopolis', 'en', t);
+      expect(heliopolis, contains('<a href="${DocumentationService.godLinkPrefix}geb_nout">Geb</a>'));
     });
 
     group('search', () {
