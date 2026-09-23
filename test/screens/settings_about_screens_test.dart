@@ -1,6 +1,7 @@
 import 'package:egyptian_mythology/core/routes/app_route.dart';
 import 'package:egyptian_mythology/core/routes/router.dart';
 import 'package:egyptian_mythology/core/services/i18n/translations.g.dart';
+import 'package:egyptian_mythology/view/screens/other/credits_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -84,6 +85,19 @@ void main() {
       expect(find.byIcon(Icons.email), findsOneWidget);
       expect(find.byIcon(Icons.favorite), findsOneWidget);
       expect(find.byIcon(Icons.share), findsOneWidget);
+    });
+
+    testWidgets('opens the sources and credits page', (tester) async {
+      await pumpAt(tester, const AboutRoute().location);
+
+      await tester.ensureVisible(find.byKey(const ValueKey('about_credits')));
+      await tester.tap(find.byKey(const ValueKey('about_credits')));
+      await settle(tester);
+      await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 200)));
+      await settle(tester);
+
+      expect(find.byType(CreditsScreen), findsOneWidget);
+      expect(find.textContaining('Jeff Dahl', findRichText: true), findsWidgets);
     });
   });
 }
