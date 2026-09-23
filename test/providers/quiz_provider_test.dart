@@ -1,5 +1,6 @@
 import 'package:egyptian_mythology/core/models/quiz_question_model.dart';
 import 'package:egyptian_mythology/core/models/quiz_state.dart';
+import 'package:egyptian_mythology/core/models/quiz_theme.dart';
 import 'package:egyptian_mythology/core/providers/quiz/quiz_provider.dart';
 import 'package:egyptian_mythology/core/providers/quiz/quiz_review_provider.dart';
 import 'package:fake_async/fake_async.dart';
@@ -211,6 +212,32 @@ void main() {
         expect(mistakes.map((m) => m.question.id), [2, 3, 4]);
         expect(mistakes[0].given, startsWith('Wrong1'));
         expect(mistakes[1].given, isNull);
+      });
+    });
+
+    test('a themed game only asks the questions of that section', () {
+      fakeAsync((async) {
+        const refs = ['gods/isis', 'myths/myth_mort', 'gods/osiris'];
+        when(() => mockQuizService.loadQuestions()).thenAnswer(
+          (_) async => [
+            for (var i = 0; i < refs.length; i++)
+              QuizQuestionModel(id: i + 1, question: 'Question $i', answer: 'A$i', choices: ['A$i', 'B$i', 'C$i', 'D$i'], ref: refs[i]),
+          ],
+        );
+        final container = makeContainer();
+        container.read(quizControllerProvider.notifier).start(theme: QuizTheme.gods);
+        async.flushMicrotasks();
+
+        final asked = <String>{};
+        for (var q = 0; q < 2; q++) {
+          final state = container.read(quizControllerProvider);
+          asked.add(state.question);
+          container.read(quizControllerProvider.notifier).answer(state.choices.indexWhere((c) => c.startsWith('A')));
+          async.elapse(const Duration(milliseconds: 2200));
+        }
+
+        expect(asked, {'Question 0', 'Question 2'});
+        expect(container.read(quizControllerProvider).allQuestionsAnswered, isTrue);
       });
     });
 

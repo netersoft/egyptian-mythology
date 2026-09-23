@@ -14,6 +14,7 @@ import '../../view/screens/quiz/quiz_play_screen.dart';
 import '../../view/screens/quiz/quiz_review_screen.dart';
 import '../../view/screens/stats/stats_screen.dart';
 import '../models/doc_category.dart';
+import '../models/quiz_theme.dart';
 import 'swipeable_page_route.dart';
 
 part 'app_route.g.dart';
@@ -141,19 +142,22 @@ class InstructionsRoute extends GoRouteData with $InstructionsRoute {
 }
 
 class QuizPlayRoute extends GoRouteData with $QuizPlayRoute {
-  const QuizPlayRoute();
+  const QuizPlayRoute({this.theme});
+
+  final QuizTheme? theme;
 
   @override
   Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(key: state.pageKey, builder: (context) => const QuizPlayScreen());
+      SwipeablePage<void>(key: state.pageKey, builder: (context) => QuizPlayScreen(theme: theme ?? QuizTheme.all));
 }
 
 class GameOverRoute extends GoRouteData with $GameOverRoute {
-  const GameOverRoute({required this.score, required this.finish, required this.isRecord});
+  const GameOverRoute({required this.score, required this.finish, required this.isRecord, this.theme});
 
   final int score;
   final bool finish;
   final bool isRecord;
+  final QuizTheme? theme;
 
   @override
   Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(
@@ -163,7 +167,7 @@ class GameOverRoute extends GoRouteData with $GameOverRoute {
     // independently of that -- disable it too, or a stray drag can pop this
     // route straight back into a fresh QuizPlayScreen.
     canSwipe: false,
-    builder: (context) => GameOverScreen(score: score, finish: finish, isRecord: isRecord),
+    builder: (context) => GameOverScreen(score: score, finish: finish, isRecord: isRecord, theme: theme ?? QuizTheme.all),
   );
 }
 

@@ -41,6 +41,7 @@
   "quiz": "Quiz",
   "stats": "Statistiques",
   "letsPlay": "Jouons!",
+  "allThemes": "Tous les thèmes",
   "instructions": "Répondez aux questions aussi vite que vous le pouvez\nVous avez 20 secondes pour répondre à chaque question\nVous avez 3 vies\nPour 5 bonnes réponses d'affilée, vous gagnez une vie, mais seulement si vous en avez perdu une\nPlus vous répondez rapidement, plus vous gagnez des points",
   "exitTitle": "Quitter",
   "exitMsg": "Êtes-vous sûr de vouloir quitter l'application ?",

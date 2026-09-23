@@ -5,6 +5,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../models/quiz_mistake.dart';
 import '../../models/quiz_question_model.dart';
 import '../../models/quiz_state.dart';
+import '../../models/quiz_theme.dart';
 import '../../services/audio/audio_service.dart';
 import '../../services/di/locator.dart';
 import '../../services/quiz/quiz_service.dart';
@@ -48,8 +49,8 @@ class QuizController extends _$QuizController {
     return const QuizState();
   }
 
-  Future<void> start() async {
-    _questions = await _quizService.loadQuestions();
+  Future<void> start({QuizTheme theme = QuizTheme.all}) async {
+    _questions = (await _quizService.loadQuestions()).where(theme.includes).toList();
     if (!ref.mounted) return;
     _index = 0;
     _correctStreak = 0;

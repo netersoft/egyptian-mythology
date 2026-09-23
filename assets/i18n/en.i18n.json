@@ -41,6 +41,7 @@
   "quiz": "Quiz",
   "stats": "Stats",
   "letsPlay": "Let's play!",
+  "allThemes": "All themes",
   "instructions": "Answer the questions as fast as you can\nYou have 20 seconds to answer each question\nYou have 3 lives\nFor 5 good answers in a row, you earn one life, but only if you have lost one\nThe faster you answer, the more points you earn",
   "exitTitle": "Exit",
   "exitMsg": "Are you sure you want to leave the application?",

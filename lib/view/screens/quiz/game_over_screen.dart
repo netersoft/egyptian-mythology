@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../core/models/quiz_theme.dart';
 import '../../../core/providers/quiz/quiz_review_provider.dart';
 import '../../../core/routes/app_route.dart';
 import '../../../core/services/audio/audio_service.dart';
@@ -18,8 +19,10 @@ class GameOverScreen extends ConsumerWidget {
   final int score;
   final bool finish;
   final bool isRecord;
+  // Replay starts a new game on the same theme.
+  final QuizTheme theme;
 
-  const GameOverScreen({required this.score, required this.finish, required this.isRecord, super.key});
+  const GameOverScreen({required this.score, required this.finish, required this.isRecord, this.theme = QuizTheme.all, super.key});
 
   void _navigate(BuildContext context, VoidCallback go) {
     unawaited(locator<AudioService>().playClick());
@@ -115,7 +118,7 @@ class GameOverScreen extends ConsumerWidget {
                       IconActionButton(
                         icon: Icons.replay,
                         tooltip: t.replay,
-                        onTap: () => _navigate(context, () => const QuizPlayRoute().go(context)),
+                        onTap: () => _navigate(context, () => QuizPlayRoute(theme: theme == QuizTheme.all ? null : theme).go(context)),
                       ),
                       IconActionButton(
                         icon: Icons.home,

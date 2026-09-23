@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/models/quiz_state.dart';
+import '../../../core/models/quiz_theme.dart';
 import '../../../core/providers/quiz/quiz_provider.dart';
 import '../../../core/routes/app_route.dart';
 import '../../../core/services/audio/audio_service.dart';
@@ -15,7 +16,9 @@ import '../../components/buttons/menu_button.dart';
 import '../../themes/app_colors.dart';
 
 class QuizPlayScreen extends ConsumerStatefulWidget {
-  const QuizPlayScreen({super.key});
+  final QuizTheme theme;
+
+  const QuizPlayScreen({this.theme = QuizTheme.all, super.key});
 
   @override
   ConsumerState<QuizPlayScreen> createState() => _QuizPlayScreenState();
@@ -32,7 +35,7 @@ class _QuizPlayScreenState extends ConsumerState<QuizPlayScreen> {
   void initState() {
     super.initState();
     _lifecycleListener = AppLifecycleListener(onHide: () => ref.read(quizControllerProvider.notifier).pause());
-    unawaited(ref.read(quizControllerProvider.notifier).start());
+    unawaited(ref.read(quizControllerProvider.notifier).start(theme: widget.theme));
   }
 
   @override
@@ -51,6 +54,7 @@ class _QuizPlayScreenState extends ConsumerState<QuizPlayScreen> {
           score: next.score,
           finish: next.allQuestionsAnswered,
           isRecord: next.isRecord,
+          theme: widget.theme == QuizTheme.all ? null : widget.theme,
         ).pushReplacement(context);
       }
     });
