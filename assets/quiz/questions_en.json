@@ -7,7 +7,7 @@
       "Osiris",
       "Anubis",
       "Onasis",
-      "Thot"
+      "Thoth"
     ]
   },
   {
@@ -18,7 +18,7 @@
       "Ra",
       "Anubis",
       "Osiris",
-      "Thot"
+      "Thoth"
     ]
   },
   {
@@ -83,7 +83,7 @@
     "choices": [
       "Shu",
       "Seth",
-      "Thot",
+      "Thoth",
       "Mehen"
     ]
   },
@@ -94,7 +94,7 @@
     "choices": [
       "Tefnut",
       "Nut",
-      "Nephtys",
+      "Nephthys",
       "Sekhmet"
     ]
   },
@@ -126,7 +126,7 @@
     "answer": "Isis",
     "choices": [
       "Isis",
-      "Nephtys",
+      "Nephthys",
       "Neith",
       "Selkis"
     ]
@@ -134,9 +134,9 @@
   {
     "id": 13,
     "question": "What is the name of the wife of the god Seth",
-    "answer": "Nephtys",
+    "answer": "Nephthys",
     "choices": [
-      "Nephtys",
+      "Nephthys",
       "Isis",
       "Selkis",
       "Neith"
@@ -225,7 +225,7 @@
     "answer": "Anubis",
     "choices": [
       "Anubis",
-      "Thot",
+      "Thoth",
       "Amun",
       "Seth"
     ]
@@ -337,7 +337,7 @@
       "Isis",
       "Maat",
       "Wadjet",
-      "Nephtys"
+      "Nephthys"
     ]
   },
   {
@@ -365,12 +365,12 @@
   {
     "id": 34,
     "question": "Who are the first children of Tem",
-    "answer": "Chu and Tefnut",
+    "answer": "Shu and Tefnut",
     "choices": [
-      "Chu and Tefnut",
+      "Shu and Tefnut",
       "Geb and Nut",
       "Osiris and Isis",
-      "Nephtys and Set"
+      "Nephthys and Seth"
     ]
   },
   {
@@ -391,16 +391,16 @@
     "choices": [
       "Osiris",
       "Beerus",
-      "Thot",
+      "Thoth",
       "Anubis"
     ]
   },
   {
     "id": 37,
     "question": "Which god replaces the sun god at night and is called the lunar god",
-    "answer": "Thot",
+    "answer": "Thoth",
     "choices": [
-      "Thot",
+      "Thoth",
       "Anubis",
       "Osiris",
       "Ptah"
@@ -622,7 +622,7 @@
     "choices": [
       "Horus",
       "Ra",
-      "Thot",
+      "Thoth",
       "Seth"
     ]
   },
@@ -644,7 +644,7 @@
     "choices": [
       "Hathor",
       "Isis",
-      "Nephtys",
+      "Nephthys",
       "Bastet"
     ]
   },
@@ -667,7 +667,7 @@
       "Khepri",
       "Atum",
       "Ra",
-      "Thot"
+      "Thoth"
     ]
   },
   {
@@ -695,9 +695,9 @@
   {
     "id": 64,
     "question": "Which god was in charge of the separation of heaven from earth by Re",
-    "answer": "Chu",
+    "answer": "Shu",
     "choices": [
-      "Chu",
+      "Shu",
       "Nut",
       "Geb",
       "Atum"
@@ -849,9 +849,9 @@
   {
     "id": 78,
     "question": "Which divinity represents the language of Ptah in the cosmogony of memphis",
-    "answer": "Thot",
+    "answer": "Thoth",
     "choices": [
-      "Thot",
+      "Thoth",
       "Anubis",
       "Apep",
       "Khnum"
@@ -941,7 +941,7 @@
     "choices": [
       "Bes",
       "Hapi",
-      "Thot",
+      "Thoth",
       "Khnum"
     ]
   },
@@ -996,7 +996,7 @@
     "choices": [
       "Re",
       "Osiris",
-      "Thot",
+      "Thoth",
       "Horus"
     ]
   },
@@ -1017,7 +1017,7 @@
     "answer": "Tueris",
     "choices": [
       "Tueris",
-      "Nephtys",
+      "Nephthys",
       "Isis",
       "Neith"
     ]
@@ -1039,7 +1039,7 @@
     "answer": "Isis",
     "choices": [
       "Isis",
-      "Nephtys",
+      "Nephthys",
       "Neith",
       "Selkis"
     ]
@@ -1047,9 +1047,9 @@
   {
     "id": 96,
     "question": "What god taught men hieroglyphics",
-    "answer": "Thot",
+    "answer": "Thoth",
     "choices": [
-      "Thot",
+      "Thoth",
       "Anubis",
       "Kaio",
       "Hapi"
