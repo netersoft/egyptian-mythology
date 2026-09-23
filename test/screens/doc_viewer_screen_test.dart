@@ -1,9 +1,11 @@
+import 'package:egyptian_mythology/core/models/doc_category.dart';
 import 'package:egyptian_mythology/core/routes/app_route.dart';
 import 'package:egyptian_mythology/core/routes/router.dart';
 import 'package:egyptian_mythology/core/services/i18n/translations.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
 
 import '../helpers/test_utils.dart';
 
@@ -132,6 +134,65 @@ void main() {
 
       expect(nextCard, findsNothing);
       expect(find.descendant(of: previousCard, matching: find.text(t.mythMortTitle)), findsOneWidget);
+    });
+  });
+
+  group('DocViewerScreen reading progress', () {
+    late MockReadingProgressRepository progress;
+
+    setUp(() async {
+      teardownTestLocator();
+      progress = MockReadingProgressRepository();
+      registerFallbackValue(DocCategory.gods);
+      when(() => progress.lastItemId(any())).thenReturn(null);
+      when(() => progress.lastOffset(any())).thenReturn(0);
+      when(() => progress.save(any(), any(), any())).thenAnswer((_) async {});
+      await setupTestLocator(readingProgressRepository: progress);
+    });
+
+    ScrollPosition docScroll(WidgetTester tester) => tester.state<ScrollableState>(find.byType(Scrollable).last).position;
+
+    testWidgets('reopens a category on the page the reader left it on', (tester) async {
+      when(() => progress.lastItemId(DocCategory.gods)).thenReturn('anubis');
+
+      await pumpAt(tester, const GodsDocRoute().location);
+
+      expect(find.descendant(of: find.byType(AppBar), matching: find.text(t.anubis)), findsOneWidget);
+    });
+
+    testWidgets('restores the saved scroll offset on the resumed page', (tester) async {
+      when(() => progress.lastItemId(DocCategory.cosmogonies)).thenReturn('heliopolis');
+      when(() => progress.lastOffset(DocCategory.cosmogonies)).thenReturn(600);
+
+      await pumpAt(tester, const CosmogoniesDocRoute().location);
+      await settle(tester);
+
+      expect(docScroll(tester).pixels, 600);
+    });
+
+    testWidgets('falls back to the first page when the saved page no longer exists', (tester) async {
+      when(() => progress.lastItemId(DocCategory.gods)).thenReturn('removed_god');
+      when(() => progress.lastOffset(DocCategory.gods)).thenReturn(600);
+
+      await pumpAt(tester, const GodsDocRoute().location);
+
+      expect(find.descendant(of: find.byType(AppBar), matching: find.text(t.introTitle)), findsOneWidget);
+      expect(docScroll(tester).pixels, 0);
+    });
+
+    testWidgets('saves the page when switching to another one, then the scroll offset', (tester) async {
+      await pumpAt(tester, const CosmogoniesDocRoute().location);
+      verify(() => progress.save(DocCategory.cosmogonies, 'intro', 0)).called(1);
+
+      await tester.tap(find.byIcon(Icons.menu));
+      await settle(tester);
+      await tester.tap(find.widgetWithText(ListTile, t.memphisTitle));
+      await settle(tester);
+      verify(() => progress.save(DocCategory.cosmogonies, 'memphis', 0)).called(1);
+
+      await tester.drag(find.byType(Scrollable).last, const Offset(0, -300));
+      await tester.pump(const Duration(milliseconds: 600));
+      verify(() => progress.save(DocCategory.cosmogonies, 'memphis', any(that: greaterThan(0)))).called(1);
     });
   });
 }

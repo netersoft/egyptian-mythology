@@ -5,4 +5,7 @@ abstract class PrefKeys {
   static const bestScore = 'bestScore';
   static const musicEnabled = 'musicEnabled';
   static const soundEnabled = 'soundEnabled';
+
+  static String docLastItem(String categoryFolder) => 'docLastItem_$categoryFolder';
+  static String docLastOffset(String categoryFolder) => 'docLastOffset_$categoryFolder';
 }

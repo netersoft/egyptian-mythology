@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
@@ -9,6 +10,7 @@ import '../../../core/models/doc_item.dart';
 import '../../../core/services/audio/audio_service.dart';
 import '../../../core/services/di/locator.dart';
 import '../../../core/services/documentation/documentation_service.dart';
+import '../../../core/services/documentation/reading_progress_repository.dart';
 import '../../../core/services/i18n/translations.g.dart';
 import '../../themes/app_colors.dart';
 import '../../themes/app_decorations.dart';
@@ -29,7 +31,9 @@ class DocViewerScreen extends StatefulWidget {
 
 class _DocViewerScreenState extends State<DocViewerScreen> {
   final _docs = locator<DocumentationService>();
+  final _progress = locator<ReadingProgressRepository>();
   final _scrollController = ScrollController();
+  Timer? _saveProgressDebounce;
 
   List<DocItem>? _items;
   DocItem? _selected;
@@ -48,6 +52,11 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
 
   @override
   void dispose() {
+    // Flush a pending save so leaving right after scrolling isn't lost.
+    if (_saveProgressDebounce?.isActive ?? false) {
+      _saveProgressDebounce!.cancel();
+      _saveProgress();
+    }
     _scrollController.dispose();
     super.dispose();
   }
@@ -55,25 +64,67 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
   void _onScroll() {
     final showTitle = _scrollController.offset < 100;
     if (showTitle != _showTitle) setState(() => _showTitle = showTitle);
+
+    _saveProgressDebounce?.cancel();
+    _saveProgressDebounce = Timer(const Duration(milliseconds: 500), _saveProgress);
+  }
+
+  void _saveProgress() {
+    final selected = _selected;
+    if (selected == null || !_scrollController.hasClients) return;
+    unawaited(_progress.save(widget.category, selected.id, _scrollController.offset));
   }
 
   Future<void> _loadItems() async {
     final items = await _docs.loadItems(widget.category, LocaleSettings.instance.currentLocale.languageCode, t);
     if (!mounted) return;
     setState(() => _items = items);
-    if (items.isNotEmpty) await _selectItem(items.first);
+    if (items.isEmpty) return;
+
+    // Resume on the page (and scroll position) the reader left this category
+    // on; the id may be gone if the content changed, so fall back to the start.
+    final lastId = _progress.lastItemId(widget.category);
+    final resumed = items.where((item) => item.id == lastId).firstOrNull;
+    if (resumed == null) {
+      await _selectItem(items.first);
+    } else {
+      await _selectItem(resumed, restoreOffset: _progress.lastOffset(widget.category));
+    }
   }
 
-  Future<void> _selectItem(DocItem item) async {
+  Future<void> _selectItem(DocItem item, {double restoreOffset = 0}) async {
     _requested = item;
     final html = await _docs.loadContent(widget.category, item.id, LocaleSettings.instance.currentLocale.languageCode);
     if (!mounted || !identical(item, _requested)) return;
+    _saveProgressDebounce?.cancel();
     if (_scrollController.hasClients) _scrollController.jumpTo(0);
     setState(() {
       _selected = item;
       _html = html;
       _showTitle = true;
     });
+    if (restoreOffset > 0) {
+      unawaited(_restoreScroll(item, restoreOffset));
+    } else {
+      unawaited(_progress.save(widget.category, item.id, 0));
+    }
+  }
+
+  // HtmlWidget lays its content out over several frames (and illustrations
+  // grow the page as they decode), so the saved offset may not be reachable
+  // yet on the first frame -- retry briefly until the page is tall enough,
+  // then clamp. Gives up as soon as the reader scrolls or changes page.
+  Future<void> _restoreScroll(DocItem item, double offset) async {
+    for (var attempt = 0; attempt < 40; attempt++) {
+      await Future<void>.delayed(const Duration(milliseconds: 50));
+      if (!mounted || !identical(item, _selected) || !_scrollController.hasClients) return;
+      final position = _scrollController.position;
+      if (position.pixels != 0) return;
+      if (position.maxScrollExtent >= offset || attempt == 39) {
+        _scrollController.jumpTo(math.min(offset, position.maxScrollExtent));
+        return;
+      }
+    }
   }
 
   void _onSelect(DocItem item) {

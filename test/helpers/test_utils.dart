@@ -1,7 +1,9 @@
 import 'package:egyptian_mythology/core/helpers/router/navigation_helper.dart';
+import 'package:egyptian_mythology/core/models/doc_category.dart';
 import 'package:egyptian_mythology/core/services/audio/audio_service.dart';
 import 'package:egyptian_mythology/core/services/di/locator.dart';
 import 'package:egyptian_mythology/core/services/documentation/documentation_service.dart';
+import 'package:egyptian_mythology/core/services/documentation/reading_progress_repository.dart';
 import 'package:egyptian_mythology/core/services/hive/service.dart';
 import 'package:egyptian_mythology/core/services/quiz/quiz_service.dart';
 import 'package:egyptian_mythology/core/services/scores/scores_repository.dart';
@@ -19,6 +21,8 @@ class MockQuizService extends Mock implements QuizService {}
 
 class MockScoresRepository extends Mock implements ScoresRepository {}
 
+class MockReadingProgressRepository extends Mock implements ReadingProgressRepository {}
+
 Future<void> setupTestLocator({
   SharedPreferencesService? sharedPreferencesService,
   NavigationHelper? navigationHelper,
@@ -27,6 +31,7 @@ Future<void> setupTestLocator({
   DocumentationService? documentationService,
   QuizService? quizService,
   ScoresRepository? scoresRepository,
+  ReadingProgressRepository? readingProgressRepository,
 }) async {
   await dotenv.load();
 
@@ -63,6 +68,17 @@ Future<void> setupTestLocator({
     locator.registerSingleton<DocumentationService>(documentationService ?? DocumentationService());
   }
 
+  if (!locator.isRegistered<ReadingProgressRepository>()) {
+    final progress = readingProgressRepository ?? MockReadingProgressRepository();
+    if (progress is MockReadingProgressRepository) {
+      registerFallbackValue(DocCategory.gods);
+      when(() => progress.lastItemId(any())).thenReturn(null);
+      when(() => progress.lastOffset(any())).thenReturn(0);
+      when(() => progress.save(any(), any(), any())).thenAnswer((_) async {});
+    }
+    locator.registerSingleton<ReadingProgressRepository>(progress);
+  }
+
   if (!locator.isRegistered<QuizService>()) {
     locator.registerSingleton<QuizService>(quizService ?? QuizService());
   }
@@ -87,6 +103,9 @@ void teardownTestLocator() {
   }
   if (locator.isRegistered<DocumentationService>()) {
     locator.unregister<DocumentationService>();
+  }
+  if (locator.isRegistered<ReadingProgressRepository>()) {
+    locator.unregister<ReadingProgressRepository>();
   }
   if (locator.isRegistered<QuizService>()) {
     locator.unregister<QuizService>();

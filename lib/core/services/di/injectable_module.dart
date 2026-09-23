@@ -3,6 +3,7 @@ import 'package:injectable/injectable.dart';
 import '../../helpers/router/navigation_helper.dart';
 import '../audio/audio_service.dart';
 import '../documentation/documentation_service.dart';
+import '../documentation/reading_progress_repository.dart';
 import '../hive/service.dart';
 import '../quiz/quiz_service.dart';
 import '../scores/scores_repository.dart';
@@ -26,6 +27,9 @@ abstract class AppModule {
 
   @singleton
   DocumentationService get documentationService => DocumentationService();
+
+  @singleton
+  ReadingProgressRepository get readingProgressRepository => ReadingProgressRepository();
 
   @singleton
   ScoresRepository get scoresRepository => ScoresRepository();
