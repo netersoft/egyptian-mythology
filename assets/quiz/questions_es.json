@@ -271,7 +271,7 @@
       "Heka",
       "Sia",
       "Hu",
-      "upuaut"
+      "Upuaut"
     ]
   },
   {
@@ -282,7 +282,7 @@
       "Sia",
       "Heka",
       "Hu",
-      "upuaut"
+      "Upuaut"
     ]
   },
   {
@@ -293,15 +293,15 @@
       "Hu",
       "Sia",
       "Heka",
-      "upuaut"
+      "Upuaut"
     ]
   },
   {
     "id": 28,
     "question": "¿Cuál es el dios de los caminos?",
-    "answer": "upuaut",
+    "answer": "Upuaut",
     "choices": [
-      "upuaut",
+      "Upuaut",
       "Hu",
       "Sia",
       "Heka"
@@ -336,7 +336,7 @@
     "choices": [
       "Isis",
       "Maat",
-      "uadyet",
+      "Uadyet",
       "Neftis"
     ]
   },
@@ -346,7 +346,7 @@
     "answer": "Mut",
     "choices": [
       "Mut",
-      "uadyet",
+      "Uadyet",
       "Bastet",
       "Sejmet"
     ]
@@ -412,7 +412,7 @@
     "answer": "Ankh",
     "choices": [
       "Ankh",
-      "uadyet",
+      "Uadyet",
       "Horakhty",
       "Duat"
     ]
@@ -596,9 +596,9 @@
   {
     "id": 55,
     "question": "¿Qué diosa tiene a la cobra como animal representativo?",
-    "answer": "uadyet",
+    "answer": "Uadyet",
     "choices": [
-      "uadyet",
+      "Uadyet",
       "Maat",
       "Hathor",
       "Isis"

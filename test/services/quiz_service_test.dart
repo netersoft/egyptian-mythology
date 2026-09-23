@@ -35,5 +35,18 @@ void main() {
 
       expect(first.map((q) => q.id).toList(), isNot(second.map((q) => q.id).toList()));
     });
+
+    // Catches names that lost their leading letter when the data was
+    // translated from French (e.g. "Ouadjet" -> "uadjet" instead of "Wadjet").
+    test('every bundled answer choice starts with a capital letter or a digit', () async {
+      for (final code in ['fr', 'en', 'de', 'es', 'pt']) {
+        final questions = await quizService.loadQuestions(localeCode: code);
+        for (final q in questions) {
+          for (final choice in q.choices) {
+            expect(choice, isNot(matches(RegExp(r'^\p{Ll}', unicode: true))), reason: '$code #${q.id}: "$choice"');
+          }
+        }
+      }
+    });
   });
 }

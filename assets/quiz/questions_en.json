@@ -271,7 +271,7 @@
       "Heqa",
       "Sia",
       "Hu",
-      "upuaut"
+      "Wepwawet"
     ]
   },
   {
@@ -282,7 +282,7 @@
       "Sia",
       "Heqa",
       "Hu",
-      "upuaut"
+      "Wepwawet"
     ]
   },
   {
@@ -293,15 +293,15 @@
       "Hu",
       "Sia",
       "Heqa",
-      "upuaut"
+      "Wepwawet"
     ]
   },
   {
     "id": 28,
     "question": "What is the god of paths",
-    "answer": "upuaut",
+    "answer": "Wepwawet",
     "choices": [
-      "upuaut",
+      "Wepwawet",
       "Hu",
       "Sia",
       "Heqa"
@@ -336,7 +336,7 @@
     "choices": [
       "Isis",
       "Maat",
-      "uadjet",
+      "Wadjet",
       "Nephtys"
     ]
   },
@@ -346,7 +346,7 @@
     "answer": "Mut",
     "choices": [
       "Mut",
-      "uadjet",
+      "Wadjet",
       "Bastet",
       "Sekhmet"
     ]
@@ -412,7 +412,7 @@
     "answer": "Ankh",
     "choices": [
       "Ankh",
-      "uadjet",
+      "Wadjet",
       "Horakhty",
       "Duat"
     ]
@@ -596,9 +596,9 @@
   {
     "id": 55,
     "question": "Which goddess whose representative animal is the cobra",
-    "answer": "uadjet",
+    "answer": "Wadjet",
     "choices": [
-      "uadjet",
+      "Wadjet",
       "Maat",
       "Hathor",
       "Isis"
@@ -980,7 +980,7 @@
   },
   {
     "id": 90,
-    "question": "What was the counterpart of the cobra goddess Ouadjet in Upper Egypt",
+    "question": "What was the counterpart of the cobra goddess Wadjet in Upper Egypt",
     "answer": "Nekhbet",
     "choices": [
       "Nekhbet",
