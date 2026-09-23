@@ -1,3 +1,6 @@
+import 'package:egyptian_mythology/core/models/doc_category.dart';
+import 'package:egyptian_mythology/core/services/documentation/documentation_service.dart';
+import 'package:egyptian_mythology/core/services/i18n/translations.g.dart';
 import 'package:egyptian_mythology/core/services/quiz/quiz_service.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -26,6 +29,27 @@ void main() {
       for (final q in questions) {
         expect(q.choices.length, 4);
         expect(q.choices, contains(q.answer));
+      }
+    });
+
+    // question_refs.json is shared by every locale: each question must point
+    // at a documentation page that exists.
+    test('every question links to an existing documentation page', () async {
+      final docs = DocumentationService();
+      final translations = await AppLocale.fr.build();
+      final pages = {
+        for (final category in [DocCategory.gods, DocCategory.cosmogonies, DocCategory.myths])
+          for (final item in await docs.loadItems(category, 'fr', translations)) '${category.folder}/${item.id}',
+      };
+
+      for (final q in await quizService.loadQuestions(localeCode: 'fr')) {
+        expect(pages, contains(q.ref), reason: '#${q.id}');
+      }
+    });
+
+    test('every French question explains its answer', () async {
+      for (final q in await quizService.loadQuestions(localeCode: 'fr')) {
+        expect(q.explanation, isNotEmpty, reason: '#${q.id}');
       }
     });
 

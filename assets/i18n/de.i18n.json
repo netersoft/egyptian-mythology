@@ -58,6 +58,12 @@
   "bravo": "Gut gemacht!",
   "quizFinishText": "Du hast das Quiz abgeschlossen! Du bist ein Experte der ägyptischen Mythologie.",
   "replay": "Nochmal spielen",
+  "reviewMistakes": "Meine Fehler ansehen (${count})",
+  "mistakesTitle": "Meine Fehler",
+  "yourAnswer": "Deine Antwort: ${value}",
+  "timeUp": "Zeit abgelaufen",
+  "correctAnswer": "Richtige Antwort: ${value}",
+  "learnMore": "Mehr erfahren",
 
   "changeLang": "Sprache ändern",
   "langLabel": "Sprache",

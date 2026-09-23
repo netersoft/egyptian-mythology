@@ -2,12 +2,14 @@ import 'dart:async';
 
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../models/quiz_mistake.dart';
 import '../../models/quiz_question_model.dart';
 import '../../models/quiz_state.dart';
 import '../../services/audio/audio_service.dart';
 import '../../services/di/locator.dart';
 import '../../services/quiz/quiz_service.dart';
 import '../../services/scores/scores_repository.dart';
+import 'quiz_review_provider.dart';
 
 part 'quiz_provider.g.dart';
 
@@ -31,6 +33,7 @@ class QuizController extends _$QuizController {
   List<QuizQuestionModel> _questions = [];
   int _index = 0;
   int _correctStreak = 0;
+  final _mistakes = <QuizMistake>[];
   Timer? _timer;
 
   QuizService get _quizService => locator<QuizService>();
@@ -50,6 +53,7 @@ class QuizController extends _$QuizController {
     if (!ref.mounted) return;
     _index = 0;
     _correctStreak = 0;
+    _mistakes.clear();
     state = const QuizState(phase: QuizPhase.playing);
     _loadQuestion();
   }
@@ -82,6 +86,7 @@ class QuizController extends _$QuizController {
       _loadQuestion();
     } else {
       _correctStreak = 0;
+      _mistakes.add(QuizMistake(question: currentQuestion, given: choices[selectedIndex]));
       state = state.copyWith(selectedIndex: selectedIndex, correctIndex: correctIndex);
       await Future<void>.delayed(_feedbackDelay);
       if (!ref.mounted) return;
@@ -157,8 +162,9 @@ class QuizController extends _$QuizController {
   // still teaches the player something. selectedIndex stays null: no button
   // is marked wrong, only the right one is highlighted.
   Future<void> _onTimeout() async {
-    final correctIndex = state.choices.indexOf(_questions[_index - 1].answer);
-    state = state.copyWith(remainingSeconds: 0, correctIndex: correctIndex);
+    final question = _questions[_index - 1];
+    _mistakes.add(QuizMistake(question: question));
+    state = state.copyWith(remainingSeconds: 0, correctIndex: state.choices.indexOf(question.answer));
     await Future<void>.delayed(_feedbackDelay);
     if (!ref.mounted) return;
     await _loseLife();
@@ -178,6 +184,7 @@ class QuizController extends _$QuizController {
   Future<void> _finish({required bool allQuestionsAnswered}) async {
     _timer?.cancel();
     final isRecord = state.score > _scoresRepository.getBestScore();
+    ref.read(quizReviewProvider.notifier).set(_mistakes);
     await _scoresRepository.add(state.score);
     if (!ref.mounted) return;
     state = state.copyWith(phase: QuizPhase.gameOver, allQuestionsAnswered: allQuestionsAnswered, isRecord: isRecord);

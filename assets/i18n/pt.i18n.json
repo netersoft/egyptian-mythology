@@ -58,6 +58,12 @@
   "bravo": "Muito bem!",
   "quizFinishText": "Você completou o quiz! Você é um verdadeiro expert em mitologia egípcia.",
   "replay": "Jogar novamente",
+  "reviewMistakes": "Rever meus erros (${count})",
+  "mistakesTitle": "Meus erros",
+  "yourAnswer": "Sua resposta: ${value}",
+  "timeUp": "Tempo esgotado",
+  "correctAnswer": "Resposta correta: ${value}",
+  "learnMore": "Saiba mais",
 
   "changeLang": "Alterar o idioma",
   "langLabel": "Idioma",

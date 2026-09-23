@@ -1,6 +1,7 @@
 import 'package:egyptian_mythology/core/models/quiz_question_model.dart';
 import 'package:egyptian_mythology/core/models/quiz_state.dart';
 import 'package:egyptian_mythology/core/providers/quiz/quiz_provider.dart';
+import 'package:egyptian_mythology/core/providers/quiz/quiz_review_provider.dart';
 import 'package:fake_async/fake_async.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -177,6 +178,39 @@ void main() {
         expect(state.allQuestionsAnswered, isFalse);
         expect(state.life, 0);
         verify(() => mockScoresRepository.add(0)).called(1);
+      });
+    });
+
+    test('keeps the wrong and timed-out questions for the review after the game', () {
+      fakeAsync((async) {
+        final container = makeContainer();
+        container.read(quizControllerProvider.notifier).start();
+        async.flushMicrotasks();
+
+        // Question 0: right. Question 1: wrong. Question 2: timeout. Question 3: wrong -> game over.
+        var state = container.read(quizControllerProvider);
+        container.read(quizControllerProvider.notifier).answer(state.choices.indexOf('Answer0'));
+        async.elapse(const Duration(milliseconds: 2200));
+
+        state = container.read(quizControllerProvider);
+        final wrong = state.choices.indexWhere((c) => c != 'Answer1');
+        container.read(quizControllerProvider.notifier).answer(wrong);
+        async
+          ..elapse(const Duration(milliseconds: 2200))
+          ..elapse(const Duration(seconds: 21))
+          ..elapse(const Duration(milliseconds: 2200));
+
+        state = container.read(quizControllerProvider);
+        container.read(quizControllerProvider.notifier).answer(state.choices.indexWhere((c) => c != 'Answer3'));
+        async
+          ..elapse(const Duration(milliseconds: 2200))
+          ..flushMicrotasks();
+
+        expect(container.read(quizControllerProvider).phase, QuizPhase.gameOver);
+        final mistakes = container.read(quizReviewProvider);
+        expect(mistakes.map((m) => m.question.id), [2, 3, 4]);
+        expect(mistakes[0].given, startsWith('Wrong1'));
+        expect(mistakes[1].given, isNull);
       });
     });
 

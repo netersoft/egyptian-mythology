@@ -1,8 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../core/providers/quiz/quiz_review_provider.dart';
 import '../../../core/routes/app_route.dart';
 import '../../../core/services/audio/audio_service.dart';
 import '../../../core/services/di/locator.dart';
@@ -12,7 +14,7 @@ import '../../components/buttons/icon_action_button.dart';
 import '../../components/text/typewriter_text.dart';
 import '../../themes/app_colors.dart';
 
-class GameOverScreen extends StatelessWidget {
+class GameOverScreen extends ConsumerWidget {
   final int score;
   final bool finish;
   final bool isRecord;
@@ -25,8 +27,9 @@ class GameOverScreen extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final t = context.t;
+    final mistakes = ref.watch(quizReviewProvider).length;
     final showCongrat = finish || score > 0;
     final congratText = finish ? t.congratulations : t.bravo;
 
@@ -85,6 +88,26 @@ class GameOverScreen extends StatelessWidget {
                               t.scoreRecord,
                               textAlign: TextAlign.center,
                               style: const TextStyle(color: Colors.black),
+                            ),
+                          ),
+                        if (mistakes > 0)
+                          Padding(
+                            padding: const EdgeInsets.only(top: 16),
+                            child: TextButton.icon(
+                              key: const ValueKey('review_mistakes'),
+                              // A dark pill so the label stays readable over
+                              // the busy desert backdrop.
+                              style: TextButton.styleFrom(
+                                backgroundColor: const Color(0xCC000000),
+                                shape: const StadiumBorder(side: BorderSide(color: AppColors.goldenRod)),
+                                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                              ),
+                              onPressed: () => _navigate(context, () => unawaited(const QuizReviewRoute().push<void>(context))),
+                              icon: const Icon(Icons.fact_check, color: AppColors.goldenYellow),
+                              label: Text(
+                                t.reviewMistakes(count: mistakes),
+                                style: const TextStyle(color: AppColors.goldenYellow, fontSize: 16),
+                              ),
                             ),
                           ),
                       ],

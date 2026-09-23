@@ -58,6 +58,12 @@
   "bravo": "Bravo !",
   "quizFinishText": "Vous avez terminé le quiz ! Vous êtes un as de la mythologie égyptienne.",
   "replay": "Rejouer",
+  "reviewMistakes": "Revoir mes erreurs (${count})",
+  "mistakesTitle": "Mes erreurs",
+  "yourAnswer": "Votre réponse : ${value}",
+  "timeUp": "Temps écoulé",
+  "correctAnswer": "Bonne réponse : ${value}",
+  "learnMore": "En savoir plus",
 
   "changeLang": "Changer la langue",
   "langLabel": "Langue",

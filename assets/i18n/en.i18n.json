@@ -58,6 +58,12 @@
   "bravo": "Well done!",
   "quizFinishText": "You have completed the quiz! You are an ace of Egyptian mythology.",
   "replay": "Replay",
+  "reviewMistakes": "Review my mistakes (${count})",
+  "mistakesTitle": "My mistakes",
+  "yourAnswer": "Your answer: ${value}",
+  "timeUp": "Time’s up",
+  "correctAnswer": "Correct answer: ${value}",
+  "learnMore": "Learn more",
 
   "changeLang": "Change the language",
   "langLabel": "Language",

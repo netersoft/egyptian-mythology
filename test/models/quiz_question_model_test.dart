@@ -9,6 +9,7 @@ void main() {
         'question': 'Who is the sovereign god and supreme judge of the Kingdom of the Dead',
         'answer': 'Osiris',
         'choices': ['Osiris', 'Anubis', 'Onasis', 'Thot'],
+        'explanation': 'Osiris rules the afterlife.',
       };
 
       final model = QuizQuestionModel.fromJson(json);
@@ -17,6 +18,7 @@ void main() {
       expect(model.question, json['question']);
       expect(model.answer, 'Osiris');
       expect(model.choices, ['Osiris', 'Anubis', 'Onasis', 'Thot']);
+      expect(model.explanation, 'Osiris rules the afterlife.');
       expect(model.toJson(), json);
     });
   });

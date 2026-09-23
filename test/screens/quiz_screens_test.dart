@@ -1,8 +1,12 @@
+import 'package:egyptian_mythology/core/models/quiz_mistake.dart';
+import 'package:egyptian_mythology/core/models/quiz_question_model.dart';
+import 'package:egyptian_mythology/core/providers/quiz/quiz_review_provider.dart';
 import 'package:egyptian_mythology/core/routes/app_route.dart';
 import 'package:egyptian_mythology/core/routes/router.dart';
 import 'package:egyptian_mythology/core/services/i18n/translations.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/misc.dart' show Override;
 import 'package:flutter_test/flutter_test.dart';
 
 import '../helpers/test_utils.dart';
@@ -23,9 +27,10 @@ void main() {
     await tester.pump(const Duration(milliseconds: 1600));
   }
 
-  Future<void> pumpAt(WidgetTester tester, String location) async {
+  Future<void> pumpAt(WidgetTester tester, String location, {List<Override> overrides = const []}) async {
     await tester.pumpWidget(
       ProviderScope(
+        overrides: overrides,
         child: TranslationProvider(
           child: MaterialApp.router(
             routerConfig: createRouter(initialLocation: location, observers: const []),
@@ -116,4 +121,47 @@ void main() {
       expect(find.text(t.documentation), findsOneWidget);
     });
   });
+
+  group('QuizReviewScreen', () {
+    testWidgets('the game-over screen offers the review only after mistakes', (tester) async {
+      await pumpAt(tester, const GameOverRoute(score: 10, finish: false, isRecord: false).location);
+      expect(find.byKey(const ValueKey('review_mistakes')), findsNothing);
+    });
+
+    testWidgets('lists each mistake with the right answer and opens the page that covers it', (tester) async {
+      await pumpAt(
+        tester,
+        const GameOverRoute(score: 10, finish: false, isRecord: false).location,
+        overrides: [quizReviewProvider.overrideWith(_OneMistake.new)],
+      );
+      await tester.tap(find.byKey(const ValueKey('review_mistakes')));
+      await settle(tester);
+
+      expect(find.text(t.yourAnswer(value: 'Anubis')), findsOneWidget);
+      expect(find.text(t.correctAnswer(value: 'Osiris')), findsOneWidget);
+      expect(find.textContaining('rules the afterlife', findRichText: true), findsOneWidget);
+
+      await tester.tap(find.text(t.learnMore));
+      await settle(tester);
+
+      expect(find.descendant(of: find.byType(AppBar), matching: find.text(t.osiris)), findsOneWidget);
+    });
+  });
+}
+
+class _OneMistake extends QuizReview {
+  @override
+  List<QuizMistake> build() => const [
+    QuizMistake(
+      question: QuizQuestionModel(
+        id: 1,
+        question: 'Who judges the dead?',
+        answer: 'Osiris',
+        choices: ['Osiris', 'Anubis', 'Thoth', 'Horus'],
+        explanation: 'Osiris rules the afterlife.',
+        ref: 'gods/osiris',
+      ),
+      given: 'Anubis',
+    ),
+  ];
 }
