@@ -41,6 +41,7 @@
   "quiz": "Quiz",
   "stats": "Statistiken",
   "letsPlay": "Los geht's!",
+  "allThemes": "Alle Themen",
   "instructions": "Beantworte die Fragen so schnell du kannst\nDu hast 20 Sekunden Zeit für jede Frage\nDu hast 3 Leben\nFür 5 richtige Antworten in Folge erhältst du ein Leben zurück, aber nur wenn du zuvor eines verloren hast\nJe schneller du antwortest, desto mehr Punkte erhältst du",
   "exitTitle": "Beenden",
   "exitMsg": "Möchtest du die App wirklich verlassen?",

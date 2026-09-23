@@ -1,9 +1,11 @@
 import 'package:egyptian_mythology/core/models/quiz_mistake.dart';
 import 'package:egyptian_mythology/core/models/quiz_question_model.dart';
+import 'package:egyptian_mythology/core/models/quiz_theme.dart';
 import 'package:egyptian_mythology/core/providers/quiz/quiz_review_provider.dart';
 import 'package:egyptian_mythology/core/routes/app_route.dart';
 import 'package:egyptian_mythology/core/routes/router.dart';
 import 'package:egyptian_mythology/core/services/i18n/translations.g.dart';
+import 'package:egyptian_mythology/view/screens/quiz/quiz_play_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;
@@ -51,6 +53,19 @@ void main() {
       await settle(tester);
 
       expect(find.text('Score: 0'), findsOneWidget);
+    });
+  });
+
+  group('InstructionsScreen themes', () {
+    testWidgets('starts a game on the chosen theme', (tester) async {
+      await pumpAt(tester, const InstructionsRoute().location);
+
+      await tester.tap(find.byKey(const ValueKey('quiz_theme_myths')));
+      await tester.pump();
+      await tester.tap(find.text(t.letsPlay));
+      await settle(tester);
+
+      expect(tester.widget<QuizPlayScreen>(find.byType(QuizPlayScreen)).theme, QuizTheme.myths);
     });
   });
 

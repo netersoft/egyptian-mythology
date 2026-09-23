@@ -41,6 +41,7 @@
   "quiz": "Quiz",
   "stats": "Estatísticas",
   "letsPlay": "Vamos jogar!",
+  "allThemes": "Todos os temas",
   "instructions": "Responda às perguntas o mais rápido que puder\nVocê tem 20 segundos para responder a cada pergunta\nVocê tem 3 vidas\nA cada 5 respostas certas seguidas, você ganha uma vida, mas somente se já tiver perdido uma\nQuanto mais rápido você responder, mais pontos ganha",
   "exitTitle": "Sair",
   "exitMsg": "Tem certeza de que deseja sair do aplicativo?",

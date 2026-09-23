@@ -39,6 +39,7 @@
   "mainMenu": "Menu principal",
   "documentation": "Documentation",
   "quiz": "Quiz",
+  "allThemes": "Tous les thèmes",
   "stats": "Statistiques",
   "letsPlay": "Jouons !",
   "instructions": "Répondez aux questions aussi vite que possible\nVous avez 20 secondes pour répondre à chaque question\nVous avez 3 vies\nAprès 5 bonnes réponses d'affilée, vous regagnez une vie si vous en avez perdu une\nPlus vous répondez vite, plus vous marquez de points",
