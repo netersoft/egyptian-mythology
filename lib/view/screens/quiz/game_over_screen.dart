@@ -95,11 +95,18 @@ class GameOverScreen extends ConsumerWidget {
                             padding: const EdgeInsets.only(top: 16),
                             child: TextButton.icon(
                               key: const ValueKey('review_mistakes'),
+                              // A dark pill so the label stays readable over
+                              // the busy desert backdrop.
+                              style: TextButton.styleFrom(
+                                backgroundColor: const Color(0xCC000000),
+                                shape: const StadiumBorder(side: BorderSide(color: AppColors.goldenRod)),
+                                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                              ),
                               onPressed: () => _navigate(context, () => unawaited(const QuizReviewRoute().push<void>(context))),
-                              icon: const Icon(Icons.fact_check, color: AppColors.goldenRod),
+                              icon: const Icon(Icons.fact_check, color: AppColors.goldenYellow),
                               label: Text(
                                 t.reviewMistakes(count: mistakes),
-                                style: const TextStyle(color: AppColors.goldenRod, fontSize: 16, decoration: TextDecoration.underline),
+                                style: const TextStyle(color: AppColors.goldenYellow, fontSize: 16),
                               ),
                             ),
                           ),
