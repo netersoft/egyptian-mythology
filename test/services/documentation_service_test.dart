@@ -69,6 +69,20 @@ void main() {
       expect(en, isNot(equals(fr)));
     });
 
+    // A section id the code doesn't know (the French file once used "khnoum"
+    // for "khnum") shows its raw id as the page title and breaks god links.
+    test('every god page has a translated title in every locale', () async {
+      for (final locale in AppLocale.values) {
+        final translations = await locale.build();
+        final items = await docs.loadItems(DocCategory.gods, locale.languageCode, translations);
+
+        expect(items, hasLength(36), reason: locale.languageCode);
+        for (final item in items) {
+          expect(item.title, isNot(item.id), reason: '${locale.languageCode}: ${item.id}');
+        }
+      }
+    });
+
     group('linkGodMentions', () {
       const names = {'Isis': 'isis', 'Osiris': 'osiris', 'Amun': 'amon', 'Amun-Re': 'amon_re', 'Re': 're'};
       String link(String id, String name) => '<a href="${DocumentationService.godLinkPrefix}$id">$name</a>';
