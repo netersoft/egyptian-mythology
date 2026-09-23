@@ -9,6 +9,7 @@ import math
 from PIL import Image, ImageDraw, ImageFont
 
 # (id, lat, lon, label side) -- side is where the label goes: 'l' or 'r'.
+# LABEL_DY nudges a label vertically (px) where two sites are very close.
 SITES = [
     ('bouto', 31.19, 30.74, 'r'), ('sais', 30.97, 30.77, 'r'), ('bubastis', 30.57, 31.51, 'r'),
     ('heliopolis', 30.13, 31.31, 'r'), ('giza', 29.98, 31.13, 'l'), ('memphis', 29.85, 31.25, 'r'),
@@ -18,6 +19,8 @@ SITES = [
     ('esna', 25.29, 32.55, 'l'), ('elkab', 25.12, 32.80, 'r'), ('edfu', 24.98, 32.87, 'r'),
     ('kom_ombo', 24.45, 32.93, 'r'), ('elephantine', 24.09, 32.89, 'l'), ('philae', 24.02, 32.88, 'r'),
 ]
+
+LABEL_DY = {'dendera': -10, 'coptos': 10, 'elkab': -10, 'edfu': 10, 'elephantine': -8, 'philae': 8}
 
 NAMES = {
     'fr': dict(bouto='Bouto', sais='Saïs', bubastis='Bubastis', heliopolis='Héliopolis', giza='Gizeh', memphis='Memphis',
@@ -67,9 +70,9 @@ W = int((LON1 - LON0) * K * SCALE)
 TEXT = (255, 223, 0, 255)
 LINE = (218, 165, 32, 255)
 WATER = (64, 164, 223, 255)
-FONT = ImageFont.truetype('assets/fonts/montserrat/montserrat_medium.ttf', 30)
-SMALL = ImageFont.truetype('assets/fonts/montserrat/montserrat_medium.ttf', 26)
-REGION = ImageFont.truetype('assets/fonts/montserrat/montserrat_bold.ttf', 30)
+FONT = ImageFont.truetype('assets/fonts/montserrat/montserrat_medium.ttf', 36)
+SMALL = ImageFont.truetype('assets/fonts/montserrat/montserrat_medium.ttf', 30)
+REGION = ImageFont.truetype('assets/fonts/montserrat/montserrat_bold.ttf', 34)
 
 
 def xy(lat, lon):
@@ -89,7 +92,7 @@ def draw(locale):
     d.ellipse([fx - 28, fy - 10, fx + 28, fy + 10], fill=WATER)
 
     d.text(xy(31.62, 29.1), n['sea'], font=SMALL, fill=WATER, anchor='ls')
-    d.text(xy(26.9, 34.1), n['red_sea'], font=SMALL, fill=WATER, anchor='ls')
+    d.text(xy(28.1, 33.45), n['red_sea'], font=SMALL, fill=WATER, anchor='ls')
     d.text(xy(28.4, 31.05), n['nile'], font=SMALL, fill=WATER, anchor='lm')
     d.text(xy(30.45, 29.9), n['lower'], font=REGION, fill=LINE, anchor='mm')
     d.text(xy(26.7, 29.9), n['upper'], font=REGION, fill=LINE, anchor='mm')
@@ -97,10 +100,11 @@ def draw(locale):
     for site, lat, lon, side in SITES:
         x, y = xy(lat, lon)
         d.ellipse([x - 7, y - 7, x + 7, y + 7], fill=TEXT)
+        ly = y + LABEL_DY.get(site, 0)
         if side == 'r':
-            d.text((x + 14, y), n[site], font=FONT, fill=TEXT, anchor='lm')
+            d.text((x + 14, ly), n[site], font=FONT, fill=TEXT, anchor='lm')
         else:
-            d.text((x - 14, y), n[site], font=FONT, fill=TEXT, anchor='rm')
+            d.text((x - 14, ly), n[site], font=FONT, fill=TEXT, anchor='rm')
 
     img.save(f'assets/docs/res/pictures/reference/map-{locale}.png', optimize=True)
 
