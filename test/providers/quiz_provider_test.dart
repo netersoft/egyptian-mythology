@@ -220,5 +220,28 @@ void main() {
         expect(container.read(quizControllerProvider).isRecord, isTrue);
       });
     });
+
+    // Leaving QuizPlayScreen (back swipe) mid-feedback disposes the autoDispose
+    // controller while answer() is still awaiting its feedback delay.
+    test('leaving the quiz during answer feedback does not touch the disposed controller', () {
+      fakeAsync((async) {
+        final container = ProviderContainer();
+        addTearDown(container.dispose);
+        final subscription = container.listen(quizControllerProvider, (_, _) {});
+        final notifier = container.read(quizControllerProvider.notifier)..start();
+        async.flushMicrotasks();
+
+        Object? error;
+        final correctIndex = container.read(quizControllerProvider).choices.indexOf('Answer0');
+        notifier.answer(correctIndex).catchError((Object e) => error = e);
+        subscription.close();
+        async
+          ..flushMicrotasks()
+          ..elapse(const Duration(seconds: 30));
+
+        expect(error, isNull);
+        expect(async.pendingTimers, isEmpty);
+      });
+    });
   });
 }
