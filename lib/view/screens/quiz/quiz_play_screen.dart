@@ -161,7 +161,9 @@ class _AnswerButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final inFeedback = state.selectedIndex != null;
+    // correctIndex is set both after an answer and when the timer runs out
+    // (selectedIndex stays null then, so only the right answer lights up).
+    final inFeedback = state.correctIndex != null;
     final isCorrectChoice = inFeedback && index == state.correctIndex;
     final isWrongChoice = inFeedback && index == state.selectedIndex && index != state.correctIndex;
 

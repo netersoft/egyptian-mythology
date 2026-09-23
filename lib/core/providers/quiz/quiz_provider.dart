@@ -54,6 +54,8 @@ class QuizController extends _$QuizController {
   }
 
   Future<void> answer(int selectedIndex) async {
+    // Already showing feedback (answered, or timed out) -- ignore extra taps.
+    if (state.correctIndex != null) return;
     _timer?.cancel();
     unawaited(_audioService.playClick());
 
@@ -120,11 +122,22 @@ class QuizController extends _$QuizController {
     if (remaining <= 0) {
       _timer?.cancel();
       _correctStreak = 0;
-      state = state.copyWith(remainingSeconds: 0);
-      unawaited(_loseLife());
+      unawaited(_onTimeout());
     } else {
       state = state.copyWith(remainingSeconds: remaining);
     }
+  }
+
+  // Unlike the legacy app (which moved straight on), flash the correct answer
+  // for the same feedback delay as a wrong answer, so a timed-out question
+  // still teaches the player something. selectedIndex stays null: no button
+  // is marked wrong, only the right one is highlighted.
+  Future<void> _onTimeout() async {
+    final correctIndex = state.choices.indexOf(_questions[_index - 1].answer);
+    state = state.copyWith(remainingSeconds: 0, correctIndex: correctIndex);
+    await Future<void>.delayed(_feedbackDelay);
+    if (!ref.mounted) return;
+    await _loseLife();
   }
 
   Future<void> _loseLife() async {
