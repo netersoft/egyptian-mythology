@@ -149,11 +149,70 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
 
   // God-name links (doc:gods/<id>) open that god's page as a new screen, so
   // back returns to the page the link was followed from, like on the web.
+  // Glossary terms (glossary:<id>) show their definition in a sheet instead,
+  // so looking a word up doesn't lose the reader's place.
   bool _onTapUrl(String url) {
-    if (!url.startsWith(DocumentationService.godLinkPrefix)) return false;
-    unawaited(locator<AudioService>().playClick());
-    unawaited(GodsDocRoute(item: url.substring(DocumentationService.godLinkPrefix.length)).push<void>(context));
-    return true;
+    if (url.startsWith(DocumentationService.godLinkPrefix)) {
+      unawaited(locator<AudioService>().playClick());
+      unawaited(GodsDocRoute(item: url.substring(DocumentationService.godLinkPrefix.length)).push<void>(context));
+      return true;
+    }
+    if (url.startsWith(DocumentationService.glossaryLinkPrefix)) {
+      unawaited(locator<AudioService>().playClick());
+      unawaited(_showDefinition(url.substring(DocumentationService.glossaryLinkPrefix.length)));
+      return true;
+    }
+    return false;
+  }
+
+  Future<void> _showDefinition(String id) async {
+    final entries = await _docs.glossary(LocaleSettings.instance.currentLocale.languageCode);
+    final entry = entries.where((e) => e.id == id).firstOrNull;
+    if (entry == null || !mounted) return;
+
+    await showModalBottomSheet<void>(
+      context: context,
+      backgroundColor: AppColors.blackRussian,
+      showDragHandle: true,
+      builder: (sheetContext) => SafeArea(
+        child: Padding(
+          key: const ValueKey('glossary_sheet'),
+          padding: const EdgeInsets.fromLTRB(24, 0, 24, 16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                entry.term,
+                style: const TextStyle(color: AppColors.goldenYellow, fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 8),
+              HtmlWidget(entry.definition, textStyle: const TextStyle(color: AppColors.goldenYellow, fontSize: 16)),
+              if (widget.category != DocCategory.reference)
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.of(sheetContext).pop();
+                      unawaited(locator<AudioService>().playClick());
+                      unawaited(const ReferenceDocRoute(item: DocumentationService.glossaryPageId).push<void>(context));
+                    },
+                    child: Text(t.seeGlossary, style: const TextStyle(color: AppColors.goldenRod)),
+                  ),
+                ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  // God links are underlined; glossary terms get a dotted underline, so the
+  // reader can tell "opens a page" from "shows a definition".
+  static Map<String, String>? _linkStyle(String? tag, String? href) {
+    if (tag != 'a') return null;
+    final isTerm = href?.startsWith(DocumentationService.glossaryLinkPrefix) ?? false;
+    return {'color': '#DAA520', 'text-decoration': 'underline', if (isTerm) 'text-decoration-style': 'dotted'};
   }
 
   void _share() {
@@ -230,7 +289,7 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
                   _html!,
                   factoryBuilder: DocWidgetFactory.new,
                   onTapUrl: _onTapUrl,
-                  customStylesBuilder: (element) => element.localName == 'a' ? const {'color': '#DAA520', 'text-decoration': 'underline'} : null,
+                  customStylesBuilder: (element) => _linkStyle(element.localName, element.attributes['href']),
                   textStyle: const TextStyle(color: AppColors.goldenYellow, fontSize: 16),
                 ),
                 _buildPager(),
