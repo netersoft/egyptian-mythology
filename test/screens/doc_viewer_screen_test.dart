@@ -87,4 +87,51 @@ void main() {
       expect(find.widgetWithText(ListTile, t.mythOsirienTitle), findsOneWidget);
     });
   });
+
+  group('DocViewerScreen previous/next pager', () {
+    final previousCard = find.byKey(const ValueKey('doc_previous_page'));
+    final nextCard = find.byKey(const ValueKey('doc_next_page'));
+
+    Future<void> tapCard(WidgetTester tester, Finder card) async {
+      await tester.ensureVisible(card);
+      await settle(tester);
+      await tester.tap(card);
+      await settle(tester);
+    }
+
+    testWidgets('first page shows only a next card, titled after the following page', (tester) async {
+      await pumpAt(tester, const CosmogoniesDocRoute().location);
+      await tester.ensureVisible(nextCard);
+
+      expect(previousCard, findsNothing);
+      expect(find.descendant(of: nextCard, matching: find.text(t.next)), findsOneWidget);
+      expect(find.descendant(of: nextCard, matching: find.text(t.heliopolisTitle)), findsOneWidget);
+    });
+
+    testWidgets('tapping next loads the following page, which links back to the previous one', (tester) async {
+      await pumpAt(tester, const CosmogoniesDocRoute().location);
+      await tapCard(tester, nextCard);
+
+      expect(find.descendant(of: find.byType(AppBar), matching: find.text(t.heliopolisTitle)), findsOneWidget);
+      await tester.ensureVisible(previousCard);
+      expect(find.descendant(of: previousCard, matching: find.text(t.introTitle)), findsOneWidget);
+      expect(find.descendant(of: nextCard, matching: find.text(t.hermopolisTitle)), findsOneWidget);
+
+      await tapCard(tester, previousCard);
+
+      expect(find.descendant(of: find.byType(AppBar), matching: find.text(t.introTitle)), findsOneWidget);
+    });
+
+    testWidgets('last page shows only a previous card', (tester) async {
+      await pumpAt(tester, const MythsDocRoute().location);
+      await tester.tap(find.byIcon(Icons.menu));
+      await settle(tester);
+      await tester.tap(find.widgetWithText(ListTile, t.mythOsirienTitle));
+      await settle(tester);
+      await tester.ensureVisible(previousCard);
+
+      expect(nextCard, findsNothing);
+      expect(find.descendant(of: previousCard, matching: find.text(t.mythMortTitle)), findsOneWidget);
+    });
+  });
 }

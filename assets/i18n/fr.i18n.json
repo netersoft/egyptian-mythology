@@ -9,6 +9,8 @@
   "legalInformation": "Mentions légales",
   "settings": "Paramètres",
   "share": "Partager",
+  "previous": "Précédent",
+  "next": "Suivant",
   "anErrorOccurred": "Une erreur s'est produite",
   "connectionErrorTitle": "Erreur de connexion",
   "connectionErrorContent": "Impossible de mettre à jour les données depuis le serveur",
