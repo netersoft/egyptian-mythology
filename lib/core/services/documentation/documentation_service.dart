@@ -290,9 +290,10 @@ class DocumentationService {
   };
 
   static const _godIds = [
-    'amemet', 'amon', 'amon_re', 'anubis', 'apophis', 'aton', 'bastet', 'bes', 'chou_tefnout', 'geb_nout', 'hapi', //
-    'hathor', 'horus', 'isis', 'khnum', 'khonsou', 'maat', 'min', 'mout', 'nefertem', 'neith', 'nekhbet', 'nephtys',
-    'osiris', 'ouadjet', 'ptah', 're', 'sekhmet', 'selkis', 'seth', 'sobek', 'sokar', 'thot', 'toueris', 'wepwawet',
+    'amemet', 'amon', 'amon_re', 'anubis', 'apophis', 'aton', 'atoum', 'bastet', 'bes', 'chou_tefnout', 'geb_nout', //
+    'hapi', 'haroeris', 'hathor', 'heka', 'horus', 'isis', 'khepri', 'khnum', 'khonsou', 'maat', 'min', 'montou', 'mout',
+    'nefertem', 'neith', 'nekhbet', 'nephtys', 'osiris', 'ouadjet', 'ptah', 're', 'satis_anouket', 'sekhmet', 'selkis',
+    'seshat', 'seth', 'sobek', 'sokar', 'thot', 'toueris', 'wepwawet',
   ];
 
   String _godTitle(String id, Translations t) => switch (id) {
@@ -303,18 +304,23 @@ class DocumentationService {
     'anubis' => t.anubis,
     'apophis' => t.apophis,
     'aton' => t.aton,
+    'atoum' => t.atoum,
     'bastet' => t.bastet,
     'bes' => t.bes,
     'chou_tefnout' => t.chouTefnout,
     'geb_nout' => t.gebNout,
     'hapi' => t.hapi,
+    'haroeris' => t.haroeris,
     'hathor' => t.hathor,
+    'heka' => t.heka,
     'horus' => t.horus,
     'isis' => t.isis,
+    'khepri' => t.khepri,
     'khnum' => t.khnoum,
     'khonsou' => t.khonsou,
     'maat' => t.maat,
     'min' => t.min,
+    'montou' => t.montou,
     'mout' => t.mout,
     'nefertem' => t.nefertem,
     'neith' => t.neith,
@@ -324,8 +330,10 @@ class DocumentationService {
     'ouadjet' => t.ouadjet,
     'ptah' => t.ptah,
     're' => t.re,
+    'satis_anouket' => t.satisAnouket,
     'sekhmet' => t.sekhmet,
     'selkis' => t.selkis,
+    'seshat' => t.seshat,
     'seth' => t.seth,
     'sobek' => t.sobek,
     'sokar' => t.sokar,
