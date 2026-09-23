@@ -8,6 +8,7 @@ import '../../view/screens/documentation/doc_sections_screen.dart';
 import '../../view/screens/documentation/doc_viewer_screen.dart';
 import '../../view/screens/main_screen.dart';
 import '../../view/screens/other/about_screen.dart';
+import '../../view/screens/other/credits_screen.dart';
 import '../../view/screens/quiz/game_over_screen.dart';
 import '../../view/screens/quiz/instructions_screen.dart';
 import '../../view/screens/quiz/quiz_play_screen.dart';
@@ -38,6 +39,7 @@ class RedirectionRoute extends GoRouteData with $RedirectionRoute {
   routes: [
     TypedGoRoute<SettingsRoute>(path: 'other/settings'),
     TypedGoRoute<AboutRoute>(path: 'other/about'),
+    TypedGoRoute<CreditsRoute>(path: 'other/credits'),
     TypedGoRoute<DocSectionsRoute>(
       path: 'doc',
       routes: [
@@ -74,6 +76,14 @@ class AboutRoute extends GoRouteData with $AboutRoute {
   @override
   Page<void> buildPage(BuildContext context, GoRouterState state) =>
       SwipeablePage<void>(key: state.pageKey, builder: (context) => const AboutScreen());
+}
+
+class CreditsRoute extends GoRouteData with $CreditsRoute {
+  const CreditsRoute();
+
+  @override
+  Page<void> buildPage(BuildContext context, GoRouterState state) =>
+      SwipeablePage<void>(key: state.pageKey, builder: (context) => const CreditsScreen());
 }
 
 class DocSectionsRoute extends GoRouteData with $DocSectionsRoute {

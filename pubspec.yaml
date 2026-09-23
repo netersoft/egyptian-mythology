@@ -140,11 +140,13 @@ flutter:
     - assets/docs/fr/myths/
     - assets/docs/fr/privacy_policy.html
     - assets/docs/fr/terms_of_use.html
+    - assets/docs/fr/credits.html
     - assets/docs/en/gods/
     - assets/docs/en/cosmogonies/
     - assets/docs/en/myths/
     - assets/docs/en/privacy_policy.html
     - assets/docs/en/terms_of_use.html
+    - assets/docs/en/credits.html
     - assets/docs/de/gods/
     - assets/docs/de/cosmogonies/
     - assets/docs/de/myths/
