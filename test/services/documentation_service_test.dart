@@ -71,12 +71,16 @@ void main() {
 
     // A section id the code doesn't know (the French file once used "khnoum"
     // for "khnum") shows its raw id as the page title and breaks god links.
+    // French is the source text: every other locale may only lag behind it.
     test('every god page has a translated title in every locale', () async {
+      final fr = await docs.loadItems(DocCategory.gods, 'fr', await AppLocale.fr.build());
+      expect(fr, hasLength(43));
+
       for (final locale in AppLocale.values) {
         final translations = await locale.build();
         final items = await docs.loadItems(DocCategory.gods, locale.languageCode, translations);
 
-        expect(items, hasLength(36), reason: locale.languageCode);
+        expect(fr.map((i) => i.id), containsAll(items.map((i) => i.id)), reason: locale.languageCode);
         for (final item in items) {
           expect(item.title, isNot(item.id), reason: '${locale.languageCode}: ${item.id}');
         }
@@ -125,6 +129,13 @@ void main() {
 
       final heliopolis = await docs.loadContent(DocCategory.cosmogonies, 'heliopolis', 'en', t);
       expect(heliopolis, contains('<a href="${DocumentationService.godLinkPrefix}geb_nout">Geb</a>'));
+    });
+
+    test('"Horus l’Ancien" links to his own page, not to Horus', () async {
+      final fr = await AppLocale.fr.build();
+      final gebNut = await docs.loadContent(DocCategory.gods, 'geb_nout', 'fr', fr);
+
+      expect(gebNut, contains('<a href="${DocumentationService.godLinkPrefix}haroeris">Horus l’Ancien</a>'));
     });
 
     group('search', () {
