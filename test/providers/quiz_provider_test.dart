@@ -54,7 +54,7 @@ void main() {
 
         final state = container.read(quizControllerProvider);
         expect(state.phase, QuizPhase.playing);
-        expect(state.question, 'Question 0 ?');
+        expect(state.question, 'Question 0');
         expect(state.choices, containsAll(['Answer0', 'Wrong0a', 'Wrong0b', 'Wrong0c']));
         expect(state.remainingSeconds, 20);
         expect(state.life, 3);
@@ -90,7 +90,7 @@ void main() {
 
         final state = container.read(quizControllerProvider);
         expect(state.score, 150);
-        expect(state.question, 'Question 1 ?');
+        expect(state.question, 'Question 1');
         expect(state.remainingSeconds, 20);
         expect(state.life, 3);
       });
@@ -111,7 +111,7 @@ void main() {
         final state = container.read(quizControllerProvider);
         expect(state.life, 2);
         expect(state.phase, QuizPhase.playing);
-        expect(state.question, 'Question 1 ?');
+        expect(state.question, 'Question 1');
         expect(state.score, 0);
       });
     });
@@ -126,7 +126,7 @@ void main() {
 
         final revealed = container.read(quizControllerProvider);
         expect(revealed.remainingSeconds, 0);
-        expect(revealed.question, 'Question 0 ?');
+        expect(revealed.question, 'Question 0');
         expect(revealed.correctIndex, revealed.choices.indexOf('Answer0'));
         expect(revealed.selectedIndex, isNull);
         expect(revealed.life, 3);
@@ -135,7 +135,7 @@ void main() {
 
         final state = container.read(quizControllerProvider);
         expect(state.life, 2);
-        expect(state.question, 'Question 1 ?');
+        expect(state.question, 'Question 1');
         expect(state.correctIndex, isNull);
       });
     });
@@ -155,7 +155,7 @@ void main() {
         final state = container.read(quizControllerProvider);
         expect(state.score, 0);
         expect(state.life, 2);
-        expect(state.question, 'Question 1 ?');
+        expect(state.question, 'Question 1');
       });
     });
 
@@ -312,7 +312,7 @@ void main() {
           async.elapse(const Duration(seconds: 10));
 
           var state = container.read(quizControllerProvider);
-          expect(state.question, 'Question 1 ?');
+          expect(state.question, 'Question 1');
           expect(state.remainingSeconds, 20);
 
           notifier.resume();
