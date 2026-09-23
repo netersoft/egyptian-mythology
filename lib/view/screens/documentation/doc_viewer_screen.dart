@@ -7,6 +7,7 @@ import 'package:share_plus/share_plus.dart';
 
 import '../../../core/models/doc_category.dart';
 import '../../../core/models/doc_item.dart';
+import '../../../core/routes/app_route.dart';
 import '../../../core/services/audio/audio_service.dart';
 import '../../../core/services/di/locator.dart';
 import '../../../core/services/documentation/documentation_service.dart';
@@ -22,8 +23,10 @@ const _playStoreUrl = 'https://play.google.com/store/apps/details?id=com.neteru.
 
 class DocViewerScreen extends StatefulWidget {
   final DocCategory category;
+  // Page to open on, overriding the saved reading position (god links).
+  final String? initialItemId;
 
-  const DocViewerScreen({required this.category, super.key});
+  const DocViewerScreen({required this.category, this.initialItemId, super.key});
 
   @override
   State<DocViewerScreen> createState() => _DocViewerScreenState();
@@ -81,6 +84,12 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
     setState(() => _items = items);
     if (items.isEmpty) return;
 
+    final requested = items.where((item) => item.id == widget.initialItemId).firstOrNull;
+    if (requested != null) {
+      await _selectItem(requested);
+      return;
+    }
+
     // Resume on the page (and scroll position) the reader left this category
     // on; the id may be gone if the content changed, so fall back to the start.
     final lastId = _progress.lastItemId(widget.category);
@@ -94,7 +103,7 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
 
   Future<void> _selectItem(DocItem item, {double restoreOffset = 0}) async {
     _requested = item;
-    final html = await _docs.loadContent(widget.category, item.id, LocaleSettings.instance.currentLocale.languageCode);
+    final html = await _docs.loadContent(widget.category, item.id, LocaleSettings.instance.currentLocale.languageCode, t);
     if (!mounted || !identical(item, _requested)) return;
     _saveProgressDebounce?.cancel();
     if (_scrollController.hasClients) _scrollController.jumpTo(0);
@@ -136,6 +145,15 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
   void _onPage(DocItem item) {
     unawaited(locator<AudioService>().playClick());
     unawaited(_selectItem(item));
+  }
+
+  // God-name links (doc:gods/<id>) open that god's page as a new screen, so
+  // back returns to the page the link was followed from, like on the web.
+  bool _onTapUrl(String url) {
+    if (!url.startsWith(DocumentationService.godLinkPrefix)) return false;
+    unawaited(locator<AudioService>().playClick());
+    unawaited(GodsDocRoute(item: url.substring(DocumentationService.godLinkPrefix.length)).push<void>(context));
+    return true;
   }
 
   void _share() {
@@ -203,6 +221,8 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
                 HtmlWidget(
                   _html!,
                   factoryBuilder: DocWidgetFactory.new,
+                  onTapUrl: _onTapUrl,
+                  customStylesBuilder: (element) => element.localName == 'a' ? const {'color': '#DAA520', 'text-decoration': 'underline'} : null,
                   textStyle: const TextStyle(color: AppColors.goldenYellow, fontSize: 16),
                 ),
                 _buildPager(),

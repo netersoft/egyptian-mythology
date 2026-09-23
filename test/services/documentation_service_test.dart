@@ -42,7 +42,7 @@ void main() {
     });
 
     test('loads a single god fragment with asset-scheme image rewrite', () async {
-      final html = await docs.loadContent(DocCategory.gods, 'anubis', 'en');
+      final html = await docs.loadContent(DocCategory.gods, 'anubis', 'en', t);
 
       expect(html, contains('Anubis'));
       expect(html, contains('src="asset:assets/docs/res/pictures/gods/anubis.svg"'));
@@ -50,23 +50,67 @@ void main() {
     });
 
     test('loads cosmogony content with asset-scheme image rewrite', () async {
-      final html = await docs.loadContent(DocCategory.cosmogonies, 'heliopolis', 'en');
+      final html = await docs.loadContent(DocCategory.cosmogonies, 'heliopolis', 'en', t);
 
       expect(html, contains('src="asset:assets/docs/res/pictures/cosmogonies/heliopolis_banner.jpg"'));
       expect(html, isNot(contains('<html>')));
     });
 
     test('loads myth content with asset-scheme image rewrite', () async {
-      final html = await docs.loadContent(DocCategory.myths, 'myth_mort', 'en');
+      final html = await docs.loadContent(DocCategory.myths, 'myth_mort', 'en', t);
 
       expect(html, contains('src="asset:assets/docs/res/pictures/myths/myth_mort_banner.jpg"'));
     });
 
     test('gods.html is parsed per locale (en and fr differ)', () async {
-      final en = await docs.loadContent(DocCategory.gods, 'anubis', 'en');
-      final fr = await docs.loadContent(DocCategory.gods, 'anubis', 'fr');
+      final en = await docs.loadContent(DocCategory.gods, 'anubis', 'en', t);
+      final fr = await docs.loadContent(DocCategory.gods, 'anubis', 'fr', t);
 
       expect(en, isNot(equals(fr)));
+    });
+
+    group('linkGodMentions', () {
+      const names = {'Isis': 'isis', 'Osiris': 'osiris', 'Amun': 'amon', 'Amun-Re': 'amon_re', 'Re': 're'};
+      String link(String id, String name) => '<a href="${DocumentationService.godLinkPrefix}$id">$name</a>';
+
+      test('links only the first mention of each god', () {
+        final html = DocumentationService.linkGodMentions('<p>Isis and Osiris. Later, Isis again.</p>', names);
+
+        expect(html, '<p>${link('isis', 'Isis')} and ${link('osiris', 'Osiris')}. Later, Isis again.</p>');
+      });
+
+      test('never touches tags or attribute values', () {
+        final html = DocumentationService.linkGodMentions('<img alt="Isis" src="isis.png"><p>Isis</p>', names);
+
+        expect(html, '<img alt="Isis" src="isis.png"><p>${link('isis', 'Isis')}</p>');
+      });
+
+      test('skips text inside headings and existing links', () {
+        final html = DocumentationService.linkGodMentions('<h2>Isis</h2><a href="x">Osiris</a><p>Isis, Osiris</p>', names);
+
+        expect(html, '<h2>Isis</h2><a href="x">Osiris</a><p>${link('isis', 'Isis')}, ${link('osiris', 'Osiris')}</p>');
+      });
+
+      test('matches whole names only, preferring the longest one', () {
+        final html = DocumentationService.linkGodMentions('<p>Amun-Re, Reborn, Isisian, Amun, Re</p>', names);
+
+        expect(html, '<p>${link('amon_re', 'Amun-Re')}, Reborn, Isisian, ${link('amon', 'Amun')}, ${link('re', 'Re')}</p>');
+      });
+
+      test("doesn't link a god's own page to itself", () {
+        final html = DocumentationService.linkGodMentions('<p>Isis and Osiris</p>', names, excludeId: 'isis');
+
+        expect(html, '<p>Isis and ${link('osiris', 'Osiris')}</p>');
+      });
+    });
+
+    test('loadContent links god mentions in the current language, excluding the page itself', () async {
+      final osiris = await docs.loadContent(DocCategory.gods, 'osiris', 'en', t);
+      expect(osiris, contains('${DocumentationService.godLinkPrefix}isis'));
+      expect(osiris, isNot(contains('${DocumentationService.godLinkPrefix}osiris')));
+
+      final chouTefnout = await docs.loadContent(DocCategory.cosmogonies, 'heliopolis', 'en', t);
+      expect(chouTefnout, contains('<a href="${DocumentationService.godLinkPrefix}chou_tefnout">Chu</a>'));
     });
   });
 }
