@@ -46,6 +46,7 @@ class RedirectionRoute extends GoRouteData with $RedirectionRoute {
         TypedGoRoute<GodsDocRoute>(path: 'gods'),
         TypedGoRoute<CosmogoniesDocRoute>(path: 'cosmogonies'),
         TypedGoRoute<MythsDocRoute>(path: 'myths'),
+        TypedGoRoute<ReferenceDocRoute>(path: 'reference'),
         TypedGoRoute<DocSearchRoute>(path: 'search'),
       ],
     ),
@@ -129,6 +130,18 @@ class MythsDocRoute extends GoRouteData with $MythsDocRoute {
   Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(
     key: state.pageKey,
     builder: (context) => DocViewerScreen(category: DocCategory.myths, initialItemId: item),
+  );
+}
+
+class ReferenceDocRoute extends GoRouteData with $ReferenceDocRoute {
+  const ReferenceDocRoute({this.item});
+
+  final String? item;
+
+  @override
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(
+    key: state.pageKey,
+    builder: (context) => DocViewerScreen(category: DocCategory.reference, initialItemId: item),
   );
 }
 

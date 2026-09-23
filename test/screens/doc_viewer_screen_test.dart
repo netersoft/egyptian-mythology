@@ -39,12 +39,13 @@ void main() {
   }
 
   group('DocSectionsScreen', () {
-    testWidgets('renders the 3 category buttons and search', (tester) async {
+    testWidgets('renders the 4 category buttons and search', (tester) async {
       await pumpAt(tester, const DocSectionsRoute().location);
 
       expect(find.text(t.gods), findsOneWidget);
       expect(find.text(t.cosmogonies), findsOneWidget);
       expect(find.text(t.myths), findsOneWidget);
+      expect(find.text(t.reference), findsOneWidget);
       expect(find.text(t.search), findsOneWidget);
     });
   });
@@ -220,6 +221,26 @@ void main() {
       await pumpAt(tester, const GodsDocRoute(item: 'isis').location);
 
       expect(find.descendant(of: find.byType(AppBar), matching: find.text(t.isis)), findsOneWidget);
+    });
+  });
+
+  group('DocViewerScreen glossary links', () {
+    testWidgets('tapping a glossary term shows its definition, which leads to the glossary', (tester) async {
+      await LocaleSettings.setLocaleRaw('fr');
+      await pumpAt(tester, const CosmogoniesDocRoute(item: 'heliopolis').location);
+
+      await tester.ensureVisible(find.textContaining('Noun', findRichText: true).first);
+      await settle(tester);
+      await tester.tapOnText(find.textRange.ofSubstring('Noun').first);
+      await settle(tester);
+
+      expect(find.byKey(const ValueKey('glossary_sheet')), findsOneWidget);
+      expect(find.textContaining('océan primordial', findRichText: true), findsWidgets);
+
+      await tester.tap(find.text(t.seeGlossary));
+      await settle(tester);
+
+      expect(find.descendant(of: find.byType(AppBar), matching: find.text(t.glossaryTitle)), findsOneWidget);
     });
   });
 

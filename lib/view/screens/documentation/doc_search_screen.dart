@@ -59,6 +59,7 @@ class _DocSearchScreenState extends State<DocSearchScreen> {
       DocCategory.gods => GodsDocRoute(item: item).push<void>(context),
       DocCategory.cosmogonies => CosmogoniesDocRoute(item: item).push<void>(context),
       DocCategory.myths => MythsDocRoute(item: item).push<void>(context),
+      DocCategory.reference => ReferenceDocRoute(item: item).push<void>(context),
     });
   }
 
@@ -119,6 +120,7 @@ class _ResultTile extends StatelessWidget {
     DocCategory.gods => Icons.groups,
     DocCategory.cosmogonies => Icons.auto_awesome,
     DocCategory.myths => Icons.auto_stories,
+    DocCategory.reference => Icons.menu_book,
   };
 
   @override
