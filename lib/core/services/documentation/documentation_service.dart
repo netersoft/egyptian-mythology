@@ -14,7 +14,7 @@ import '../i18n/translations.g.dart';
 // here instead, since HtmlWidget has no anchor-scroll equivalent.
 class DocumentationService {
   static const _cosmogonyFileIds = ['intro', 'heliopolis', 'hermopolis', 'memphis', 'thebes'];
-  static const _mythFileIds = ['myth_intro', 'myth_circadien', 'myth_mort', 'myth_osirien'];
+  static const _mythFileIds = ['myth_intro', 'myth_circadien', 'myth_mort', 'myth_osirien', 'myth_lointaine', 'myth_famine'];
   // The glossary page is built from assets/glossary/, not from an HTML file.
   static const _referenceFileIds = ['glossary', 'map', 'chronology'];
   static const glossaryPageId = 'glossary';
@@ -281,6 +281,8 @@ class DocumentationService {
     'myth_circadien' => t.mythCircadienTitle,
     'myth_mort' => t.mythMortTitle,
     'myth_osirien' => t.mythOsirienTitle,
+    'myth_lointaine' => t.mythLointaineTitle,
+    'myth_famine' => t.mythFamineTitle,
     'glossary' => t.glossaryTitle,
     'map' => t.mapTitle,
     'chronology' => t.chronologyTitle,

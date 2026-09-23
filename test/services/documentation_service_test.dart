@@ -34,10 +34,17 @@ void main() {
       expect(items.firstWhere((i) => i.id == 'heliopolis').title, 'Heliopolis Cosmogony');
     });
 
-    test('loads all 4 myth items with resolved titles', () async {
+    test('loads all 6 myth items with resolved titles', () async {
       final items = await docs.loadItems(DocCategory.myths, 'en', t);
 
-      expect(items.map((i) => i.id).toList(), ['myth_intro', 'myth_circadien', 'myth_mort', 'myth_osirien']);
+      expect(items.map((i) => i.id).toList(), [
+        'myth_intro',
+        'myth_circadien',
+        'myth_mort',
+        'myth_osirien',
+        'myth_lointaine',
+        'myth_famine',
+      ]);
       expect(items.firstWhere((i) => i.id == 'myth_circadien').title, 'Myth of the Day Cycle');
     });
 

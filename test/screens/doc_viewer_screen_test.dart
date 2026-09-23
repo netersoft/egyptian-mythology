@@ -130,12 +130,12 @@ void main() {
       await pumpAt(tester, const MythsDocRoute().location);
       await tester.tap(find.byIcon(Icons.menu));
       await settle(tester);
-      await tester.tap(find.widgetWithText(ListTile, t.mythOsirienTitle));
+      await tester.tap(find.widgetWithText(ListTile, t.mythFamineTitle));
       await settle(tester);
       await tester.ensureVisible(previousCard);
 
       expect(nextCard, findsNothing);
-      expect(find.descendant(of: previousCard, matching: find.text(t.mythMortTitle)), findsOneWidget);
+      expect(find.descendant(of: previousCard, matching: find.text(t.mythLointaineTitle)), findsOneWidget);
     });
   });
 
