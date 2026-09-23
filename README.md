@@ -99,7 +99,7 @@ lib/
 │   ├── models/                        # JSON-serializable + plain models (quiz, docs, scores)
 │   ├── enums/                         # Typed constants
 │   ├── helpers/                       # Router redirection, logging
-│   └── tools/                         # Utils, formatters, constants
+│   └── tools/                         # Constants, color/string helpers
 ├── view/
 │   ├── themes/                        # AppTheme, AppColors (from .env)
 │   ├── screens/                       # Documentation, quiz, stats, account (settings), other (about), main
