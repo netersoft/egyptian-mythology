@@ -35,6 +35,7 @@
   "pageNotFound": "Page introuvable",
   "backToHome": "Retour à l'accueil",
   "recommandApp": "Recommander l'application",
+
   "mainMenu": "Menu principal",
   "documentation": "Documentation",
   "quiz": "Quiz",
@@ -43,6 +44,7 @@
   "instructions": "Répondez aux questions aussi vite que possible\nVous avez 20 secondes pour répondre à chaque question\nVous avez 3 vies\nAprès 5 bonnes réponses d'affilée, vous regagnez une vie si vous en avez perdu une\nPlus vous répondez vite, plus vous marquez de points",
   "exitTitle": "Quitter",
   "exitMsg": "Êtes-vous sûr de vouloir quitter l'application ?",
+
   "score": "Score : ${value}",
   "bestScore": "Meilleur score : ${value}",
   "noScore": "Aucun score !",
@@ -51,16 +53,19 @@
   "confirmTitle": "Confirmation",
   "confirmDeleteScores": "Supprimer tous vos scores ?",
   "progress": "Progression",
+
   "congratulations": "Félicitations !",
   "bravo": "Bravo !",
   "quizFinishText": "Vous avez terminé le quiz ! Vous êtes un as de la mythologie égyptienne.",
   "replay": "Rejouer",
+
   "changeLang": "Changer la langue",
   "langLabel": "Langue",
   "french": "Français",
   "english": "Anglais",
   "music": "Musique",
   "song": "Son",
+
   "credits": "Crédits",
   "about1": "Développement : Noé Gnanih",
   "about2": "Musiques : Desert City - Kevin MacLeod, Desert Caravan",
@@ -70,6 +75,7 @@
   "shareAppMsg": "Apprenez-en plus sur la mythologie égyptienne avec cette application ! ${value}",
   "toContact": "Contacter",
   "rate": "Noter",
+
   "introTitle": "Introduction",
   "docTitle": "Documentation",
   "gods": "Dieux",
@@ -86,6 +92,7 @@
   "mythCircadienTitle": "Mythe du cycle du jour",
   "mythMortTitle": "Mythe de la mort",
   "mythOsirienTitle": "Mythe osirien",
+
   "amemet": "Amémet",
   "amon": "Amon",
   "amonRe": "Amon-Rê",
