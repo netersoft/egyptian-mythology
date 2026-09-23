@@ -45,6 +45,11 @@ class DocSectionsScreen extends StatelessWidget {
                       label: context.t.myths,
                       onTap: () => _navigate(context, () => const MythsDocRoute().push(context)),
                     ),
+                    MenuButton(
+                      icon: Icons.search,
+                      label: context.t.search,
+                      onTap: () => _navigate(context, () => const DocSearchRoute().push(context)),
+                    ),
                   ],
                 ),
               ),

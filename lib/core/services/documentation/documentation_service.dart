@@ -2,6 +2,7 @@ import 'package:flutter/services.dart' show rootBundle;
 
 import '../../models/doc_category.dart';
 import '../../models/doc_item.dart';
+import '../../models/doc_search_result.dart';
 import '../i18n/translations.g.dart';
 
 // Cosmogonies and myths each ship as one HTML file per item. Gods ship as a
@@ -13,6 +14,7 @@ class DocumentationService {
   static const _mythFileIds = ['myth_intro', 'myth_circadien', 'myth_mort', 'myth_osirien'];
 
   final _godsContentCache = <String, Map<String, String>>{};
+  final _searchIndexCache = <String, List<_IndexedPage>>{};
 
   Future<List<DocItem>> loadItems(DocCategory category, String locale, Translations t) async {
     switch (category) {
@@ -38,6 +40,90 @@ class DocumentationService {
 
     // A god's own page doesn't link to itself.
     return linkGodMentions(html, _godNames(t), excludeId: category == DocCategory.gods ? id : null);
+  }
+
+  // Searches every page of every category, ignoring case and accents ("re"
+  // finds "Rê", "amon" finds "Amón"). Pages whose title matches come first,
+  // then pages whose text does, each with an excerpt around its first match.
+  Future<List<DocSearchResult>> search(String query, String locale, Translations t) async {
+    final needle = foldForSearch(query.trim());
+    if (needle.length < 2) return const [];
+
+    final pages = await _searchIndex(locale, t);
+    final byTitle = <DocSearchResult>[];
+    final byText = <DocSearchResult>[];
+
+    for (final page in pages) {
+      if (page.foldedTitle.contains(needle)) {
+        byTitle.add(DocSearchResult(category: page.category, item: page.item));
+        continue;
+      }
+      final at = page.foldedText.indexOf(needle);
+      if (at < 0) continue;
+
+      const before = 40;
+      const after = 90;
+      final start = at <= before ? 0 : page.text.lastIndexOf(' ', at - before) + 1;
+      final end = at + needle.length + after >= page.text.length ? page.text.length : page.text.indexOf(' ', at + needle.length + after);
+      final excerpt = page.text.substring(start, end < 0 ? page.text.length : end);
+      final prefix = start > 0 ? '…' : '';
+      byText.add(
+        DocSearchResult(
+          category: page.category,
+          item: page.item,
+          snippet: '$prefix$excerpt${end >= 0 && end < page.text.length ? '…' : ''}',
+          matchStart: prefix.length + at - start,
+          matchEnd: prefix.length + at - start + needle.length,
+        ),
+      );
+    }
+    return [...byTitle, ...byText];
+  }
+
+  Future<List<_IndexedPage>> _searchIndex(String locale, Translations t) async {
+    final cached = _searchIndexCache[locale];
+    if (cached != null) return cached;
+
+    final pages = <_IndexedPage>[];
+    for (final category in DocCategory.values) {
+      for (final item in await loadItems(category, locale, t)) {
+        final html = await loadContent(category, item.id, locale, t);
+        final text = htmlToText(html);
+        pages.add(_IndexedPage(category, item, text, foldForSearch(item.title), foldForSearch(text)));
+      }
+    }
+    return _searchIndexCache[locale] = pages;
+  }
+
+  // Inline tags sit inside a word run ("<a>Maat</a>'s") and must vanish
+  // without a trace; any other tag separates blocks, so becomes a space.
+  static final _inlineTags = RegExp(r'</?(a|b|i|em|strong|span|sup|sub|small)\b[^>]*>', caseSensitive: false);
+  static final _tags = RegExp('<[^>]*>');
+  static final _spaces = RegExp(r'\s+');
+  static const _entities = {'&nbsp;': ' ', '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#39;': "'", '&rsquo;': '’'};
+
+  static String htmlToText(String html) {
+    var text = html.replaceAll(_inlineTags, '').replaceAll(_tags, ' ');
+    _entities.forEach((entity, char) => text = text.replaceAll(entity, char));
+    return text.replaceAll(_spaces, ' ').trim();
+  }
+
+  static const _accents = {
+    'à': 'a', 'á': 'a', 'â': 'a', 'ã': 'a', 'ä': 'a', 'å': 'a', 'ç': 'c', 'è': 'e', 'é': 'e', 'ê': 'e', 'ë': 'e', //
+    'ì': 'i', 'í': 'i', 'î': 'i', 'ï': 'i', 'ñ': 'n', 'ò': 'o', 'ó': 'o', 'ô': 'o', 'õ': 'o', 'ö': 'o', 'ù': 'u',
+    'ú': 'u', 'û': 'u', 'ü': 'u', 'ý': 'y', 'ÿ': 'y', 'œ': 'o', 'æ': 'a', 'ß': 's', '’': "'",
+  };
+
+  // Lowercases and strips accents one character at a time, so the folded
+  // string keeps the original's length and match offsets map straight back
+  // onto the original text for the excerpt.
+  static String foldForSearch(String text) {
+    final out = StringBuffer();
+    for (final char in text.split('')) {
+      final lower = char.toLowerCase();
+      out.write(lower.length == 1 ? (_accents[lower] ?? lower) : char);
+    }
+    return out.toString();
   }
 
   // Links scheme handled by DocViewerScreen: doc:gods/<god id>.
@@ -178,4 +264,14 @@ class DocumentationService {
     'wepwawet' => t.wepwawet,
     _ => id,
   };
+}
+
+class _IndexedPage {
+  final DocCategory category;
+  final DocItem item;
+  final String text;
+  final String foldedTitle;
+  final String foldedText;
+
+  const _IndexedPage(this.category, this.item, this.text, this.foldedTitle, this.foldedText);
 }

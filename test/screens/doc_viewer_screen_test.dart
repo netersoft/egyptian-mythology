@@ -39,12 +39,13 @@ void main() {
   }
 
   group('DocSectionsScreen', () {
-    testWidgets('renders the 3 category buttons', (tester) async {
+    testWidgets('renders the 3 category buttons and search', (tester) async {
       await pumpAt(tester, const DocSectionsRoute().location);
 
       expect(find.text(t.gods), findsOneWidget);
       expect(find.text(t.cosmogonies), findsOneWidget);
       expect(find.text(t.myths), findsOneWidget);
+      expect(find.text(t.search), findsOneWidget);
     });
   });
 
@@ -219,6 +220,47 @@ void main() {
       await pumpAt(tester, const GodsDocRoute(item: 'isis').location);
 
       expect(find.descendant(of: find.byType(AppBar), matching: find.text(t.isis)), findsOneWidget);
+    });
+  });
+
+  group('DocSearchScreen', () {
+    final searchField = find.byKey(const ValueKey('doc_search_field'));
+
+    Future<void> search(WidgetTester tester, String query) async {
+      await tester.enterText(searchField, query);
+      await tester.pump(const Duration(milliseconds: 250));
+      await settle(tester);
+    }
+
+    testWidgets('lists matching pages and opens the tapped one, back returns to the results', (tester) async {
+      await pumpAt(tester, const DocSearchRoute().location);
+      await search(tester, 'heliopolis');
+
+      final result = find.widgetWithText(ListTile, t.heliopolisTitle);
+      expect(result, findsOneWidget);
+
+      await tester.tap(result);
+      await settle(tester);
+      expect(find.descendant(of: find.byType(AppBar), matching: find.text(t.heliopolisTitle)), findsOneWidget);
+
+      await tester.binding.handlePopRoute();
+      await settle(tester);
+      expect(result, findsOneWidget);
+    });
+
+    testWidgets('shows an empty state when nothing matches', (tester) async {
+      await pumpAt(tester, const DocSearchRoute().location);
+      await search(tester, 'xylophone');
+
+      expect(find.text(t.noResults), findsOneWidget);
+    });
+
+    testWidgets('is reachable from the viewer app bar', (tester) async {
+      await pumpAt(tester, const MythsDocRoute().location);
+      await tester.tap(find.byIcon(Icons.search));
+      await settle(tester);
+
+      expect(searchField, findsOneWidget);
     });
   });
 }

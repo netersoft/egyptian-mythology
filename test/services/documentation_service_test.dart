@@ -112,5 +112,51 @@ void main() {
       final chouTefnout = await docs.loadContent(DocCategory.cosmogonies, 'heliopolis', 'en', t);
       expect(chouTefnout, contains('<a href="${DocumentationService.godLinkPrefix}chou_tefnout">Chu</a>'));
     });
+
+    group('search', () {
+      test('ignores queries shorter than 2 characters', () async {
+        expect(await docs.search(' a ', 'en', t), isEmpty);
+      });
+
+      test('lists title matches before text matches', () async {
+        final results = await docs.search('anubis', 'en', t);
+
+        expect(results.first.category, DocCategory.gods);
+        expect(results.first.item.id, 'anubis');
+        expect(results.first.snippet, isEmpty);
+        expect(results.skip(1).every((r) => r.snippet.isNotEmpty), isTrue);
+      });
+
+      test('ignores case and accents, and locates the match in the excerpt', () async {
+        await LocaleSettings.setLocaleRaw('fr');
+        final results = await docs.search('MAAT', 'fr', t);
+
+        final maat = results.firstWhere((r) => r.item.id == 'maat');
+        expect(maat.item.title, 'Maât');
+
+        final textHit = results.firstWhere((r) => r.snippet.isNotEmpty);
+        expect(DocumentationService.foldForSearch(textHit.snippet.substring(textHit.matchStart, textHit.matchEnd)), 'maat');
+        await LocaleSettings.setLocaleRaw('en');
+      });
+
+      test('returns nothing for an unknown word', () async {
+        expect(await docs.search('xylophone', 'en', t), isEmpty);
+      });
+    });
+
+    test('htmlToText drops inline tags without adding spaces, and separates blocks', () {
+      expect(
+        DocumentationService.htmlToText('<p>heavier than <a href="doc:gods/maat">Maat</a>\'s <b>feather</b>.</p><p>Next&nbsp;one</p>'),
+        "heavier than Maat's feather. Next one",
+      );
+    });
+
+    test('foldForSearch lowercases and strips accents without changing the length', () {
+      const text = 'Amón-Rê, Maât & Œuvre';
+      final folded = DocumentationService.foldForSearch(text);
+
+      expect(folded, 'amon-re, maat & ouvre');
+      expect(folded.length, text.length);
+    });
   });
 }
