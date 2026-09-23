@@ -11,14 +11,15 @@ import '../../services/scores/scores_repository.dart';
 
 part 'quiz_provider.g.dart';
 
-// Mirrors the legacy PlayActivity exactly, including its quirks:
-// - a life is only regained after 6 correct answers in a row (not 5 -- the
-//   Java increments a 0-based counter and only grants the life once it
-//   would exceed 5, i.e. on the 6th correct answer).
-// - the feedback delay (flash the tapped/correct button, then advance) is
-//   AppUtilities.DELAY / 2 = 2160ms.
+// Mirrors the legacy PlayActivity, except for one off-by-one: the Java only
+// granted a life back on the 6th correct answer in a row, while the rules
+// shown on InstructionsScreen (every locale) promise it after 5. It now
+// follows the rules as written.
+// The feedback delay (flash the tapped/correct button, then advance) is the
+// legacy AppUtilities.DELAY / 2 = 2160ms.
 const _feedbackDelay = Duration(milliseconds: 2160);
 const _questionSeconds = 20;
+const _streakForLife = 5;
 
 // The provider is autoDispose, so leaving QuizPlayScreen mid-game (e.g. a
 // back swipe during the feedback delay) disposes it while an await is still
@@ -68,9 +69,8 @@ class QuizController extends _$QuizController {
       final gained = state.remainingSeconds * 10;
       var life = state.life;
       if (life < 3) {
-        if (_correctStreak < 5) {
-          _correctStreak += 1;
-        } else {
+        _correctStreak += 1;
+        if (_correctStreak == _streakForLife) {
           life += 1;
           _correctStreak = 0;
         }

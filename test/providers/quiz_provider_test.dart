@@ -180,7 +180,7 @@ void main() {
       });
     });
 
-    test('gains a life back only after 6 correct answers in a row while below 3 lives', () {
+    test('gains a life back after 5 correct answers in a row while below 3 lives, as the rules say', () {
       fakeAsync((async) {
         final container = makeContainer();
         container.read(quizControllerProvider.notifier).start();
@@ -195,8 +195,8 @@ void main() {
         q += 1;
         expect(container.read(quizControllerProvider).life, 2);
 
-        // 5 correct answers in a row: streak climbs but life is unchanged.
-        for (var i = 0; i < 5; i++) {
+        // 4 correct answers in a row: streak climbs but life is unchanged.
+        for (var i = 0; i < 4; i++) {
           state = container.read(quizControllerProvider);
           container.read(quizControllerProvider.notifier).answer(state.choices.indexOf('Answer$q'));
           async.elapse(const Duration(milliseconds: 2200));
@@ -204,7 +204,7 @@ void main() {
         }
         expect(container.read(quizControllerProvider).life, 2);
 
-        // The 6th correct answer in a row restores the lost life.
+        // The 5th correct answer in a row restores the lost life.
         state = container.read(quizControllerProvider);
         container.read(quizControllerProvider.notifier).answer(state.choices.indexOf('Answer$q'));
         async.elapse(const Duration(milliseconds: 2200));
