@@ -11,6 +11,8 @@
   "share": "Compartilhar",
   "previous": "Anterior",
   "next": "Próximo",
+  "quizPaused": "Pausado",
+  "resume": "Retomar",
   "anErrorOccurred": "Ocorreu um erro",
   "connectionErrorContent": "Não foi possível atualizar os dados do servidor",
   "connectionErrorTitle": "Erro de conexão",

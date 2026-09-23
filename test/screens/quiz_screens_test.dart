@@ -56,6 +56,28 @@ void main() {
       expect(find.text('Score: 0'), findsOneWidget);
       expect(find.byType(InkWell), findsNWidgets(4));
     });
+
+    testWidgets('backgrounding the app pauses the quiz until the player taps Resume', (tester) async {
+      await pumpAt(tester, const QuizPlayRoute().location);
+
+      // The test binding stops producing frames while hidden/paused, so the
+      // overlay is checked once back in the foreground -- which is also what
+      // the player actually sees.
+      [
+        AppLifecycleState.inactive,
+        AppLifecycleState.hidden,
+        AppLifecycleState.paused,
+        AppLifecycleState.hidden,
+        AppLifecycleState.inactive,
+        AppLifecycleState.resumed,
+      ].forEach(tester.binding.handleAppLifecycleStateChanged);
+      await tester.pump(const Duration(seconds: 5));
+      expect(find.text(t.quizPaused), findsOneWidget);
+
+      await tester.tap(find.byKey(const ValueKey('quiz_resume')));
+      await tester.pump();
+      expect(find.text(t.quizPaused), findsNothing);
+    });
   });
 
   group('GameOverScreen', () {

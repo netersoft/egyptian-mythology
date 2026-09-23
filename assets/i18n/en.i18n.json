@@ -11,6 +11,8 @@
   "share": "Share",
   "previous": "Previous",
   "next": "Next",
+  "quizPaused": "Paused",
+  "resume": "Resume",
   "anErrorOccurred": "An error has occurred",
   "connectionErrorContent": "Unable to update data from server",
   "connectionErrorTitle": "Connexion error",

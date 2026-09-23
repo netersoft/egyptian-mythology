@@ -110,7 +110,31 @@ class QuizController extends _$QuizController {
       correctIndex: null,
     );
 
+    if (!state.isPaused) _startTimer();
+  }
+
+  void _startTimer() {
+    _timer?.cancel();
     _timer = Timer.periodic(const Duration(seconds: 1), (_) => _tick());
+  }
+
+  // Called when the app leaves the foreground (QuizPlayScreen's lifecycle
+  // listener): a phone call or an app switch must not burn through the
+  // countdown and the player's lives. The feedback delay of an answer
+  // already given keeps running -- only the countdown is frozen, and a
+  // question loaded while paused waits for resume() to start its timer.
+  void pause() {
+    if (state.phase != QuizPhase.playing || state.isPaused) return;
+    _timer?.cancel();
+    state = state.copyWith(isPaused: true);
+  }
+
+  void resume() {
+    if (!state.isPaused) return;
+    state = state.copyWith(isPaused: false);
+    // Mid-feedback (answered or timed out): the pending delay will load the
+    // next question, which starts its own timer.
+    if (state.phase == QuizPhase.playing && state.correctIndex == null) _startTimer();
   }
 
   void _tick() {
