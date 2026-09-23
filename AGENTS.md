@@ -70,3 +70,22 @@ ankh-shake animation) or a screen with a real repeating `Timer` must never call
 ```bash
 flutter test
 ```
+
+## Content
+
+French (`assets/docs/fr/`, `assets/quiz/questions_fr.json`) is the source text: fix or
+extend content there first, then carry the change into the other four locales. Use one
+spelling per name everywhere (docs, quiz, i18n titles), so god-name links and search match:
+
+| FR | FR | FR | FR |
+|---|---|---|---|
+| Rê | Atoum | Chou | Tefnout |
+| Geb | Nout | Osiris | Isis |
+| Seth | Nephtys | Horus l’Ancien | Thot |
+| Maât | Amon | Amon-Rê | Aton |
+| Khépri | Khnoum | Khonsou | Nefertoum |
+| Touéris | Selkis | Amémet | Oupouaout |
+| Heka | Chabaka | Noun | Douat |
+
+Typography: French quotes « … », typographic apostrophe ’, centuries and dynasties
+written `XXV<sup>e</sup>`.
