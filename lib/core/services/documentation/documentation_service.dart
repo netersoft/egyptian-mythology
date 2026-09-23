@@ -26,14 +26,74 @@ class DocumentationService {
     }
   }
 
-  Future<String> loadContent(DocCategory category, String id, String locale) async {
+  Future<String> loadContent(DocCategory category, String id, String locale, Translations t) async {
+    final String html;
     if (category == DocCategory.gods) {
       await _ensureGodsLoaded(locale);
-      return _godsContentCache[locale]![id] ?? '';
+      html = _godsContentCache[locale]![id] ?? '';
+    } else {
+      final raw = await rootBundle.loadString('assets/docs/$locale/${category.folder}/$id.html', cache: false);
+      html = _rewriteImageSrcs(_extractBody(raw));
     }
 
-    final raw = await rootBundle.loadString('assets/docs/$locale/${category.folder}/$id.html', cache: false);
-    return _rewriteImageSrcs(_extractBody(raw));
+    // A god's own page doesn't link to itself.
+    return linkGodMentions(html, _godNames(t), excludeId: category == DocCategory.gods ? id : null);
+  }
+
+  // Links scheme handled by DocViewerScreen: doc:gods/<god id>.
+  static const godLinkPrefix = 'doc:gods/';
+
+  // Name as written in the docs -> god page id, in the current language.
+  // Paired pages ("Geb & Nut") are reachable from either name.
+  Map<String, String> _godNames(Translations t) => {
+    for (final id in _godIds)
+      for (final name in _godTitle(id, t).split('&')) name.trim(): id,
+  };
+
+  static final _tagOrText = RegExp('(<[^>]*>)|([^<]+)');
+  static final _noLinkTags = RegExp(r'^<(/?)(a|h[1-6])\b', caseSensitive: false);
+
+  // Turns the first mention of each god into a doc:gods/<id> link, the way
+  // an encyclopedia links a term once per article. Only text content is
+  // touched -- never tags or attribute values (alt="Isis") -- and nothing
+  // inside existing links or headings. Names match whole words only, longest
+  // first, so "Amun-Re" wins over "Amun" and "Re".
+  static String linkGodMentions(String html, Map<String, String> names, {String? excludeId}) {
+    if (names.isEmpty) return html;
+    final sorted = names.keys.toList()..sort((a, b) => b.length.compareTo(a.length));
+    final pattern = RegExp(
+      '(?<![\\p{L}\\p{N}_-])(${sorted.map(RegExp.escape).join('|')})(?![\\p{L}\\p{N}_-])',
+      unicode: true,
+    );
+
+    final linked = <String>{?excludeId};
+    var noLinkDepth = 0;
+    final out = StringBuffer();
+
+    for (final match in _tagOrText.allMatches(html)) {
+      final tag = match.group(1);
+      if (tag != null) {
+        final noLink = _noLinkTags.firstMatch(tag);
+        if (noLink != null && !tag.endsWith('/>')) noLinkDepth += noLink.group(1) == '/' ? -1 : 1;
+        out.write(tag);
+        continue;
+      }
+
+      final text = match.group(2)!;
+      if (noLinkDepth > 0) {
+        out.write(text);
+        continue;
+      }
+      out.write(
+        text.replaceAllMapped(pattern, (m) {
+          final name = m.group(0)!;
+          final id = names[name]!;
+          if (!linked.add(id)) return name;
+          return '<a href="$godLinkPrefix$id">$name</a>';
+        }),
+      );
+    }
+    return out.toString();
   }
 
   Future<void> _ensureGodsLoaded(String locale) async {
@@ -72,6 +132,12 @@ class DocumentationService {
     'myth_osirien' => t.mythOsirienTitle,
     _ => fileId,
   };
+
+  static const _godIds = [
+    'amemet', 'amon', 'amon_re', 'anubis', 'apophis', 'aton', 'bastet', 'bes', 'chou_tefnout', 'geb_nout', 'hapi', //
+    'hathor', 'horus', 'isis', 'khnum', 'khonsou', 'maat', 'min', 'mout', 'nefertem', 'neith', 'nekhbet', 'nephtys',
+    'osiris', 'ouadjet', 'ptah', 're', 'sekhmet', 'selkis', 'seth', 'sobek', 'sokar', 'thot', 'toueris', 'wepwawet',
+  ];
 
   String _godTitle(String id, Translations t) => switch (id) {
     'intro' => t.introTitle,

@@ -83,11 +83,17 @@ class DocSectionsRoute extends GoRouteData with $DocSectionsRoute {
 }
 
 class GodsDocRoute extends GoRouteData with $GodsDocRoute {
-  const GodsDocRoute();
+  // Opens straight on one god's page (?item=anubis) -- used by the god-name
+  // links inside documentation pages -- instead of resuming the last read one.
+  const GodsDocRoute({this.item});
+
+  final String? item;
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(key: state.pageKey, builder: (context) => const DocViewerScreen(category: DocCategory.gods));
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(
+    key: state.pageKey,
+    builder: (context) => DocViewerScreen(category: DocCategory.gods, initialItemId: item),
+  );
 }
 
 class CosmogoniesDocRoute extends GoRouteData with $CosmogoniesDocRoute {

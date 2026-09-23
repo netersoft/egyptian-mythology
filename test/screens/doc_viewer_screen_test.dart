@@ -195,4 +195,30 @@ void main() {
       verify(() => progress.save(DocCategory.cosmogonies, 'memphis', any(that: greaterThan(0)))).called(1);
     });
   });
+
+  group('DocViewerScreen god links', () {
+    testWidgets('tapping a god name opens that god page on top, and back returns', (tester) async {
+      await pumpAt(tester, const MythsDocRoute().location);
+
+      final osirisLink = find.textRange.ofSubstring('Osiris').first;
+      await tester.ensureVisible(find.textContaining('Osiris', findRichText: true).first);
+      await settle(tester);
+      await tester.tapOnText(osirisLink);
+      await settle(tester);
+
+      expect(find.descendant(of: find.byType(AppBar), matching: find.text(t.osiris)), findsOneWidget);
+
+      // System back (the viewer AppBar shows the drawer button, not a back one).
+      await tester.binding.handlePopRoute();
+      await settle(tester);
+
+      expect(find.descendant(of: find.byType(AppBar), matching: find.text(t.introTitle)), findsOneWidget);
+    });
+
+    testWidgets('a route with an item opens on that page instead of the saved one', (tester) async {
+      await pumpAt(tester, const GodsDocRoute(item: 'isis').location);
+
+      expect(find.descendant(of: find.byType(AppBar), matching: find.text(t.isis)), findsOneWidget);
+    });
+  });
 }
