@@ -20,6 +20,11 @@ part 'quiz_provider.g.dart';
 const _feedbackDelay = Duration(milliseconds: 2160);
 const _questionSeconds = 20;
 
+// The provider is autoDispose, so leaving QuizPlayScreen mid-game (e.g. a
+// back swipe during the feedback delay) disposes it while an await is still
+// pending -- every async gap below re-checks ref.mounted before touching
+// state, or Riverpod throws UnmountedRefException.
+
 @riverpod
 class QuizController extends _$QuizController {
   List<QuizQuestionModel> _questions = [];
@@ -41,6 +46,7 @@ class QuizController extends _$QuizController {
 
   Future<void> start() async {
     _questions = await _quizService.loadQuestions();
+    if (!ref.mounted) return;
     _index = 0;
     _correctStreak = 0;
     state = const QuizState(phase: QuizPhase.playing);
@@ -70,11 +76,13 @@ class QuizController extends _$QuizController {
 
       state = state.copyWith(score: state.score + gained, life: life, selectedIndex: selectedIndex, correctIndex: selectedIndex);
       await Future<void>.delayed(_feedbackDelay);
+      if (!ref.mounted) return;
       _loadQuestion();
     } else {
       _correctStreak = 0;
       state = state.copyWith(selectedIndex: selectedIndex, correctIndex: correctIndex);
       await Future<void>.delayed(_feedbackDelay);
+      if (!ref.mounted) return;
       await _loseLife();
     }
   }
@@ -134,6 +142,7 @@ class QuizController extends _$QuizController {
     _timer?.cancel();
     final isRecord = state.score > _scoresRepository.getBestScore();
     await _scoresRepository.add(state.score);
+    if (!ref.mounted) return;
     state = state.copyWith(phase: QuizPhase.gameOver, allQuestionsAnswered: allQuestionsAnswered, isRecord: isRecord);
   }
 }
