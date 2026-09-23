@@ -105,7 +105,7 @@ class QuizController extends _$QuizController {
 
     state = state.copyWith(
       phase: QuizPhase.playing,
-      question: '${currentQuestion.question.trim()} ?',
+      question: currentQuestion.question,
       choices: choices,
       remainingSeconds: _questionSeconds,
       selectedIndex: null,
