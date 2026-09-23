@@ -116,7 +116,7 @@ void main() {
       });
     });
 
-    test('letting the timer run out costs a life the same as a wrong answer', () {
+    test('letting the timer run out reveals the correct answer, then costs a life', () {
       fakeAsync((async) {
         final container = makeContainer();
         container.read(quizControllerProvider.notifier).start();
@@ -124,7 +124,36 @@ void main() {
           ..flushMicrotasks()
           ..elapse(const Duration(seconds: 20));
 
+        final revealed = container.read(quizControllerProvider);
+        expect(revealed.remainingSeconds, 0);
+        expect(revealed.question, 'Question 0 ?');
+        expect(revealed.correctIndex, revealed.choices.indexOf('Answer0'));
+        expect(revealed.selectedIndex, isNull);
+        expect(revealed.life, 3);
+
+        async.elapse(const Duration(milliseconds: 2200));
+
         final state = container.read(quizControllerProvider);
+        expect(state.life, 2);
+        expect(state.question, 'Question 1 ?');
+        expect(state.correctIndex, isNull);
+      });
+    });
+
+    test('answering while the timed-out answer is being revealed is ignored', () {
+      fakeAsync((async) {
+        final container = makeContainer();
+        final notifier = container.read(quizControllerProvider.notifier)..start();
+        async
+          ..flushMicrotasks()
+          ..elapse(const Duration(seconds: 20));
+
+        final revealed = container.read(quizControllerProvider);
+        notifier.answer(revealed.correctIndex!);
+        async.elapse(const Duration(milliseconds: 2200));
+
+        final state = container.read(quizControllerProvider);
+        expect(state.score, 0);
         expect(state.life, 2);
         expect(state.question, 'Question 1 ?');
       });
