@@ -13,6 +13,7 @@ class QuizState {
   final int? correctIndex;
   final bool allQuestionsAnswered;
   final bool isRecord;
+  final bool isPaused;
 
   const QuizState({
     this.phase = QuizPhase.loading,
@@ -25,6 +26,7 @@ class QuizState {
     this.correctIndex,
     this.allQuestionsAnswered = false,
     this.isRecord = false,
+    this.isPaused = false,
   });
 
   QuizState copyWith({
@@ -38,6 +40,7 @@ class QuizState {
     Object? correctIndex = _sentinel,
     bool? allQuestionsAnswered,
     bool? isRecord,
+    bool? isPaused,
   }) => QuizState(
     phase: phase ?? this.phase,
     question: question ?? this.question,
@@ -49,5 +52,6 @@ class QuizState {
     correctIndex: identical(correctIndex, _sentinel) ? this.correctIndex : correctIndex as int?,
     allQuestionsAnswered: allQuestionsAnswered ?? this.allQuestionsAnswered,
     isRecord: isRecord ?? this.isRecord,
+    isPaused: isPaused ?? this.isPaused,
   );
 }

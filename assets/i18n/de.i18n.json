@@ -11,6 +11,8 @@
   "share": "Teilen",
   "previous": "Zurück",
   "next": "Weiter",
+  "quizPaused": "Pausiert",
+  "resume": "Fortsetzen",
   "anErrorOccurred": "Ein Fehler ist aufgetreten",
   "connectionErrorContent": "Die Daten konnten nicht vom Server aktualisiert werden",
   "connectionErrorTitle": "Verbindungsfehler",

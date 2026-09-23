@@ -272,5 +272,63 @@ void main() {
         expect(async.pendingTimers, isEmpty);
       });
     });
+
+    group('pause/resume', () {
+      test('pause freezes the countdown and resume restarts it where it stopped', () {
+        fakeAsync((async) {
+          final container = makeContainer();
+          final notifier = container.read(quizControllerProvider.notifier)..start();
+          async
+            ..flushMicrotasks()
+            ..elapse(const Duration(seconds: 5));
+
+          notifier.pause();
+          async.elapse(const Duration(minutes: 2));
+
+          var state = container.read(quizControllerProvider);
+          expect(state.isPaused, isTrue);
+          expect(state.remainingSeconds, 15);
+          expect(state.life, 3);
+
+          notifier.resume();
+          async.elapse(const Duration(seconds: 3));
+
+          state = container.read(quizControllerProvider);
+          expect(state.isPaused, isFalse);
+          expect(state.remainingSeconds, 12);
+        });
+      });
+
+      test('a question loaded while paused waits for resume to start its timer', () {
+        fakeAsync((async) {
+          final container = makeContainer();
+          final notifier = container.read(quizControllerProvider.notifier)..start();
+          async.flushMicrotasks();
+
+          final correctIndex = container.read(quizControllerProvider).choices.indexOf('Answer0');
+          notifier
+            ..answer(correctIndex)
+            ..pause();
+          async.elapse(const Duration(seconds: 10));
+
+          var state = container.read(quizControllerProvider);
+          expect(state.question, 'Question 1 ?');
+          expect(state.remainingSeconds, 20);
+
+          notifier.resume();
+          async.elapse(const Duration(seconds: 2));
+
+          state = container.read(quizControllerProvider);
+          expect(state.remainingSeconds, 18);
+        });
+      });
+
+      test('pause is a no-op outside of play', () {
+        final container = makeContainer();
+        container.read(quizControllerProvider.notifier).pause();
+
+        expect(container.read(quizControllerProvider).isPaused, isFalse);
+      });
+    });
   });
 }
