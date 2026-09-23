@@ -5,6 +5,7 @@ import 'package:egyptian_mythology/core/services/i18n/translations.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../helpers/test_utils.dart';
@@ -13,6 +14,10 @@ void main() {
   late MockScoresRepository mockScoresRepository;
   late List<ScoreEntryModel> scores;
   var bestScore = 0;
+
+  // The real app gets intl date symbols loaded by GlobalMaterialLocalizations;
+  // these tests pump a bare MaterialApp, so load them explicitly.
+  setUpAll(initializeDateFormatting);
 
   setUp(() async {
     mockScoresRepository = MockScoresRepository();
@@ -61,8 +66,8 @@ void main() {
     group('with existing scores', () {
       setUp(() {
         scores = [
-          const ScoreEntryModel(date: 'Mon 01.01.2024 - 10:00', score: 100),
-          const ScoreEntryModel(date: 'Tue 02.01.2024 - 11:00', score: 250),
+          ScoreEntryModel(score: 100, playedAt: DateTime(2024, 1, 1, 10)),
+          ScoreEntryModel(score: 250, playedAt: DateTime(2024, 1, 2, 11, 5)),
         ];
         bestScore = 250;
       });
@@ -74,6 +79,22 @@ void main() {
         expect(find.text('100'), findsOneWidget);
         expect(find.text('250'), findsOneWidget);
         expect(find.text('Best Score: 250'), findsOneWidget);
+      });
+
+      testWidgets('formats score dates in the current app language', (tester) async {
+        await pumpAt(tester, const StatsRoute().location);
+        expect(find.text('Jan 2, 2024 11:05'), findsOneWidget);
+
+        await LocaleSettings.setLocaleRaw('fr');
+        await pumpAt(tester, const StatsRoute().location);
+        expect(find.text('2 janv. 2024 11:05'), findsOneWidget);
+      });
+
+      testWidgets('falls back to the raw legacy string for an unparseable old entry', (tester) async {
+        scores = [const ScoreEntryModel(score: 40, date: 'garbled')];
+        await pumpAt(tester, const StatsRoute().location);
+
+        expect(find.text('garbled'), findsOneWidget);
       });
 
       testWidgets('Delete asks for confirmation and clears the history when confirmed', (tester) async {

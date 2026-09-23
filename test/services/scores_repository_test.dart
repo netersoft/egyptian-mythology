@@ -1,5 +1,8 @@
 import 'dart:io';
 
+import 'package:egyptian_mythology/core/models/score_entry_model.dart';
+import 'package:egyptian_mythology/core/services/di/locator.dart';
+import 'package:egyptian_mythology/core/services/hive/hive_adapters.dart';
 import 'package:egyptian_mythology/core/services/hive/hive_registrar.g.dart';
 import 'package:egyptian_mythology/core/services/hive/keys.dart';
 import 'package:egyptian_mythology/core/services/hive/service.dart';
@@ -49,13 +52,44 @@ void main() {
       expect(repository.getAll(), isEmpty);
     });
 
-    test('add appends a score entry with a formatted date', () async {
+    test('add appends a score entry timestamped with the current time', () async {
+      final before = DateTime.now();
       await repository.add(120);
 
       final all = repository.getAll();
       expect(all, hasLength(1));
       expect(all.single.score, 120);
-      expect(all.single.date, isNotEmpty);
+      expect(all.single.playedAt, isNotNull);
+      expect(all.single.playedAt!.isBefore(before.subtract(const Duration(seconds: 1))), isFalse);
+    });
+
+    test('getAll backfills playedAt from the legacy date string of entries saved up to 2.0.3', () async {
+      await locator<HiveService>().scoresBox!.put(HiveKeys.scoresList, [
+        const ScoreEntryModel(score: 80, date: 'Mon 01.01.2024 - 10:05'),
+        const ScoreEntryModel(score: 90, date: 'garbled'),
+      ]);
+
+      final [parsed, unparseable] = repository.getAll();
+      expect(parsed.playedAt, DateTime(2024, 1, 1, 10, 5));
+      expect(unparseable.playedAt, isNull);
+      expect(unparseable.date, 'garbled');
+    });
+
+    test('entries written to disk by the pre-2.0.4 adapter (no playedAt field) still load', () async {
+      final box = locator<HiveService>().scoresBox!;
+      await box.close();
+
+      Hive.registerAdapter(_LegacyScoreEntryAdapter(), override: true);
+      final legacyBox = await Hive.openBox(HiveKeys.scores);
+      await legacyBox.put(HiveKeys.scoresList, [const ScoreEntryModel(score: 150, date: 'Tue 02.01.2024 - 11:00')]);
+      await legacyBox.close();
+
+      Hive.registerAdapter(ScoreEntryModelAdapter(), override: true);
+      locator<HiveService>().scoresBox = await Hive.openBox(HiveKeys.scores);
+
+      final entry = repository.getAll().single;
+      expect(entry.score, 150);
+      expect(entry.playedAt, DateTime(2024, 1, 2, 11));
     });
 
     test('add accumulates multiple entries in insertion order', () async {
@@ -87,4 +121,24 @@ void main() {
       expect(repository.getBestScore(), 0);
     });
   });
+}
+
+// Byte-for-byte copy of the ScoreEntryModelAdapter generated before playedAt
+// was added (2 fields: date at index 0, score at index 1).
+class _LegacyScoreEntryAdapter extends TypeAdapter<ScoreEntryModel> {
+  @override
+  final typeId = 138;
+
+  @override
+  ScoreEntryModel read(BinaryReader reader) => throw UnimplementedError();
+
+  @override
+  void write(BinaryWriter writer, ScoreEntryModel obj) {
+    writer
+      ..writeByte(2)
+      ..writeByte(0)
+      ..write(obj.date)
+      ..writeByte(1)
+      ..write(obj.score);
+  }
 }

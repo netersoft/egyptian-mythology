@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../../../core/models/score_entry_model.dart';
 import '../../../core/services/audio/audio_service.dart';
@@ -107,6 +108,15 @@ class _StatsScreenState extends State<StatsScreen> {
     );
   }
 
+  // Localized date + time in the current app language, e.g. "Sep 23, 2026 14:05"
+  // (en) / "23 sept. 2026 14:05" (fr). Falls back to the raw legacy string for
+  // an old entry whose timestamp couldn't be parsed.
+  String _formatDate(ScoreEntryModel entry) {
+    final playedAt = entry.playedAt;
+    if (playedAt == null) return entry.date;
+    return DateFormat.yMMMd(LocaleSettings.instance.currentLocale.languageCode).add_Hm().format(playedAt);
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
     body: PyramidBackground(
@@ -134,7 +144,7 @@ class _StatsScreenState extends State<StatsScreen> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(entry.date, style: const TextStyle(color: AppColors.goldenYellow)),
+                                  Text(_formatDate(entry), style: const TextStyle(color: AppColors.goldenYellow)),
                                   Text(
                                     '${entry.score}',
                                     style: const TextStyle(color: AppColors.goldenRod, fontWeight: FontWeight.bold),
