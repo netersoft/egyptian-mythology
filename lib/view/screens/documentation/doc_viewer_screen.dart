@@ -208,8 +208,11 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
   }
 
   // God links are underlined; glossary terms get a dotted underline, so the
-  // reader can tell "opens a page" from "shows a definition".
-  static Map<String, String>? _linkStyle(String? tag, String? href) {
+  // reader can tell "opens a page" from "shows a definition". Figures drop
+  // the browser-default 40px side margins: on a phone they shrank every
+  // illustration, and made the labels of the map and family tree too small.
+  static Map<String, String>? _elementStyle(String? tag, String? href) {
+    if (tag == 'figure') return const {'margin': '1em 0'};
     if (tag != 'a') return null;
     final isTerm = href?.startsWith(DocumentationService.glossaryLinkPrefix) ?? false;
     return {'color': '#DAA520', 'text-decoration': 'underline', if (isTerm) 'text-decoration-style': 'dotted'};
@@ -289,7 +292,7 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
                   _html!,
                   factoryBuilder: DocWidgetFactory.new,
                   onTapUrl: _onTapUrl,
-                  customStylesBuilder: (element) => _linkStyle(element.localName, element.attributes['href']),
+                  customStylesBuilder: (element) => _elementStyle(element.localName, element.attributes['href']),
                   textStyle: const TextStyle(color: AppColors.goldenYellow, fontSize: 16),
                 ),
                 _buildPager(),

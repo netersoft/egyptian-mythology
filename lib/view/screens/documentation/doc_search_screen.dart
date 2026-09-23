@@ -120,7 +120,7 @@ class _ResultTile extends StatelessWidget {
     DocCategory.gods => Icons.groups,
     DocCategory.cosmogonies => Icons.auto_awesome,
     DocCategory.myths => Icons.auto_stories,
-    DocCategory.reference => Icons.menu_book,
+    DocCategory.reference => Icons.explore,
   };
 
   @override
