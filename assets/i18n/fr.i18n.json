@@ -79,6 +79,12 @@
 
   "introTitle": "Introduction",
   "docTitle": "Documentation",
+  "reference": "Repères",
+  "referenceShare": "Glossaire, carte des sites et chronologie : tout pour se repérer dans la mythologie égyptienne…\nApprenez-en plus avec cette application : ${value}",
+  "glossaryTitle": "Glossaire",
+  "mapTitle": "Carte des sites",
+  "chronologyTitle": "Chronologie",
+  "seeGlossary": "Voir le glossaire",
   "gods": "Dieux",
   "cosmogonies": "Cosmogonies",
   "myths": "Mythes",

@@ -1,8 +1,11 @@
-import 'package:flutter/services.dart' show rootBundle;
+import 'dart:convert';
+
+import 'package:flutter/services.dart' show AssetManifest, rootBundle;
 
 import '../../models/doc_category.dart';
 import '../../models/doc_item.dart';
 import '../../models/doc_search_result.dart';
+import '../../models/glossary_entry.dart';
 import '../i18n/translations.g.dart';
 
 // Cosmogonies and myths each ship as one HTML file per item. Gods ship as a
@@ -12,9 +15,18 @@ import '../i18n/translations.g.dart';
 class DocumentationService {
   static const _cosmogonyFileIds = ['intro', 'heliopolis', 'hermopolis', 'memphis', 'thebes'];
   static const _mythFileIds = ['myth_intro', 'myth_circadien', 'myth_mort', 'myth_osirien'];
+  // The glossary page is built from assets/glossary/, not from an HTML file.
+  static const _referenceFileIds = ['glossary', 'map', 'chronology'];
+  static const glossaryPageId = 'glossary';
+
+  // French is the source text; a page or glossary not translated yet falls
+  // back to it rather than leaving a hole in the other locales.
+  static const _sourceLocale = 'fr';
 
   final _godsContentCache = <String, Map<String, String>>{};
   final _searchIndexCache = <String, List<_IndexedPage>>{};
+  final _glossaryCache = <String, List<GlossaryEntry>>{};
+  Future<AssetManifest>? _manifest;
 
   Future<List<DocItem>> loadItems(DocCategory category, String locale, Translations t) async {
     switch (category) {
@@ -25,22 +37,63 @@ class DocumentationService {
         return _cosmogonyFileIds.map((id) => DocItem(id: id, title: _itemTitle(id, t))).toList();
       case DocCategory.myths:
         return _mythFileIds.map((id) => DocItem(id: id, title: _itemTitle(id, t))).toList();
+      case DocCategory.reference:
+        return _referenceFileIds.map((id) => DocItem(id: id, title: _itemTitle(id, t))).toList();
     }
   }
 
   Future<String> loadContent(DocCategory category, String id, String locale, Translations t) async {
     final String html;
+    final isGlossary = category == DocCategory.reference && id == glossaryPageId;
     if (category == DocCategory.gods) {
       await _ensureGodsLoaded(locale);
       html = _godsContentCache[locale]![id] ?? '';
+    } else if (isGlossary) {
+      html = _glossaryPage(await glossary(locale));
     } else {
-      final raw = await rootBundle.loadString('assets/docs/$locale/${category.folder}/$id.html', cache: false);
+      final raw = await _loadWithFallback((l) => 'assets/docs/$l/${category.folder}/$id.html', locale);
       html = _rewriteImageSrcs(_extractBody(raw));
     }
 
-    // A god's own page doesn't link to itself.
-    return linkGodMentions(html, _godNames(t), excludeId: category == DocCategory.gods ? id : null);
+    // A god's own page doesn't link to itself, and the glossary doesn't link
+    // its terms back to themselves. A locale without its own glossary yet
+    // gets no term links rather than definitions in another language.
+    final linkTerms = !isGlossary && await _exists(_glossaryPath(locale));
+    final links = <String, String>{
+      if (linkTerms)
+        for (final entry in await glossary(locale))
+          for (final alias in entry.aliases) alias: '$glossaryLinkPrefix${entry.id}',
+      for (final MapEntry(key: name, value: godId) in _godNames(t).entries) name: '$godLinkPrefix$godId',
+    };
+    return linkMentions(html, links, exclude: {if (category == DocCategory.gods) '$godLinkPrefix$id'});
   }
+
+  // The glossary of [locale], sorted by term as the reader would expect.
+  Future<List<GlossaryEntry>> glossary(String locale) async {
+    final cached = _glossaryCache[locale];
+    if (cached != null) return cached;
+
+    final raw = await _loadWithFallback(_glossaryPath, locale);
+    final entries = (jsonDecode(raw) as List<dynamic>).map((e) => GlossaryEntry.fromJson(e as Map<String, dynamic>)).toList()
+      ..sort((a, b) => foldForSearch(a.term).compareTo(foldForSearch(b.term)));
+    return _glossaryCache[locale] = entries;
+  }
+
+  static String _glossaryPath(String locale) => 'assets/glossary/glossary_$locale.json';
+
+  Future<bool> _exists(String asset) async {
+    final manifest = await (_manifest ??= AssetManifest.loadFromAssetBundle(rootBundle));
+    return manifest.listAssets().contains(asset);
+  }
+
+  Future<String> _loadWithFallback(String Function(String locale) path, String locale) async =>
+      rootBundle.loadString(path(await _exists(path(locale)) ? locale : _sourceLocale), cache: false);
+
+  static String _glossaryPage(List<GlossaryEntry> entries) => [
+    '<section>',
+    for (final entry in entries) '<h3>${entry.term}</h3><p>${entry.definition}</p>',
+    '</section>',
+  ].join('\n');
 
   // Searches every page of every category, ignoring case and accents ("re"
   // finds "Rê", "amon" finds "Amón"). Pages whose title matches come first,
@@ -129,8 +182,10 @@ class DocumentationService {
     return out.toString();
   }
 
-  // Links scheme handled by DocViewerScreen: doc:gods/<god id>.
+  // Links schemes handled by DocViewerScreen: doc:gods/<god id> opens a god's
+  // page, glossary:<entry id> shows the definition of a glossary term.
   static const godLinkPrefix = 'doc:gods/';
+  static const glossaryLinkPrefix = 'glossary:';
 
   // Name as written in the docs -> god page id, in the current language.
   // Paired pages ("Geb & Nut") are reachable from either name.
@@ -142,20 +197,27 @@ class DocumentationService {
   static final _tagOrText = RegExp('(<[^>]*>)|([^<]+)');
   static final _noLinkTags = RegExp(r'^<(/?)(a|h[1-6])\b', caseSensitive: false);
 
-  // Turns the first mention of each god into a doc:gods/<id> link, the way
-  // an encyclopedia links a term once per article. Only text content is
-  // touched -- never tags or attribute values (alt="Isis") -- and nothing
-  // inside existing links or headings. Names match whole words only, longest
-  // first, so "Amun-Re" wins over "Amun" and "Re".
-  static String linkGodMentions(String html, Map<String, String> names, {String? excludeId}) {
-    if (names.isEmpty) return html;
-    final sorted = names.keys.toList()..sort((a, b) => b.length.compareTo(a.length));
+  static String linkGodMentions(String html, Map<String, String> names, {String? excludeId}) => linkMentions(
+    html,
+    names.map((name, id) => MapEntry(name, '$godLinkPrefix$id')),
+    exclude: {if (excludeId != null) '$godLinkPrefix$excludeId'},
+  );
+
+  // Turns the first mention of each name into a link to its href, the way an
+  // encyclopedia links a term once per article (several names sharing an
+  // href, like "Geb" and "Nut", count as one). Only text content is touched
+  // -- never tags or attribute values (alt="Isis") -- and nothing inside
+  // existing links or headings. Names match whole words only, longest first,
+  // so "Amun-Re" wins over "Amun" and "Re". Hrefs in [exclude] stay unlinked.
+  static String linkMentions(String html, Map<String, String> hrefs, {Set<String> exclude = const {}}) {
+    if (hrefs.isEmpty) return html;
+    final sorted = hrefs.keys.toList()..sort((a, b) => b.length.compareTo(a.length));
     final pattern = RegExp(
       '(?<![\\p{L}\\p{N}_-])(${sorted.map(RegExp.escape).join('|')})(?![\\p{L}\\p{N}_-])',
       unicode: true,
     );
 
-    final linked = <String>{?excludeId};
+    final linked = {...exclude};
     var noLinkDepth = 0;
     final out = StringBuffer();
 
@@ -176,9 +238,9 @@ class DocumentationService {
       out.write(
         text.replaceAllMapped(pattern, (m) {
           final name = m.group(0)!;
-          final id = names[name]!;
-          if (!linked.add(id)) return name;
-          return '<a href="$godLinkPrefix$id">$name</a>';
+          final href = hrefs[name]!;
+          if (!linked.add(href)) return name;
+          return '<a href="$href">$name</a>';
         }),
       );
     }
@@ -219,6 +281,9 @@ class DocumentationService {
     'myth_circadien' => t.mythCircadienTitle,
     'myth_mort' => t.mythMortTitle,
     'myth_osirien' => t.mythOsirienTitle,
+    'glossary' => t.glossaryTitle,
+    'map' => t.mapTitle,
+    'chronology' => t.chronologyTitle,
     _ => fileId,
   };
 

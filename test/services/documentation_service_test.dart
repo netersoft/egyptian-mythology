@@ -192,5 +192,39 @@ void main() {
       expect(folded, 'amon-re, maat & ouvre');
       expect(folded.length, text.length);
     });
+
+    group('reference', () {
+      test('lists the glossary, the map and the timeline', () async {
+        final items = await docs.loadItems(DocCategory.reference, 'en', t);
+
+        expect(items.map((i) => i.id).toList(), ['glossary', 'map', 'chronology']);
+        expect(items.first.title, t.glossaryTitle);
+      });
+
+      test('builds the glossary page from its entries, sorted, without linking terms to themselves', () async {
+        final fr = await AppLocale.fr.build();
+        final html = await docs.loadContent(DocCategory.reference, 'glossary', 'fr', fr);
+
+        expect(html, contains('<h3>Ka</h3>'));
+        expect(html.indexOf('<h3>Akh</h3>'), lessThan(html.indexOf('<h3>Uræus</h3>')));
+        expect(html, isNot(contains(DocumentationService.glossaryLinkPrefix)));
+      });
+
+      test('pages not translated yet fall back to French instead of failing', () async {
+        final html = await docs.loadContent(DocCategory.reference, 'chronology', 'de', t);
+
+        expect(html, contains('Ancien Empire'));
+      });
+
+      test('links the first mention of glossary terms, but not in a locale without its own glossary', () async {
+        final fr = await AppLocale.fr.build();
+        final heliopolis = await docs.loadContent(DocCategory.cosmogonies, 'heliopolis', 'fr', fr);
+        expect(heliopolis, contains('<a href="${DocumentationService.glossaryLinkPrefix}nun">Noun</a>'));
+        expect(RegExp('${DocumentationService.glossaryLinkPrefix}nun"').allMatches(heliopolis), hasLength(1));
+
+        final german = await docs.loadContent(DocCategory.cosmogonies, 'heliopolis', 'de', await AppLocale.de.build());
+        expect(german, isNot(contains(DocumentationService.glossaryLinkPrefix)));
+      });
+    });
   });
 }

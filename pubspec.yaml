@@ -138,6 +138,7 @@ flutter:
     - assets/docs/fr/gods/
     - assets/docs/fr/cosmogonies/
     - assets/docs/fr/myths/
+    - assets/docs/fr/reference/
     - assets/docs/fr/privacy_policy.html
     - assets/docs/fr/terms_of_use.html
     - assets/docs/fr/credits.html
@@ -166,6 +167,8 @@ flutter:
     - assets/docs/res/pictures/gods/
     - assets/docs/res/pictures/cosmogonies/
     - assets/docs/res/pictures/myths/
+    - assets/docs/res/pictures/reference/
+    - assets/glossary/
     - assets/docs/res/styles/
     # QUIZ
     - assets/quiz/
