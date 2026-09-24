@@ -1,1586 +1,1730 @@
 [
   {
     "id": 1,
-    "question": "Wer ist der Herrschergott und oberste Richter des Totenreichs?",
+    "question": "Welcher Gott ist der Herrscher und oberste Richter des Totenreichs",
     "answer": "Osiris",
     "choices": [
       "Osiris",
       "Anubis",
-      "Onasis",
-      "Thot"
-    ]
+      "Thot",
+      "Horus"
+    ],
+    "explanation": "Von Seth ermordet und dann ins Leben zurückgeholt, herrscht Osiris über das Jenseits und richtet dort die Verstorbenen."
   },
   {
     "id": 2,
-    "question": "Welcher Gott steht an der Spitze der großen Neunheit der neun Hauptgötter?",
-    "answer": "Re",
+    "question": "Welcher Gott steht an der Spitze der Neunheit von Heliopolis",
+    "answer": "Atum",
     "choices": [
-      "Re",
-      "Anubis",
+      "Atum",
       "Osiris",
-      "Thot"
-    ]
+      "Thot",
+      "Anubis"
+    ],
+    "explanation": "Der Demiurg Atum, oft als Re-Atum mit Re gleichgesetzt, steht an der Spitze der neun Götter der Neunheit."
   },
   {
     "id": 3,
-    "question": "Wie heißt der Urozean, aus dem alles entstanden ist?",
+    "question": "Wie heißt der Urozean, aus dem alles hervorging",
     "answer": "Der Nun",
     "choices": [
       "Der Nun",
       "Der Nil",
       "Der Ren",
-      "Der Ben"
-    ]
+      "Der Benben"
+    ],
+    "explanation": "Vor der Schöpfung gab es nur den Nun, einen reglosen, dunklen Ozean, der die Welt bis heute umgibt."
   },
   {
     "id": 4,
-    "question": "Wie heißt die dunkle Schlange, der sich der Sonnengott jede Nacht stellen muss?",
+    "question": "Welche riesige Schlange muss der Sonnengott jede Nacht bekämpfen",
     "answer": "Apophis",
     "choices": [
       "Apophis",
-      "Yormungand",
-      "Aido-Wedo",
-      "Waagal"
-    ]
+      "Mehen",
+      "Kematef",
+      "Irta"
+    ],
+    "explanation": "Jede Nacht greift die Schlange Apophis die Barke des Re in der Unterwelt an, um die Sonne zu verschlingen."
   },
   {
     "id": 5,
-    "question": "Wie heißt die Sonnenscheibe über dem Gott Re?",
-    "answer": "Harachte",
+    "question": "Wie heißt die vergöttlichte Sonnenscheibe, die Echnaton zum einzigen Gott Ägyptens machte",
+    "answer": "Aton",
     "choices": [
-      "Harachte",
-      "Mehen",
-      "Heqa",
-      "Duat"
-    ]
+      "Aton",
+      "Atum",
+      "Chepre",
+      "Amun"
+    ],
+    "explanation": "Aton ist die Sonnenscheibe selbst, dargestellt mit Strahlen, die in kleinen Händen enden."
   },
   {
     "id": 6,
-    "question": "Wie wird das Jenseits in der ägyptischen Mythologie genannt?",
+    "question": "Wie heißt die Welt der Toten in der ägyptischen Mythologie",
     "answer": "Die Duat",
     "choices": [
       "Die Duat",
       "Der Nun",
-      "Die Tuad",
-      "Die Heqa"
-    ]
+      "Der Benben",
+      "Die Achtheit"
+    ],
+    "explanation": "Die Duat ist die Unterwelt, die die Sonne jede Nacht durchquert und durch die der Verstorbene reist."
   },
   {
     "id": 7,
-    "question": "Wie heißt der Urhügel?",
+    "question": "Wie heißt der Urhügel, der in Heliopolis aus dem Nun auftauchte",
     "answer": "Der Benben",
     "choices": [
       "Der Benben",
-      "Der Nun",
-      "Der Harachte",
+      "Der Benu",
+      "Der Djed",
       "Der Ren"
-    ]
+    ],
+    "explanation": "Atum ließ aus den Wassern des Nun einen Erdhügel auftauchen, den Benben, um darauf stehen zu können."
   },
   {
     "id": 8,
-    "question": "Wer ist der Gott der trockenen Luft?",
+    "question": "Welcher Gott verkörpert Luft und Licht",
     "answer": "Schu",
     "choices": [
       "Schu",
       "Seth",
       "Thot",
-      "Mehen"
-    ]
+      "Geb"
+    ],
+    "explanation": "Aus dem Niesen des Atum geboren, ist Schu der Gott der Luft und des Lichts, der den Himmel stützt."
   },
   {
     "id": 9,
-    "question": "Wer ist die Göttin der feuchten Luft?",
+    "question": "Welche Göttin verkörpert die Feuchtigkeit",
     "answer": "Tefnut",
     "choices": [
       "Tefnut",
       "Nut",
       "Nephthys",
       "Sachmet"
-    ]
+    ],
+    "explanation": "Tefnut, aus dem Speichel des Atum geboren, ist die Göttin der Feuchtigkeit, Schwester und Gemahlin des Schu."
   },
   {
     "id": 10,
-    "question": "Wer ist der Gott der Erde?",
+    "question": "Welcher Gott verkörpert die Erde",
     "answer": "Geb",
     "choices": [
       "Geb",
       "Nut",
       "Schu",
       "Tefnut"
-    ]
+    ],
+    "explanation": "Geb ist die Erde, liegend unter dem gewölbten Körper der Nut dargestellt; Erdbeben galten als sein Lachen."
   },
   {
     "id": 11,
-    "question": "Wer ist die Göttin des Himmels?",
+    "question": "Welche Göttin verkörpert den Himmel",
     "answer": "Nut",
     "choices": [
       "Nut",
       "Geb",
       "Isis",
       "Maat"
-    ]
+    ],
+    "explanation": "Nut ist der Himmel: eine Frau mit sternenbedecktem Körper, über die Erde gewölbt."
   },
   {
     "id": 12,
-    "question": "Wie heißt die Frau des Osiris?",
+    "question": "Wer ist die Gemahlin des Osiris",
     "answer": "Isis",
     "choices": [
       "Isis",
       "Nephthys",
       "Neith",
       "Selket"
-    ]
+    ],
+    "explanation": "Isis ist die Schwester und Gemahlin des Osiris, dessen zerstückelten Leichnam sie zusammenfügte."
   },
   {
     "id": 13,
-    "question": "Wie heißt die Frau des Gottes Seth?",
+    "question": "Wer ist die Gemahlin des Seth",
     "answer": "Nephthys",
     "choices": [
       "Nephthys",
       "Isis",
       "Selket",
       "Neith"
-    ]
+    ],
+    "explanation": "Nephthys ist die Gemahlin des Seth, stellte sich nach dem Mord aber auf die Seite des Osiris."
   },
   {
     "id": 14,
-    "question": "Wie viele Götter haben Geb und Nut zur Welt gebracht?",
+    "question": "Wie viele Kinder brachte Nut an den Epagomenentagen zur Welt",
     "answer": "5",
     "choices": [
       "5",
       "6",
       "2",
       "3"
-    ]
+    ],
+    "explanation": "An den fünf Epagomenentagen wurden Osiris, Horus der Ältere, Seth, Isis und Nephthys geboren."
   },
   {
     "id": 15,
-    "question": "Wie heißt die zaubermächtige Göttin und Frau des Osiris?",
-    "answer": "Isis",
+    "question": "Welche Hieroglyphe trägt die Göttin Isis auf dem Kopf",
+    "answer": "Den Thron",
     "choices": [
-      "Isis",
-      "Sachmet",
-      "Maat",
-      "Hathor"
-    ]
+      "Den Thron",
+      "Die Mondsichel",
+      "Die Feder",
+      "Den Skorpion"
+    ],
+    "explanation": "Der Name der Isis wird mit dem Zeichen des Throns geschrieben, das sie auf dem Kopf trägt."
   },
   {
     "id": 16,
-    "question": "Wie heißt der Sonnengott, wenn er die aufgehende Sonne ist?",
-    "answer": "Chepri",
+    "question": "In welcher Gestalt erscheint der Sonnengott bei Tagesanbruch",
+    "answer": "Chepre",
     "choices": [
-      "Chepri",
+      "Chepre",
       "Atum",
       "Re",
       "Aton"
-    ]
+    ],
+    "explanation": "Am Morgen ist die Sonne Chepre, der Skarabäus, der die Sonnenscheibe über den Himmel schiebt."
   },
   {
     "id": 17,
-    "question": "Wie heißt der Sonnengott, wenn er die Mittagssonne ist?",
+    "question": "Unter welchem Namen herrscht der Sonnengott am Mittag",
     "answer": "Re",
     "choices": [
       "Re",
       "Amun",
-      "Chepri",
-      "Aton"
-    ]
+      "Chepre",
+      "Atum"
+    ],
+    "explanation": "Die Sonne ist am Morgen Chepre, am Mittag Re in seiner ganzen Kraft und am Abend Atum."
   },
   {
     "id": 18,
-    "question": "Wie heißt der Sonnengott, wenn er die untergehende Sonne ist?",
+    "question": "Unter welchem Namen geht der Sonnengott am Abend unter",
     "answer": "Atum",
     "choices": [
       "Atum",
       "Aton",
       "Re",
-      "Chepri"
-    ]
+      "Chepre"
+    ],
+    "explanation": "Am Abend wird die Sonne zu Atum, dem alten Schöpfer, der im Westen untergeht."
   },
   {
     "id": 19,
-    "question": "Wer ist der Gott des Bösen, des Zorns und der unkontrollierten Leidenschaften?",
+    "question": "Welcher Gott verkörpert die Wüste, die Gewitter und die Unordnung",
     "answer": "Seth",
     "choices": [
       "Seth",
       "Apophis",
-      "Apep",
+      "Sobek",
       "Anubis"
-    ]
+    ],
+    "explanation": "Seth ist der Gott der Wüste, der Gewitter und der Unordnung, verbunden mit der Farbe Rot."
   },
   {
     "id": 20,
-    "question": "Welches Organ beschützt Nephthys unter den Kanopen?",
+    "question": "Welches Organ schützte die Göttin Nephthys unter den Kanopen",
     "answer": "Die Lunge",
     "choices": [
       "Die Lunge",
       "Die Leber",
-      "Der Magen",
-      "Die Gedärme"
-    ]
+      "Den Magen",
+      "Den Darm"
+    ],
+    "explanation": "Nephthys wachte über die Kanope der Lunge, die Hapy hütete, der pavianköpfige Horussohn."
   },
   {
     "id": 21,
-    "question": "Welcher Gott entstand aus der Vereinigung von Osiris und Nephthys?",
+    "question": "Welcher Gott ging aus der Verbindung von Osiris und Nephthys hervor",
     "answer": "Anubis",
     "choices": [
       "Anubis",
       "Thot",
-      "Amun",
+      "Horus",
       "Seth"
-    ]
+    ],
+    "explanation": "Nach der verbreitetsten Überlieferung ist Anubis der Sohn von Osiris und Nephthys, aufgezogen von Isis."
   },
   {
     "id": 22,
-    "question": "In wie viele Stücke zerschneidet Seth den Leichnam seines Bruders Osiris?",
+    "question": "In wie viele Teile zerstückelte Seth den Leichnam des Osiris",
     "answer": "14",
     "choices": [
       "14",
       "21",
       "12",
-      "16"
-    ]
+      "7"
+    ],
+    "explanation": "Seth zerstückelte den Leichnam des Osiris in vierzehn Teile, die er über ganz Ägypten verstreute."
   },
   {
     "id": 23,
-    "question": "Welcher Gott entstand aus der Vereinigung von Osiris und Isis?",
+    "question": "Welcher Gott ging aus der Verbindung von Osiris und Isis hervor",
     "answer": "Horus",
     "choices": [
       "Horus",
       "Chons",
       "Thot",
       "Atum"
-    ]
+    ],
+    "explanation": "Isis empfing Horus von dem durch ihre Magie belebten Osiris und versteckte ihn in den Sümpfen von Chemmis."
   },
   {
     "id": 24,
-    "question": "Wer ist der Gott der Handwerker und Baumeister?",
+    "question": "Welcher Gott ist der Schutzherr der Handwerker und Baumeister",
     "answer": "Ptah",
     "choices": [
       "Ptah",
       "Min",
       "Bes",
       "Chons"
-    ]
+    ],
+    "explanation": "Ptah, der Schöpfergott von Memphis, ist der Schutzherr der Handwerker, Bildhauer und Baumeister."
   },
   {
     "id": 25,
-    "question": "Wer ist der Gott, der die schützende Magie verkörpert?",
-    "answer": "Heqa",
+    "question": "Welcher Gott verkörpert die Magie",
+    "answer": "Heka",
     "choices": [
-      "Heqa",
+      "Heka",
       "Sia",
       "Hu",
       "Upuaut"
-    ]
+    ],
+    "explanation": "Heka, die Magie, fährt mit Sia und Hu in der Barke des Re."
   },
   {
     "id": 26,
-    "question": "Wer ist der Gott, der das Wissen verkörpert?",
+    "question": "Welcher Gott verkörpert die Erkenntnis",
     "answer": "Sia",
     "choices": [
       "Sia",
-      "Heqa",
+      "Heka",
       "Hu",
       "Upuaut"
-    ]
+    ],
+    "explanation": "Sia, die Erkenntnis, begleitet Re mit Heka und Hu in seiner Barke."
   },
   {
     "id": 27,
-    "question": "Wer ist der Gott, der das schöpferische Wort verkörpert?",
+    "question": "Welcher Gott verkörpert das schöpferische Wort",
     "answer": "Hu",
     "choices": [
       "Hu",
       "Sia",
-      "Heqa",
+      "Heka",
       "Upuaut"
-    ]
+    ],
+    "explanation": "Hu, das schöpferische Wort, gehört zur göttlichen Besatzung der Barke des Re."
   },
   {
     "id": 28,
-    "question": "Wer ist der Gott der Wege?",
-    "answer": "Upuaut",
+    "question": "Welche Wüstengegend durchquert die Barke des Re in der vierten und fünften Stunde der Nacht",
+    "answer": "Das Reich des Sokar",
     "choices": [
-      "Upuaut",
-      "Hu",
-      "Sia",
-      "Heqa"
-    ]
+      "Das Reich des Sokar",
+      "Das Binsengefilde",
+      "Die Sümpfe von Chemmis",
+      "Die Flammeninsel"
+    ],
+    "explanation": "In der vierten und fünften Stunde durchquert die Barke die Wüste des Sokar und muss über den Sand gezogen werden."
   },
   {
     "id": 29,
-    "question": "Wie viele Stunden braucht der Sonnengott, um den Himmelsfluss zu durchqueren?",
+    "question": "Wie viele Stunden braucht die Sonne am Tag, um den Himmel zu durchqueren",
     "answer": "12 Stunden",
     "choices": [
       "12 Stunden",
       "6 Stunden",
       "8 Stunden",
-      "4 Stunden"
-    ]
+      "24 Stunden"
+    ],
+    "explanation": "Die Sonne durchquert den Himmel am Tag in zwölf Stunden und die Unterwelt in der Nacht in zwölf Stunden."
   },
   {
     "id": 30,
-    "question": "Welche wohltätige Schlange beschützt den Sonnengott in der sechsten Stunde der Durchquerung des Himmelsflusses?",
+    "question": "Welche wohlwollende Schlange legt sich schützend um Re in der Nacht",
     "answer": "Mehen",
     "choices": [
       "Mehen",
       "Apophis",
-      "Apep",
-      "Yormungand"
-    ]
+      "Kematef",
+      "Irta"
+    ],
+    "explanation": "Die Schlange Mehen legt ihre Windungen um Re, um ihn im tiefsten Augenblick der Nacht zu schützen."
   },
   {
     "id": 31,
-    "question": "Welcher Göttin gelingt es, den geheimen Namen des Gottes Re zu erfahren?",
+    "question": "Welcher Göttin gelang es, den geheimen Namen des Re zu erfahren",
     "answer": "Isis",
     "choices": [
       "Isis",
       "Maat",
       "Wadjet",
       "Nephthys"
-    ]
+    ],
+    "explanation": "Isis formte eine Schlange, die Re biss, und heilte ihn erst im Tausch gegen seinen geheimen Namen."
   },
   {
     "id": 32,
-    "question": "Wie heißt die schützende Göttin, die der Sonnengott auf seiner Stirn trägt?",
-    "answer": "Mut",
+    "question": "Welche Kobragöttin erhebt sich als Uräus auf der Stirn des Königs und des Sonnengottes",
+    "answer": "Wadjet",
     "choices": [
-      "Mut",
       "Wadjet",
+      "Mut",
       "Bastet",
       "Sachmet"
-    ]
+    ],
+    "explanation": "Wadjet, die Kobragöttin, erhebt sich als Uräus auf der Stirn der Könige und Götter."
   },
   {
     "id": 33,
-    "question": "Wie heißt der Schöpfergott, der aus dem Nun hervorging, um alles zu erschaffen?",
+    "question": "Welcher Demiurg stieg in der Kosmogonie von Heliopolis aus dem Nun empor",
     "answer": "Atum",
     "choices": [
       "Atum",
       "Amun",
       "Aton",
       "Osiris"
-    ]
+    ],
+    "explanation": "Atum stieg allein aus dem Nun empor und brachte aus sich selbst das erste Götterpaar hervor."
   },
   {
     "id": 34,
-    "question": "Wer sind die ersten Kinder des Tem?",
+    "question": "Wer sind die ersten Kinder des Atum",
     "answer": "Schu und Tefnut",
     "choices": [
       "Schu und Tefnut",
       "Geb und Nut",
       "Osiris und Isis",
-      "Nephthys und Seth"
-    ]
+      "Seth und Nephthys"
+    ],
+    "explanation": "Atum brachte aus sich selbst Schu und Tefnut hervor, das erste Paar der Schöpfung."
   },
   {
     "id": 35,
-    "question": "Welche Göttin verschlingt Re am Abend, um ihn am frühen Morgen wieder zur Welt zu bringen?",
+    "question": "Welche Göttin verschluckt am Abend die Sonne und bringt sie am Morgen neu zur Welt",
     "answer": "Nut",
     "choices": [
       "Nut",
-      "Schu",
-      "Heqa",
-      "Hathor"
-    ]
+      "Tefnut",
+      "Neith",
+      "Maat"
+    ],
+    "explanation": "Jeden Abend verschluckt Nut die Sonne, die in der Nacht durch ihren Körper wandert und am Morgen wiedergeboren wird."
   },
   {
     "id": 36,
-    "question": "Wer ist der Gott des Todes und der Wiedergeburt?",
+    "question": "Welcher gestorbene und auferstandene Gott verkörpert die Wiedergeburt der Pflanzenwelt",
     "answer": "Osiris",
     "choices": [
       "Osiris",
-      "Beerus",
+      "Seth",
       "Thot",
       "Anubis"
-    ]
+    ],
+    "explanation": "Als gestorbener und auferstandener Gott verkörperte Osiris auch die Pflanzen, die nach jeder Flut neu wachsen."
   },
   {
     "id": 37,
-    "question": "Welcher Gott vertritt den Sonnengott nachts und wird der Mondgott genannt?",
+    "question": "Welcher Mondgott erhellt die Nacht während der unterirdischen Reise der Sonne",
     "answer": "Thot",
     "choices": [
       "Thot",
       "Anubis",
       "Osiris",
       "Ptah"
-    ]
+    ],
+    "explanation": "Während Re die Duat durchquert, erhellt der Mond des Thot die Nacht."
   },
   {
     "id": 38,
-    "question": "Wie wird das Kreuz als Symbol des Lebens genannt?",
-    "answer": "Anch",
+    "question": "Wie heißt das Kreuz, das das Leben symbolisiert",
+    "answer": "Das Anch",
     "choices": [
-      "Anch",
-      "Wadjet",
-      "Harachte",
-      "Duat"
-    ]
+      "Das Anch",
+      "Der Djed-Pfeiler",
+      "Das Udjat",
+      "Das Was-Zepter"
+    ],
+    "explanation": "Das Anch, das Kreuz mit der Schlaufe, bedeutet „Leben“; die Strahlen des Aton reichen es dem König."
   },
   {
     "id": 39,
-    "question": "Welcher Gott wurde als Erster überhaupt mumifiziert?",
+    "question": "Welcher Gott wurde als Erster mumifiziert",
     "answer": "Osiris",
     "choices": [
       "Osiris",
       "Anubis",
-      "Hakai",
-      "Horus"
-    ]
+      "Horus",
+      "Re"
+    ],
+    "explanation": "Anubis salbte, reinigte und umwickelte den Leichnam des Osiris: Das war die erste Mumie."
   },
   {
     "id": 40,
-    "question": "Welches Tier repräsentiert die Göttin Hathor?",
-    "answer": "Die Kuh",
+    "question": "In welcher Tiergestalt wird die Göttin Hathor dargestellt",
+    "answer": "Als Kuh",
     "choices": [
-      "Die Kuh",
-      "Das Kalb",
-      "Der Hund",
-      "Die Katze"
-    ]
+      "Als Kuh",
+      "Als Katze",
+      "Als Löwin",
+      "Als Nilpferd"
+    ],
+    "explanation": "Hathor erscheint als Kuh, als Frau mit Kuhohren oder mit Hörnern, die die Sonnenscheibe umfassen."
   },
   {
     "id": 41,
-    "question": "Welches Tier repräsentiert die Göttin Bastet?",
-    "answer": "Die Katze",
+    "question": "In welcher Tiergestalt wird die Göttin Bastet dargestellt",
+    "answer": "Als Katze",
     "choices": [
-      "Die Katze",
-      "Die Kuh",
-      "Der Hund",
-      "Der Löwe"
-    ]
+      "Als Katze",
+      "Als Kuh",
+      "Als Geier",
+      "Als Nilpferd"
+    ],
+    "explanation": "Bastet ist die Katzengöttin des Hauses; ursprünglich eine Löwin, ist die Katze ihre besänftigte Gestalt."
   },
   {
     "id": 42,
-    "question": "Welches Tier repräsentiert die Göttin Sachmet?",
-    "answer": "Die Löwin",
+    "question": "In welcher Tiergestalt wird die Göttin Sachmet dargestellt",
+    "answer": "Als Löwin",
     "choices": [
-      "Die Löwin",
-      "Der Hund",
-      "Die Katze",
-      "Der Tiger"
-    ]
+      "Als Löwin",
+      "Als Katze",
+      "Als Kuh",
+      "Als Geier"
+    ],
+    "explanation": "Sachmet, „die Mächtige“, ist eine löwenköpfige Göttin, Verkörperung des göttlichen Zorns."
   },
   {
     "id": 43,
-    "question": "Was ist die verbreitetste Kosmogonie?",
+    "question": "Welche Stadt gab der verbreitetsten Kosmogonie Ägyptens ihren Namen",
     "answer": "Heliopolis",
     "choices": [
       "Heliopolis",
       "Hermopolis",
-      "Theben",
-      "Syene"
-    ]
+      "Memphis",
+      "Theben"
+    ],
+    "explanation": "Die Kosmogonie von Heliopolis, deren Schöpfer Atum ist, ist die verbreitetste Ägyptens."
   },
   {
     "id": 44,
-    "question": "Wofür steht das Djet beim Menschen?",
-    "answer": "Der Körper",
+    "question": "Welchem Teil des Menschen entspricht der Djet",
+    "answer": "Dem Körper",
     "choices": [
-      "Der Körper",
-      "Die Seele",
-      "Der Geist",
-      "Das Bewusstsein"
-    ]
+      "Dem Körper",
+      "Der Seele",
+      "Der Lebenskraft",
+      "Dem Namen"
+    ],
+    "explanation": "Der Djet ist der Körper, den die Einbalsamierung bewahren sollte, damit Ka und Ba zu ihm zurückkehren."
   },
   {
     "id": 45,
-    "question": "Wofür steht der Ka beim Menschen?",
-    "answer": "Die Seele",
+    "question": "Welchem Teil des Menschen entspricht der Ka",
+    "answer": "Der Lebenskraft",
     "choices": [
-      "Die Seele",
-      "Der Körper",
-      "Der Geist",
-      "Das Bewusstsein"
-    ]
+      "Der Lebenskraft",
+      "Dem Körper",
+      "Dem Schatten",
+      "Dem Namen"
+    ],
+    "explanation": "Der Ka ist die Lebenskraft, mit dem Menschen geboren und nach seinem Tod von den Opfergaben genährt."
   },
   {
     "id": 46,
-    "question": "Welche Zeremonie ermöglicht dem Verstorbenen die Reise ins Jenseits?",
-    "answer": "Die Einbalsamierung",
+    "question": "Welches Ritual gab dem Verstorbenen vor der Bestattung den Gebrauch seiner Sinne zurück",
+    "answer": "Die Mundöffnung",
     "choices": [
-      "Die Einbalsamierung",
-      "Die Bestattung",
-      "Die Mumifizierung",
-      "Die Bandagierung"
-    ]
+      "Die Mundöffnung",
+      "Das Wiegen des Herzens",
+      "Das negative Sündenbekenntnis",
+      "Das Umwickeln mit Binden"
+    ],
+    "explanation": "Die Mundöffnung gab dem Verstorbenen den Gebrauch seiner Sinne zurück, damit er im Jenseits sprechen, sehen und essen konnte."
   },
   {
     "id": 47,
-    "question": "Was ist das Symbol der Göttin Maat?",
+    "question": "Was ist das Symbol der Göttin Maat",
     "answer": "Die Feder",
     "choices": [
       "Die Feder",
       "Die Waage",
-      "Das Schwert",
-      "Der Anch"
-    ]
+      "Das Sistrum",
+      "Das Anch"
+    ],
+    "explanation": "Maat trägt eine Straußenfeder, die beim Gericht gegen das Herz des Verstorbenen gewogen wird."
   },
   {
     "id": 48,
-    "question": "Welches Tier repräsentiert den Gott Horus?",
+    "question": "Welches Tier gehört zum Gott Horus",
     "answer": "Der Falke",
     "choices": [
       "Der Falke",
-      "Der Adler",
-      "Der Rabe",
-      "Der Sperber"
-    ]
+      "Der Geier",
+      "Der Ibis",
+      "Der Schakal"
+    ],
+    "explanation": "Horus ist der Falkengott; sein rechtes Auge war die Sonne, sein linkes der Mond."
   },
   {
     "id": 49,
-    "question": "Welches andere Tier repräsentiert den Gott Thot neben dem Ibis?",
+    "question": "Welches ist neben dem Ibis das andere Tier des Gottes Thot",
     "answer": "Der Pavian",
     "choices": [
       "Der Pavian",
       "Der Schakal",
-      "Der Hund",
-      "Der Adler"
-    ]
+      "Die Katze",
+      "Der Falke"
+    ],
+    "explanation": "Thot wird als Mann mit Ibiskopf oder in Gestalt eines Pavians dargestellt."
   },
   {
     "id": 50,
-    "question": "Wie wird der geflügelte Käfer genannt, der die Sonnenscheibe schiebt?",
-    "answer": "Chepri",
+    "question": "Welches Insekt stellt den Gott Chepre dar",
+    "answer": "Der Skarabäus",
     "choices": [
-      "Chepri",
-      "Atum",
-      "Bes",
-      "Nut"
-    ]
+      "Der Skarabäus",
+      "Die Biene",
+      "Der Skorpion",
+      "Die Gottesanbeterin"
+    ],
+    "explanation": "Chepre ist der Skarabäus: Der Pillendreher mit seiner Kugel erinnerte an die über den Himmel geschobene Sonne."
   },
   {
     "id": 51,
-    "question": "Welche Göttin verkörpert die kosmische Harmonie, die vom Schöpfergott Tem eingerichtet wurde?",
+    "question": "Welche Göttin verkörpert die Ordnung der Welt, die Wahrheit und die Gerechtigkeit",
     "answer": "Maat",
     "choices": [
       "Maat",
       "Isis",
       "Sachmet",
       "Hathor"
-    ]
+    ],
+    "explanation": "Maat ist die vom Schöpfer eingerichtete Ordnung der Welt: Wahrheit, Gerechtigkeit und Gleichgewicht."
   },
   {
     "id": 52,
-    "question": "Welche Göttin ist dafür zuständig, unwürdige Seelen beim Herzwiegen zu verschlingen?",
+    "question": "Welches Wesen verschlingt die Herzen der für unwürdig befundenen Toten",
     "answer": "Ammit",
     "choices": [
       "Ammit",
       "Nechbet",
       "Sachmet",
       "Thoeris"
-    ]
+    ],
+    "explanation": "Ammit, „die Fresserin“, frisst die zu schweren Herzen der Toten, die dann für immer verschwinden."
   },
   {
     "id": 53,
-    "question": "Wer ist der Gott des Wassers und der Fruchtbarkeit?",
+    "question": "Welcher Krokodilgott ist Herr der Gewässer und Sümpfe",
     "answer": "Sobek",
     "choices": [
       "Sobek",
-      "Isis",
-      "Champa",
+      "Anubis",
+      "Chnum",
       "Bes"
-    ]
+    ],
+    "explanation": "Sobek, der Krokodilgott, verkörpert die furchterregende Macht des Nils und die Fruchtbarkeit, die er bringt."
   },
   {
     "id": 54,
-    "question": "Welche Göttin wird durch das Nilpferd repräsentiert?",
-    "answer": "Thoeris",
+    "question": "Welche Göttin hat einen Bogen und zwei gekreuzte Pfeile als Emblem",
+    "answer": "Neith",
     "choices": [
-      "Thoeris",
-      "Ammit",
-      "Sachmet",
-      "Bastet"
-    ]
+      "Neith",
+      "Selket",
+      "Maat",
+      "Mut"
+    ],
+    "explanation": "Als Göttin des Krieges und der Jagd hat Neith einen Bogen und zwei gekreuzte Pfeile als Emblem."
   },
   {
     "id": 55,
-    "question": "Welche Göttin wird durch die Kobra repräsentiert?",
-    "answer": "Wadjet",
+    "question": "Welche Göttin wird als Frau mit einem Skorpion auf dem Kopf dargestellt",
+    "answer": "Selket",
     "choices": [
-      "Wadjet",
+      "Selket",
+      "Neith",
       "Maat",
-      "Hathor",
-      "Isis"
-    ]
+      "Hathor"
+    ],
+    "explanation": "Selket trägt einen Skorpion auf dem Kopf und schützte vor giftigen Stichen und Bissen."
   },
   {
     "id": 56,
-    "question": "Welcher Gott steht im Zentrum des Mythos von Tag und Nacht?",
+    "question": "Welcher Gott steht im Mittelpunkt des Mythos vom Tageszyklus",
     "answer": "Re",
     "choices": [
       "Re",
       "Osiris",
-      "Aton",
-      "Ptah"
-    ]
+      "Ptah",
+      "Min"
+    ],
+    "explanation": "Der Mythos vom Tageszyklus folgt Re am Tag über den Himmel und in der Nacht durch die Unterwelt."
   },
   {
     "id": 57,
-    "question": "Welcher Gott gilt als der erste der Pharaonen?",
+    "question": "Als lebendige Verkörperung welches Gottes galt jeder Pharao",
     "answer": "Horus",
     "choices": [
       "Horus",
-      "Re",
       "Thot",
-      "Seth"
-    ]
+      "Seth",
+      "Ptah"
+    ],
+    "explanation": "Nach seinem Sieg über Seth wurde Horus zum Vorbild der Pharaonen, die als „lebender Horus“ herrschten."
   },
   {
     "id": 58,
-    "question": "Welcher Gott ersetzt Tem in der Kosmogonie von Memphis?",
+    "question": "Welcher Gott ist der Schöpfer in der Kosmogonie von Memphis",
     "answer": "Ptah",
     "choices": [
       "Ptah",
       "Aton",
       "Amun",
       "Chnum"
-    ]
+    ],
+    "explanation": "In Memphis erschafft Ptah die Welt durch das Denken seines Herzens und das Wort seiner Zunge."
   },
   {
     "id": 59,
-    "question": "Wer ist die Frau des Gottes Horus?",
+    "question": "Welche Göttin ist die Gemahlin des Horus von Edfu",
     "answer": "Hathor",
     "choices": [
       "Hathor",
       "Isis",
       "Nephthys",
       "Bastet"
-    ]
+    ],
+    "explanation": "Hathor ist die Gemahlin des Horus von Edfu; ihr Wiedersehen wurde jedes Jahr gefeiert."
   },
   {
     "id": 60,
-    "question": "Wer ist der Gott der Gräber und Nekropolen und Beschützer der Einbalsamierer?",
+    "question": "Welcher schakalköpfige Gott ist der Schutzherr der Balsamierer",
     "answer": "Anubis",
     "choices": [
       "Anubis",
       "Osiris",
       "Seth",
       "Horus"
-    ]
+    ],
+    "explanation": "Anubis mumifizierte Osiris: Bei der Einbalsamierung trug der oberste Priester seine Schakalsmaske."
   },
   {
     "id": 61,
-    "question": "In welcher Gestalt wird der Sonnengott jeden Morgen wiedergeboren?",
-    "answer": "Chepri",
+    "question": "Welche Gestalt nimmt der Sonnengott in der Nacht in der Unterwelt an",
+    "answer": "Einen Mann mit Widderkopf",
     "choices": [
-      "Chepri",
-      "Atum",
-      "Re",
-      "Thot"
-    ]
+      "Einen Mann mit Widderkopf",
+      "Einen Mann mit Falkenkopf",
+      "Einen Skarabäus",
+      "Ein Kind in einem Lotus"
+    ],
+    "explanation": "In der Nacht, in der Unterwelt, nimmt Re die Gestalt eines Mannes mit Widderkopf an."
   },
   {
     "id": 62,
-    "question": "Welcher Körperteil des Osiris wurde von einem Fisch verschlungen?",
+    "question": "Welcher Teil des Körpers des Osiris wurde von einem Fisch verschluckt",
     "answer": "Sein Phallus",
     "choices": [
       "Sein Phallus",
       "Sein Kopf",
-      "Sein Bein",
+      "Sein Herz",
       "Sein Arm"
-    ]
+    ],
+    "explanation": "Isis fand den ganzen Körper des Osiris außer seinem Phallus, den ein Nilfisch verschluckt hatte."
   },
   {
     "id": 63,
-    "question": "In Gestalt welches mythischen Vogels ging Tem aus dem Nun hervor?",
-    "answer": "Der Bennu",
+    "question": "In Gestalt welches Vogels erschien Atum auf dem Benben",
+    "answer": "Des Benu",
     "choices": [
-      "Der Bennu",
-      "Der Ibis",
-      "Der Falke",
-      "Der Adler"
-    ]
+      "Des Benu",
+      "Des Ibis",
+      "Des Falken",
+      "Des Geiers"
+    ],
+    "explanation": "Atum erschien auf dem Benben in Gestalt des Benu, eines Vogels, den die Griechen mit dem Phönix verglichen."
   },
   {
     "id": 64,
-    "question": "Welcher Gott war für die Trennung von Himmel und Erde durch Re zuständig?",
+    "question": "Welcher Gott trennte auf Befehl des Atum den Himmel von der Erde",
     "answer": "Schu",
     "choices": [
       "Schu",
       "Nut",
       "Geb",
-      "Atum"
-    ]
+      "Thot"
+    ],
+    "explanation": "Auf Befehl des Atum hob Schu Nut über Geb empor und trennte so den Himmel von der Erde."
   },
   {
     "id": 65,
-    "question": "Aus wie vielen Göttern besteht die Achtheit von Hermopolis?",
+    "question": "Wie viele Götter bilden die Achtheit von Hermopolis",
     "answer": "8",
     "choices": [
       "8",
       "9",
       "12",
       "6"
-    ]
+    ],
+    "explanation": "Die Achtheit von Hermopolis zählt acht Gottheiten, die vier Paare bilden."
   },
   {
     "id": 66,
-    "question": "Aus wie vielen Götterpaaren besteht die Achtheit von Hermopolis?",
+    "question": "Wie viele Götterpaare bilden die Achtheit von Hermopolis",
     "answer": "4",
     "choices": [
       "4",
       "8",
       "2",
-      "6"
-    ]
+      "3"
+    ],
+    "explanation": "Nun und Naunet, Heh und Hehet, Kek und Keket, Amun und Amaunet bilden die vier Paare der Achtheit."
   },
   {
     "id": 67,
-    "question": "Als was wurden die Göttinnen der Achtheit von Hermopolis dargestellt?",
-    "answer": "Schlangen",
+    "question": "Mit welchem Kopf wurden die Göttinnen der Achtheit dargestellt",
+    "answer": "Mit einem Schlangenkopf",
     "choices": [
-      "Schlangen",
-      "Frösche",
-      "Affen",
-      "Falken"
-    ]
+      "Mit einem Schlangenkopf",
+      "Mit einem Froschkopf",
+      "Mit einem Pavianskopf",
+      "Mit einem Falkenkopf"
+    ],
+    "explanation": "Die Göttinnen der Achtheit hatten Schlangenköpfe, die Götter Froschköpfe."
   },
   {
     "id": 68,
-    "question": "Als was wurden die Götter der Achtheit von Hermopolis dargestellt?",
-    "answer": "Frösche",
+    "question": "Mit welchem Kopf wurden die Götter der Achtheit dargestellt",
+    "answer": "Mit einem Froschkopf",
     "choices": [
-      "Frösche",
-      "Schlangen",
-      "Falken",
-      "Affen"
-    ]
+      "Mit einem Froschkopf",
+      "Mit einem Schlangenkopf",
+      "Mit einem Falkenkopf",
+      "Mit einem Pavianskopf"
+    ],
+    "explanation": "Die Götter der Achtheit hatten Froschköpfe, denn der Frosch scheint aus dem Nilschlamm zu entstehen."
   },
   {
     "id": 69,
-    "question": "Wofür stand das Paar Nun und Naunet in der Kosmogonie von Hermopolis?",
-    "answer": "Das Wasser",
+    "question": "Wofür steht das Paar Nun und Naunet in der Kosmogonie von Hermopolis",
+    "answer": "Die Urwasser",
     "choices": [
-      "Das Wasser",
-      "Das Geheimnisvolle",
-      "Das Unendliche",
-      "Die Dunkelheit"
-    ]
+      "Die Urwasser",
+      "Das Verborgene",
+      "Den grenzenlosen Raum",
+      "Die Finsternis"
+    ],
+    "explanation": "Nun und Naunet verkörpern die Urwasser des Chaos."
   },
   {
     "id": 70,
-    "question": "Wofür stand das Paar Amun und Amaunet in der Kosmogonie von Hermopolis?",
-    "answer": "Das Geheimnisvolle",
+    "question": "Wofür steht das Paar Amun und Amaunet in der Kosmogonie von Hermopolis",
+    "answer": "Das Verborgene",
     "choices": [
-      "Das Geheimnisvolle",
-      "Das Wasser",
-      "Das Unendliche",
-      "Die Dunkelheit"
-    ]
+      "Das Verborgene",
+      "Die Urwasser",
+      "Den grenzenlosen Raum",
+      "Die Finsternis"
+    ],
+    "explanation": "Amun und Amaunet verkörpern das Verborgene, Unsichtbare."
   },
   {
     "id": 71,
-    "question": "Wo lag das Hauptheiligtum des Ptah, Sitz der königlichen Macht seit der ersten Dynastie?",
+    "question": "In welcher Stadt lag das große Heiligtum des Ptah",
     "answer": "Memphis",
     "choices": [
       "Memphis",
       "Theben",
       "Heliopolis",
       "Abydos"
-    ]
+    ],
+    "explanation": "Memphis war die Stadt des Ptah; der Name seines Tempels, Hut-ka-Ptah, gab uns das Wort „Ägypten“."
   },
   {
     "id": 72,
-    "question": "Mit welchem heiligen Tier war der Kult des Ptah in Memphis verbunden, das als seine lebendige Verkörperung galt?",
+    "question": "Welches heilige Tier galt als lebendige Verkörperung des Ptah",
     "answer": "Der Apis-Stier",
     "choices": [
       "Der Apis-Stier",
-      "Die heilige Katze",
-      "Das heilige Krokodil",
-      "Der heilige Falke"
-    ]
+      "Die Katze von Bubastis",
+      "Das Krokodil des Fayum",
+      "Der Ibis von Hermopolis"
+    ],
+    "explanation": "Der Apis-Stier war die lebendige Verkörperung des Ptah; er wurde im Serapeum von Sakkara bestattet."
   },
   {
     "id": 73,
-    "question": "Woraus gingen laut der heliopolitanischen Kosmogonie die ersten Menschen hervor?",
-    "answer": "Aus den Tränen des Schöpfergottes",
+    "question": "Woraus entstanden nach der Kosmogonie von Heliopolis die ersten Menschen",
+    "answer": "Aus den Tränen des Demiurgen",
     "choices": [
-      "Aus den Tränen des Schöpfergottes",
+      "Aus den Tränen des Demiurgen",
       "Aus dem Schweiß des Re",
       "Aus dem Nilschlamm",
       "Aus dem Atem des Schu"
-    ]
+    ],
+    "explanation": "Atum weinte, als er Schu und Tefnut wiederfand, und seine Tränen (<i>remyt</i>) wurden zu Menschen (<i>remetch</i>)."
   },
   {
     "id": 74,
-    "question": "Welche Göttin schickte der Sonnengott, um die Rebellen zu vernichten, die sich gegen ihn erhoben hatten?",
+    "question": "Welche Löwengöttin metzelte die gegen Re aufständischen Menschen nieder",
     "answer": "Sachmet",
     "choices": [
       "Sachmet",
       "Bastet",
-      "Hathor",
-      "Selket"
-    ]
+      "Selket",
+      "Neith"
+    ],
+    "explanation": "Das Auge des Re verwandelte sich in Gestalt der Hathor in die Löwin Sachmet, um die Aufständischen niederzumetzeln."
   },
   {
     "id": 75,
-    "question": "Welche Prüfung muss der Verstorbene bestehen, um Zugang zum ewigen Leben zu erhalten?",
-    "answer": "Das Herzwiegen",
+    "question": "Welche Prüfung entschied über das Schicksal des Verstorbenen im Jenseits",
+    "answer": "Das Wiegen des Herzens",
     "choices": [
-      "Das Herzwiegen",
-      "Das himmlische Wettrennen",
-      "Der Kampf der Götter",
-      "Die große Illusion"
-    ]
+      "Das Wiegen des Herzens",
+      "Das Bootsrennen",
+      "Der Kampf gegen Apophis",
+      "Die Durchquerung des Nun"
+    ],
+    "explanation": "Das Herz des Verstorbenen wurde gegen die Feder der Maat gewogen; war es zu schwer, verschlang es Ammit."
   },
   {
     "id": 76,
-    "question": "Wer ist der Sonnengott bei Sonnenauf- und -untergang?",
+    "question": "Unter welchem Namen wurde die Große Sphinx von Gizeh verehrt",
     "answer": "Harmachis",
     "choices": [
       "Harmachis",
-      "Chepri",
+      "Chepre",
       "Atum",
-      "Re"
-    ]
+      "Aton"
+    ],
+    "explanation": "Die Große Sphinx von Gizeh wurde als Harmachis verehrt, „Horus im Horizont“, eine Gestalt der Sonne."
   },
   {
     "id": 77,
-    "question": "Womit erschuf Ptah den Menschen in der Kosmogonie von Memphis?",
-    "answer": "Mit dem Schlamm",
+    "question": "Wie erschuf Ptah nach der memphitischen Theologie die Welt",
+    "answer": "Durch Denken und Wort",
     "choices": [
-      "Mit dem Schlamm",
-      "Mit dem Staub",
-      "Mit der Asche",
-      "Mit dem Wasser"
-    ]
+      "Durch Denken und Wort",
+      "Durch Formen von Ton auf seiner Scheibe",
+      "Durch Ausbrüten eines Eies",
+      "Durch Vereinigung mit sich selbst"
+    ],
+    "explanation": "Nach dem Schabaka-Stein existiert alles zuerst als Gedanke im Herzen des Ptah und entsteht dann durch sein Wort."
   },
   {
     "id": 78,
-    "question": "Welche Gottheit verkörpert die Sprache des Ptah in der Kosmogonie von Memphis?",
+    "question": "Welcher Gott ist in der memphitischen Theologie die Zunge des Ptah",
     "answer": "Thot",
     "choices": [
       "Thot",
+      "Horus",
       "Anubis",
-      "Apep",
       "Chnum"
-    ]
+    ],
+    "explanation": "In der memphitischen Theologie ist das Herz des Ptah Horus und seine Zunge Thot."
   },
   {
     "id": 79,
-    "question": "Wie nennt man einen kopflosen Dämon aus dem hellenistischen Ägypten?",
-    "answer": "Der Akephalos",
-    "choices": [
-      "Der Akephalos",
-      "Die Sphinx",
-      "Der Greif",
-      "Die Sphinge"
-    ]
-  },
-  {
-    "id": 80,
-    "question": "Wie heißt die Kobragottheit, deren Aufgabe es ist, den Pharao zu beschützen?",
-    "answer": "Uräus",
-    "choices": [
-      "Uräus",
-      "Nechbet",
-      "Anch",
-      "Duat"
-    ]
-  },
-  {
-    "id": 81,
-    "question": "Wie heißt das Mischwesen mit dem Körper eines Löwen und einem menschlichen Kopf?",
-    "answer": "Die Sphinx",
-    "choices": [
-      "Die Sphinx",
-      "Die Nechbet",
-      "Der Akephalos",
-      "Der Uräus"
-    ]
-  },
-  {
-    "id": 82,
-    "question": "Wie nennt man einen Verstorbenen, der die Herzwaageprüfung bestanden hat?",
-    "answer": "Ach",
-    "choices": [
-      "Ach",
-      "Sphinx",
-      "Chnum",
-      "Chons"
-    ]
-  },
-  {
-    "id": 83,
-    "question": "Was bedeutet der Ren eines Menschen?",
-    "answer": "Sein Name",
-    "choices": [
-      "Sein Name",
-      "Seine Seele",
-      "Sein Körper",
-      "Seine Tugend"
-    ]
-  },
-  {
-    "id": 84,
-    "question": "Was bedeutet das Wort \"Amun\"?",
-    "answer": "Der Verborgene",
-    "choices": [
-      "Der Verborgene",
-      "Der Unsichtbare",
-      "Der König",
-      "Der Frühere"
-    ]
-  },
-  {
-    "id": 85,
-    "question": "Welches Tier repräsentiert den Gott Anubis?",
-    "answer": "Der Schakal",
-    "choices": [
-      "Der Schakal",
-      "Der Hund",
-      "Die Katze",
-      "Der Wolf"
-    ]
-  },
-  {
-    "id": 86,
-    "question": "Wer ist der Schutzgott der Familie?",
+    "question": "Welcher zwergenhafte Gott mit grimassierendem Gesicht schützte Haus und Geburt",
     "answer": "Bes",
     "choices": [
       "Bes",
+      "Min",
       "Hapi",
-      "Thot",
       "Chnum"
-    ]
+    ],
+    "explanation": "Bes, ein Zwerg mit grimassierendem Gesicht, vertrieb Dämonen und schützte Schlaf und Geburt."
+  },
+  {
+    "id": 80,
+    "question": "Wie heißt die aufgerichtete Kobra auf der Stirn der Pharaonen",
+    "answer": "Der Uräus",
+    "choices": [
+      "Der Uräus",
+      "Das Anch",
+      "Der Djed-Pfeiler",
+      "Das Udjat"
+    ],
+    "explanation": "Der Uräus ist die aufgerichtete Kobra auf der Stirn der Pharaonen, Bild der Göttin Wadjet."
+  },
+  {
+    "id": 81,
+    "question": "Wie heißt das Wesen mit Löwenkörper und Menschenkopf",
+    "answer": "Die Sphinx",
+    "choices": [
+      "Die Sphinx",
+      "Der Greif",
+      "Der Benu",
+      "Der Uräus"
+    ],
+    "explanation": "Die Sphinx hat einen Löwenkörper und einen Menschenkopf; die von Gizeh wurde als Harmachis verehrt."
+  },
+  {
+    "id": 82,
+    "question": "Wie heißt der lichte, unsterbliche Geist des gerechtfertigten Toten",
+    "answer": "Der Ach",
+    "choices": [
+      "Der Ach",
+      "Der Ka",
+      "Der Ba",
+      "Der Ren"
+    ],
+    "explanation": "Nach einem günstigen Urteil vereinen sich Ka und Ba zum Ach, dem unsterblichen Geist."
+  },
+  {
+    "id": 83,
+    "question": "Was bezeichnet der Ren eines Menschen",
+    "answer": "Seinen Namen",
+    "choices": [
+      "Seinen Namen",
+      "Seinen Schatten",
+      "Seinen Körper",
+      "Seine Lebenskraft"
+    ],
+    "explanation": "Der Ren ist der Name: Solange man ihn aussprach, existierte der Verstorbene weiter."
+  },
+  {
+    "id": 84,
+    "question": "Was bedeutet der Name „Amun“",
+    "answer": "Der Verborgene",
+    "choices": [
+      "Der Verborgene",
+      "Der Leuchtende",
+      "Der König",
+      "Der Alte"
+    ],
+    "explanation": "Amun, „der Verborgene“, ist ein unsichtbarer Schöpfer, überall gegenwärtig, aber von niemandem zu sehen."
+  },
+  {
+    "id": 85,
+    "question": "Welches Tier gehört zum Gott Anubis",
+    "answer": "Der Schakal",
+    "choices": [
+      "Der Schakal",
+      "Der Löwe",
+      "Der Pavian",
+      "Der Widder"
+    ],
+    "explanation": "Schakale streiften um die Friedhöfe: Die Ägypter machten dieses Tier zum Wächter der Gräber."
+  },
+  {
+    "id": 86,
+    "question": "Wie viele Mitverschwörer halfen Seth, Osiris in die Truhe zu sperren",
+    "answer": "72",
+    "choices": [
+      "72",
+      "12",
+      "42",
+      "7"
+    ],
+    "explanation": "Mit zweiundsiebzig Mitverschwörern sperrte Seth Osiris in eine maßgefertigte Truhe und warf sie in den Nil."
   },
   {
     "id": 87,
-    "question": "Welcher Gott brachte Überfluss und sorgte für die jährliche Nilüberschwemmung, die das Land fruchtbar machte?",
+    "question": "Welcher Gott brachte Überfluss, indem er die jährliche Nilflut auslöste",
     "answer": "Hapi",
     "choices": [
       "Hapi",
       "Apophis",
       "Neith",
       "Min"
-    ]
+    ],
+    "explanation": "Hapi verkörpert die Nilflut, die jeden Sommer die Felder mit fruchtbarem Schlamm bedeckte."
   },
   {
     "id": 88,
-    "question": "Welcher Gott entstand aus der Vereinigung des Paares Amun und Mut?",
+    "question": "Welcher Gott ist der Sohn von Amun und Mut",
     "answer": "Chons",
     "choices": [
       "Chons",
       "Min",
       "Chnum",
       "Hapi"
-    ]
+    ],
+    "explanation": "Chons, der Mondgott, ist der Sohn von Amun und Mut, mit denen er die thebanische Triade bildet."
   },
   {
     "id": 89,
-    "question": "Welcher Gott wird mit erigiertem Phallus und einer von zwei Federn gekrönten Krone dargestellt?",
+    "question": "Welcher Fruchtbarkeitsgott wird mit zwei hohen Federn und erhobenem Arm mit Geißel dargestellt",
     "answer": "Min",
     "choices": [
       "Min",
       "Chons",
       "Hapi",
-      "Apep"
-    ]
+      "Ptah"
+    ],
+    "explanation": "Min, der Gott der Fruchtbarkeit, trägt zwei hohe Federn und hebt den rechten Arm mit einer Geißel."
   },
   {
     "id": 90,
-    "question": "Was war das Gegenstück der Kobragöttin Wadjet in Oberägypten?",
+    "question": "Welche Göttin war in Oberägypten das Gegenstück zur Kobragöttin Wadjet",
     "answer": "Nechbet",
     "choices": [
       "Nechbet",
       "Maat",
-      "Duat",
-      "Selket"
-    ]
+      "Selket",
+      "Neith"
+    ],
+    "explanation": "Nechbet, die Geiergöttin des Südens, bildete mit Wadjet die „beiden Herrinnen“, die den König beschützten."
   },
   {
     "id": 91,
-    "question": "Welcher Gott gab den Ägyptern das Konzept der Maat?",
+    "question": "Wessen Tochter ist Maat",
     "answer": "Re",
     "choices": [
       "Re",
       "Osiris",
       "Thot",
       "Horus"
-    ]
+    ],
+    "explanation": "Als Tochter des Re verkörpert Maat die Ordnung der Welt, wie der Schöpfer sie eingerichtet hat."
   },
   {
     "id": 92,
-    "question": "Welche weitere Göttin bewacht zusammen mit Isis, Nephthys und Neith die königlichen Sarkophage und Kanopenkästen?",
-    "answer": "Selket",
+    "question": "Welche Kanope schützte die Göttin Selket",
+    "answer": "Die des Darms",
     "choices": [
-      "Selket",
-      "Hathor",
-      "Bastet",
-      "Sachmet"
-    ]
+      "Die des Darms",
+      "Die der Leber",
+      "Die der Lunge",
+      "Die des Magens"
+    ],
+    "explanation": "Selket wachte über die Kanope des Darms, die der falkenköpfige Kebechsenuef hütete."
   },
   {
     "id": 93,
-    "question": "Welche Göttin war die Beschützerin der Frauen bei der Geburt?",
+    "question": "Welche Nilpferdgöttin schützte die Schwangeren und die Geburt",
     "answer": "Thoeris",
     "choices": [
       "Thoeris",
-      "Nephthys",
-      "Isis",
-      "Neith"
-    ]
+      "Ammit",
+      "Sachmet",
+      "Nephthys"
+    ],
+    "explanation": "Thoeris, eine Nilpferdgöttin mit dem Bauch einer Schwangeren, beschützte die Geburt."
   },
   {
     "id": 94,
-    "question": "Welche weitere Göttin bewacht zusammen mit Isis, Nephthys und Selket die königlichen Sarkophage und Kanopenkästen?",
+    "question": "Welche Göttin von Sais wachte mit Isis, Nephthys und Selket über die Kanopen",
     "answer": "Neith",
     "choices": [
       "Neith",
       "Sachmet",
       "Hathor",
       "Maat"
-    ]
+    ],
+    "explanation": "Neith wachte mit Isis, Nephthys und Selket über die Kanopen, besonders über die des Magens."
   },
   {
     "id": 95,
-    "question": "Welche ägyptische Göttin wird oft als Frau dargestellt, die ein Kind stillt?",
+    "question": "Welche Göttin wird oft beim Stillen ihres Sohnes dargestellt",
     "answer": "Isis",
     "choices": [
       "Isis",
       "Nephthys",
       "Neith",
       "Selket"
-    ]
+    ],
+    "explanation": "Isis wird oft beim Stillen ihres Sohnes Horus dargestellt, als Bild der schützenden Mutter."
   },
   {
     "id": 96,
-    "question": "Welcher Gott lehrte die Menschen die Hieroglyphen?",
+    "question": "Welcher Gott galt als Erfinder der Hieroglyphen",
     "answer": "Thot",
     "choices": [
       "Thot",
       "Anubis",
-      "Kaio",
+      "Ptah",
       "Hapi"
-    ]
+    ],
+    "explanation": "Thot galt als Erfinder der Hieroglyphen, der Mathematik und des Kalenders."
   },
   {
     "id": 97,
-    "question": "Welcher Gott trägt einen Namen, der sowohl \"der Hohe\" als auch \"der Ferne\" bedeutet?",
+    "question": "Welcher Gott trägt einen Namen, der „der Obere“ oder „der Ferne“ bedeutet",
     "answer": "Horus",
     "choices": [
       "Horus",
       "Osiris",
       "Amun",
       "Ptah"
-    ]
+    ],
+    "explanation": "Der Name des Horus erinnert an den Falken, der hoch am Himmel schwebt: „der Obere“."
   },
   {
     "id": 98,
-    "question": "Welcher widderköpfige Gott mit waagerechten Hörnern wird oft dargestellt, wie er die Menschen an seiner Töpferscheibe formt?",
+    "question": "Welcher widderköpfige Gott mit waagerechten Hörnern formt die Kinder auf seiner Töpferscheibe",
     "answer": "Chnum",
     "choices": [
       "Chnum",
-      "Hathor",
+      "Amun",
       "Anubis",
       "Min"
-    ]
+    ],
+    "explanation": "Chnum, der „göttliche Töpfer“, formte auf seiner Scheibe die Kinder und ihren Ka."
   },
   {
     "id": 99,
-    "question": "Was ist die Psychostasie in der ägyptischen Mythologie?",
-    "answer": "Das Wiegen der Seele",
+    "question": "Wie nennt man das Wiegen des Herzens auch",
+    "answer": "Psychostasie",
     "choices": [
-      "Das Wiegen der Seele",
-      "Die Reise der Seele",
-      "Der Tod der Seele",
-      "Das Gefängnis der Seele"
-    ]
+      "Psychostasie",
+      "Negatives Sündenbekenntnis",
+      "Mundöffnung",
+      "Amduat"
+    ],
+    "explanation": "Das Wiegen des Herzens des Verstorbenen gegen die Feder der Maat heißt auch Psychostasie."
   },
   {
     "id": 100,
-    "question": "Welche Göttin stoppt wütend einen Angriff des Apophis während der nächtlichen Reise des Re?",
-    "answer": "Selket (Serket)",
+    "question": "Welche Göttin hält Apophis während der nächtlichen Reise des Re fest",
+    "answer": "Selket",
     "choices": [
-      "Selket (Serket)",
+      "Selket",
       "Bastet",
       "Neith",
       "Maat"
-    ]
+    ],
+    "explanation": "In der siebten Stunde der Nacht hält Selket Apophis fest, während die Magie der Isis ihn schwächt."
   },
   {
     "id": 101,
-    "question": "Unter der Herrschaft welches Pharaos verdrängte der Kult des Aton die anderen Götter?",
+    "question": "Unter welchem Pharao verdrängte der Kult des Aton den der anderen Götter",
     "answer": "Echnaton",
     "choices": [
       "Echnaton",
-      "Ramses",
+      "Ramses II.",
       "Tutanchamun",
-      "Sethos"
-    ]
+      "Sethos I."
+    ],
+    "explanation": "Der Pharao Amenophis IV. machte Aton zum einzigen Gott Ägyptens und nahm den Namen Echnaton an."
   },
   {
     "id": 102,
-    "question": "Wohin flüchtet sich Isis, um den kleinen Horus zu verstecken?",
-    "answer": "Die Sümpfe von Chemmis",
+    "question": "Wo fand Isis Zuflucht, um das Kind Horus zu verstecken",
+    "answer": "In den Sümpfen von Chemmis",
     "choices": [
-      "Die Sümpfe von Chemmis",
-      "Der Tempel von Philae",
-      "Die Stadt Byblos",
-      "Die Oase Siwa"
-    ]
+      "In den Sümpfen von Chemmis",
+      "Im Tempel von Philae",
+      "In der Stadt Byblos",
+      "In der Oase Siwa"
+    ],
+    "explanation": "Isis versteckte Horus in den Sümpfen von Chemmis im Herzen des Deltas, um ihn vor Seth zu schützen."
   },
   {
     "id": 103,
-    "question": "In welche Tiergestalt verwandeln sich Horus und Seth für ihr Duell im Nil?",
-    "answer": "Nilpferde",
+    "question": "In welcher Tiergestalt kämpften Horus und Seth im Nil",
+    "answer": "Als Nilpferde",
     "choices": [
-      "Nilpferde",
-      "Krokodile",
-      "Schlangen",
-      "Stiere"
-    ]
+      "Als Nilpferde",
+      "Als Krokodile",
+      "Als Schlangen",
+      "Als Stiere"
+    ],
+    "explanation": "In Nilpferde verwandelt, tauchten Horus und Seth in den Nil: Wer zuerst auftauchte, sollte verlieren."
   },
   {
     "id": 104,
-    "question": "Wer reißt Horus während ihres Kampfes um den Thron die Augen aus?",
+    "question": "Wer riss Horus im Kampf um den Thron die Augen aus",
     "answer": "Seth",
     "choices": [
       "Seth",
       "Apophis",
       "Sobek",
       "Thot"
-    ]
+    ],
+    "explanation": "Im Kampf um den Thron riss Seth Horus die Augen aus und vergrub sie."
   },
   {
     "id": 105,
-    "question": "Welche Göttin heilt die Augen des Horus, nachdem Seth sie ihm ausgerissen hat?",
+    "question": "Welche Göttin gab Horus mit Gazellenmilch das Augenlicht zurück",
     "answer": "Hathor",
     "choices": [
       "Hathor",
       "Isis",
       "Neith",
       "Maat"
-    ]
+    ],
+    "explanation": "Hathor gab Horus das Augenlicht zurück, indem sie Gazellenmilch auf seine Augen träufelte."
   },
   {
     "id": 106,
-    "question": "Wie heißt das Schutzsymbol, das aus der Heilung des Horusauges entstand?",
-    "answer": "Das Horusauge (Udjat)",
+    "question": "Wie heißt das geheilte Horusauge, das zum Schutzsymbol wurde",
+    "answer": "Das Udjat",
     "choices": [
-      "Das Horusauge (Udjat)",
-      "Der Anch",
+      "Das Udjat",
+      "Das Anch",
       "Der Uräus",
-      "Der Djed"
-    ]
+      "Der Djed-Pfeiler"
+    ],
+    "explanation": "Das wiederhergestellte Horusauge, das Udjat, wurde zu einem der verbreitetsten Amulette Ägyptens."
   },
   {
     "id": 107,
-    "question": "Mit welcher List gewinnt Horus das Steinboot-Rennen gegen Seth?",
-    "answer": "Er benutzt ein mit Gips überzogenes Holzboot",
+    "question": "Mit welcher List gewann Horus das Rennen der Steinboote gegen Seth",
+    "answer": "Er nahm ein mit Gips überzogenes Holzboot",
     "choices": [
-      "Er benutzt ein mit Gips überzogenes Holzboot",
-      "Er versenkt Seths Boot mit Sobeks Hilfe",
-      "Er stiehlt Seths Boot in der Nacht",
-      "Er bittet Thot, einen Sturm heraufzubeschwören"
-    ]
+      "Er nahm ein mit Gips überzogenes Holzboot",
+      "Er ließ das Boot des Seth mit Sobeks Hilfe versenken",
+      "Er stahl das Boot des Seth in der Nacht",
+      "Er bat Thot, einen Sturm zu entfachen"
+    ],
+    "explanation": "Horus baute ein Boot aus Zedernholz und überzog es mit Gips; das des Seth aus echtem Stein sank."
   },
   {
     "id": 108,
-    "question": "Wer droht dem göttlichen Gericht mit der Entsendung von Boten, falls Horus nicht gekrönt wird?",
+    "question": "Wer drohte dem Göttergericht, seine Boten zu schicken, wenn Horus nicht gekrönt würde",
     "answer": "Osiris",
     "choices": [
       "Osiris",
       "Isis",
       "Nephthys",
       "Anubis"
-    ]
+    ],
+    "explanation": "Aus der Totenwelt drohte Osiris, seine Dämonen zu schicken, falls sein Sohn nicht gekrönt würde."
   },
   {
     "id": 109,
-    "question": "Wie viele Jahre zögert das göttliche Gericht zwischen Horus und Seth?",
+    "question": "Wie viele Jahre zögerte das Göttergericht zwischen Horus und Seth",
     "answer": "80 Jahre",
     "choices": [
       "80 Jahre",
       "28 Jahre",
       "12 Jahre",
       "400 Jahre"
-    ]
+    ],
+    "explanation": "Das Göttergericht unter dem Vorsitz des Re zögerte achtzig Jahre lang zwischen Horus und Seth."
   },
   {
     "id": 110,
-    "question": "Welche Rolle erhält Seth nach der Krönung des Horus?",
-    "answer": "Die Barke des Re vor Apophis zu schützen",
+    "question": "Welche Aufgabe erhielt Seth nach der Krönung des Horus",
+    "answer": "Apophis von der Barke des Re aus abzuwehren",
     "choices": [
-      "Die Barke des Re vor Apophis zu schützen",
-      "Über das Totenreich zu herrschen",
-      "Der neue Botengott zu werden",
+      "Apophis von der Barke des Re aus abzuwehren",
+      "Über die Totenwelt zu herrschen",
+      "Bote der Götter zu werden",
       "Die Tore der Duat zu bewachen"
-    ]
+    ],
+    "explanation": "Seth folgte Re an den Himmel: Vom Bug der Sonnenbarke aus schlägt er Apophis zurück."
   },
   {
     "id": 111,
-    "question": "Wie viele Skorpione begleiten Isis, als sie mit Horus durch das Delta flieht?",
+    "question": "Wie viele Skorpione begleiteten Isis, als sie mit Horus durch das Delta zog",
     "answer": "7",
     "choices": [
       "7",
       "4",
       "12",
       "3"
-    ]
+    ],
+    "explanation": "Sieben Skorpione begleiteten Isis: Tefen, Befen, Mestet, Mestetef, Petet, Tjetet und Matet."
   },
   {
     "id": 112,
-    "question": "Auf welcher magischen Stele wurde Isis' Zauberspruch gegen Skorpiongift überliefert?",
+    "question": "Auf welche magische Stele wurde der Spruch gegen Skorpiongift kopiert",
     "answer": "Die Metternichstele",
     "choices": [
       "Die Metternichstele",
-      "Der Stein von Rosette",
-      "Der Schabaka-Stein",
-      "Der Stein von Palermo"
-    ]
+      "Den Stein von Rosette",
+      "Den Schabaka-Stein",
+      "Den Palermostein"
+    ],
+    "explanation": "Die Sprüche der Isis und des Thot wurden auf magische Stelen wie die Metternichstele kopiert."
   },
   {
     "id": 113,
-    "question": "Warum kann Apophis niemals endgültig vernichtet werden?",
+    "question": "Warum kann Apophis niemals vernichtet werden",
     "answer": "Weil er nie erschaffen wurde",
     "choices": [
       "Weil er nie erschaffen wurde",
       "Weil er unerreichbar im Nun lebt",
-      "Weil er sich durch Re regeneriert",
-      "Weil er von Seth beschützt wird"
-    ]
+      "Weil Re ihn immer wieder erneuert",
+      "Weil Seth ihn beschützt"
+    ],
+    "explanation": "Apophis existierte vor der Schöpfung und wurde nie erschaffen: Er kann daher nicht vernichtet werden."
   },
   {
     "id": 114,
-    "question": "Wie heißt das tägliche Tempelritual, das Re helfen soll, Apophis zu besiegen?",
+    "question": "Welches Ritual rezitierten die Priester, um Re beim Sieg über Apophis zu helfen",
     "answer": "Das Buch vom Niederwerfen des Apophis",
     "choices": [
       "Das Buch vom Niederwerfen des Apophis",
       "Das Totenbuch",
-      "Das Pfortenbuch",
-      "Das Buch des Thot"
-    ]
+      "Das Amduat",
+      "Die Pyramidentexte"
+    ],
+    "explanation": "Die Priester formten eine Figur des Apophis aus Wachs, zertraten, durchbohrten und verbrannten sie."
   },
   {
     "id": 115,
-    "question": "Der Gott welcher Blume ist Nefertem?",
-    "answer": "Des blauen Lotos",
+    "question": "Welcher Blume ist Nefertem der Gott",
+    "answer": "Dem blauen Lotus",
     "choices": [
-      "Des blauen Lotos",
-      "Des Papyrus",
+      "Dem blauen Lotus",
+      "Dem Papyrus",
       "Der Lilie",
-      "Der weißen Seerose"
-    ]
+      "Der Rose"
+    ],
+    "explanation": "Nefertem ist der Gott des blauen Lotus, der Blume, die sich im Morgengrauen öffnet, und der Düfte."
   },
   {
     "id": 116,
-    "question": "Wer sind die Eltern des Nefertem in der memphitischen Triade?",
+    "question": "Wer sind die Eltern des Nefertem in der memphitischen Triade",
     "answer": "Ptah und Sachmet",
     "choices": [
       "Ptah und Sachmet",
       "Amun und Mut",
       "Osiris und Isis",
       "Re und Hathor"
-    ]
+    ],
+    "explanation": "In Memphis bildet Nefertem mit seinen Eltern Ptah und Sachmet eine Triade."
   },
   {
     "id": 117,
-    "question": "Welche Krone trägt der Gott Sokar?",
+    "question": "Welche Krone trägt der Gott Sokar",
     "answer": "Die Atef-Krone",
     "choices": [
       "Die Atef-Krone",
       "Die Doppelkrone",
-      "Die Rote Krone",
-      "Die Weiße Krone"
-    ]
+      "Die rote Krone",
+      "Die weiße Krone"
+    ],
+    "explanation": "Sokar, der Falkengott der Nekropole von Memphis, trägt die Atef-Krone."
   },
   {
     "id": 118,
-    "question": "Wie heißt die heilige Barke des Sokar, die während seines Festes in Prozession getragen wird?",
-    "answer": "Die Henu-Barke",
+    "question": "Wie heißt die heilige Barke des Sokar, die bei seinem Fest in Prozession getragen wurde",
+    "answer": "Die Henu",
     "choices": [
-      "Die Henu-Barke",
+      "Die Henu",
       "Die Barke der Millionen Jahre",
-      "Die Neschmet-Barke",
-      "Die Mesektet-Barke"
-    ]
+      "Die Neschmet",
+      "Die Mesektet"
+    ],
+    "explanation": "Beim Fest des Sokar wurde seine heilige Barke, die Henu, um die Mauern von Memphis getragen."
   },
   {
     "id": 119,
-    "question": "Was bedeutet der Name des Gottes Upuaut?",
-    "answer": "Öffner der Wege",
+    "question": "Was bedeutet der Name des Gottes Upuaut",
+    "answer": "Der die Wege öffnet",
     "choices": [
-      "Öffner der Wege",
-      "Hüter der Toten",
-      "Richter der Seelen",
-      "Träger des Lichts"
-    ]
+      "Der die Wege öffnet",
+      "Der die Toten bewacht",
+      "Der die Seelen richtet",
+      "Der das Licht trägt"
+    ],
+    "explanation": "Upuaut bahnte dem König in den Prozessionen den Weg und den Toten den Weg ins Jenseits."
   },
   {
     "id": 120,
-    "question": "Wo befand sich das Hauptkultzentrum des Upuaut?",
+    "question": "Wo lag das wichtigste Kultzentrum des Upuaut",
     "answer": "Assiut",
     "choices": [
       "Assiut",
       "Buto",
       "Sais",
       "Edfu"
-    ]
+    ],
+    "explanation": "Upuaut wurde in Assiut verehrt, das die Griechen Lykopolis nannten, die „Stadt des Wolfes“."
   },
   {
     "id": 121,
-    "question": "Welcher Gott nimmt in der thebanischen Kosmogonie den Platz des Schöpfergottes ein?",
+    "question": "Welcher Gott ist der Schöpfer in der thebanischen Kosmogonie",
     "answer": "Amun",
     "choices": [
       "Amun",
       "Ptah",
       "Thot",
       "Re"
-    ]
+    ],
+    "explanation": "In Theben bildete sich Amun, „der Verborgene“, am Anfang selbst; alle Götter sind seine Erscheinungsformen."
   },
   {
     "id": 122,
-    "question": "Wie heißt die geflügelte Schlange, aus der Amun bei der Erschaffung der Welt hervorgegangen sein soll?",
+    "question": "In Gestalt welcher Schlange erschien Amun beim Anbruch der Welt",
     "answer": "Kematef",
     "choices": [
       "Kematef",
       "Apophis",
       "Mehen",
       "Irta"
-    ]
+    ],
+    "explanation": "Späten Texten zufolge erschien Amun in Gestalt der Schlange Kematef, „der seine Zeit vollendet hat“."
   },
   {
     "id": 123,
-    "question": "Welcher von Amun hervorgebrachte Gott formte die Erde und die Achtheit in der thebanischen Kosmogonie?",
+    "question": "Welche von Kematef gezeugte Schlange erschuf in der thebanischen Kosmogonie die Achtheit",
     "answer": "Irta",
     "choices": [
       "Irta",
-      "Kematef",
-      "Ptah",
-      "Schu"
-    ]
+      "Mehen",
+      "Apophis",
+      "Wadjet"
+    ],
+    "explanation": "Kematef zeugte Irta, „der die Erde gemacht hat“, der wiederum die Achtheit erschuf."
   },
   {
     "id": 124,
-    "question": "Welcher Tempel wurde im Neuen Reich zum größten je in Ägypten errichteten religiösen Komplex?",
+    "question": "Welcher Tempel wurde zur größten je in Ägypten errichteten Kultanlage",
     "answer": "Karnak",
     "choices": [
       "Karnak",
       "Abu Simbel",
       "Luxor",
       "Edfu"
-    ]
+    ],
+    "explanation": "Fast zweitausend Jahre lang erweitert, ist der Amun-Tempel von Karnak der größte Ägyptens."
   },
   {
     "id": 125,
-    "question": "Wo befand sich das große Kultzentrum der Isis, das bis ins 6. Jahrhundert n. Chr. aktiv war?",
+    "question": "Wo lag der große Isis-Tempel, der bis ins 6. Jahrhundert n. Chr. in Betrieb blieb",
     "answer": "Philae",
     "choices": [
       "Philae",
       "Bubastis",
       "Sais",
       "Edfu"
-    ]
+    ],
+    "explanation": "Der Isis-Tempel von Philae blieb bis ins 6. Jahrhundert geöffnet, lange nach dem Ende der anderen Kulte."
   },
   {
     "id": 126,
-    "question": "Wo befand sich das Hauptheiligtum des Chnum?",
+    "question": "Wo lag das wichtigste Heiligtum des Chnum",
     "answer": "Elephantine",
     "choices": [
       "Elephantine",
       "Kom Ombo",
       "Assiut",
       "Theben"
-    ]
+    ],
+    "explanation": "Chnum wurde auf der Insel Elephantine verehrt, wo er mit Satet und Anuket eine Triade bildete."
   },
   {
     "id": 127,
-    "question": "Wo befand sich das große Kultzentrum der Bastet, dessen Fest von Herodot beschrieben wurde?",
+    "question": "Wo lag das große Kultzentrum der Bastet, deren Fest Herodot beschrieb",
     "answer": "Bubastis",
     "choices": [
       "Bubastis",
       "Memphis",
       "Heliopolis",
       "Sais"
-    ]
+    ],
+    "explanation": "Herodot beschreibt das Fest der Bastet in Bubastis, das Hunderttausende Pilger anzog."
   },
   {
     "id": 128,
-    "question": "Welches sind die beiden großen Kultzentren des Sobek?",
+    "question": "Welches sind die beiden großen Kultzentren des Gottes Sobek",
     "answer": "Kom Ombo und das Fayum",
     "choices": [
       "Kom Ombo und das Fayum",
       "Elephantine und Assiut",
       "Bubastis und Sais",
       "Theben und Memphis"
-    ]
+    ],
+    "explanation": "Sobek teilte einen Doppeltempel in Kom Ombo und herrschte über das Fayum, wo heilige Krokodile gehalten wurden."
   },
   {
     "id": 129,
-    "question": "Welcher Pharao verehrte Sobek im Fayum in besonderer Weise?",
+    "question": "Welcher Pharao förderte besonders den Kult des Sobek im Fayum",
     "answer": "Amenemhet III.",
     "choices": [
       "Amenemhet III.",
       "Echnaton",
       "Sethos I.",
       "Ramses II."
-    ]
+    ],
+    "explanation": "Der Pharao Amenemhet III. aus dem Mittleren Reich förderte besonders den Kult des Sobek im Fayum."
   },
   {
     "id": 130,
-    "question": "Wo befand sich das Kultzentrum der Neith, Hauptstadt der 26. Dynastie?",
+    "question": "Welche Stadt, Kultzentrum der Neith, war Hauptstadt der 26. Dynastie",
     "answer": "Sais",
     "choices": [
       "Sais",
       "Bubastis",
       "Buto",
       "Necheb"
-    ]
+    ],
+    "explanation": "Neith war die große Göttin von Sais, der Hauptstadt Ägyptens unter der 26. Dynastie."
   },
   {
     "id": 131,
-    "question": "Wo befand sich das Heiligtum der Nechbet, der Geiergöttin?",
-    "answer": "Necheb (El Kab)",
+    "question": "Wo lag das Heiligtum der Geiergöttin Nechbet",
+    "answer": "Necheb (Elkab)",
     "choices": [
-      "Necheb (El Kab)",
+      "Necheb (Elkab)",
       "Buto",
       "Sais",
       "Elephantine"
-    ]
+    ],
+    "explanation": "Das Heiligtum der Nechbet lag in Necheb, dem heutigen Elkab, in Oberägypten."
   },
   {
     "id": 132,
-    "question": "Wo befand sich das Kultzentrum der Wadjet, der Kobragöttin?",
+    "question": "Wo lag das Kultzentrum der Kobragöttin Wadjet",
     "answer": "Buto",
     "choices": [
       "Buto",
       "Necheb",
       "Sais",
       "Kom Ombo"
-    ]
+    ],
+    "explanation": "Das Kultzentrum der Wadjet, Buto, lag im Nildelta."
   },
   {
     "id": 133,
-    "question": "Welcher Pharao trug stolz den Namen des Seth, bevor der Gott später verunglimpft wurde?",
+    "question": "Welcher Pharao trug den Namen des Gottes Seth",
     "answer": "Sethos I.",
     "choices": [
       "Sethos I.",
       "Echnaton",
       "Tutanchamun",
       "Amenemhet III."
-    ]
+    ],
+    "explanation": "Lange für seine Kraft geachtet, gab Seth den Pharaonen Sethos I. und Sethos II. ihren Namen."
   },
   {
     "id": 134,
-    "question": "Welcher griechische Gott wurde ab der griechisch-römischen Zeit mit Thot in Hermopolis gleichgesetzt?",
+    "question": "Mit welchem griechischen Gott wurde Thot gleichgesetzt",
     "answer": "Hermes",
     "choices": [
       "Hermes",
       "Zeus",
       "Apollon",
       "Hades"
-    ]
+    ],
+    "explanation": "Die Griechen setzten Thot mit Hermes gleich, dem Götterboten und Schutzherrn der Schrift."
   },
   {
     "id": 135,
-    "question": "Welche Gottheit verkörpert in der memphitischen Theologie den \"Gedanken\" des Ptah?",
+    "question": "Welcher Gott ist in der memphitischen Theologie das Herz des Ptah, der Sitz des Denkens",
     "answer": "Horus",
     "choices": [
       "Horus",
       "Thot",
       "Sachmet",
       "Nefertem"
-    ]
+    ],
+    "explanation": "In der memphitischen Theologie ist Horus das Herz des Ptah, der Sitz des Denkens, und Thot seine Zunge."
   },
   {
     "id": 136,
-    "question": "Auf welchem antiken, im British Museum wiederentdeckten Monument wurde die memphitische Theologie eingraviert?",
+    "question": "Auf welchem 1805 dem British Museum geschenkten Denkmal ist die memphitische Theologie eingemeißelt",
     "answer": "Der Schabaka-Stein",
     "choices": [
       "Der Schabaka-Stein",
       "Der Stein von Rosette",
       "Die Metternichstele",
       "Die Narmer-Palette"
-    ]
+    ],
+    "explanation": "Der Schabaka-Stein wurde 1805 dem British Museum geschenkt, als noch niemand Hieroglyphen lesen konnte."
   },
   {
     "id": 137,
-    "question": "Welche zusammengesetzte Gottheit entsteht aus der Verschmelzung von Ptah, Sokar und Osiris?",
+    "question": "Welche zusammengesetzte Gottheit entstand aus der Verschmelzung von Ptah, Sokar und Osiris",
     "answer": "Ptah-Sokar-Osiris",
     "choices": [
       "Ptah-Sokar-Osiris",
       "Amun-Re",
       "Re-Harachte",
-      "Osiris-Re"
-    ]
+      "Sobek-Re"
+    ],
+    "explanation": "Ptah verschmolz mit Sokar und Osiris zu Ptah-Sokar-Osiris, dem Gott der Schöpfung, des Todes und der Wiedergeburt."
   },
   {
     "id": 138,
-    "question": "Wie gelingt es den Göttern, Sachmets Zerstörungswut zu stoppen?",
-    "answer": "Indem sie rot gefärbtes Bier über das Land verteilen",
+    "question": "Wie beendeten die Götter das Gemetzel der Sachmet",
+    "answer": "Mit rot gefärbtem Bier",
     "choices": [
-      "Indem sie rot gefärbtes Bier über das Land verteilen",
-      "Indem sie sie in der Duat einsperren",
-      "Indem Thot sie einschläfert",
-      "Indem sie ihr den Thron Ägyptens anbieten"
-    ]
+      "Mit rot gefärbtem Bier",
+      "Indem sie sie in die Duat sperrten",
+      "Indem sie Thot baten, sie einzuschläfern",
+      "Indem sie ihr den Thron Ägyptens anboten"
+    ],
+    "explanation": "Re ließ mit rotem Ocker gefärbtes Bier ausgießen; Sachmet trank es, wurde betrunken und vergaß ihren Zorn."
   },
   {
     "id": 139,
-    "question": "Auf dem Rücken welches Himmelstieres steigt Re nach diesem Ereignis in den Himmel auf?",
+    "question": "Auf dem Rücken welches himmlischen Tieres verließ Re die Erde",
     "answer": "Der Himmelskuh Nut",
     "choices": [
       "Der Himmelskuh Nut",
       "Des Falken Horus",
-      "Des Skarabäus Chepri",
+      "Des Skarabäus Chepre",
       "Des Widders Chnum"
-    ]
+    ],
+    "explanation": "Der Herrschaft müde, stieg Re auf den Rücken der Nut, die sich in eine Himmelskuh verwandelt hatte, und verließ die Erde."
   },
   {
     "id": 140,
-    "question": "Welche Göttin trägt den Beinamen \"groß an Zauberkraft\", weil sie Re seinen geheimen Namen entlockte?",
-    "answer": "Isis",
+    "question": "Woraus formte Isis die Schlange, die Re biss",
+    "answer": "Aus dem Speichel des Re, vermischt mit Erde",
     "choices": [
-      "Isis",
-      "Hathor",
-      "Maat",
-      "Sachmet"
-    ]
+      "Aus dem Speichel des Re, vermischt mit Erde",
+      "Aus Bienenwachs",
+      "Aus einer Feder der Maat",
+      "Aus den Tränen der Nut"
+    ],
+    "explanation": "Isis vermischte den Speichel, den der alternde Re tropfen ließ, mit Erde und formte daraus eine Schlange."
   },
   {
     "id": 141,
-    "question": "Was bedeutet der Name der Göttin Nephthys?",
+    "question": "Was bedeutet der Name der Göttin Nephthys",
     "answer": "Herrin des Hauses",
     "choices": [
       "Herrin des Hauses",
-      "Öffnerin der Wege",
-      "Groß an Zauberkraft",
+      "Die die Wege öffnet",
+      "Die Zauberreiche",
       "Die Mächtige"
-    ]
+    ],
+    "explanation": "Nephthys trägt auf dem Kopf die Hieroglyphen ihres Namens: ein Haus mit einem Korb darauf."
   },
   {
     "id": 142,
-    "question": "Welchen Beruf beanspruchten die Priester der Sachmet im alten Ägypten für sich?",
-    "answer": "Ärzte",
+    "question": "Wer stellte sich unter den Schutz der Göttin Sachmet",
+    "answer": "Die Ärzte",
     "choices": [
-      "Ärzte",
-      "Baumeister",
-      "Schreiber",
-      "Einbalsamierer"
-    ]
+      "Die Ärzte",
+      "Die Baumeister",
+      "Die Schreiber",
+      "Die Balsamierer"
+    ],
+    "explanation": "Als Urheberin der Seuchen konnte Sachmet sie auch heilen: Die Ärzte stellten sich unter ihren Schutz."
   },
   {
     "id": 143,
-    "question": "Welche göttliche Triade bildet Chnum in Elephantine?",
+    "question": "Welche göttliche Triade bildet Chnum in Elephantine",
     "answer": "Chnum, Satet und Anuket",
     "choices": [
       "Chnum, Satet und Anuket",
       "Ptah, Sachmet und Nefertem",
       "Amun, Mut und Chons",
       "Osiris, Isis und Horus"
-    ]
+    ],
+    "explanation": "In Elephantine bildete Chnum mit den Göttinnen Satet und Anuket eine Triade."
   },
   {
     "id": 144,
-    "question": "Mit welchem Gott wurde Upuaut aufgrund ihrer gemeinsamen Totenrolle zunehmend verwechselt?",
+    "question": "Mit welchem Gott wurde Upuaut wegen ihrer gemeinsamen Rolle im Totenkult manchmal verwechselt",
     "answer": "Anubis",
     "choices": [
       "Anubis",
       "Thot",
       "Sokar",
       "Osiris"
-    ]
+    ],
+    "explanation": "Upuaut öffnete den Toten den Weg ins Jenseits, eine Rolle, die ihn Anubis nahebrachte."
   }
 ]
