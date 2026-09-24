@@ -217,8 +217,9 @@ void main() {
         expect(html, isNot(contains(DocumentationService.glossaryLinkPrefix)));
       });
 
+      // 'xx' stands for a locale whose pages aren't translated yet.
       test('pages not translated yet fall back to French instead of failing', () async {
-        final html = await docs.loadContent(DocCategory.reference, 'chronology', 'de', t);
+        final html = await docs.loadContent(DocCategory.reference, 'chronology', 'xx', t);
 
         expect(html, contains('Ancien Empire'));
       });
@@ -229,8 +230,8 @@ void main() {
         expect(heliopolis, contains('<a href="${DocumentationService.glossaryLinkPrefix}nun">Noun</a>'));
         expect(RegExp('${DocumentationService.glossaryLinkPrefix}nun"').allMatches(heliopolis), hasLength(1));
 
-        final german = await docs.loadContent(DocCategory.cosmogonies, 'heliopolis', 'de', await AppLocale.de.build());
-        expect(german, isNot(contains(DocumentationService.glossaryLinkPrefix)));
+        final untranslated = await docs.loadContent(DocCategory.cosmogonies, 'heliopolis', 'xx', t);
+        expect(untranslated, isNot(contains(DocumentationService.glossaryLinkPrefix)));
       });
     });
 
