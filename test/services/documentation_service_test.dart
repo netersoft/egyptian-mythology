@@ -13,10 +13,10 @@ void main() {
   });
 
   group('DocumentationService', () {
-    test('loads all 36 god items (intro + 35 deities) with resolved titles', () async {
+    test('loads all 43 god items (intro + 42 deities) with resolved titles', () async {
       final items = await docs.loadItems(DocCategory.gods, 'en', t);
 
-      expect(items.length, 36);
+      expect(items.length, 43);
       expect(items.first.id, 'intro');
       expect(items.first.title, 'Introduction');
       expect(items.firstWhere((i) => i.id == 'anubis').title, 'Anubis');
@@ -25,6 +25,7 @@ void main() {
       expect(items.firstWhere((i) => i.id == 'nefertem').title, 'Nefertem');
       expect(items.firstWhere((i) => i.id == 'sokar').title, 'Sokar');
       expect(items.firstWhere((i) => i.id == 'wepwawet').title, 'Wepwawet');
+      expect(items.firstWhere((i) => i.id == 'haroeris').title, 'Horus the Elder');
     });
 
     test('loads all 5 cosmogony items with resolved titles', () async {
@@ -232,6 +233,17 @@ void main() {
 
         final untranslated = await docs.loadContent(DocCategory.cosmogonies, 'heliopolis', 'xx', t);
         expect(untranslated, isNot(contains(DocumentationService.glossaryLinkPrefix)));
+      });
+
+      // English glossary aliases must not collide with ordinary words: the
+      // was sceptre is spelled out so that "was" itself never links.
+      test('links English glossary terms without catching ordinary words', () async {
+        final gods = await docs.loadContent(DocCategory.gods, 'ptah', 'en', t);
+        expect(gods, contains('<a href="${DocumentationService.glossaryLinkPrefix}was">was sceptre</a>'));
+
+        final osiris = await docs.loadContent(DocCategory.myths, 'myth_osirien', 'en', t);
+        expect(osiris, isNot(contains('>was</a>')));
+        expect(osiris, isNot(contains('>shut</a>')));
       });
     });
 

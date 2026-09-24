@@ -145,6 +145,7 @@ flutter:
     - assets/docs/en/gods/
     - assets/docs/en/cosmogonies/
     - assets/docs/en/myths/
+    - assets/docs/en/reference/
     - assets/docs/en/privacy_policy.html
     - assets/docs/en/terms_of_use.html
     - assets/docs/en/credits.html
