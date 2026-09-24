@@ -4,8 +4,9 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 
 // A glossary term only gets linked where its exact alias appears in the
-// docs, so a translated glossary whose aliases don't match the translated
-// text ("canopic jars" vs "canopic vases") silently links nothing. Check every
+// docs (possibly wrapped across source lines, as the linker allows), so a
+// translated glossary whose aliases don't match the translated text
+// ("canopic jars" vs "canopic vases") silently links nothing. Check every
 // glossary against the French one and against its own locale's pages.
 void main() {
   final glossaries = Directory('assets/glossary').listSync().whereType<File>().where((f) => f.path.endsWith('.json'));
@@ -28,7 +29,7 @@ void main() {
         for (final entry in jsonDecode(glossary.readAsStringSync()) as List<dynamic>)
           if (!(entry['aliases'] as List<dynamic>).any(
             (alias) => RegExp(
-              '(?<![\\p{L}\\p{N}_-])${RegExp.escape(alias as String)}(?![\\p{L}\\p{N}_-])',
+              '(?<![\\p{L}\\p{N}_-])${(alias as String).split(' ').map(RegExp.escape).join(r'\s+')}(?![\\p{L}\\p{N}_-])',
               unicode: true,
             ).hasMatch(text),
           ))

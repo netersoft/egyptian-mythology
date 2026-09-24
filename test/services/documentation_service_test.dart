@@ -146,6 +146,15 @@ void main() {
       expect(gebNut, contains('<a href="${DocumentationService.godLinkPrefix}haroeris">Horus l’Ancien</a>'));
     });
 
+    // The Sobek page wraps "Horus l’Ancien" across two source lines.
+    test('a multi-word name still links when the source wraps it across lines', () async {
+      final fr = await AppLocale.fr.build();
+      final sobek = await docs.loadContent(DocCategory.gods, 'sobek', 'fr', fr);
+
+      expect(sobek, contains('${DocumentationService.godLinkPrefix}haroeris'));
+      expect(sobek, isNot(contains('${DocumentationService.godLinkPrefix}horus"')));
+    });
+
     group('search', () {
       test('ignores queries shorter than 2 characters', () async {
         expect(await docs.search(' a ', 'en', t), isEmpty);

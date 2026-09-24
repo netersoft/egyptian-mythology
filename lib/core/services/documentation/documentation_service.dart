@@ -211,6 +211,7 @@ class DocumentationService {
 
   static final _tagOrText = RegExp('(<[^>]*>)|([^<]+)');
   static final _noLinkTags = RegExp(r'^<(/?)(a|h[1-6])\b', caseSensitive: false);
+  static final _whitespace = RegExp(r'\s+');
 
   static String linkGodMentions(String html, Map<String, String> names, {String? excludeId}) => linkMentions(
     html,
@@ -223,12 +224,14 @@ class DocumentationService {
   // href, like "Geb" and "Nut", count as one). Only text content is touched
   // -- never tags or attribute values (alt="Isis") -- and nothing inside
   // existing links or headings. Names match whole words only, longest first,
-  // so "Amun-Re" wins over "Amun" and "Re". Hrefs in [exclude] stay unlinked.
+  // so "Amun-Re" wins over "Amun" and "Re", and a multi-word name still
+  // matches when the source wraps it across lines ("Horus\n\t\tthe Elder").
+  // Hrefs in [exclude] stay unlinked.
   static String linkMentions(String html, Map<String, String> hrefs, {Set<String> exclude = const {}}) {
     if (hrefs.isEmpty) return html;
     final sorted = hrefs.keys.toList()..sort((a, b) => b.length.compareTo(a.length));
     final pattern = RegExp(
-      '(?<![\\p{L}\\p{N}_-])(${sorted.map(RegExp.escape).join('|')})(?![\\p{L}\\p{N}_-])',
+      '(?<![\\p{L}\\p{N}_-])(${sorted.map((name) => name.split(' ').map(RegExp.escape).join(r'\s+')).join('|')})(?![\\p{L}\\p{N}_-])',
       unicode: true,
     );
 
@@ -253,7 +256,7 @@ class DocumentationService {
       out.write(
         text.replaceAllMapped(pattern, (m) {
           final name = m.group(0)!;
-          final href = hrefs[name]!;
+          final href = hrefs[name.replaceAll(_whitespace, ' ')]!;
           if (!linked.add(href)) return name;
           return '<a href="$href">$name</a>';
         }),
