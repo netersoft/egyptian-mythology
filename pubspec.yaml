@@ -159,8 +159,10 @@ flutter:
     - assets/docs/es/gods/
     - assets/docs/es/cosmogonies/
     - assets/docs/es/myths/
+    - assets/docs/es/reference/
     - assets/docs/es/privacy_policy.html
     - assets/docs/es/terms_of_use.html
+    - assets/docs/es/credits.html
     - assets/docs/pt/gods/
     - assets/docs/pt/cosmogonies/
     - assets/docs/pt/myths/

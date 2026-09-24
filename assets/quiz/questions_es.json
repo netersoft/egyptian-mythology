@@ -1,1586 +1,1730 @@
 [
   {
     "id": 1,
-    "question": "¿Quién es el dios soberano y juez supremo del Reino de los Muertos?",
+    "question": "¿Qué dios es el soberano y juez supremo del reino de los muertos",
     "answer": "Osiris",
     "choices": [
       "Osiris",
       "Anubis",
-      "Onasis",
-      "Thot"
-    ]
+      "Thot",
+      "Horus"
+    ],
+    "explanation": "Asesinado por Seth y luego devuelto a la vida, Osiris reina sobre el más allá y juzga allí a los difuntos."
   },
   {
     "id": 2,
-    "question": "¿Quién es el dios que preside la gran enéada de los nueve dioses principales?",
-    "answer": "Ra",
+    "question": "¿Qué dios se encuentra a la cabeza de la Enéada de Heliópolis",
+    "answer": "Atum",
     "choices": [
-      "Ra",
-      "Anubis",
+      "Atum",
       "Osiris",
-      "Thot"
-    ]
+      "Thot",
+      "Anubis"
+    ],
+    "explanation": "El demiurgo Atum, a menudo confundido con Ra bajo el nombre de Ra-Atum, está a la cabeza de los nueve dioses de la Enéada."
   },
   {
     "id": 3,
-    "question": "¿Cuál es el nombre del océano primordial del que todo emergió?",
+    "question": "¿Cómo se llama el océano primordial del que surgió todo",
     "answer": "El Nun",
     "choices": [
       "El Nun",
       "El Nilo",
       "El Ren",
-      "El Ben"
-    ]
+      "El Benben"
+    ],
+    "explanation": "Antes de la Creación solo existía el Nun, un océano inerte y oscuro que sigue rodeando el mundo."
   },
   {
     "id": 4,
-    "question": "¿Cuál es la serpiente tenebrosa que el dios sol debe enfrentar cada noche?",
+    "question": "¿Qué serpiente gigante debe enfrentar cada noche el dios sol",
     "answer": "Apofis",
     "choices": [
       "Apofis",
-      "Yormungand",
-      "Aido-Wedo",
-      "Waagal"
-    ]
+      "Mehen",
+      "Kematef",
+      "Irta"
+    ],
+    "explanation": "Cada noche, la serpiente Apofis ataca la barca de Ra en el mundo subterráneo para engullir el sol."
   },
   {
     "id": 5,
-    "question": "¿Cómo se llama el disco solar que corona al dios Ra?",
-    "answer": "Horakhty",
+    "question": "¿Cómo se llama el disco solar divinizado que Akenatón convirtió en el dios único de Egipto",
+    "answer": "Atón",
     "choices": [
-      "Horakhty",
-      "Mehen",
-      "Heka",
-      "Duat"
-    ]
+      "Atón",
+      "Atum",
+      "Jepri",
+      "Amón"
+    ],
+    "explanation": "Atón es el propio disco solar, representado con rayos que terminan en pequeñas manos."
   },
   {
     "id": 6,
-    "question": "¿Qué nombre recibe el más allá en la mitología egipcia?",
+    "question": "¿Cómo se llama el mundo de los muertos en la mitología egipcia",
     "answer": "La Duat",
     "choices": [
       "La Duat",
       "El Nun",
-      "La Tuad",
-      "La Heka"
-    ]
+      "El Benben",
+      "La Ogdóada"
+    ],
+    "explanation": "La Duat es el mundo subterráneo que el sol atraviesa cada noche y por el que viaja el difunto."
   },
   {
     "id": 7,
-    "question": "¿Cuál es el nombre de la colina primordial?",
+    "question": "¿Cómo se llama el montículo primordial surgido del Nun en Heliópolis",
     "answer": "El Benben",
     "choices": [
       "El Benben",
-      "El Nun",
-      "El Horakhty",
+      "El Benu",
+      "El Djed",
       "El Ren"
-    ]
+    ],
+    "explanation": "Atum hizo surgir de las aguas del Nun un montículo de tierra, el Benben, para poder sostenerse sobre él."
   },
   {
     "id": 8,
-    "question": "¿Cuál es el dios del aire seco?",
+    "question": "¿Qué dios personifica el aire y la luz",
     "answer": "Shu",
     "choices": [
       "Shu",
       "Seth",
       "Thot",
-      "Mehen"
-    ]
+      "Geb"
+    ],
+    "explanation": "Nacido del estornudo de Atum, Shu es el dios del aire y de la luz que sostiene el cielo."
   },
   {
     "id": 9,
-    "question": "¿Cuál es la diosa del aire húmedo?",
+    "question": "¿Qué diosa personifica la humedad",
     "answer": "Tefnut",
     "choices": [
       "Tefnut",
       "Nut",
       "Neftis",
       "Sejmet"
-    ]
+    ],
+    "explanation": "Tefnut, nacida de la saliva de Atum, es la diosa de la humedad, hermana y esposa de Shu."
   },
   {
     "id": 10,
-    "question": "¿Cuál es el dios de la tierra?",
+    "question": "¿Qué dios personifica la tierra",
     "answer": "Geb",
     "choices": [
       "Geb",
       "Nut",
       "Shu",
       "Tefnut"
-    ]
+    ],
+    "explanation": "Geb es la tierra, representada tendida bajo el cuerpo arqueado de Nut; se decía que los terremotos eran su risa."
   },
   {
     "id": 11,
-    "question": "¿Cuál es la diosa del cielo?",
+    "question": "¿Qué diosa personifica el cielo",
     "answer": "Nut",
     "choices": [
       "Nut",
       "Geb",
       "Isis",
       "Maat"
-    ]
+    ],
+    "explanation": "Nut es el cielo: una mujer de cuerpo cubierto de estrellas, arqueada sobre la tierra."
   },
   {
     "id": 12,
-    "question": "¿Cuál es el nombre de la esposa de Osiris?",
+    "question": "¿Quién es la esposa de Osiris",
     "answer": "Isis",
     "choices": [
       "Isis",
       "Neftis",
       "Neit",
       "Selkis"
-    ]
+    ],
+    "explanation": "Isis es la hermana y esposa de Osiris, cuyo cuerpo desmembrado reunió."
   },
   {
     "id": 13,
-    "question": "¿Cuál es el nombre de la esposa del dios Seth?",
+    "question": "¿Quién es la esposa de Seth",
     "answer": "Neftis",
     "choices": [
       "Neftis",
       "Isis",
       "Selkis",
       "Neit"
-    ]
+    ],
+    "explanation": "Neftis es la esposa de Seth, pero tomó partido por Osiris tras su asesinato."
   },
   {
     "id": 14,
-    "question": "¿Cuántos dioses engendraron Geb y Nut?",
+    "question": "¿Cuántos hijos dio a luz Nut durante los días epagómenos",
     "answer": "5",
     "choices": [
       "5",
       "6",
       "2",
       "3"
-    ]
+    ],
+    "explanation": "Durante los cinco días epagómenos nacieron Osiris, Horus el Viejo, Seth, Isis y Neftis."
   },
   {
     "id": 15,
-    "question": "¿Cuál es el nombre de la diosa maga y esposa de Osiris?",
-    "answer": "Isis",
+    "question": "¿Qué jeroglífico lleva la diosa Isis en la cabeza",
+    "answer": "El trono",
     "choices": [
-      "Isis",
-      "Sejmet",
-      "Maat",
-      "Hathor"
-    ]
+      "El trono",
+      "La media luna",
+      "La pluma",
+      "El escorpión"
+    ],
+    "explanation": "El nombre de Isis se escribe con el signo del trono, que lleva en la cabeza."
   },
   {
     "id": 16,
-    "question": "¿Cómo se llama el dios sol cuando es el sol naciente?",
-    "answer": "Khepri",
+    "question": "¿Bajo qué forma aparece el dios sol al amanecer",
+    "answer": "Jepri",
     "choices": [
-      "Khepri",
+      "Jepri",
       "Atum",
       "Ra",
       "Atón"
-    ]
+    ],
+    "explanation": "Por la mañana, el sol es Jepri, el escarabajo que empuja el disco solar por el cielo."
   },
   {
     "id": 17,
-    "question": "¿Cómo se llama el dios sol cuando es el sol del mediodía?",
+    "question": "¿Con qué nombre reina el dios sol a mediodía",
     "answer": "Ra",
     "choices": [
       "Ra",
       "Amón",
-      "Khepri",
-      "Atón"
-    ]
+      "Jepri",
+      "Atum"
+    ],
+    "explanation": "El sol es Jepri por la mañana, Ra a mediodía en todo su poder y Atum por la tarde."
   },
   {
     "id": 18,
-    "question": "¿Cómo se llama el dios sol cuando es el sol poniente?",
+    "question": "¿Con qué nombre se pone el dios sol por la tarde",
     "answer": "Atum",
     "choices": [
       "Atum",
       "Atón",
       "Ra",
-      "Khepri"
-    ]
+      "Jepri"
+    ],
+    "explanation": "Por la tarde, el sol se convierte en Atum, el viejo creador que se pone por occidente."
   },
   {
     "id": 19,
-    "question": "¿Cuál es el dios del mal, la ira y las pasiones incontroladas?",
+    "question": "¿Qué dios encarna el desierto, las tormentas y el desorden",
     "answer": "Seth",
     "choices": [
       "Seth",
       "Apofis",
-      "Apep",
+      "Sobek",
       "Anubis"
-    ]
+    ],
+    "explanation": "Seth es el dios del desierto, de las tormentas y del desorden, asociado al color rojo."
   },
   {
     "id": 20,
-    "question": "¿Qué órgano protege Neftis entre los vasos canopos?",
+    "question": "¿Qué órgano protegía la diosa Neftis entre los vasos canopos",
     "answer": "Los pulmones",
     "choices": [
       "Los pulmones",
       "El hígado",
       "El estómago",
       "Los intestinos"
-    ]
+    ],
+    "explanation": "Neftis velaba por el vaso canopo de los pulmones, custodiado por Hapy, el hijo de Horus con cabeza de babuino."
   },
   {
     "id": 21,
-    "question": "¿Qué dios nació de la unión de Osiris y Neftis?",
+    "question": "¿Qué dios nació de la unión de Osiris y Neftis",
     "answer": "Anubis",
     "choices": [
       "Anubis",
       "Thot",
-      "Amón",
+      "Horus",
       "Seth"
-    ]
+    ],
+    "explanation": "Según la tradición más extendida, Anubis es hijo de Osiris y de Neftis, criado por Isis."
   },
   {
     "id": 22,
-    "question": "¿En cuántos pedazos corta Seth el cuerpo de su hermano Osiris?",
+    "question": "¿En cuántos pedazos cortó Seth el cuerpo de Osiris",
     "answer": "14",
     "choices": [
       "14",
       "21",
       "12",
-      "16"
-    ]
+      "7"
+    ],
+    "explanation": "Seth cortó el cuerpo de Osiris en catorce pedazos, que dispersó por todo Egipto."
   },
   {
     "id": 23,
-    "question": "¿Qué dios nació de la unión de Osiris e Isis?",
+    "question": "¿Qué dios nació de la unión de Osiris e Isis",
     "answer": "Horus",
     "choices": [
       "Horus",
       "Jonsu",
       "Thot",
       "Atum"
-    ]
+    ],
+    "explanation": "Isis concibió a Horus de Osiris, reanimado por su magia, y luego lo escondió en los pantanos de Quemmis."
   },
   {
     "id": 24,
-    "question": "¿Cuál es el dios de los artesanos y arquitectos?",
+    "question": "¿Qué dios es el patrón de los artesanos y de los arquitectos",
     "answer": "Ptah",
     "choices": [
       "Ptah",
       "Min",
       "Bes",
       "Jonsu"
-    ]
+    ],
+    "explanation": "Ptah, el dios creador de Menfis, es el patrón de los artesanos, los escultores y los arquitectos."
   },
   {
     "id": 25,
-    "question": "¿Quién es el dios que personifica la magia protectora?",
+    "question": "¿Qué dios personifica la magia",
     "answer": "Heka",
     "choices": [
       "Heka",
       "Sia",
       "Hu",
       "Upuaut"
-    ]
+    ],
+    "explanation": "Heka, la magia, viaja en la barca de Ra con Sia y Hu."
   },
   {
     "id": 26,
-    "question": "¿Quién es el dios que personifica el conocimiento?",
+    "question": "¿Qué dios personifica el conocimiento",
     "answer": "Sia",
     "choices": [
       "Sia",
       "Heka",
       "Hu",
       "Upuaut"
-    ]
+    ],
+    "explanation": "Sia, el conocimiento, acompaña a Ra en su barca con Heka y Hu."
   },
   {
     "id": 27,
-    "question": "¿Quién es el dios que personifica la palabra creadora?",
+    "question": "¿Qué dios personifica la palabra creadora",
     "answer": "Hu",
     "choices": [
       "Hu",
       "Sia",
       "Heka",
       "Upuaut"
-    ]
+    ],
+    "explanation": "Hu, la palabra creadora, forma parte de la tripulación divina de la barca de Ra."
   },
   {
     "id": 28,
-    "question": "¿Cuál es el dios de los caminos?",
-    "answer": "Upuaut",
+    "question": "¿Qué región desértica atraviesa la barca de Ra en las horas cuarta y quinta de la noche",
+    "answer": "El dominio de Sokar",
     "choices": [
-      "Upuaut",
-      "Hu",
-      "Sia",
-      "Heka"
-    ]
+      "El dominio de Sokar",
+      "Los Campos de Iaru",
+      "Los pantanos de Quemmis",
+      "La isla de la Llama"
+    ],
+    "explanation": "En las horas cuarta y quinta, la barca atraviesa el desierto de Sokar y debe ser remolcada sobre la arena."
   },
   {
     "id": 29,
-    "question": "¿Cuántas horas tarda el dios sol en cruzar el río del cielo?",
-    "answer": "12h",
+    "question": "¿Cuántas horas tarda el sol en atravesar el cielo durante el día",
+    "answer": "12 horas",
     "choices": [
-      "12h",
-      "6h",
-      "8h",
-      "4h"
-    ]
+      "12 horas",
+      "6 horas",
+      "8 horas",
+      "24 horas"
+    ],
+    "explanation": "El sol atraviesa el cielo en doce horas de día y el mundo subterráneo en doce horas de noche."
   },
   {
     "id": 30,
-    "question": "¿Cuál es la serpiente benéfica que protege al dios sol durante la sexta hora de la travesía del río celeste?",
+    "question": "¿Qué serpiente benéfica enrolla sus anillos alrededor de Ra para protegerlo durante la noche",
     "answer": "Mehen",
     "choices": [
       "Mehen",
       "Apofis",
-      "Apep",
-      "Yormungand"
-    ]
+      "Kematef",
+      "Irta"
+    ],
+    "explanation": "La serpiente Mehen enrolla sus anillos alrededor de Ra para protegerlo en el momento más profundo de la noche."
   },
   {
     "id": 31,
-    "question": "¿Qué diosa consigue obtener el nombre secreto del dios Ra?",
+    "question": "¿Qué diosa logró obtener el nombre secreto de Ra",
     "answer": "Isis",
     "choices": [
       "Isis",
       "Maat",
       "Uadyet",
       "Neftis"
-    ]
+    ],
+    "explanation": "Isis modeló una serpiente que mordió a Ra y solo lo curó a cambio de su nombre secreto."
   },
   {
     "id": 32,
-    "question": "¿Cuál es el nombre de la diosa protectora que el dios sol lleva en la frente?",
-    "answer": "Mut",
+    "question": "¿Qué diosa cobra se yergue, en forma de ureo, sobre la frente del rey y del dios sol",
+    "answer": "Uadyet",
     "choices": [
-      "Mut",
       "Uadyet",
+      "Mut",
       "Bastet",
       "Sejmet"
-    ]
+    ],
+    "explanation": "Uadyet, la diosa cobra, se yergue en forma de ureo sobre la frente de los reyes y de los dioses."
   },
   {
     "id": 33,
-    "question": "¿Cuál es el nombre del demiurgo que emergió del Nun para crearlo todo?",
+    "question": "¿Qué demiurgo surgió del Nun en la cosmogonía de Heliópolis",
     "answer": "Atum",
     "choices": [
       "Atum",
       "Amón",
       "Atón",
       "Osiris"
-    ]
+    ],
+    "explanation": "Atum surgió solo del Nun y sacó de sí mismo la primera pareja divina."
   },
   {
     "id": 34,
-    "question": "¿Quiénes son los primeros hijos de Atum?",
+    "question": "¿Quiénes son los primeros hijos de Atum",
     "answer": "Shu y Tefnut",
     "choices": [
       "Shu y Tefnut",
       "Geb y Nut",
       "Osiris e Isis",
-      "Neftis y Seth"
-    ]
+      "Seth y Neftis"
+    ],
+    "explanation": "Atum sacó de sí mismo a Shu y Tefnut, la primera pareja de la Creación."
   },
   {
     "id": 35,
-    "question": "¿Qué diosa se traga a Ra por la noche para darlo a luz al amanecer?",
+    "question": "¿Qué diosa se traga el sol por la tarde para darlo a luz de nuevo por la mañana",
     "answer": "Nut",
     "choices": [
       "Nut",
-      "Shu",
-      "Heka",
-      "Hathor"
-    ]
+      "Tefnut",
+      "Neit",
+      "Maat"
+    ],
+    "explanation": "Cada tarde, Nut se traga el sol, que atraviesa su cuerpo durante la noche y renace por la mañana."
   },
   {
     "id": 36,
-    "question": "¿Cuál es el dios de la muerte y el renacimiento?",
+    "question": "¿Qué dios muerto y resucitado encarna el renacimiento de la vegetación",
     "answer": "Osiris",
     "choices": [
       "Osiris",
-      "Beerus",
+      "Seth",
       "Thot",
       "Anubis"
-    ]
+    ],
+    "explanation": "Dios muerto y resucitado, Osiris encarnaba también la vegetación que renace tras cada crecida."
   },
   {
     "id": 37,
-    "question": "¿Qué dios sustituye al dios sol durante la noche y es llamado dios lunar?",
+    "question": "¿Qué dios lunar ilumina la noche durante el viaje subterráneo del sol",
     "answer": "Thot",
     "choices": [
       "Thot",
       "Anubis",
       "Osiris",
       "Ptah"
-    ]
+    ],
+    "explanation": "Mientras Ra atraviesa la Duat, es la luna de Thot la que ilumina la noche."
   },
   {
     "id": 38,
-    "question": "¿Cómo se llama la cruz símbolo de la vida?",
-    "answer": "Ankh",
+    "question": "¿Cómo se llama la cruz símbolo de la vida",
+    "answer": "El anj",
     "choices": [
-      "Ankh",
-      "Uadyet",
-      "Horakhty",
-      "Duat"
-    ]
+      "El anj",
+      "El pilar djed",
+      "El udyat",
+      "El cetro uas"
+    ],
+    "explanation": "El anj, la cruz coronada por un lazo, significa «vida»; los rayos de Atón se lo tienden al rey."
   },
   {
     "id": 39,
-    "question": "¿Qué dios fue el primero en ser momificado?",
+    "question": "¿Qué dios fue el primero en ser momificado",
     "answer": "Osiris",
     "choices": [
       "Osiris",
       "Anubis",
-      "Hakai",
-      "Horus"
-    ]
+      "Horus",
+      "Ra"
+    ],
+    "explanation": "Anubis ungió, purificó y envolvió el cuerpo de Osiris: fue la primera momia."
   },
   {
     "id": 40,
-    "question": "¿Cuál es el animal representativo de la diosa Hathor?",
+    "question": "¿Con qué forma animal se representa a la diosa Hathor",
     "answer": "La vaca",
     "choices": [
       "La vaca",
-      "El becerro",
-      "El perro",
-      "El gato"
-    ]
+      "La gata",
+      "La leona",
+      "El hipopótamo"
+    ],
+    "explanation": "Hathor aparece como una vaca, como una mujer con orejas de vaca o tocada con cuernos que rodean el disco solar."
   },
   {
     "id": 41,
-    "question": "¿Cuál es el animal representativo de la diosa Bastet?",
-    "answer": "El gato",
+    "question": "¿Con qué forma animal se representa a la diosa Bastet",
+    "answer": "La gata",
     "choices": [
-      "El gato",
+      "La gata",
       "La vaca",
-      "El perro",
-      "El león"
-    ]
+      "El buitre",
+      "El hipopótamo"
+    ],
+    "explanation": "Bastet es la diosa gata del hogar; en su origen leona, la gata es su forma apaciguada."
   },
   {
     "id": 42,
-    "question": "¿Cuál es el animal representativo de la diosa Sejmet?",
+    "question": "¿Con qué forma animal se representa a la diosa Sejmet",
     "answer": "La leona",
     "choices": [
       "La leona",
-      "El perro",
-      "El gato",
-      "El tigre"
-    ]
+      "La gata",
+      "La vaca",
+      "El buitre"
+    ],
+    "explanation": "Sejmet, «la poderosa», es una diosa con cabeza de leona, encarnación de la cólera divina."
   },
   {
     "id": 43,
-    "question": "¿Cuál es la cosmogonía egipcia más extendida?",
+    "question": "¿Qué ciudad dio su nombre a la cosmogonía más extendida de Egipto",
     "answer": "Heliópolis",
     "choices": [
       "Heliópolis",
       "Hermópolis",
-      "Tebas",
-      "Syene"
-    ]
+      "Menfis",
+      "Tebas"
+    ],
+    "explanation": "La cosmogonía de Heliópolis, cuyo creador es Atum, es la más extendida de Egipto."
   },
   {
     "id": 44,
-    "question": "¿A qué corresponde el Djet en el individuo?",
-    "answer": "El cuerpo",
+    "question": "¿A qué corresponde el djet en el individuo",
+    "answer": "Al cuerpo",
     "choices": [
-      "El cuerpo",
-      "El alma",
-      "El espíritu",
-      "La conciencia"
-    ]
+      "Al cuerpo",
+      "Al alma",
+      "A la fuerza vital",
+      "Al nombre"
+    ],
+    "explanation": "El djet es el cuerpo, que el embalsamamiento debía preservar para que el ka y el ba volvieran a él."
   },
   {
     "id": 45,
-    "question": "¿A qué corresponde el Ka en el individuo?",
-    "answer": "El alma",
+    "question": "¿A qué corresponde el ka en el individuo",
+    "answer": "A la fuerza vital",
     "choices": [
-      "El alma",
-      "El cuerpo",
-      "El espíritu",
-      "La conciencia"
-    ]
+      "A la fuerza vital",
+      "Al cuerpo",
+      "A la sombra",
+      "Al nombre"
+    ],
+    "explanation": "El ka es la fuerza vital, nacida con el individuo y alimentada tras su muerte por las ofrendas."
   },
   {
     "id": 46,
-    "question": "¿Qué ceremonia permite el viaje del difunto hacia el más allá?",
-    "answer": "El embalsamamiento",
+    "question": "¿Qué rito devolvía al difunto el uso de sus sentidos antes de su sepultura",
+    "answer": "La Apertura de la Boca",
     "choices": [
-      "El embalsamamiento",
-      "El funeral",
-      "La momificación",
+      "La Apertura de la Boca",
+      "El pesaje del corazón",
+      "La confesión negativa",
       "El vendaje"
-    ]
+    ],
+    "explanation": "La Apertura de la Boca devolvía al difunto el uso de sus sentidos, para hablar, ver y comer en el más allá."
   },
   {
     "id": 47,
-    "question": "¿Cuál es el símbolo representativo de la diosa Maat?",
+    "question": "¿Cuál es el símbolo de la diosa Maat",
     "answer": "La pluma",
     "choices": [
       "La pluma",
       "La balanza",
-      "La espada",
-      "El ankh"
-    ]
+      "El sistro",
+      "El anj"
+    ],
+    "explanation": "Maat lleva una pluma de avestruz, que se pesa frente al corazón del difunto durante el juicio."
   },
   {
     "id": 48,
-    "question": "¿Cuál es el animal representativo del dios Horus?",
+    "question": "¿Cuál es el animal del dios Horus",
     "answer": "El halcón",
     "choices": [
       "El halcón",
-      "El águila",
-      "El cuervo",
-      "El gavilán"
-    ]
+      "El buitre",
+      "El ibis",
+      "El chacal"
+    ],
+    "explanation": "Horus es el dios halcón; su ojo derecho era el sol y su ojo izquierdo la luna."
   },
   {
     "id": 49,
-    "question": "¿Cuál es el otro animal representativo del dios Thot además del ibis?",
+    "question": "Además del ibis, ¿cuál es el otro animal del dios Thot",
     "answer": "El babuino",
     "choices": [
       "El babuino",
       "El chacal",
-      "El perro",
-      "El águila"
-    ]
+      "El gato",
+      "El halcón"
+    ],
+    "explanation": "Thot se representa como un hombre con cabeza de ibis o en forma de babuino."
   },
   {
     "id": 50,
-    "question": "¿Qué nombre recibe el escarabajo alado que empuja el disco solar?",
-    "answer": "Khepri",
+    "question": "¿Qué insecto representa al dios Jepri",
+    "answer": "El escarabajo",
     "choices": [
-      "Khepri",
-      "Atum",
-      "Bes",
-      "Nut"
-    ]
+      "El escarabajo",
+      "La abeja",
+      "El escorpión",
+      "La mantis religiosa"
+    ],
+    "explanation": "Jepri es el escarabajo: el escarabajo pelotero empujando su bola evocaba el sol empujado por el cielo."
   },
   {
     "id": 51,
-    "question": "¿Qué diosa personifica la armonía cósmica instaurada por el demiurgo Atum?",
+    "question": "¿Qué diosa personifica el orden del mundo, la verdad y la justicia",
     "answer": "Maat",
     "choices": [
       "Maat",
       "Isis",
       "Sejmet",
       "Hathor"
-    ]
+    ],
+    "explanation": "Maat es el orden del mundo establecido por el creador: la verdad, la justicia y el equilibrio."
   },
   {
     "id": 52,
-    "question": "¿Qué diosa se encarga de devorar las almas indignas durante la pesada del corazón?",
+    "question": "¿Qué criatura devora el corazón de los difuntos juzgados indignos",
     "answer": "Amemet",
     "choices": [
       "Amemet",
       "Nejbet",
       "Sejmet",
       "Tueris"
-    ]
+    ],
+    "explanation": "Amemet, «la Devoradora», come el corazón demasiado pesado de los difuntos, que desaparecen para siempre."
   },
   {
     "id": 53,
-    "question": "¿Cuál es el dios del agua y la fertilidad?",
+    "question": "¿Qué dios cocodrilo es el señor de las aguas y de los pantanos",
     "answer": "Sobek",
     "choices": [
       "Sobek",
-      "Isis",
-      "Champa",
+      "Anubis",
+      "Jnum",
       "Bes"
-    ]
+    ],
+    "explanation": "Sobek, el dios cocodrilo, encarna el poder temible del Nilo y la fertilidad que aporta."
   },
   {
     "id": 54,
-    "question": "¿Qué diosa tiene al hipopótamo como animal representativo?",
-    "answer": "Tueris",
+    "question": "¿Qué diosa tiene como emblema un arco y dos flechas cruzadas",
+    "answer": "Neit",
     "choices": [
-      "Tueris",
-      "Amemet",
-      "Sejmet",
-      "Bastet"
-    ]
+      "Neit",
+      "Selkis",
+      "Maat",
+      "Mut"
+    ],
+    "explanation": "Diosa de la guerra y de la caza, Neit tiene como emblema un arco y dos flechas cruzadas."
   },
   {
     "id": 55,
-    "question": "¿Qué diosa tiene a la cobra como animal representativo?",
-    "answer": "Uadyet",
+    "question": "¿Qué diosa se representa como una mujer que lleva un escorpión en la cabeza",
+    "answer": "Selkis",
     "choices": [
-      "Uadyet",
+      "Selkis",
+      "Neit",
       "Maat",
-      "Hathor",
-      "Isis"
-    ]
+      "Hathor"
+    ],
+    "explanation": "Selkis lleva un escorpión en la cabeza y protegía de las picaduras y mordeduras venenosas."
   },
   {
     "id": 56,
-    "question": "¿Qué dios se encuentra en el centro del mito del día y la noche?",
+    "question": "¿Qué dios está en el centro del mito del ciclo del día",
     "answer": "Ra",
     "choices": [
       "Ra",
       "Osiris",
-      "Atón",
-      "Ptah"
-    ]
+      "Ptah",
+      "Min"
+    ],
+    "explanation": "El mito del ciclo del día sigue a Ra por el cielo de día y por el mundo subterráneo de noche."
   },
   {
     "id": 57,
-    "question": "¿Qué dios es considerado el primero de los faraones?",
+    "question": "¿De qué dios se consideraba a cada faraón la encarnación viva",
     "answer": "Horus",
     "choices": [
       "Horus",
-      "Ra",
       "Thot",
-      "Seth"
-    ]
+      "Seth",
+      "Ptah"
+    ],
+    "explanation": "Tras su victoria sobre Seth, Horus se convirtió en el modelo de los faraones, que reinaban como un «Horus vivo»."
   },
   {
     "id": 58,
-    "question": "¿Qué dios sustituye a Atum en la cosmogonía de Menfis?",
+    "question": "¿Qué dios desempeña el papel de creador en la cosmogonía de Menfis",
     "answer": "Ptah",
     "choices": [
       "Ptah",
       "Atón",
       "Amón",
       "Jnum"
-    ]
+    ],
+    "explanation": "En Menfis, Ptah crea el mundo mediante el pensamiento de su corazón y la palabra de su lengua."
   },
   {
     "id": 59,
-    "question": "¿Quién es la esposa del dios Horus?",
+    "question": "¿Qué diosa es la esposa de Horus de Edfu",
     "answer": "Hathor",
     "choices": [
       "Hathor",
       "Isis",
       "Neftis",
       "Bastet"
-    ]
+    ],
+    "explanation": "Hathor es la esposa de Horus de Edfu; cada año se celebraba su reencuentro."
   },
   {
     "id": 60,
-    "question": "¿Cuál es el dios de las tumbas, las necrópolis y protector de los embalsamadores?",
+    "question": "¿Qué dios con cabeza de chacal es el patrón de los embalsamadores",
     "answer": "Anubis",
     "choices": [
       "Anubis",
       "Osiris",
       "Seth",
       "Horus"
-    ]
+    ],
+    "explanation": "Anubis momificó a Osiris: durante los embalsamamientos, el jefe de los sacerdotes llevaba su máscara de chacal."
   },
   {
     "id": 61,
-    "question": "¿Bajo qué forma renace el dios sol cada mañana?",
-    "answer": "Khepri",
+    "question": "¿Qué forma adopta el dios sol por la noche, en el mundo subterráneo",
+    "answer": "Un hombre con cabeza de carnero",
     "choices": [
-      "Khepri",
-      "Atum",
-      "Ra",
-      "Thot"
-    ]
+      "Un hombre con cabeza de carnero",
+      "Un hombre con cabeza de halcón",
+      "Un escarabajo",
+      "Un niño en un loto"
+    ],
+    "explanation": "Por la noche, en el mundo subterráneo, Ra adopta la forma de un hombre con cabeza de carnero."
   },
   {
     "id": 62,
-    "question": "¿Qué parte del cuerpo de Osiris fue devorada por un pez?",
+    "question": "¿Qué parte del cuerpo de Osiris se tragó un pez",
     "answer": "Su falo",
     "choices": [
       "Su falo",
       "Su cabeza",
-      "Su pierna",
+      "Su corazón",
       "Su brazo"
-    ]
+    ],
+    "explanation": "Isis encontró todo el cuerpo de Osiris salvo su falo, que se había tragado un pez del Nilo."
   },
   {
     "id": 63,
-    "question": "¿Bajo la forma de qué ave mítica emergió Atum del Nun?",
-    "answer": "El Bennu",
+    "question": "¿En forma de qué ave apareció Atum sobre el Benben",
+    "answer": "El Benu",
     "choices": [
-      "El Bennu",
+      "El Benu",
       "El ibis",
       "El halcón",
-      "El águila"
-    ]
+      "El buitre"
+    ],
+    "explanation": "Atum apareció sobre el Benben en forma de Benu, un ave que los griegos compararon con el fénix."
   },
   {
     "id": 64,
-    "question": "¿Qué dios fue encargado por Ra de separar el cielo de la tierra?",
+    "question": "¿Qué dios separó el cielo de la tierra por orden de Atum",
     "answer": "Shu",
     "choices": [
       "Shu",
       "Nut",
       "Geb",
-      "Atum"
-    ]
+      "Thot"
+    ],
+    "explanation": "Por orden de Atum, Shu levantó a Nut por encima de Geb, separando el cielo de la tierra."
   },
   {
     "id": 65,
-    "question": "¿Cuántos dioses forman la ogdóada de Hermópolis?",
+    "question": "¿Cuántos dioses forman la Ogdóada de Hermópolis",
     "answer": "8",
     "choices": [
       "8",
       "9",
       "12",
       "6"
-    ]
+    ],
+    "explanation": "La Ogdóada de Hermópolis cuenta con ocho divinidades, que forman cuatro parejas."
   },
   {
     "id": 66,
-    "question": "¿Cuántas parejas de dioses forman la ogdóada de Hermópolis?",
+    "question": "¿Cuántas parejas divinas forman la Ogdóada de Hermópolis",
     "answer": "4",
     "choices": [
       "4",
       "8",
       "2",
-      "6"
-    ]
+      "3"
+    ],
+    "explanation": "Nun y Naunet, Heh y Hehet, Kek y Keket, Amón y Amonet forman las cuatro parejas de la Ogdóada."
   },
   {
     "id": 67,
-    "question": "¿Cómo eran representadas las diosas de la ogdóada de Hermópolis?",
-    "answer": "Serpientes",
+    "question": "¿Con qué cabeza se representaba a las diosas de la Ogdóada",
+    "answer": "Una cabeza de serpiente",
     "choices": [
-      "Serpientes",
-      "Ranas",
-      "Monos",
-      "Halcones"
-    ]
+      "Una cabeza de serpiente",
+      "Una cabeza de rana",
+      "Una cabeza de babuino",
+      "Una cabeza de halcón"
+    ],
+    "explanation": "Las diosas de la Ogdóada tenían cabeza de serpiente, y los dioses cabeza de rana."
   },
   {
     "id": 68,
-    "question": "¿Cómo eran representados los dioses de la ogdóada de Hermópolis?",
-    "answer": "Ranas",
+    "question": "¿Con qué cabeza se representaba a los dioses de la Ogdóada",
+    "answer": "Una cabeza de rana",
     "choices": [
-      "Ranas",
-      "Serpientes",
-      "Halcones",
-      "Monos"
-    ]
+      "Una cabeza de rana",
+      "Una cabeza de serpiente",
+      "Una cabeza de halcón",
+      "Una cabeza de babuino"
+    ],
+    "explanation": "Los dioses de la Ogdóada tenían cabeza de rana, animal que parece nacer del barro del Nilo."
   },
   {
     "id": 69,
-    "question": "¿Qué representaba la pareja Nun y Nunet en la cosmogonía de Hermópolis?",
-    "answer": "El agua",
+    "question": "¿Qué representa la pareja Nun y Naunet en la cosmogonía de Hermópolis",
+    "answer": "Las aguas primordiales",
     "choices": [
-      "El agua",
-      "Lo misterioso",
-      "Lo infinito",
-      "La oscuridad"
-    ]
+      "Las aguas primordiales",
+      "Lo oculto",
+      "El espacio sin límites",
+      "Las tinieblas"
+    ],
+    "explanation": "Nun y Naunet encarnan las aguas primordiales del caos."
   },
   {
     "id": 70,
-    "question": "¿Qué representaba la pareja Amón y Amonet en la cosmogonía de Hermópolis?",
-    "answer": "Lo misterioso",
+    "question": "¿Qué representa la pareja Amón y Amonet en la cosmogonía de Hermópolis",
+    "answer": "Lo oculto",
     "choices": [
-      "Lo misterioso",
-      "El agua",
-      "Lo infinito",
-      "La oscuridad"
-    ]
+      "Lo oculto",
+      "Las aguas primordiales",
+      "El espacio sin límites",
+      "Las tinieblas"
+    ],
+    "explanation": "Amón y Amonet encarnan lo oculto, lo invisible."
   },
   {
     "id": 71,
-    "question": "¿Dónde se encontraba el principal santuario de Ptah, sede del poder real desde la primera dinastía?",
+    "question": "¿En qué ciudad se encontraba el gran santuario de Ptah",
     "answer": "Menfis",
     "choices": [
       "Menfis",
       "Tebas",
       "Heliópolis",
       "Abidos"
-    ]
+    ],
+    "explanation": "Menfis era la ciudad de Ptah; el nombre de su templo, Hut-ka-Ptah, dio origen a la palabra «Egipto»."
   },
   {
     "id": 72,
-    "question": "¿Con qué animal sagrado estaba asociado el culto de Ptah en Menfis, considerado su encarnación viviente?",
+    "question": "¿Qué animal sagrado se consideraba la encarnación viva de Ptah",
     "answer": "El toro Apis",
     "choices": [
       "El toro Apis",
-      "El gato sagrado",
-      "El cocodrilo sagrado",
-      "El halcón sagrado"
-    ]
+      "El gato de Bubastis",
+      "El cocodrilo de El Fayum",
+      "El ibis de Hermópolis"
+    ],
+    "explanation": "El toro Apis era la encarnación viva de Ptah; se enterraba en el Serapeum de Saqqara."
   },
   {
     "id": 73,
-    "question": "Según la cosmogonía heliopolitana, ¿de qué nacieron los primeros hombres?",
-    "answer": "Las lágrimas del demiurgo",
+    "question": "Según la cosmogonía de Heliópolis, ¿de qué nacieron los primeros hombres",
+    "answer": "De las lágrimas del demiurgo",
     "choices": [
-      "Las lágrimas del demiurgo",
-      "El sudor de Ra",
-      "El barro del Nilo",
-      "El aliento de Shu"
-    ]
+      "De las lágrimas del demiurgo",
+      "Del sudor de Ra",
+      "Del limo del Nilo",
+      "Del aliento de Shu"
+    ],
+    "explanation": "Atum lloró al reencontrar a Shu y Tefnut, y sus lágrimas (<i>remyt</i>) se convirtieron en los hombres (<i>remetch</i>)."
   },
   {
     "id": 74,
-    "question": "¿Qué diosa envió el dios sol para masacrar a los rebeldes que se alzaron contra él?",
+    "question": "¿Qué diosa leona masacró a los hombres que se rebelaron contra Ra",
     "answer": "Sejmet",
     "choices": [
       "Sejmet",
       "Bastet",
-      "Hathor",
-      "Selkis"
-    ]
+      "Selkis",
+      "Neit"
+    ],
+    "explanation": "El Ojo de Ra, en forma de Hathor, se transformó en la leona Sejmet para masacrar a los hombres rebeldes."
   },
   {
     "id": 75,
-    "question": "¿Qué prueba debe superar el difunto para acceder a la vida eterna?",
-    "answer": "La pesada del corazón",
+    "question": "¿Qué prueba decidía la suerte del difunto en el más allá",
+    "answer": "El pesaje del corazón",
     "choices": [
-      "La pesada del corazón",
-      "La carrera celeste",
-      "La lucha de los dioses",
-      "La gran ilusión"
-    ]
+      "El pesaje del corazón",
+      "La carrera de barcas",
+      "El combate contra Apofis",
+      "La travesía del Nun"
+    ],
+    "explanation": "El corazón del difunto se pesaba frente a la pluma de Maat; si pesaba demasiado, lo devoraba Amemet."
   },
   {
     "id": 76,
-    "question": "¿Cuál es el dios del sol al amanecer y al atardecer?",
-    "answer": "Harmakhis",
+    "question": "¿Con qué nombre se veneraba a la gran Esfinge de Guiza",
+    "answer": "Harmajis",
     "choices": [
-      "Harmakhis",
-      "Khepri",
+      "Harmajis",
+      "Jepri",
       "Atum",
-      "Ra"
-    ]
+      "Atón"
+    ],
+    "explanation": "La gran Esfinge de Guiza era venerada como Harmajis, «Horus en el horizonte», una forma del sol."
   },
   {
     "id": 77,
-    "question": "¿Con qué creó Ptah al hombre en la cosmogonía de Menfis?",
-    "answer": "El limo",
+    "question": "Según la teología menfita, ¿cómo creó Ptah el mundo",
+    "answer": "Mediante el pensamiento y la palabra",
     "choices": [
-      "El limo",
-      "El polvo",
-      "La ceniza",
-      "El agua"
-    ]
+      "Mediante el pensamiento y la palabra",
+      "Modelando arcilla en su torno",
+      "Incubando un huevo",
+      "Uniéndose a sí mismo"
+    ],
+    "explanation": "Según la piedra de Shabaka, todo existe primero como pensamiento en el corazón de Ptah y nace después de su palabra."
   },
   {
     "id": 78,
-    "question": "¿Qué divinidad representa la lengua de Ptah en la cosmogonía de Menfis?",
+    "question": "¿Qué dios representa la lengua de Ptah en la teología menfita",
     "answer": "Thot",
     "choices": [
       "Thot",
+      "Horus",
       "Anubis",
-      "Apep",
       "Jnum"
-    ]
+    ],
+    "explanation": "En la teología menfita, el corazón de Ptah es Horus y su lengua es Thot."
   },
   {
     "id": 79,
-    "question": "¿Cómo se llama un demonio sin cabeza del Egipto helenístico?",
-    "answer": "El Akéfalo",
-    "choices": [
-      "El Akéfalo",
-      "La esfinge",
-      "El grifo",
-      "La esfinge griega"
-    ]
-  },
-  {
-    "id": 80,
-    "question": "¿Cómo se llama la divinidad cobra cuya función es proteger al faraón?",
-    "answer": "El ureo",
-    "choices": [
-      "El ureo",
-      "Nejbet",
-      "Ankh",
-      "Duat"
-    ]
-  },
-  {
-    "id": 81,
-    "question": "¿Cómo se llama la quimera con cuerpo de león y cabeza humana?",
-    "answer": "La esfinge",
-    "choices": [
-      "La esfinge",
-      "Nejbet",
-      "El Akéfalo",
-      "El ureo"
-    ]
-  },
-  {
-    "id": 82,
-    "question": "¿Cómo se llama un difunto que ha superado la prueba de la pesada del corazón?",
-    "answer": "Aj",
-    "choices": [
-      "Aj",
-      "Esfinge",
-      "Jnum",
-      "Jonsu"
-    ]
-  },
-  {
-    "id": 83,
-    "question": "¿Qué designa el Ren de un individuo?",
-    "answer": "Su nombre",
-    "choices": [
-      "Su nombre",
-      "Su alma",
-      "Su cuerpo",
-      "Su virtud"
-    ]
-  },
-  {
-    "id": 84,
-    "question": "¿Qué significa la palabra «Amón»?",
-    "answer": "El oculto",
-    "choices": [
-      "El oculto",
-      "El invisible",
-      "El rey",
-      "El antiguo"
-    ]
-  },
-  {
-    "id": 85,
-    "question": "¿Cuál es el animal representativo del dios Anubis?",
-    "answer": "El chacal",
-    "choices": [
-      "El chacal",
-      "El perro",
-      "El gato",
-      "El lobo"
-    ]
-  },
-  {
-    "id": 86,
-    "question": "¿Cuál es el dios protector de la familia?",
+    "question": "¿Qué dios enano de rostro gesticulante protegía los hogares y los nacimientos",
     "answer": "Bes",
     "choices": [
       "Bes",
+      "Min",
       "Hapi",
-      "Thot",
       "Jnum"
-    ]
+    ],
+    "explanation": "Bes, enano de rostro gesticulante, ahuyentaba a los demonios y protegía el sueño y los nacimientos."
+  },
+  {
+    "id": 80,
+    "question": "¿Cómo se llama la cobra erguida en la frente de los faraones",
+    "answer": "El ureo",
+    "choices": [
+      "El ureo",
+      "El anj",
+      "El pilar djed",
+      "El udyat"
+    ],
+    "explanation": "El ureo es la cobra erguida en la frente de los faraones, imagen de la diosa Uadyet."
+  },
+  {
+    "id": 81,
+    "question": "¿Cómo se llama la criatura con cuerpo de león y cabeza humana",
+    "answer": "La esfinge",
+    "choices": [
+      "La esfinge",
+      "El grifo",
+      "El Benu",
+      "El ureo"
+    ],
+    "explanation": "La esfinge tiene cuerpo de león y cabeza humana; la de Guiza era venerada como Harmajis."
+  },
+  {
+    "id": 82,
+    "question": "¿Cómo se llama el espíritu luminoso e inmortal del difunto justificado",
+    "answer": "El aj",
+    "choices": [
+      "El aj",
+      "El ka",
+      "El ba",
+      "El ren"
+    ],
+    "explanation": "Tras un juicio favorable, el ka y el ba se reúnen para formar el aj, el espíritu inmortal."
+  },
+  {
+    "id": 83,
+    "question": "¿Qué designa el ren de un individuo",
+    "answer": "Su nombre",
+    "choices": [
+      "Su nombre",
+      "Su sombra",
+      "Su cuerpo",
+      "Su fuerza vital"
+    ],
+    "explanation": "El ren es el nombre: mientras se pronunciara, el difunto seguía existiendo."
+  },
+  {
+    "id": 84,
+    "question": "¿Qué significa el nombre «Amón»",
+    "answer": "El oculto",
+    "choices": [
+      "El oculto",
+      "El luminoso",
+      "El rey",
+      "El antiguo"
+    ],
+    "explanation": "Amón, «el oculto», es un creador invisible, presente en todas partes pero que nadie puede ver."
+  },
+  {
+    "id": 85,
+    "question": "¿Cuál es el animal del dios Anubis",
+    "answer": "El chacal",
+    "choices": [
+      "El chacal",
+      "El león",
+      "El babuino",
+      "El carnero"
+    ],
+    "explanation": "Los chacales merodeaban por los cementerios: los egipcios hicieron de este animal el guardián de las tumbas."
+  },
+  {
+    "id": 86,
+    "question": "¿Cuántos cómplices ayudaron a Seth a encerrar a Osiris en el cofre",
+    "answer": "72",
+    "choices": [
+      "72",
+      "12",
+      "42",
+      "7"
+    ],
+    "explanation": "Con setenta y dos cómplices, Seth encerró a Osiris en un cofre a su medida y lo arrojó al Nilo."
   },
   {
     "id": 87,
-    "question": "¿Qué dios traía la abundancia y aseguraba la crecida anual del Nilo que fertilizaba la tierra?",
+    "question": "¿Qué dios traía la abundancia provocando la crecida anual del Nilo",
     "answer": "Hapi",
     "choices": [
       "Hapi",
       "Apofis",
       "Neit",
       "Min"
-    ]
+    ],
+    "explanation": "Hapi encarna la crecida del Nilo, que cada verano cubría los campos de un limo fértil."
   },
   {
     "id": 88,
-    "question": "¿Qué dios resultó de la unión de la pareja Amón y Mut?",
+    "question": "¿Qué dios es hijo de Amón y de Mut",
     "answer": "Jonsu",
     "choices": [
       "Jonsu",
       "Min",
       "Jnum",
       "Hapi"
-    ]
+    ],
+    "explanation": "Jonsu, dios de la luna, es hijo de Amón y de Mut, con quienes forma la tríada tebana."
   },
   {
     "id": 89,
-    "question": "¿Qué dios es representado con el falo erecto y una corona rematada por dos plumas?",
+    "question": "¿Qué dios de la fertilidad se representa tocado con dos altas plumas y con el brazo alzado sosteniendo un flagelo",
     "answer": "Min",
     "choices": [
       "Min",
       "Jonsu",
       "Hapi",
-      "Apep"
-    ]
+      "Ptah"
+    ],
+    "explanation": "Min, dios de la fertilidad, está tocado con dos altas plumas y alza el brazo derecho sosteniendo un flagelo."
   },
   {
     "id": 90,
-    "question": "¿Cuál era la homóloga de la diosa cobra Uadyet en el Alto Egipto?",
+    "question": "¿Qué diosa era la homóloga en el Alto Egipto de la diosa cobra Uadyet",
     "answer": "Nejbet",
     "choices": [
       "Nejbet",
       "Maat",
-      "Duat",
-      "Selkis"
-    ]
+      "Selkis",
+      "Neit"
+    ],
+    "explanation": "Nejbet, la diosa buitre del Sur, formaba con Uadyet las «Dos Señoras» protectoras del rey."
   },
   {
     "id": 91,
-    "question": "¿Qué dios dio a los egipcios el concepto de Maat?",
+    "question": "¿De qué dios es hija Maat",
     "answer": "Ra",
     "choices": [
       "Ra",
       "Osiris",
       "Thot",
       "Horus"
-    ]
+    ],
+    "explanation": "Hija de Ra, Maat encarna el orden del mundo tal como lo estableció el creador."
   },
   {
     "id": 92,
-    "question": "¿Qué otra diosa custodia los sarcófagos y cofres canopos reales junto con Isis, Neftis y Neit?",
-    "answer": "Selkis",
+    "question": "¿Qué vaso canopo protegía la diosa Selkis",
+    "answer": "El de los intestinos",
     "choices": [
-      "Selkis",
-      "Hathor",
-      "Bastet",
-      "Sejmet"
-    ]
+      "El de los intestinos",
+      "El del hígado",
+      "El de los pulmones",
+      "El del estómago"
+    ],
+    "explanation": "Selkis velaba por el vaso canopo de los intestinos, custodiado por Qebehsenuf, con cabeza de halcón."
   },
   {
     "id": 93,
-    "question": "¿Qué diosa era la protectora de las mujeres durante el parto?",
+    "question": "¿Qué diosa hipopótamo protegía a las mujeres embarazadas y los partos",
     "answer": "Tueris",
     "choices": [
       "Tueris",
-      "Neftis",
-      "Isis",
-      "Neit"
-    ]
+      "Amemet",
+      "Sejmet",
+      "Neftis"
+    ],
+    "explanation": "Tueris, diosa hipopótamo con vientre de mujer embarazada, protegía los partos."
   },
   {
     "id": 94,
-    "question": "¿Qué otra diosa custodia los sarcófagos y cofres canopos reales junto con Isis, Neftis y Selkis?",
+    "question": "¿Qué diosa de Sais velaba por los vasos canopos junto a Isis, Neftis y Selkis",
     "answer": "Neit",
     "choices": [
       "Neit",
       "Sejmet",
       "Hathor",
       "Maat"
-    ]
+    ],
+    "explanation": "Neit velaba con Isis, Neftis y Selkis por los vasos canopos, en particular el del estómago."
   },
   {
     "id": 95,
-    "question": "¿Qué diosa egipcia es representada a menudo como una mujer amamantando a un niño?",
+    "question": "¿Qué diosa se representa a menudo amamantando a su hijo",
     "answer": "Isis",
     "choices": [
       "Isis",
       "Neftis",
       "Neit",
       "Selkis"
-    ]
+    ],
+    "explanation": "Isis se representa a menudo amamantando a su hijo Horus, imagen de la madre protectora."
   },
   {
     "id": 96,
-    "question": "¿Qué dios enseñó a los hombres los jeroglíficos?",
+    "question": "¿Qué dios pasaba por ser el inventor de los jeroglíficos",
     "answer": "Thot",
     "choices": [
       "Thot",
       "Anubis",
-      "Kaio",
+      "Ptah",
       "Hapi"
-    ]
+    ],
+    "explanation": "Thot pasaba por ser el inventor de los jeroglíficos, de las matemáticas y del calendario."
   },
   {
     "id": 97,
-    "question": "¿Qué dios lleva un nombre que significa «el que está por encima» y también «el que está lejos»?",
+    "question": "¿Qué dios lleva un nombre que significa «el que está arriba» o «el lejano»",
     "answer": "Horus",
     "choices": [
       "Horus",
       "Osiris",
       "Amón",
       "Ptah"
-    ]
+    ],
+    "explanation": "El nombre de Horus evoca al halcón que planea alto en el cielo: «el que está arriba»."
   },
   {
     "id": 98,
-    "question": "¿Qué dios con cabeza de carnero y cuernos horizontales suele ser representado modelando humanos en su torno?",
+    "question": "¿Qué dios con cabeza de carnero y cuernos horizontales modela a los niños en su torno de alfarero",
     "answer": "Jnum",
     "choices": [
       "Jnum",
-      "Hathor",
+      "Amón",
       "Anubis",
       "Min"
-    ]
+    ],
+    "explanation": "Jnum, el «divino alfarero», modelaba en su torno a los niños y su ka."
   },
   {
     "id": 99,
-    "question": "¿Qué es la psicostasia en la mitología egipcia?",
-    "answer": "La pesada del alma",
+    "question": "¿Cómo se llama también el pesaje del corazón",
+    "answer": "La psicostasia",
     "choices": [
-      "La pesada del alma",
-      "El viaje del alma",
-      "La muerte del alma",
-      "La prisión del alma"
-    ]
+      "La psicostasia",
+      "La confesión negativa",
+      "La Apertura de la Boca",
+      "El Amduat"
+    ],
+    "explanation": "El pesaje del corazón del difunto frente a la pluma de Maat se llama también psicostasia."
   },
   {
     "id": 100,
-    "question": "¿Qué diosa detiene con furia un ataque de Apofis durante el viaje nocturno de Ra?",
-    "answer": "Serket (Selkis)",
+    "question": "¿Qué diosa inmoviliza a Apofis durante el viaje nocturno de Ra",
+    "answer": "Selkis",
     "choices": [
-      "Serket (Selkis)",
+      "Selkis",
       "Bastet",
       "Neit",
       "Maat"
-    ]
+    ],
+    "explanation": "En la séptima hora de la noche, Selkis inmoviliza a Apofis mientras la magia de Isis lo debilita."
   },
   {
     "id": 101,
-    "question": "¿Bajo el reinado de qué faraón el culto a Atón suplantó al de los demás dioses?",
+    "question": "¿Bajo el reinado de qué faraón el culto de Atón suplantó al de los demás dioses",
     "answer": "Akenatón",
     "choices": [
       "Akenatón",
-      "Ramsés",
+      "Ramsés II",
       "Tutankamón",
-      "Seti"
-    ]
+      "Seti I"
+    ],
+    "explanation": "El faraón Amenhotep IV convirtió a Atón en el único dios de Egipto y adoptó el nombre de Akenatón."
   },
   {
     "id": 102,
-    "question": "¿Dónde se refugia Isis para esconder al pequeño Horus?",
-    "answer": "Los pantanos de Chemmis",
+    "question": "¿Dónde se refugió Isis para esconder a Horus niño",
+    "answer": "En los pantanos de Quemmis",
     "choices": [
-      "Los pantanos de Chemmis",
-      "El templo de Filé",
-      "La ciudad de Biblos",
-      "El oasis de Siwa"
-    ]
+      "En los pantanos de Quemmis",
+      "En el templo de Filae",
+      "En la ciudad de Biblos",
+      "En el oasis de Siwa"
+    ],
+    "explanation": "Isis escondió a Horus en los pantanos de Quemmis, en el corazón del delta, para protegerlo de Seth."
   },
   {
     "id": 103,
-    "question": "¿En qué forma animal se transforman Horus y Seth para su duelo en el Nilo?",
-    "answer": "Hipopótamos",
+    "question": "¿Con qué forma animal se enfrentaron Horus y Seth en el Nilo",
+    "answer": "Como hipopótamos",
     "choices": [
-      "Hipopótamos",
-      "Cocodrilos",
-      "Serpientes",
-      "Toros"
-    ]
+      "Como hipopótamos",
+      "Como cocodrilos",
+      "Como serpientes",
+      "Como toros"
+    ],
+    "explanation": "Transformados en hipopótamos, Horus y Seth se sumergieron en el Nilo: el primero en salir perdería."
   },
   {
     "id": 104,
-    "question": "¿Quién arranca los ojos de Horus durante su lucha por el trono?",
+    "question": "¿Quién arrancó los ojos a Horus durante su lucha por el trono",
     "answer": "Seth",
     "choices": [
       "Seth",
       "Apofis",
       "Sobek",
       "Thot"
-    ]
+    ],
+    "explanation": "Durante su lucha por el trono, Seth arrancó los ojos a Horus y los enterró."
   },
   {
     "id": 105,
-    "question": "¿Qué diosa cura los ojos de Horus tras ser arrancados por Seth?",
+    "question": "¿Qué diosa devolvió la vista a Horus con leche de gacela",
     "answer": "Hathor",
     "choices": [
       "Hathor",
       "Isis",
       "Neit",
       "Maat"
-    ]
+    ],
+    "explanation": "Hathor devolvió la vista a Horus vertiendo leche de gacela sobre sus ojos."
   },
   {
     "id": 106,
-    "question": "¿Cómo se llama el símbolo protector nacido de la curación del ojo de Horus?",
-    "answer": "El Ojo de Horus (Udyat)",
+    "question": "¿Cómo se llama el ojo de Horus curado, convertido en símbolo de protección",
+    "answer": "El udyat",
     "choices": [
-      "El Ojo de Horus (Udyat)",
-      "El Ankh",
+      "El udyat",
+      "El anj",
       "El ureo",
-      "El Djed"
-    ]
+      "El pilar djed"
+    ],
+    "explanation": "El ojo de Horus restaurado, el udyat, se convirtió en uno de los amuletos más extendidos de Egipto."
   },
   {
     "id": 107,
-    "question": "¿Qué truco permite a Horus ganar la carrera de barcas de piedra contra Seth?",
-    "answer": "Usa una barca de madera recubierta de yeso",
+    "question": "¿Con qué astucia ganó Horus la carrera de barcos de piedra contra Seth",
+    "answer": "Usó un barco de madera cubierto de yeso",
     "choices": [
-      "Usa una barca de madera recubierta de yeso",
-      "Hunde la barca de Seth con la ayuda de Sobek",
-      "Roba la barca de Seth durante la noche",
-      "Le pide a Thot que invoque una tormenta"
-    ]
+      "Usó un barco de madera cubierto de yeso",
+      "Hizo hundir el barco de Seth con ayuda de Sobek",
+      "Robó el barco de Seth por la noche",
+      "Pidió a Thot que desatara una tormenta"
+    ],
+    "explanation": "Horus construyó un barco de madera de cedro cubierto de yeso; el de Seth, de piedra de verdad, se hundió."
   },
   {
     "id": 108,
-    "question": "¿Quién amenaza al tribunal divino con enviar a sus mensajeros si Horus no es coronado?",
+    "question": "¿Quién amenazó al tribunal de los dioses con enviar a sus mensajeros si Horus no era coronado",
     "answer": "Osiris",
     "choices": [
       "Osiris",
       "Isis",
       "Neftis",
       "Anubis"
-    ]
+    ],
+    "explanation": "Desde el mundo de los muertos, Osiris amenazó con enviar a sus demonios si su hijo no era coronado."
   },
   {
     "id": 109,
-    "question": "¿Durante cuántos años duda el tribunal divino entre Horus y Seth?",
+    "question": "¿Durante cuántos años dudó el tribunal de los dioses entre Horus y Seth",
     "answer": "80 años",
     "choices": [
       "80 años",
       "28 años",
       "12 años",
       "400 años"
-    ]
+    ],
+    "explanation": "El tribunal de los dioses, presidido por Ra, dudó durante ochenta años entre Horus y Seth."
   },
   {
     "id": 110,
-    "question": "¿Qué papel se le asigna a Seth tras la coronación de Horus?",
-    "answer": "Proteger la barca de Ra contra Apofis",
+    "question": "¿Qué papel recibió Seth tras la coronación de Horus",
+    "answer": "Rechazar a Apofis desde la barca de Ra",
     "choices": [
-      "Proteger la barca de Ra contra Apofis",
-      "Reinar sobre el reino de los muertos",
-      "Convertirse en el nuevo mensajero de los dioses",
+      "Rechazar a Apofis desde la barca de Ra",
+      "Reinar sobre el mundo de los muertos",
+      "Convertirse en el mensajero de los dioses",
       "Custodiar las puertas de la Duat"
-    ]
+    ],
+    "explanation": "Seth se unió a Ra en el cielo: desde la proa de la barca solar, rechaza a Apofis."
   },
   {
     "id": 111,
-    "question": "¿Cuántos escorpiones escoltan a Isis mientras huye por el delta con Horus?",
+    "question": "¿Cuántos escorpiones escoltaban a Isis cuando atravesaba el delta con Horus",
     "answer": "7",
     "choices": [
       "7",
       "4",
       "12",
       "3"
-    ]
+    ],
+    "explanation": "Siete escorpiones escoltaban a Isis: Tefen, Befen, Mestet, Mestetef, Petet, Tjetet y Matet."
   },
   {
     "id": 112,
-    "question": "¿En qué estela mágica fue copiada la fórmula de Isis contra el veneno de escorpión?",
+    "question": "¿En qué estela mágica se copió la fórmula contra el veneno de los escorpiones",
     "answer": "La estela de Metternich",
     "choices": [
       "La estela de Metternich",
       "La piedra de Rosetta",
       "La piedra de Shabaka",
       "La piedra de Palermo"
-    ]
+    ],
+    "explanation": "Las fórmulas de Isis y de Thot se copiaron en estelas mágicas como la de Metternich."
   },
   {
     "id": 113,
-    "question": "¿Por qué Apofis nunca puede ser destruido definitivamente?",
+    "question": "¿Por qué Apofis nunca puede ser destruido",
     "answer": "Porque nunca fue creado",
     "choices": [
       "Porque nunca fue creado",
       "Porque vive en el Nun, fuera de alcance",
-      "Porque se regenera gracias a Ra",
-      "Porque está protegido por Seth"
-    ]
+      "Porque Ra lo regenera",
+      "Porque Seth lo protege"
+    ],
+    "explanation": "Apofis existía antes de la Creación y nunca fue creado: por eso no puede ser destruido."
   },
   {
     "id": 114,
-    "question": "¿Cómo se llama el ritual diario practicado en los templos para ayudar a Ra a vencer a Apofis?",
-    "answer": "El Libro del Derribo de Apofis",
+    "question": "¿Qué ritual recitaban los sacerdotes para ayudar a Ra a vencer a Apofis",
+    "answer": "El Libro del derrocamiento de Apofis",
     "choices": [
-      "El Libro del Derribo de Apofis",
+      "El Libro del derrocamiento de Apofis",
       "El Libro de los Muertos",
-      "El Libro de las Puertas",
-      "El Libro de Thot"
-    ]
+      "El Amduat",
+      "Los Textos de las Pirámides"
+    ],
+    "explanation": "Los sacerdotes modelaban una figurilla de cera de Apofis y luego la pisoteaban, la atravesaban y la quemaban."
   },
   {
     "id": 115,
-    "question": "¿De qué flor es dios Nefertum?",
-    "answer": "El loto azul",
+    "question": "¿De qué flor es dios Nefertum",
+    "answer": "Del loto azul",
     "choices": [
-      "El loto azul",
-      "El papiro",
-      "El lirio",
-      "El nenúfar blanco"
-    ]
+      "Del loto azul",
+      "Del papiro",
+      "Del lirio",
+      "De la rosa"
+    ],
+    "explanation": "Nefertum es el dios del loto azul, la flor que se abre al alba, y de los perfumes."
   },
   {
     "id": 116,
-    "question": "¿Quiénes son los padres de Nefertum en la tríada menfita?",
+    "question": "¿Quiénes son los padres de Nefertum en la tríada menfita",
     "answer": "Ptah y Sejmet",
     "choices": [
       "Ptah y Sejmet",
       "Amón y Mut",
       "Osiris e Isis",
       "Ra y Hathor"
-    ]
+    ],
+    "explanation": "En Menfis, Nefertum forma una tríada con sus padres, Ptah y Sejmet."
   },
   {
     "id": 117,
-    "question": "¿Qué corona lleva el dios Sokar?",
+    "question": "¿Qué corona lleva el dios Sokar",
     "answer": "La corona atef",
     "choices": [
       "La corona atef",
       "La doble corona",
       "La corona roja",
       "La corona blanca"
-    ]
+    ],
+    "explanation": "Sokar, dios halcón de la necrópolis de Menfis, lleva la corona atef."
   },
   {
     "id": 118,
-    "question": "¿Cómo se llama la barca sagrada de Sokar paseada en procesión durante su fiesta?",
+    "question": "¿Cómo se llama la barca sagrada de Sokar, llevada en procesión durante su fiesta",
     "answer": "La Henu",
     "choices": [
       "La Henu",
-      "La Barca de los Millones de Años",
+      "La barca de millones de años",
       "La Neshmet",
       "La Mesektet"
-    ]
+    ],
+    "explanation": "Durante la fiesta de Sokar, su barca sagrada, la Henu, se llevaba alrededor de las murallas de Menfis."
   },
   {
     "id": 119,
-    "question": "¿Qué significa el nombre del dios Upuaut?",
+    "question": "¿Qué significa el nombre del dios Upuaut",
     "answer": "El que abre los caminos",
     "choices": [
       "El que abre los caminos",
-      "El guardián de los muertos",
-      "El juez de las almas",
-      "El portador de la luz"
-    ]
+      "El que guarda a los muertos",
+      "El que juzga las almas",
+      "El que lleva la luz"
+    ],
+    "explanation": "Upuaut abría el camino al rey en los cortejos, y a los muertos hacia el más allá."
   },
   {
     "id": 120,
-    "question": "¿Dónde se encontraba el principal centro de culto de Upuaut?",
+    "question": "¿Dónde se encontraba el principal centro de culto de Upuaut",
     "answer": "Asiut",
     "choices": [
       "Asiut",
       "Buto",
       "Sais",
-      "Edfú"
-    ]
+      "Edfu"
+    ],
+    "explanation": "Upuaut era venerado en Asiut, que los griegos llamaban Licópolis, «la ciudad del lobo»."
   },
   {
     "id": 121,
-    "question": "¿Qué dios ocupa el lugar de demiurgo en la cosmogonía tebana?",
+    "question": "¿Qué dios desempeña el papel de creador en la cosmogonía tebana",
     "answer": "Amón",
     "choices": [
       "Amón",
       "Ptah",
       "Thot",
       "Ra"
-    ]
+    ],
+    "explanation": "En Tebas, Amón, «el oculto», se formó a sí mismo al principio; todos los dioses son sus manifestaciones."
   },
   {
     "id": 122,
-    "question": "¿Cómo se llama la serpiente alada de la que se dice que surgió Amón en los albores del mundo?",
+    "question": "¿En forma de qué serpiente apareció Amón en el alba del mundo",
     "answer": "Kematef",
     "choices": [
       "Kematef",
       "Apofis",
       "Mehen",
       "Irta"
-    ]
+    ],
+    "explanation": "Según textos tardíos, Amón apareció en forma de la serpiente Kematef, «el que ha cumplido su tiempo»."
   },
   {
     "id": 123,
-    "question": "¿Qué dios, engendrado por Amón, modeló la tierra y la Ogdóada en la cosmogonía tebana?",
+    "question": "¿Qué serpiente, engendrada por Kematef, creó la Ogdóada en la cosmogonía tebana",
     "answer": "Irta",
     "choices": [
       "Irta",
-      "Kematef",
-      "Ptah",
-      "Shu"
-    ]
+      "Mehen",
+      "Apofis",
+      "Uadyet"
+    ],
+    "explanation": "Kematef engendró a Irta, «el que hizo la tierra», que a su vez creó la Ogdóada."
   },
   {
     "id": 124,
-    "question": "¿Qué templo se convirtió en el mayor complejo religioso jamás construido en Egipto durante el Imperio Nuevo?",
+    "question": "¿Qué templo se convirtió en el mayor complejo religioso jamás construido en Egipto",
     "answer": "Karnak",
     "choices": [
       "Karnak",
       "Abu Simbel",
       "Luxor",
-      "Edfú"
-    ]
+      "Edfu"
+    ],
+    "explanation": "Ampliado durante casi dos mil años, el templo de Amón en Karnak es el mayor de Egipto."
   },
   {
     "id": 125,
-    "question": "¿Dónde se encontraba el gran centro de culto de Isis, activo hasta el siglo VI d. C.?",
-    "answer": "Filé",
+    "question": "¿Dónde se encontraba el gran templo de Isis, activo hasta el siglo VI d. C.",
+    "answer": "Filae",
     "choices": [
-      "Filé",
+      "Filae",
       "Bubastis",
       "Sais",
-      "Edfú"
-    ]
+      "Edfu"
+    ],
+    "explanation": "El templo de Isis en Filae siguió abierto hasta el siglo VI, mucho después del fin de los demás cultos."
   },
   {
     "id": 126,
-    "question": "¿Dónde se encontraba el principal santuario de Jnum?",
+    "question": "¿Dónde se encontraba el santuario principal de Jnum",
     "answer": "Elefantina",
     "choices": [
       "Elefantina",
       "Kom Ombo",
       "Asiut",
       "Tebas"
-    ]
+    ],
+    "explanation": "Jnum era venerado en la isla de Elefantina, donde formaba una tríada con Satet y Anuket."
   },
   {
     "id": 127,
-    "question": "¿Dónde se encontraba el gran centro de culto de Bastet, descrito en una fiesta por Heródoto?",
+    "question": "¿Dónde se encontraba el gran centro de culto de Bastet, cuya fiesta describió Heródoto",
     "answer": "Bubastis",
     "choices": [
       "Bubastis",
       "Menfis",
       "Heliópolis",
       "Sais"
-    ]
+    ],
+    "explanation": "Heródoto describe la fiesta de Bastet en Bubastis, que atraía a cientos de miles de peregrinos."
   },
   {
     "id": 128,
-    "question": "¿Cuáles son los dos grandes centros de culto de Sobek?",
-    "answer": "Kom Ombo y el Fayum",
+    "question": "¿Cuáles son los dos grandes centros de culto del dios Sobek",
+    "answer": "Kom Ombo y El Fayum",
     "choices": [
-      "Kom Ombo y el Fayum",
+      "Kom Ombo y El Fayum",
       "Elefantina y Asiut",
       "Bubastis y Sais",
       "Tebas y Menfis"
-    ]
+    ],
+    "explanation": "Sobek compartía un templo doble en Kom Ombo y reinaba sobre El Fayum, donde se criaban cocodrilos sagrados."
   },
   {
     "id": 129,
-    "question": "¿Qué faraón profesó una devoción particular a Sobek en el Fayum?",
+    "question": "¿Qué faraón favoreció especialmente el culto de Sobek en El Fayum",
     "answer": "Amenemhat III",
     "choices": [
       "Amenemhat III",
       "Akenatón",
       "Seti I",
       "Ramsés II"
-    ]
+    ],
+    "explanation": "El faraón Amenemhat III, del Imperio Medio, favoreció especialmente el culto de Sobek en El Fayum."
   },
   {
     "id": 130,
-    "question": "¿Dónde se encontraba el centro de culto de Neit, capital de la XXVI dinastía?",
+    "question": "¿Qué ciudad, centro del culto de Neit, fue la capital de la XXVI dinastía",
     "answer": "Sais",
     "choices": [
       "Sais",
       "Bubastis",
       "Buto",
       "Nejeb"
-    ]
+    ],
+    "explanation": "Neit era la gran diosa de Sais, capital de Egipto bajo la XXVI dinastía."
   },
   {
     "id": 131,
-    "question": "¿Dónde se encontraba el santuario de Nejbet, la diosa buitre?",
+    "question": "¿Dónde se encontraba el santuario de Nejbet, la diosa buitre",
     "answer": "Nejeb (El Kab)",
     "choices": [
       "Nejeb (El Kab)",
       "Buto",
       "Sais",
       "Elefantina"
-    ]
+    ],
+    "explanation": "El santuario de Nejbet se encontraba en Nejeb, la actual El Kab, en el Alto Egipto."
   },
   {
     "id": 132,
-    "question": "¿Dónde se encontraba el centro de culto de Uadyet, la diosa cobra?",
+    "question": "¿Dónde se encontraba el centro de culto de Uadyet, la diosa cobra",
     "answer": "Buto",
     "choices": [
       "Buto",
       "Nejeb",
       "Sais",
       "Kom Ombo"
-    ]
+    ],
+    "explanation": "El centro de culto de Uadyet, Buto, se situaba en el delta del Nilo."
   },
   {
     "id": 133,
-    "question": "¿Qué faraón llevó con orgullo el nombre de Seth antes de la posterior satanización del dios?",
+    "question": "¿Qué faraón llevaba el nombre del dios Seth",
     "answer": "Seti I",
     "choices": [
       "Seti I",
       "Akenatón",
       "Tutankamón",
       "Amenemhat III"
-    ]
+    ],
+    "explanation": "Respetado durante mucho tiempo por su fuerza, Seth dio su nombre a los faraones Seti I y Seti II."
   },
   {
     "id": 134,
-    "question": "¿Qué dios griego fue asociado con Thot en Hermópolis a partir de la época grecorromana?",
+    "question": "¿Con qué dios griego se identificó a Thot",
     "answer": "Hermes",
     "choices": [
       "Hermes",
       "Zeus",
       "Apolo",
       "Hades"
-    ]
+    ],
+    "explanation": "Los griegos identificaron a Thot con Hermes, mensajero de los dioses y patrón de las letras."
   },
   {
     "id": 135,
-    "question": "¿Qué divinidad representa el «Pensamiento» de Ptah en la teología menfita?",
+    "question": "¿Qué dios representa el corazón de Ptah, sede del pensamiento, en la teología menfita",
     "answer": "Horus",
     "choices": [
       "Horus",
       "Thot",
       "Sejmet",
       "Nefertum"
-    ]
+    ],
+    "explanation": "En la teología menfita, Horus es el corazón de Ptah, sede del pensamiento, y Thot su lengua."
   },
   {
     "id": 136,
-    "question": "¿En qué monumento antiguo, redescubierto en el Museo Británico, fue grabada la teología menfita?",
+    "question": "¿En qué monumento, donado al Museo Británico en 1805, está grabada la teología menfita",
     "answer": "La piedra de Shabaka",
     "choices": [
       "La piedra de Shabaka",
       "La piedra de Rosetta",
       "La estela de Metternich",
       "La paleta de Narmer"
-    ]
+    ],
+    "explanation": "La piedra de Shabaka fue donada al Museo Británico en 1805, cuando nadie sabía leer los jeroglíficos."
   },
   {
     "id": 137,
-    "question": "¿Qué divinidad compuesta resulta de la fusión de Ptah, Sokar y Osiris?",
+    "question": "¿Qué divinidad compuesta resulta de la fusión de Ptah, Sokar y Osiris",
     "answer": "Ptah-Sokar-Osiris",
     "choices": [
       "Ptah-Sokar-Osiris",
       "Amón-Ra",
-      "Ra-Horakhty",
-      "Osiris-Ra"
-    ]
+      "Ra-Horajty",
+      "Sobek-Ra"
+    ],
+    "explanation": "Ptah se fusionó con Sokar y Osiris para formar a Ptah-Sokar-Osiris, dios de la creación, la muerte y el renacimiento."
   },
   {
     "id": 138,
-    "question": "¿Cómo logran los dioses detener la masacre de Sejmet?",
-    "answer": "Esparciendo cerveza teñida de rojo por la tierra",
+    "question": "¿Cómo detuvieron los dioses la matanza de Sejmet",
+    "answer": "Derramando cerveza teñida de rojo",
     "choices": [
-      "Esparciendo cerveza teñida de rojo por la tierra",
+      "Derramando cerveza teñida de rojo",
       "Encerrándola en la Duat",
-      "Haciendo que Thot la duerma",
+      "Pidiendo a Thot que la durmiera",
       "Ofreciéndole el trono de Egipto"
-    ]
+    ],
+    "explanation": "Ra hizo derramar cerveza teñida de ocre rojo; Sejmet la bebió, se emborrachó y olvidó su cólera."
   },
   {
     "id": 139,
-    "question": "¿Sobre el lomo de qué animal celeste asciende Ra al cielo tras este episodio?",
+    "question": "¿A lomos de qué animal celeste abandonó Ra la tierra",
     "answer": "La vaca celeste Nut",
     "choices": [
       "La vaca celeste Nut",
       "El halcón Horus",
-      "El escarabajo Khepri",
+      "El escarabajo Jepri",
       "El carnero Jnum"
-    ]
+    ],
+    "explanation": "Cansado de gobernar, Ra subió al lomo de Nut, transformada en vaca celeste, y abandonó la tierra."
   },
   {
     "id": 140,
-    "question": "¿Qué diosa lleva el epíteto de «grande en magia», por haberle arrancado su nombre secreto a Ra?",
-    "answer": "Isis",
+    "question": "¿Con qué modeló Isis la serpiente que mordió a Ra",
+    "answer": "Con la saliva de Ra mezclada con tierra",
     "choices": [
-      "Isis",
-      "Hathor",
-      "Maat",
-      "Sejmet"
-    ]
+      "Con la saliva de Ra mezclada con tierra",
+      "Con cera de abeja",
+      "Con una pluma de Maat",
+      "Con las lágrimas de Nut"
+    ],
+    "explanation": "Isis mezcló con tierra la saliva que Ra, envejecido, dejaba caer, y modeló con ella una serpiente."
   },
   {
     "id": 141,
-    "question": "¿Qué significa el nombre de la diosa Neftis?",
-    "answer": "Señora de la mansión",
+    "question": "¿Qué significa el nombre de la diosa Neftis",
+    "answer": "La señora de la casa",
     "choices": [
-      "Señora de la mansión",
+      "La señora de la casa",
       "La que abre los caminos",
-      "Grande en magia",
-      "La que es poderosa"
-    ]
+      "La grande en magia",
+      "La poderosa"
+    ],
+    "explanation": "Neftis lleva en la cabeza los jeroglíficos de su nombre: una casa coronada por una cesta."
   },
   {
     "id": 142,
-    "question": "¿Qué profesión reivindicaban los sacerdotes de Sejmet en el antiguo Egipto?",
-    "answer": "Médicos",
+    "question": "¿Quiénes se ponían bajo la protección de la diosa Sejmet",
+    "answer": "Los médicos",
     "choices": [
-      "Médicos",
-      "Arquitectos",
-      "Escribas",
-      "Embalsamadores"
-    ]
+      "Los médicos",
+      "Los arquitectos",
+      "Los escribas",
+      "Los embalsamadores"
+    ],
+    "explanation": "Responsable de las epidemias, Sejmet también podía curarlas: los médicos se ponían bajo su protección."
   },
   {
     "id": 143,
-    "question": "¿Qué tríada divina forma Jnum en Elefantina?",
-    "answer": "Jnum, Satis y Anuket",
+    "question": "¿Qué tríada divina forma Jnum en Elefantina",
+    "answer": "Jnum, Satet y Anuket",
     "choices": [
-      "Jnum, Satis y Anuket",
+      "Jnum, Satet y Anuket",
       "Ptah, Sejmet y Nefertum",
       "Amón, Mut y Jonsu",
       "Osiris, Isis y Horus"
-    ]
+    ],
+    "explanation": "En Elefantina, Jnum formaba una tríada con las diosas Satet y Anuket."
   },
   {
     "id": 144,
-    "question": "¿Con qué dios acabó confundiéndose gradualmente Upuaut, debido a su función funeraria compartida?",
+    "question": "¿Con qué dios se confundió a veces a Upuaut, por su papel funerario común",
     "answer": "Anubis",
     "choices": [
       "Anubis",
       "Thot",
       "Sokar",
       "Osiris"
-    ]
+    ],
+    "explanation": "Upuaut abría el camino de los muertos hacia el más allá, un papel que lo acercó a Anubis."
   }
 ]
