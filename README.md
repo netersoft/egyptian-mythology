@@ -142,7 +142,7 @@ Ported screen-for-screen from the legacy Android app (`.legacy/`):
 - **Quiz** (`view/screens/quiz/`) — 20s-per-question, 3-life state machine (`QuizController`), score persisted to Hive on game over.
 - **Stats** (`view/screens/stats/`) — score history, best score, `fl_chart` progress graph, clear history.
 - **Settings** (`view/screens/account/settings_screen.dart`) — language, theme, music/sound toggles.
-- **About** (`view/screens/other/about_screen.dart`) — credits, contact (`mailto:`), rate (`in_app_review`), share (`share_plus`).
+- **About** (`view/screens/other/about_screen.dart`) — credits, contact (`mailto:`), rate (Play Store listing via `url_launcher`), share (`share_plus`).
 
 ## Quality
 
