@@ -10,15 +10,12 @@ import '../../../core/routes/app_route.dart';
 import '../../../core/services/audio/audio_service.dart';
 import '../../../core/services/di/locator.dart';
 import '../../../core/services/i18n/translations.g.dart';
+import '../../../core/tools/constants/store.dart';
 import '../../components/backgrounds/pyramid_background.dart';
 import '../../components/buttons/icon_action_button.dart';
 import '../../components/misc/centered_scrollable.dart';
 import '../../components/text/typewriter_text.dart';
 import '../../themes/app_colors.dart';
-
-// Mirrors the legacy app's Play Store share link; there's no publish target
-// yet, but the package id (com.neteru.ankh) is kept for continuity.
-const _playStoreUrl = 'https://play.google.com/store/apps/details?id=com.neteru.ankh';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
@@ -28,7 +25,7 @@ class AboutScreen extends StatelessWidget {
     final t = context.t;
     await SharePlus.instance.share(
       ShareParams(
-        text: t.shareAppMsg(value: _playStoreUrl),
+        text: t.shareAppMsg(value: Store.playStoreUrl),
         subject: t.shareAppTitle,
       ),
     );
@@ -56,7 +53,7 @@ class AboutScreen extends StatelessWidget {
   // https://developer.android.com/guide/playcore/in-app-review
   Future<void> _rate() async {
     unawaited(locator<AudioService>().playClick());
-    await launchUrl(Uri.parse(_playStoreUrl), mode: LaunchMode.externalApplication);
+    await launchUrl(Uri.parse(Store.playStoreUrl), mode: LaunchMode.externalApplication);
   }
 
   @override

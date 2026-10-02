@@ -4,7 +4,7 @@
 
 ## Description
 
-A fully offline reference and quiz app about Egyptian mythology: a documentation viewer (Gods, Cosmogonies, Myths), a 20-second-per-question quiz with a 3-life system, score history with a progress chart, and settings for language/music/sound — available in French and English.
+A fully offline reference and quiz app about Egyptian mythology: a documentation viewer (Gods, Cosmogonies, Myths, plus a Reference section with a glossary, a map of sites and a timeline) with full-text search, a 20-second-per-question quiz with a 3-life system, themes and a review of missed questions, score history with a progress chart, and settings for language/music/sound — available in French, English, German, Spanish and Portuguese.
 
 This is a Flutter rewrite of a legacy native Android app (`com.neteru.ankh`, kept for reference under `.legacy/`), built on [edpage-hq/flutter-starter](https://github.com/edpage-hq/flutter-starter) with its authentication/REST API layer stripped out, since this app has no backend.
 
@@ -106,8 +106,9 @@ lib/
 │   └── components/                    # Reusable widgets (backgrounds, buttons, containers, text, etc.)
 ├── assets/
 │   ├── i18n/                          # Translation source files (*.i18n.json)
-│   ├── docs/                          # Documentation HTML (gods/cosmogonies/myths, fr+en)
-│   ├── quiz/                          # Quiz questions JSON (fr+en)
+│   ├── docs/                          # Documentation HTML (gods/cosmogonies/myths/reference + credits), per locale
+│   ├── glossary/                      # Glossary entries JSON, per locale
+│   ├── quiz/                          # Quiz questions JSON per locale + question_refs.json (question → doc page)
 │   ├── audio/                         # Background music + click SFX
 │   └── images/                        # Launcher icons, splash, Egyptian artwork
 └── test/                              # Unit + widget tests
@@ -136,13 +137,13 @@ Routes are centralized in `lib/core/routes/app_route.dart` (type-safe `go_router
 
 ## Features
 
-Ported screen-for-screen from the legacy Android app (`.legacy/`):
+Ported from the legacy Android app (`.legacy/`), then extended:
 
-- **Documentation** (`view/screens/documentation/`) — browse Gods, Cosmogonies, and Myths as native-rendered HTML (`flutter_widget_from_html_core`), fr/en.
-- **Quiz** (`view/screens/quiz/`) — 20s-per-question, 3-life state machine (`QuizController`), score persisted to Hive on game over.
+- **Documentation** (`view/screens/documentation/`) — browse Gods, Cosmogonies, Myths and Reference (glossary, map, timeline) as native-rendered HTML (`flutter_widget_from_html_core`). God names link to their page, glossary terms show their definition in a sheet, each section resumes where the reader left off, and a full-text search covers every page.
+- **Quiz** (`view/screens/quiz/`) — 20s-per-question, 3-life state machine (`QuizController`), optionally restricted to one theme (gods, cosmogonies, myths); score persisted to Hive on game over, then a review of the missed questions with explanations and a link to the matching documentation page.
 - **Stats** (`view/screens/stats/`) — score history, best score, `fl_chart` progress graph, clear history.
-- **Settings** (`view/screens/account/settings_screen.dart`) — language, theme, music/sound toggles.
-- **About** (`view/screens/other/about_screen.dart`) — credits, contact (`mailto:`), rate (Play Store listing via `url_launcher`), share (`share_plus`).
+- **Settings** (`view/screens/account/settings_screen.dart`) — language, music/sound toggles.
+- **About** (`view/screens/other/about_screen.dart`) — sources and credits page, contact (`mailto:`), rate (Play Store listing via `url_launcher`), share (`share_plus`).
 
 ## Quality
 

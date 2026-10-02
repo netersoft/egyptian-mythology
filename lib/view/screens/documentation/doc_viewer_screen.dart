@@ -13,13 +13,10 @@ import '../../../core/services/di/locator.dart';
 import '../../../core/services/documentation/documentation_service.dart';
 import '../../../core/services/documentation/reading_progress_repository.dart';
 import '../../../core/services/i18n/translations.g.dart';
+import '../../../core/tools/constants/store.dart';
 import '../../themes/app_colors.dart';
 import '../../themes/app_decorations.dart';
 import 'doc_widget_factory.dart';
-
-// Mirrors the legacy app's Play Store share link; there's no publish target
-// yet, but the package id (com.neteru.ankh) is kept for continuity.
-const _playStoreUrl = 'https://play.google.com/store/apps/details?id=com.neteru.ankh';
 
 class DocViewerScreen extends StatefulWidget {
   final DocCategory category;
@@ -222,7 +219,7 @@ class _DocViewerScreenState extends State<DocViewerScreen> {
     unawaited(locator<AudioService>().playClick());
     unawaited(
       SharePlus.instance.share(
-        ShareParams(text: widget.category.shareText(t, _playStoreUrl), subject: t.shareAppTitle),
+        ShareParams(text: widget.category.shareText(t, Store.playStoreUrl), subject: t.shareAppTitle),
       ),
     );
   }
