@@ -1726,5 +1726,449 @@
       "Osíris"
     ],
     "explanation": "Upuaut abria o caminho dos mortos rumo ao além, um papel que o aproximou de Anúbis."
+  },
+  {
+    "id": 145,
+    "question": "O que significa o nome do deus Atum",
+    "answer": "“Aquele que é completo”",
+    "choices": [
+      "“Aquele que é completo”",
+      "“O oculto”",
+      "“A mãe”",
+      "“Aquela que derrama”"
+    ],
+    "explanation": "Seu nome significa ao mesmo tempo “Aquele que é completo” e “Aquele que ainda não existe”: antes da Criação, Atum continha em si tudo o que viria a existir."
+  },
+  {
+    "id": 146,
+    "question": "Em que animal Atum se transformará no fim dos tempos",
+    "answer": "Numa serpente",
+    "choices": [
+      "Numa serpente",
+      "Num escaravelho",
+      "Num falcão",
+      "Num carneiro"
+    ],
+    "explanation": "Um texto anuncia que, no fim dos tempos, Atum destruirá tudo o que criou e voltará a ser uma serpente, sozinho nas águas do Nun."
+  },
+  {
+    "id": 147,
+    "question": "Que coroa Atum usa quase sempre",
+    "answer": "A coroa dupla",
+    "choices": [
+      "A coroa dupla",
+      "A coroa branca",
+      "A coroa vermelha",
+      "Duas plumas altas"
+    ],
+    "explanation": "Atum é o rei do universo: quase sempre usa a coroa dupla do Alto e do Baixo Egito."
+  },
+  {
+    "id": 148,
+    "question": "O que significa o verbo egípcio kheper, de onde vem o nome de Khepri",
+    "answer": "Vir a existir",
+    "choices": [
+      "Vir a existir",
+      "Brilhar, iluminar",
+      "Empurrar, rolar",
+      "Dormir, descansar"
+    ],
+    "explanation": "O nome de Khepri vem do verbo <i>kheper</i>, “vir a existir, transformar-se”: ele é o sol que renasce toda manhã."
+  },
+  {
+    "id": 149,
+    "question": "Onde se colocava um amuleto em forma de escaravelho nas múmias",
+    "answer": "Sobre o coração",
+    "choices": [
+      "Sobre o coração",
+      "Sobre a testa",
+      "Na mão",
+      "Sob os pés"
+    ],
+    "explanation": "Símbolo de renascimento, o escaravelho era colocado sobre o coração das múmias para garantir ao falecido uma nova vida."
+  },
+  {
+    "id": 150,
+    "question": "Como os gregos chamavam Hórus, o Velho",
+    "answer": "Haroéris",
+    "choices": [
+      "Haroéris",
+      "Harpócrates",
+      "Serápis",
+      "Horakhty"
+    ],
+    "explanation": "Os gregos chamavam de Haroéris esse deus falcão do céu, que não se deve confundir com Hórus, o filho de Ísis e Osíris."
+  },
+  {
+    "id": 151,
+    "question": "Com que deus Hórus, o Velho, dividia o templo duplo de Kom Ombo",
+    "answer": "Sobek",
+    "choices": [
+      "Sobek",
+      "Khnum",
+      "Montu",
+      "Sokar"
+    ],
+    "explanation": "Em Kom Ombo, Hórus, o Velho, dividia um templo duplo com o deus crocodilo Sobek, cada um ocupando uma metade."
+  },
+  {
+    "id": 152,
+    "question": "O que são os olhos de Hórus, o Velho",
+    "answer": "O sol e a lua",
+    "choices": [
+      "O sol e a lua",
+      "Duas estrelas",
+      "O Nilo e o deserto",
+      "A aurora e o crepúsculo"
+    ],
+    "explanation": "Hórus, o Velho, é um deus falcão do céu: seus olhos são o sol e a lua."
+  },
+  {
+    "id": 153,
+    "question": "Que deuses acompanham Heka na barca de Rá",
+    "answer": "Sia e Hu",
+    "choices": [
+      "Sia e Hu",
+      "Shu e Tefnut",
+      "Ísis e Néftis",
+      "Toth e Maat"
+    ],
+    "explanation": "Heka viaja na barca de Rá com Sia, o conhecimento, e Hu, a palavra criadora: as forças com que o sol cria e protege o mundo."
+  },
+  {
+    "id": 154,
+    "question": "Em Esna, Heka era filho de quais deuses",
+    "answer": "Khnum e Neit",
+    "choices": [
+      "Khnum e Neit",
+      "Ptah e Sekhmet",
+      "Amon e Mut",
+      "Osíris e Ísis"
+    ],
+    "explanation": "Em Esna, Heka era venerado como uma criança divina, filho de Khnum e de Neit, representado com o dedo na boca."
+  },
+  {
+    "id": 155,
+    "question": "Seshat é a deusa de quê",
+    "answer": "A escrita e o cálculo",
+    "choices": [
+      "A escrita e o cálculo",
+      "A guerra e a caça",
+      "O amor e a música",
+      "A cheia do Nilo"
+    ],
+    "explanation": "Seshat, companheira ou filha de Toth, é a deusa da escrita, do cálculo e dos arquivos."
+  },
+  {
+    "id": 156,
+    "question": "Seshat veste a pele de que animal",
+    "answer": "A pantera",
+    "choices": [
+      "A pantera",
+      "O leão",
+      "O touro",
+      "O chacal"
+    ],
+    "explanation": "Seshat é representada como uma mulher vestida com uma pele de pantera, com uma estrela de sete pontas na cabeça e o cálamo do escriba na mão."
+  },
+  {
+    "id": 157,
+    "question": "Onde Seshat inscrevia o nome dos faraós",
+    "answer": "Nas folhas de uma árvore sagrada",
+    "choices": [
+      "Nas folhas de uma árvore sagrada",
+      "Nos muros de Karnak",
+      "Num papiro de ouro",
+      "Nas pedras do Benben"
+    ],
+    "explanation": "Seshat mantinha o registro dos anos de reinado dos faraós, inscrevendo seus nomes nas folhas da árvore sagrada de Heliópolis."
+  },
+  {
+    "id": 158,
+    "question": "Em que ritual Seshat ajudava o rei a fixar o local de um templo",
+    "answer": "O estiramento da corda",
+    "choices": [
+      "O estiramento da corda",
+      "A abertura da boca",
+      "A pesagem do coração",
+      "A festa Sed"
+    ],
+    "explanation": "No ritual do “estiramento da corda”, Seshat ajudava o rei a esticar a corda que fixava o local exato do futuro santuário."
+  },
+  {
+    "id": 159,
+    "question": "Montu é o deus de quê",
+    "answer": "A guerra",
+    "choices": [
+      "A guerra",
+      "A sabedoria",
+      "A escrita",
+      "A fertilidade"
+    ],
+    "explanation": "Montu é o deus da guerra: os faraós se diziam “poderosos como Montu” no combate."
+  },
+  {
+    "id": 160,
+    "question": "O que significa Mentuhotep, nome de vários reis da XI dinastia",
+    "answer": "“Montu está satisfeito”",
+    "choices": [
+      "“Montu está satisfeito”",
+      "“Montu nasceu”",
+      "“Filho de Montu”",
+      "“Amado de Montu”"
+    ],
+    "explanation": "Vários reis da XI dinastia levaram o nome de Mentuhotep, “Montu está satisfeito”."
+  },
+  {
+    "id": 161,
+    "question": "Que animal encarnava a força de Montu",
+    "answer": "O touro",
+    "choices": [
+      "O touro",
+      "O leão",
+      "O crocodilo",
+      "O carneiro"
+    ],
+    "explanation": "Montu às vezes é representado como um homem com cabeça de touro, o animal que encarnava sua força."
+  },
+  {
+    "id": 162,
+    "question": "Satet e Anuket são deusas de que região",
+    "answer": "A primeira catarata",
+    "choices": [
+      "A primeira catarata",
+      "O delta do Nilo",
+      "O oásis de Siwa",
+      "O Faium"
+    ],
+    "explanation": "Satet e Anuket velavam, com Khnum, pela primeira catarata do Nilo, na fronteira sul do Egito."
+  },
+  {
+    "id": 163,
+    "question": "O que se lançava no rio durante a cheia para celebrar Anuket",
+    "answer": "Ouro e joias",
+    "choices": [
+      "Ouro e joias",
+      "Flores de lótus",
+      "Pão e cerveja",
+      "Lamparinas acesas"
+    ],
+    "explanation": "Durante a cheia, celebrava-se Anuket lançando no rio moedas, ouro e joias."
+  },
+  {
+    "id": 164,
+    "question": "O que significa o nome da deusa Satet",
+    "answer": "“Aquela que derrama”",
+    "choices": [
+      "“Aquela que derrama”",
+      "“A mãe”",
+      "“A distante”",
+      "“Aquela que protege”"
+    ],
+    "explanation": "Satet, “aquela que derrama”, era encarregada de verter sobre o Egito as águas frescas da cheia."
+  },
+  {
+    "id": 165,
+    "question": "O que significa o nome da deusa Mut",
+    "answer": "“A mãe”",
+    "choices": [
+      "“A mãe”",
+      "“A poderosa”",
+      "“A oculta”",
+      "“Aquela que derrama”"
+    ],
+    "explanation": "Mut, “a mãe”, é a esposa de Amon e a mãe de Khonsu, com quem forma a tríade tebana."
+  },
+  {
+    "id": 166,
+    "question": "Que ave, que serve para escrever seu nome, está associada a Mut",
+    "answer": "O abutre",
+    "choices": [
+      "O abutre",
+      "O falcão",
+      "O íbis",
+      "O ganso"
+    ],
+    "explanation": "Mut às vezes usa um toucado de abutre, a ave que escreve seu nome, símbolo da maternidade."
+  },
+  {
+    "id": 167,
+    "question": "Que faraó mandou colocar centenas de estátuas de Sekhmet no templo de Mut",
+    "answer": "Amenhotep III",
+    "choices": [
+      "Amenhotep III",
+      "Ramsés II",
+      "Djoser",
+      "Akhenaton"
+    ],
+    "explanation": "Mut podia se mostrar temível como Sekhmet: Amenhotep III mandou colocar em seu templo centenas de estátuas da deusa leoa para aplacar sua cólera."
+  },
+  {
+    "id": 168,
+    "question": "Que título Amon-Rá tinha no Império Novo",
+    "answer": "“Rei dos deuses”",
+    "choices": [
+      "“Rei dos deuses”",
+      "“Senhor do Duat”",
+      "“Senhor da eternidade”",
+      "“Príncipe do deserto”"
+    ],
+    "explanation": "No Império Novo, Amon-Rá, “rei dos deuses”, tornou-se o deus supremo do Egito, criador do mundo e pai do faraó."
+  },
+  {
+    "id": 169,
+    "question": "Em que época Amon foi associado a Rá, quando reis de Tebas tomaram o poder",
+    "answer": "No Império Médio",
+    "choices": [
+      "No Império Médio",
+      "No Império Antigo",
+      "No Império Novo",
+      "Na época ptolomaica"
+    ],
+    "explanation": "Quando reis originários de Tebas tomaram o poder, no Império Médio, seu deus Amon foi associado a Rá para ganhar alcance nacional."
+  },
+  {
+    "id": 170,
+    "question": "Para onde fugiu a deusa distante, transformada em leoa",
+    "answer": "Para os desertos da Núbia",
+    "choices": [
+      "Para os desertos da Núbia",
+      "Para os pântanos do delta",
+      "Para o deserto da Líbia",
+      "Para as montanhas do Sinai"
+    ],
+    "explanation": "Ferida porque outra havia tomado seu lugar, a deusa fugiu, transformada em leoa, para os desertos da Núbia, ao sul do Egito."
+  },
+  {
+    "id": 171,
+    "question": "Sob que forma Toth se aproximou da deusa distante",
+    "answer": "Um pequeno babuíno",
+    "choices": [
+      "Um pequeno babuíno",
+      "Um íbis",
+      "Um gato",
+      "Um falcão"
+    ],
+    "explanation": "Para se aproximar da leoa sem assustá-la, Toth assumiu a forma de um pequeno babuíno, e depois a acalmou com palavras e fábulas."
+  },
+  {
+    "id": 172,
+    "question": "Na fábula contada por Toth, que animal salva o leão",
+    "answer": "Um rato",
+    "choices": [
+      "Um rato",
+      "Uma serpente",
+      "Um pássaro",
+      "Um crocodilo"
+    ],
+    "explanation": "Um leão poupa um rato que, mais tarde, o salva roendo as cordas de uma rede: até os mais fracos têm seu lugar na ordem do mundo."
+  },
+  {
+    "id": 173,
+    "question": "Sob que forma Rá colocou seu Olho na fronte para que ela não partisse mais",
+    "answer": "Uma naja erguida",
+    "choices": [
+      "Uma naja erguida",
+      "Um abutre",
+      "Um disco solar",
+      "Um escaravelho"
+    ],
+    "explanation": "Para que a deusa não partisse mais, Rá a colocou em sua fronte na forma de uma naja erguida, o uraeus, guardiã de sua coroa."
+  },
+  {
+    "id": 174,
+    "question": "Que festa celebrava todo ano a volta da deusa distante, sobretudo em Dendera",
+    "answer": "A festa da embriaguez",
+    "choices": [
+      "A festa da embriaguez",
+      "A festa de Opet",
+      "A festa Sed",
+      "A festa do Vale"
+    ],
+    "explanation": "A volta da deusa coincidia com a cheia: era celebrada todo ano com uma festa da embriaguez, sobretudo em Dendera, em honra de Hathor."
+  },
+  {
+    "id": 175,
+    "question": "No reinado de que rei se passa a narrativa da estela da Fome",
+    "answer": "Djoser",
+    "choices": [
+      "Djoser",
+      "Snefru",
+      "Quéops",
+      "Ramsés II"
+    ],
+    "explanation": "Gravada na época ptolomaica, a estela narra uma fome ocorrida no reinado de Djoser, o construtor da primeira pirâmide."
+  },
+  {
+    "id": 176,
+    "question": "Durante quantos anos a cheia do Nilo faltou, segundo a estela da Fome",
+    "answer": "Sete",
+    "choices": [
+      "Sete",
+      "Três",
+      "Nove",
+      "Doze"
+    ],
+    "explanation": "Havia sete anos que a cheia não vinha: faltavam grãos e até os templos estavam fechados."
+  },
+  {
+    "id": 177,
+    "question": "Que sábio conselheiro revelou ao rei o segredo da cheia",
+    "answer": "Imhotep",
+    "choices": [
+      "Imhotep",
+      "Ptahhotep",
+      "Senenmut",
+      "Uni"
+    ],
+    "explanation": "Imhotep, o sacerdote e arquiteto da pirâmide de degraus de Saqqara, consultou os livros sagrados e revelou ao rei o segredo da cheia."
+  },
+  {
+    "id": 178,
+    "question": "Segundo Imhotep, de onde brotava o Nilo",
+    "answer": "De cavernas sob Elefantina",
+    "choices": [
+      "De cavernas sob Elefantina",
+      "Das lágrimas de Ísis",
+      "De um lago no deserto",
+      "De uma nascente em Karnak"
+    ],
+    "explanation": "Imhotep revelou que o Nilo brotava de duas cavernas situadas sob a ilha de Elefantina, cujo senhor era Khnum."
+  },
+  {
+    "id": 179,
+    "question": "Segundo os historiadores, por que os sacerdotes de Khnum mandaram gravar a estela da Fome",
+    "answer": "Para defender suas receitas",
+    "choices": [
+      "Para defender suas receitas",
+      "Para homenagear Djoser",
+      "Para anunciar uma cheia",
+      "Para celebrar uma vitória"
+    ],
+    "explanation": "Rivais dos sacerdotes de Ísis em Filas, os sacerdotes de Khnum atribuíram a Djoser seus direitos sobre a região para lhes dar a autoridade da antiguidade: uma “falsificação piedosa”."
+  },
+  {
+    "id": 180,
+    "question": "O que designa a palavra “demiurgo”",
+    "answer": "O criador do universo",
+    "choices": [
+      "O criador do universo",
+      "O primeiro faraó",
+      "O oceano primordial",
+      "O sumo sacerdote"
+    ],
+    "explanation": "Em cada cosmogonia, o deus da cidade desempenha o papel de demiurgo, isto é, de criador do universo (do grego <i>dēmiourgos</i>, “artesão”)."
+  },
+  {
+    "id": 181,
+    "question": "Qual era a mais difundida das cosmogonias egípcias",
+    "answer": "A de Heliópolis",
+    "choices": [
+      "A de Heliópolis",
+      "A de Hermópolis",
+      "A de Mênfis",
+      "A de Tebas"
+    ],
+    "explanation": "A mais difundida é a de Heliópolis, cujo criador é o demiurgo solar Atum, muitas vezes identificado com Rá."
   }
 ]

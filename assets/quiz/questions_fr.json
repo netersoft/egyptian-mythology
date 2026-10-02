@@ -1726,5 +1726,449 @@
       "Osiris"
     ],
     "explanation": "Oupouaout ouvrait le chemin des morts vers l’au-delà, un rôle qui le rapprocha d’Anubis."
+  },
+  {
+    "id": 145,
+    "question": "Que signifie le nom du dieu Atoum",
+    "answer": "« Celui qui est complet »",
+    "choices": [
+      "« Celui qui est complet »",
+      "« Le caché »",
+      "« La mère »",
+      "« Celui qui répand »"
+    ],
+    "explanation": "Son nom signifie à la fois « Celui qui est complet » et « Celui qui n’est pas encore » : avant la Création, Atoum contenait en lui tout ce qui allait exister."
+  },
+  {
+    "id": 146,
+    "question": "En quel animal Atoum doit-il se changer à la fin des temps",
+    "answer": "Un serpent",
+    "choices": [
+      "Un serpent",
+      "Un scarabée",
+      "Un faucon",
+      "Un bélier"
+    ],
+    "explanation": "Un texte annonce qu’à la fin des temps, Atoum détruira tout ce qu’il a créé et redeviendra un serpent, seul dans les eaux du Noun."
+  },
+  {
+    "id": 147,
+    "question": "Quelle couronne Atoum porte-t-il le plus souvent",
+    "answer": "La double couronne",
+    "choices": [
+      "La double couronne",
+      "La couronne blanche",
+      "La couronne rouge",
+      "Deux hautes plumes"
+    ],
+    "explanation": "Atoum est le roi de l’univers : il porte le plus souvent la double couronne de Haute et de Basse-Égypte."
+  },
+  {
+    "id": 148,
+    "question": "Que signifie le verbe égyptien kheper, d’où vient le nom de Khépri",
+    "answer": "Venir à l’existence",
+    "choices": [
+      "Venir à l’existence",
+      "Briller, éclairer",
+      "Pousser, rouler",
+      "Dormir, se reposer"
+    ],
+    "explanation": "Le nom de Khépri vient du verbe <i>kheper</i>, « venir à l’existence, se transformer » : il est le soleil qui renaît chaque matin."
+  },
+  {
+    "id": 149,
+    "question": "Où plaçait-on une amulette en forme de scarabée sur les momies",
+    "answer": "Sur le cœur",
+    "choices": [
+      "Sur le cœur",
+      "Sur le front",
+      "Dans la main",
+      "Sous les pieds"
+    ],
+    "explanation": "Symbole de renaissance, le scarabée était placé sur le cœur des momies pour assurer au défunt une nouvelle vie."
+  },
+  {
+    "id": 150,
+    "question": "Comment les Grecs appelaient-ils Horus l’Ancien",
+    "answer": "Haroëris",
+    "choices": [
+      "Haroëris",
+      "Harpocrate",
+      "Sérapis",
+      "Horakhty"
+    ],
+    "explanation": "Les Grecs appelaient Haroëris ce dieu faucon du ciel, à ne pas confondre avec Horus, le fils d’Isis et d’Osiris."
+  },
+  {
+    "id": 151,
+    "question": "Avec quel dieu Horus l’Ancien partageait-il le temple double de Kom Ombo",
+    "answer": "Sobek",
+    "choices": [
+      "Sobek",
+      "Khnoum",
+      "Montou",
+      "Sokar"
+    ],
+    "explanation": "À Kom Ombo, Horus l’Ancien partageait un temple double avec le dieu crocodile Sobek, chacun en occupant une moitié."
+  },
+  {
+    "id": 152,
+    "question": "Que sont les yeux d’Horus l’Ancien",
+    "answer": "Le soleil et la lune",
+    "choices": [
+      "Le soleil et la lune",
+      "Deux étoiles",
+      "Le Nil et le désert",
+      "L’aube et le crépuscule"
+    ],
+    "explanation": "Horus l’Ancien est un dieu faucon du ciel, dont les yeux sont le soleil et la lune."
+  },
+  {
+    "id": 153,
+    "question": "Quels dieux accompagnent Heka dans la barque de Rê",
+    "answer": "Sia et Hou",
+    "choices": [
+      "Sia et Hou",
+      "Chou et Tefnout",
+      "Isis et Nephtys",
+      "Thot et Maât"
+    ],
+    "explanation": "Heka voyage dans la barque de Rê avec Sia, la connaissance, et Hou, la parole créatrice : les forces avec lesquelles le soleil crée et protège le monde."
+  },
+  {
+    "id": 154,
+    "question": "À Esna, de quels dieux Heka était-il le fils",
+    "answer": "Khnoum et Neith",
+    "choices": [
+      "Khnoum et Neith",
+      "Ptah et Sekhmet",
+      "Amon et Mout",
+      "Osiris et Isis"
+    ],
+    "explanation": "À Esna, Heka était vénéré comme un enfant divin, fils de Khnoum et de Neith, représenté le doigt porté à la bouche."
+  },
+  {
+    "id": 155,
+    "question": "De quoi Seshat est-elle la déesse",
+    "answer": "L’écriture et le calcul",
+    "choices": [
+      "L’écriture et le calcul",
+      "La guerre et la chasse",
+      "L’amour et la musique",
+      "La crue du Nil"
+    ],
+    "explanation": "Seshat, compagne ou fille de Thot, est la déesse de l’écriture, du calcul et des archives."
+  },
+  {
+    "id": 156,
+    "question": "De la peau de quel animal Seshat est-elle vêtue",
+    "answer": "La panthère",
+    "choices": [
+      "La panthère",
+      "Le lion",
+      "Le taureau",
+      "Le chacal"
+    ],
+    "explanation": "Seshat est représentée en femme vêtue d’une peau de panthère, coiffée d’une étoile à sept branches et tenant le calame du scribe."
+  },
+  {
+    "id": 157,
+    "question": "Sur quoi Seshat inscrivait-elle le nom des pharaons",
+    "answer": "Les feuilles d’un arbre sacré",
+    "choices": [
+      "Les feuilles d’un arbre sacré",
+      "Les murs de Karnak",
+      "Un papyrus d’or",
+      "Les pierres du Benben"
+    ],
+    "explanation": "Seshat tenait le registre des années de règne des pharaons, en inscrivant leur nom sur les feuilles de l’arbre sacré d’Héliopolis."
+  },
+  {
+    "id": 158,
+    "question": "Lors de quel rituel Seshat aidait-elle le roi à fixer l’emplacement d’un temple",
+    "answer": "L’extension du cordeau",
+    "choices": [
+      "L’extension du cordeau",
+      "L’ouverture de la bouche",
+      "La pesée du cœur",
+      "La fête-sed"
+    ],
+    "explanation": "Lors de « l’extension du cordeau », Seshat aidait le roi à tendre la corde qui fixait l’emplacement exact du futur sanctuaire."
+  },
+  {
+    "id": 159,
+    "question": "De quoi Montou est-il le dieu",
+    "answer": "La guerre",
+    "choices": [
+      "La guerre",
+      "La sagesse",
+      "L’écriture",
+      "La fertilité"
+    ],
+    "explanation": "Montou est le dieu de la guerre : les pharaons se disaient « puissants comme Montou » au combat."
+  },
+  {
+    "id": 160,
+    "question": "Que signifie Montouhotep, le nom de plusieurs rois de la XIe dynastie",
+    "answer": "« Montou est satisfait »",
+    "choices": [
+      "« Montou est satisfait »",
+      "« Montou est né »",
+      "« Fils de Montou »",
+      "« Aimé de Montou »"
+    ],
+    "explanation": "Plusieurs rois de la XI<sup>e</sup> dynastie portèrent le nom de Montouhotep, « Montou est satisfait »."
+  },
+  {
+    "id": 161,
+    "question": "Quel animal incarnait la force de Montou",
+    "answer": "Le taureau",
+    "choices": [
+      "Le taureau",
+      "Le lion",
+      "Le crocodile",
+      "Le bélier"
+    ],
+    "explanation": "Montou est parfois représenté en homme à tête de taureau, l’animal qui incarnait sa force."
+  },
+  {
+    "id": 162,
+    "question": "Satis et Anouket sont les déesses de quelle région",
+    "answer": "La première cataracte",
+    "choices": [
+      "La première cataracte",
+      "Le delta du Nil",
+      "L’oasis de Siwa",
+      "Le Fayoum"
+    ],
+    "explanation": "Satis et Anouket veillaient sur la première cataracte du Nil, à la frontière sud de l’Égypte, avec Khnoum."
+  },
+  {
+    "id": 163,
+    "question": "Que jetait-on dans le fleuve pendant la crue pour célébrer Anouket",
+    "answer": "De l’or et des bijoux",
+    "choices": [
+      "De l’or et des bijoux",
+      "Des fleurs de lotus",
+      "Du pain et de la bière",
+      "Des lampes allumées"
+    ],
+    "explanation": "Pendant la crue, on célébrait Anouket en jetant dans le fleuve des pièces de monnaie, de l’or et des bijoux."
+  },
+  {
+    "id": 164,
+    "question": "Que signifie le nom de la déesse Satis",
+    "answer": "« Celle qui répand »",
+    "choices": [
+      "« Celle qui répand »",
+      "« La mère »",
+      "« La lointaine »",
+      "« Celle qui protège »"
+    ],
+    "explanation": "Satis, « celle qui répand », était chargée de verser les eaux fraîches de la crue sur l’Égypte."
+  },
+  {
+    "id": 165,
+    "question": "Que signifie le nom de la déesse Mout",
+    "answer": "« La mère »",
+    "choices": [
+      "« La mère »",
+      "« La puissante »",
+      "« La cachée »",
+      "« Celle qui répand »"
+    ],
+    "explanation": "Mout, « la mère », est l’épouse d’Amon et la mère de Khonsou, avec qui elle forme la triade thébaine."
+  },
+  {
+    "id": 166,
+    "question": "Quel oiseau, qui sert à écrire son nom, est associé à Mout",
+    "answer": "Le vautour",
+    "choices": [
+      "Le vautour",
+      "Le faucon",
+      "L’ibis",
+      "L’oie"
+    ],
+    "explanation": "Mout porte parfois une dépouille de vautour : cet oiseau, qui écrit son nom, est un symbole de la maternité."
+  },
+  {
+    "id": 167,
+    "question": "Quel pharaon fit placer des centaines de statues de Sekhmet dans le temple de Mout",
+    "answer": "Amenhotep III",
+    "choices": [
+      "Amenhotep III",
+      "Ramsès II",
+      "Djéser",
+      "Akhenaton"
+    ],
+    "explanation": "Mout pouvait se montrer redoutable comme Sekhmet : Amenhotep III fit placer dans son temple des centaines de statues de la déesse lionne pour apaiser sa colère."
+  },
+  {
+    "id": 168,
+    "question": "Quel titre portait Amon-Rê sous le Nouvel Empire",
+    "answer": "« Roi des dieux »",
+    "choices": [
+      "« Roi des dieux »",
+      "« Maître de la Douat »",
+      "« Seigneur de l’éternité »",
+      "« Prince du désert »"
+    ],
+    "explanation": "Sous le Nouvel Empire, Amon-Rê, « roi des dieux », devint le dieu suprême de l’Égypte, créateur du monde et père du pharaon."
+  },
+  {
+    "id": 169,
+    "question": "À quelle époque Amon fut-il associé à Rê, quand les rois de Thèbes prirent le pouvoir",
+    "answer": "Au Moyen Empire",
+    "choices": [
+      "Au Moyen Empire",
+      "À l’Ancien Empire",
+      "Au Nouvel Empire",
+      "À l’époque ptolémaïque"
+    ],
+    "explanation": "Lorsque les rois originaires de Thèbes prirent le pouvoir, au Moyen Empire, leur dieu Amon fut associé à Rê pour lui donner une portée nationale."
+  },
+  {
+    "id": 170,
+    "question": "Où la Déesse lointaine s’enfuit-elle, changée en lionne",
+    "answer": "Dans les déserts de Nubie",
+    "choices": [
+      "Dans les déserts de Nubie",
+      "Dans les marais du delta",
+      "Dans le désert libyque",
+      "Dans les montagnes du Sinaï"
+    ],
+    "explanation": "Blessée qu’une autre ait pris sa place, la déesse s’enfuit, changée en lionne, dans les déserts de Nubie, au sud de l’Égypte."
+  },
+  {
+    "id": 171,
+    "question": "Sous quelle forme Thot approcha-t-il la Déesse lointaine",
+    "answer": "Un petit babouin",
+    "choices": [
+      "Un petit babouin",
+      "Un ibis",
+      "Un chat",
+      "Un faucon"
+    ],
+    "explanation": "Pour approcher la lionne sans l’effrayer, Thot prit la forme d’un petit babouin, puis l’apaisa par la parole et par des fables."
+  },
+  {
+    "id": 172,
+    "question": "Dans la fable racontée par Thot, quel animal sauve le lion",
+    "answer": "Une souris",
+    "choices": [
+      "Une souris",
+      "Un serpent",
+      "Un oiseau",
+      "Un crocodile"
+    ],
+    "explanation": "Un lion épargne une souris qui, plus tard, le sauve en rongeant les liens d’un filet : même les plus faibles ont leur place dans l’ordre du monde."
+  },
+  {
+    "id": 173,
+    "question": "Sous quelle forme Rê plaça-t-il son Œil sur son front pour qu’il ne reparte plus",
+    "answer": "Un cobra dressé",
+    "choices": [
+      "Un cobra dressé",
+      "Un vautour",
+      "Un disque solaire",
+      "Un scarabée"
+    ],
+    "explanation": "Pour que la déesse ne reparte plus, Rê la plaça sur son front sous la forme d’un cobra dressé, l’uræus, gardien de sa couronne."
+  },
+  {
+    "id": 174,
+    "question": "Quelle fête célébrait chaque année le retour de la Déesse lointaine, notamment à Dendérah",
+    "answer": "La fête de l’ivresse",
+    "choices": [
+      "La fête de l’ivresse",
+      "La fête d’Opet",
+      "La fête-sed",
+      "La fête de la Vallée"
+    ],
+    "explanation": "Le retour de la déesse coïncidait avec la crue : on le célébrait chaque année par une fête de l’ivresse, notamment à Dendérah en l’honneur d’Hathor."
+  },
+  {
+    "id": 175,
+    "question": "Sous le règne de quel roi se déroule le récit de la stèle de la Famine",
+    "answer": "Djéser",
+    "choices": [
+      "Djéser",
+      "Snéfrou",
+      "Khéops",
+      "Ramsès II"
+    ],
+    "explanation": "Gravée à l’époque ptolémaïque, la stèle raconte une famine survenue sous Djéser, le bâtisseur de la première pyramide."
+  },
+  {
+    "id": 176,
+    "question": "Pendant combien d’années la crue du Nil manqua-t-elle, selon la stèle de la Famine",
+    "answer": "Sept",
+    "choices": [
+      "Sept",
+      "Trois",
+      "Neuf",
+      "Douze"
+    ],
+    "explanation": "Depuis sept ans, la crue n’était pas venue : les grains manquaient et les temples eux-mêmes étaient fermés."
+  },
+  {
+    "id": 177,
+    "question": "Quel sage conseiller révéla au roi le secret de la crue",
+    "answer": "Imhotep",
+    "choices": [
+      "Imhotep",
+      "Ptahhotep",
+      "Senenmout",
+      "Ouni"
+    ],
+    "explanation": "Imhotep, le prêtre et architecte de la pyramide à degrés de Saqqarah, consulta les livres sacrés et révéla au roi le secret de la crue."
+  },
+  {
+    "id": 178,
+    "question": "Selon Imhotep, d’où jaillissait le Nil",
+    "answer": "De cavernes sous Éléphantine",
+    "choices": [
+      "De cavernes sous Éléphantine",
+      "Des larmes d’Isis",
+      "D’un lac du désert",
+      "D’une source à Karnak"
+    ],
+    "explanation": "Imhotep révéla que le Nil jaillissait de deux cavernes situées sous l’île d’Éléphantine, dont le maître était Khnoum."
+  },
+  {
+    "id": 179,
+    "question": "Selon les historiens, pourquoi les prêtres de Khnoum firent-ils graver la stèle de la Famine",
+    "answer": "Pour défendre leurs revenus",
+    "choices": [
+      "Pour défendre leurs revenus",
+      "Pour honorer Djéser",
+      "Pour annoncer une crue",
+      "Pour fêter une victoire"
+    ],
+    "explanation": "Rivaux des prêtres d’Isis à Philae, les prêtres de Khnoum attribuèrent leurs droits sur la région à Djéser pour leur donner l’autorité de l’ancienneté : un « faux pieux »."
+  },
+  {
+    "id": 180,
+    "question": "Que désigne le mot « démiurge »",
+    "answer": "Le créateur de l’univers",
+    "choices": [
+      "Le créateur de l’univers",
+      "Le premier pharaon",
+      "L’océan primordial",
+      "Le grand prêtre"
+    ],
+    "explanation": "Dans chaque cosmogonie, le dieu de la ville tient le rôle de démiurge, c’est-à-dire de créateur de l’univers (du grec <i>dêmiourgos</i>, « artisan »)."
+  },
+  {
+    "id": 181,
+    "question": "Quelle était la plus répandue des cosmogonies égyptiennes",
+    "answer": "Celle d’Héliopolis",
+    "choices": [
+      "Celle d’Héliopolis",
+      "Celle d’Hermopolis",
+      "Celle de Memphis",
+      "Celle de Thèbes"
+    ],
+    "explanation": "La plus répandue est celle d’Héliopolis, dont le créateur est le démiurge solaire Atoum, souvent assimilé à Rê."
   }
 ]
