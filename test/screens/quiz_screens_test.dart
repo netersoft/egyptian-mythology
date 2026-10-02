@@ -23,8 +23,12 @@ void main() {
 
   // Not pumpAndSettle: MainRoute (infinite-shake ankh footer) stays mounted
   // underneath every nested route, and QuizPlayScreen runs a real 1s
-  // countdown Timer.periodic -- neither ever "settles".
+  // countdown Timer.periodic -- neither ever "settles". The question files
+  // are over 50 KB, so rootBundle decodes them in a background isolate,
+  // which only completes in real time (runAsync), not in fake-async pumps.
   Future<void> settle(WidgetTester tester) async {
+    await tester.pump();
+    await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 200)));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 1600));
   }

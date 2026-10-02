@@ -1726,5 +1726,449 @@
       "Osiris"
     ],
     "explanation": "Wepwawet opened the way of the dead to the afterlife, a role that brought him close to Anubis."
+  },
+  {
+    "id": 145,
+    "question": "What does the name of the god Atum mean",
+    "answer": "“The Complete One”",
+    "choices": [
+      "“The Complete One”",
+      "“The hidden one”",
+      "“The mother”",
+      "“She who pours”"
+    ],
+    "explanation": "His name means both “the Complete One” and “the One who does not yet exist”: before Creation, Atum held within himself everything that was to be."
+  },
+  {
+    "id": 146,
+    "question": "Into which animal will Atum turn at the end of time",
+    "answer": "A serpent",
+    "choices": [
+      "A serpent",
+      "A scarab",
+      "A falcon",
+      "A ram"
+    ],
+    "explanation": "One text announces that at the end of time, Atum will destroy everything he has created and become a serpent again, alone in the waters of the Nun."
+  },
+  {
+    "id": 147,
+    "question": "Which crown does Atum most often wear",
+    "answer": "The double crown",
+    "choices": [
+      "The double crown",
+      "The white crown",
+      "The red crown",
+      "Two tall plumes"
+    ],
+    "explanation": "Atum is the king of the universe: he most often wears the double crown of Upper and Lower Egypt."
+  },
+  {
+    "id": 148,
+    "question": "What does the Egyptian verb kheper, from which Khepri takes his name, mean",
+    "answer": "To come into being",
+    "choices": [
+      "To come into being",
+      "To shine, to light up",
+      "To push, to roll",
+      "To sleep, to rest"
+    ],
+    "explanation": "Khepri’s name comes from the verb <i>kheper</i>, “to come into being, to transform”: he is the sun reborn every morning."
+  },
+  {
+    "id": 149,
+    "question": "Where was a scarab amulet placed on mummies",
+    "answer": "Over the heart",
+    "choices": [
+      "Over the heart",
+      "On the forehead",
+      "In the hand",
+      "Under the feet"
+    ],
+    "explanation": "A symbol of rebirth, the scarab was placed over the heart of mummies to ensure the deceased a new life."
+  },
+  {
+    "id": 150,
+    "question": "What did the Greeks call Horus the Elder",
+    "answer": "Haroeris",
+    "choices": [
+      "Haroeris",
+      "Harpocrates",
+      "Serapis",
+      "Horakhty"
+    ],
+    "explanation": "The Greeks called this falcon sky god Haroeris; he must not be confused with Horus, the son of Isis and Osiris."
+  },
+  {
+    "id": 151,
+    "question": "With which god did Horus the Elder share the double temple of Kom Ombo",
+    "answer": "Sobek",
+    "choices": [
+      "Sobek",
+      "Khnum",
+      "Montu",
+      "Sokar"
+    ],
+    "explanation": "At Kom Ombo, Horus the Elder shared a double temple with the crocodile god Sobek, each of them holding one half."
+  },
+  {
+    "id": 152,
+    "question": "What are the eyes of Horus the Elder",
+    "answer": "The sun and the moon",
+    "choices": [
+      "The sun and the moon",
+      "Two stars",
+      "The Nile and the desert",
+      "Dawn and dusk"
+    ],
+    "explanation": "Horus the Elder is a falcon god of the sky: his eyes are the sun and the moon."
+  },
+  {
+    "id": 153,
+    "question": "Which gods travel with Heka in the bark of Re",
+    "answer": "Sia and Hu",
+    "choices": [
+      "Sia and Hu",
+      "Shu and Tefnut",
+      "Isis and Nephthys",
+      "Thoth and Maat"
+    ],
+    "explanation": "Heka travels in the bark of Re with Sia, knowledge, and Hu, creative speech: the forces with which the sun creates and protects the world."
+  },
+  {
+    "id": 154,
+    "question": "At Esna, which gods were Heka’s parents",
+    "answer": "Khnum and Neith",
+    "choices": [
+      "Khnum and Neith",
+      "Ptah and Sekhmet",
+      "Amun and Mut",
+      "Osiris and Isis"
+    ],
+    "explanation": "At Esna, Heka was worshipped as a divine child, son of Khnum and Neith, shown with a finger raised to his mouth."
+  },
+  {
+    "id": 155,
+    "question": "What is Seshat the goddess of",
+    "answer": "Writing and reckoning",
+    "choices": [
+      "Writing and reckoning",
+      "War and hunting",
+      "Love and music",
+      "The Nile flood"
+    ],
+    "explanation": "Seshat, companion or daughter of Thoth, is the goddess of writing, reckoning and records."
+  },
+  {
+    "id": 156,
+    "question": "Which animal’s skin does Seshat wear",
+    "answer": "The leopard",
+    "choices": [
+      "The leopard",
+      "The lion",
+      "The bull",
+      "The jackal"
+    ],
+    "explanation": "Seshat is shown as a woman dressed in a leopard skin, wearing a seven-pointed star and holding the scribe’s reed pen."
+  },
+  {
+    "id": 157,
+    "question": "On what did Seshat write the names of the pharaohs",
+    "answer": "The leaves of a sacred tree",
+    "choices": [
+      "The leaves of a sacred tree",
+      "The walls of Karnak",
+      "A golden papyrus",
+      "The stones of the Benben"
+    ],
+    "explanation": "Seshat kept the record of the pharaohs’ regnal years, writing their names on the leaves of the sacred tree of Heliopolis."
+  },
+  {
+    "id": 158,
+    "question": "During which ritual did Seshat help the king fix the site of a temple",
+    "answer": "Stretching the cord",
+    "choices": [
+      "Stretching the cord",
+      "The opening of the mouth",
+      "The weighing of the heart",
+      "The Sed festival"
+    ],
+    "explanation": "During the ritual of “stretching the cord”, Seshat helped the king pull taut the rope that fixed the exact site of the future sanctuary."
+  },
+  {
+    "id": 159,
+    "question": "What is Montu the god of",
+    "answer": "War",
+    "choices": [
+      "War",
+      "Wisdom",
+      "Writing",
+      "Fertility"
+    ],
+    "explanation": "Montu is the god of war: pharaohs called themselves “mighty as Montu” in battle."
+  },
+  {
+    "id": 160,
+    "question": "What does Mentuhotep, the name of several kings of the 11th Dynasty, mean",
+    "answer": "“Montu is satisfied”",
+    "choices": [
+      "“Montu is satisfied”",
+      "“Montu is born”",
+      "“Son of Montu”",
+      "“Beloved of Montu”"
+    ],
+    "explanation": "Several kings of the 11th Dynasty bore the name Mentuhotep, “Montu is satisfied”."
+  },
+  {
+    "id": 161,
+    "question": "Which animal embodied Montu’s strength",
+    "answer": "The bull",
+    "choices": [
+      "The bull",
+      "The lion",
+      "The crocodile",
+      "The ram"
+    ],
+    "explanation": "Montu is sometimes shown as a bull-headed man, the animal that embodied his strength."
+  },
+  {
+    "id": 162,
+    "question": "Satet and Anuket are the goddesses of which region",
+    "answer": "The First Cataract",
+    "choices": [
+      "The First Cataract",
+      "The Nile Delta",
+      "The Siwa Oasis",
+      "The Fayum"
+    ],
+    "explanation": "Satet and Anuket watched over the First Cataract of the Nile, on the southern border of Egypt, with Khnum."
+  },
+  {
+    "id": 163,
+    "question": "What was thrown into the river during the flood to celebrate Anuket",
+    "answer": "Gold and jewellery",
+    "choices": [
+      "Gold and jewellery",
+      "Lotus flowers",
+      "Bread and beer",
+      "Lit lamps"
+    ],
+    "explanation": "During the flood, Anuket was celebrated by throwing coins, gold and jewellery into the river."
+  },
+  {
+    "id": 164,
+    "question": "What does the name of the goddess Satet mean",
+    "answer": "“She who pours”",
+    "choices": [
+      "“She who pours”",
+      "“The mother”",
+      "“The distant one”",
+      "“She who protects”"
+    ],
+    "explanation": "Satet, “she who pours”, was charged with pouring the cool waters of the flood over Egypt."
+  },
+  {
+    "id": 165,
+    "question": "What does the name of the goddess Mut mean",
+    "answer": "“The mother”",
+    "choices": [
+      "“The mother”",
+      "“The powerful one”",
+      "“The hidden one”",
+      "“She who pours”"
+    ],
+    "explanation": "Mut, “the mother”, is the wife of Amun and the mother of Khonsu, with whom she forms the Theban triad."
+  },
+  {
+    "id": 166,
+    "question": "Which bird, used to write her name, is associated with Mut",
+    "answer": "The vulture",
+    "choices": [
+      "The vulture",
+      "The falcon",
+      "The ibis",
+      "The goose"
+    ],
+    "explanation": "Mut sometimes wears a vulture headdress: the bird that writes her name is a symbol of motherhood."
+  },
+  {
+    "id": 167,
+    "question": "Which pharaoh had hundreds of statues of Sekhmet placed in the temple of Mut",
+    "answer": "Amenhotep III",
+    "choices": [
+      "Amenhotep III",
+      "Ramesses II",
+      "Djoser",
+      "Akhenaten"
+    ],
+    "explanation": "Mut could be fearsome like Sekhmet: Amenhotep III had hundreds of statues of the lioness goddess placed in her temple to soothe her anger."
+  },
+  {
+    "id": 168,
+    "question": "Which title did Amun-Re bear in the New Kingdom",
+    "answer": "“King of the gods”",
+    "choices": [
+      "“King of the gods”",
+      "“Lord of the Duat”",
+      "“Lord of eternity”",
+      "“Prince of the desert”"
+    ],
+    "explanation": "In the New Kingdom, Amun-Re, “king of the gods”, became the supreme god of Egypt, creator of the world and father of the pharaoh."
+  },
+  {
+    "id": 169,
+    "question": "When was Amun joined with Re, as kings from Thebes took power",
+    "answer": "In the Middle Kingdom",
+    "choices": [
+      "In the Middle Kingdom",
+      "In the Old Kingdom",
+      "In the New Kingdom",
+      "In the Ptolemaic period"
+    ],
+    "explanation": "When kings from Thebes took power in the Middle Kingdom, their god Amun was joined with Re to give him national standing."
+  },
+  {
+    "id": 170,
+    "question": "Where did the Distant Goddess flee, changed into a lioness",
+    "answer": "To the deserts of Nubia",
+    "choices": [
+      "To the deserts of Nubia",
+      "To the marshes of the Delta",
+      "To the Libyan Desert",
+      "To the mountains of Sinai"
+    ],
+    "explanation": "Wounded that another had taken her place, the goddess fled, changed into a lioness, into the deserts of Nubia, south of Egypt."
+  },
+  {
+    "id": 171,
+    "question": "In what form did Thoth approach the Distant Goddess",
+    "answer": "A small baboon",
+    "choices": [
+      "A small baboon",
+      "An ibis",
+      "A cat",
+      "A falcon"
+    ],
+    "explanation": "To approach the lioness without frightening her, Thoth took the form of a small baboon, then soothed her with words and fables."
+  },
+  {
+    "id": 172,
+    "question": "In the fable told by Thoth, which animal saves the lion",
+    "answer": "A mouse",
+    "choices": [
+      "A mouse",
+      "A snake",
+      "A bird",
+      "A crocodile"
+    ],
+    "explanation": "A lion spares a mouse which later saves him by gnawing through the ropes of a net: even the weakest have their place in the order of the world."
+  },
+  {
+    "id": 173,
+    "question": "In what form did Re place his Eye on his brow so she would never leave again",
+    "answer": "A rearing cobra",
+    "choices": [
+      "A rearing cobra",
+      "A vulture",
+      "A sun disc",
+      "A scarab"
+    ],
+    "explanation": "So that the goddess would never leave again, Re placed her on his brow in the form of a rearing cobra, the uraeus, guardian of his crown."
+  },
+  {
+    "id": 174,
+    "question": "Which festival celebrated the return of the Distant Goddess each year, notably at Dendera",
+    "answer": "The Festival of Drunkenness",
+    "choices": [
+      "The Festival of Drunkenness",
+      "The Opet Festival",
+      "The Sed festival",
+      "The Festival of the Valley"
+    ],
+    "explanation": "The goddess’s return coincided with the flood: it was celebrated every year with a Festival of Drunkenness, notably at Dendera in honour of Hathor."
+  },
+  {
+    "id": 175,
+    "question": "In the reign of which king is the story of the Famine Stela set",
+    "answer": "Djoser",
+    "choices": [
+      "Djoser",
+      "Sneferu",
+      "Khufu",
+      "Ramesses II"
+    ],
+    "explanation": "Carved in the Ptolemaic period, the stela tells of a famine in the reign of Djoser, the builder of the first pyramid."
+  },
+  {
+    "id": 176,
+    "question": "For how many years did the Nile flood fail, according to the Famine Stela",
+    "answer": "Seven",
+    "choices": [
+      "Seven",
+      "Three",
+      "Nine",
+      "Twelve"
+    ],
+    "explanation": "For seven years the flood had not come: grain was scarce and the temples themselves were closed."
+  },
+  {
+    "id": 177,
+    "question": "Which wise adviser revealed the secret of the flood to the king",
+    "answer": "Imhotep",
+    "choices": [
+      "Imhotep",
+      "Ptahhotep",
+      "Senenmut",
+      "Weni"
+    ],
+    "explanation": "Imhotep, the priest and architect of the Step Pyramid at Saqqara, consulted the sacred books and revealed the secret of the flood to the king."
+  },
+  {
+    "id": 178,
+    "question": "According to Imhotep, where did the Nile gush from",
+    "answer": "Caverns beneath Elephantine",
+    "choices": [
+      "Caverns beneath Elephantine",
+      "The tears of Isis",
+      "A lake in the desert",
+      "A spring at Karnak"
+    ],
+    "explanation": "Imhotep revealed that the Nile gushed out of two caverns beneath the island of Elephantine, whose lord was Khnum."
+  },
+  {
+    "id": 179,
+    "question": "According to historians, why did the priests of Khnum have the Famine Stela carved",
+    "answer": "To defend their revenues",
+    "choices": [
+      "To defend their revenues",
+      "To honour Djoser",
+      "To announce a flood",
+      "To celebrate a victory"
+    ],
+    "explanation": "Competing with the priests of Isis at Philae, the priests of Khnum attributed their rights over the region to Djoser to give them the authority of age: a “pious forgery”."
+  },
+  {
+    "id": 180,
+    "question": "What does the word “demiurge” refer to",
+    "answer": "The creator of the universe",
+    "choices": [
+      "The creator of the universe",
+      "The first pharaoh",
+      "The primordial ocean",
+      "The high priest"
+    ],
+    "explanation": "In each cosmogony, the god of the city plays the part of the demiurge, the creator of the universe (from the Greek <i>dēmiourgos</i>, “craftsman”)."
+  },
+  {
+    "id": 181,
+    "question": "Which was the most widespread of the Egyptian cosmogonies",
+    "answer": "That of Heliopolis",
+    "choices": [
+      "That of Heliopolis",
+      "That of Hermopolis",
+      "That of Memphis",
+      "That of Thebes"
+    ],
+    "explanation": "The most widespread is that of Heliopolis, whose creator is the solar demiurge Atum, often identified with Re."
   }
 ]

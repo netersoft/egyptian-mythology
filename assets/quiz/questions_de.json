@@ -1726,5 +1726,449 @@
       "Osiris"
     ],
     "explanation": "Upuaut öffnete den Toten den Weg ins Jenseits, eine Rolle, die ihn Anubis nahebrachte."
+  },
+  {
+    "id": 145,
+    "question": "Was bedeutet der Name des Gottes Atum",
+    "answer": "„Der Vollständige“",
+    "choices": [
+      "„Der Vollständige“",
+      "„Der Verborgene“",
+      "„Die Mutter“",
+      "„Die Ausgießende“"
+    ],
+    "explanation": "Sein Name bedeutet zugleich „der Vollständige“ und „der noch nicht Seiende“: Vor der Schöpfung trug Atum alles in sich, was einmal sein würde."
+  },
+  {
+    "id": 146,
+    "question": "In welches Tier wird sich Atum am Ende der Zeiten verwandeln",
+    "answer": "In eine Schlange",
+    "choices": [
+      "In eine Schlange",
+      "In einen Skarabäus",
+      "In einen Falken",
+      "In einen Widder"
+    ],
+    "explanation": "Ein Text kündigt an, dass Atum am Ende der Zeiten alles, was er erschaffen hat, zerstören und wieder zur Schlange werden wird, allein in den Wassern des Nun."
+  },
+  {
+    "id": 147,
+    "question": "Welche Krone trägt Atum meistens",
+    "answer": "Die Doppelkrone",
+    "choices": [
+      "Die Doppelkrone",
+      "Die weiße Krone",
+      "Die rote Krone",
+      "Zwei hohe Federn"
+    ],
+    "explanation": "Atum ist der König des Universums: Er trägt meist die Doppelkrone von Ober- und Unterägypten."
+  },
+  {
+    "id": 148,
+    "question": "Was bedeutet das ägyptische Verb cheper, von dem der Name Chepre stammt",
+    "answer": "Entstehen",
+    "choices": [
+      "Entstehen",
+      "Leuchten, erhellen",
+      "Schieben, rollen",
+      "Schlafen, ruhen"
+    ],
+    "explanation": "Der Name Chepre kommt vom Verb <i>cheper</i>, „entstehen, sich verwandeln“: Er ist die Sonne, die jeden Morgen neu geboren wird."
+  },
+  {
+    "id": 149,
+    "question": "Wohin legte man den Mumien ein Skarabäus-Amulett",
+    "answer": "Auf das Herz",
+    "choices": [
+      "Auf das Herz",
+      "Auf die Stirn",
+      "In die Hand",
+      "Unter die Füße"
+    ],
+    "explanation": "Als Symbol der Wiedergeburt legte man den Skarabäus auf das Herz der Mumien, um dem Verstorbenen ein neues Leben zu sichern."
+  },
+  {
+    "id": 150,
+    "question": "Wie nannten die Griechen Horus den Älteren",
+    "answer": "Haroeris",
+    "choices": [
+      "Haroeris",
+      "Harpokrates",
+      "Serapis",
+      "Harachte"
+    ],
+    "explanation": "Die Griechen nannten diesen falkengestaltigen Himmelsgott Haroeris; er darf nicht mit Horus, dem Sohn von Isis und Osiris, verwechselt werden."
+  },
+  {
+    "id": 151,
+    "question": "Mit welchem Gott teilte Horus der Ältere den Doppeltempel von Kom Ombo",
+    "answer": "Sobek",
+    "choices": [
+      "Sobek",
+      "Chnum",
+      "Month",
+      "Sokar"
+    ],
+    "explanation": "In Kom Ombo teilte Horus der Ältere einen Doppeltempel mit dem Krokodilgott Sobek; jeder bewohnte eine Hälfte."
+  },
+  {
+    "id": 152,
+    "question": "Was sind die Augen von Horus dem Älteren",
+    "answer": "Sonne und Mond",
+    "choices": [
+      "Sonne und Mond",
+      "Zwei Sterne",
+      "Der Nil und die Wüste",
+      "Morgen- und Abenddämmerung"
+    ],
+    "explanation": "Horus der Ältere ist ein Falkengott des Himmels: Seine Augen sind Sonne und Mond."
+  },
+  {
+    "id": 153,
+    "question": "Welche Götter begleiten Heka in der Barke des Re",
+    "answer": "Sia und Hu",
+    "choices": [
+      "Sia und Hu",
+      "Schu und Tefnut",
+      "Isis und Nephthys",
+      "Thot und Maat"
+    ],
+    "explanation": "Heka fährt in der Barke des Re mit Sia, der Erkenntnis, und Hu, dem schöpferischen Wort: den Kräften, mit denen die Sonne die Welt erschafft und beschützt."
+  },
+  {
+    "id": 154,
+    "question": "Wessen Sohn war Heka in Esna",
+    "answer": "Chnum und Neith",
+    "choices": [
+      "Chnum und Neith",
+      "Ptah und Sachmet",
+      "Amun und Mut",
+      "Osiris und Isis"
+    ],
+    "explanation": "In Esna wurde Heka als göttliches Kind verehrt, Sohn von Chnum und Neith, dargestellt mit dem Finger am Mund."
+  },
+  {
+    "id": 155,
+    "question": "Wofür ist Seschat als Göttin zuständig",
+    "answer": "Schrift und Rechnen",
+    "choices": [
+      "Schrift und Rechnen",
+      "Krieg und Jagd",
+      "Liebe und Musik",
+      "Die Nilflut"
+    ],
+    "explanation": "Seschat, Gefährtin oder Tochter des Thot, ist die Göttin der Schrift, des Rechnens und der Archive."
+  },
+  {
+    "id": 156,
+    "question": "Das Fell welches Tieres trägt Seschat",
+    "answer": "Des Panthers",
+    "choices": [
+      "Des Panthers",
+      "Des Löwen",
+      "Des Stiers",
+      "Des Schakals"
+    ],
+    "explanation": "Seschat wird als Frau im Pantherfell dargestellt, mit einem siebenstrahligen Stern auf dem Kopf und der Binse des Schreibers in der Hand."
+  },
+  {
+    "id": 157,
+    "question": "Worauf schrieb Seschat die Namen der Pharaonen",
+    "answer": "Auf die Blätter eines heiligen Baumes",
+    "choices": [
+      "Auf die Blätter eines heiligen Baumes",
+      "Auf die Mauern von Karnak",
+      "Auf einen goldenen Papyrus",
+      "Auf die Steine des Benben"
+    ],
+    "explanation": "Seschat führte das Verzeichnis der Regierungsjahre der Pharaonen, indem sie ihre Namen auf die Blätter des heiligen Baumes von Heliopolis schrieb."
+  },
+  {
+    "id": 158,
+    "question": "Bei welchem Ritual half Seschat dem König, den Ort eines Tempels festzulegen",
+    "answer": "Beim Strickspannen",
+    "choices": [
+      "Beim Strickspannen",
+      "Bei der Mundöffnung",
+      "Beim Wiegen des Herzens",
+      "Beim Sedfest"
+    ],
+    "explanation": "Beim Ritual des „Strickspannens“ half Seschat dem König, die Schnur zu spannen, die den genauen Ort des künftigen Heiligtums festlegte."
+  },
+  {
+    "id": 159,
+    "question": "Wofür ist Month als Gott zuständig",
+    "answer": "Krieg",
+    "choices": [
+      "Krieg",
+      "Weisheit",
+      "Schrift",
+      "Fruchtbarkeit"
+    ],
+    "explanation": "Month ist der Gott des Krieges: Die Pharaonen nannten sich im Kampf „stark wie Month“."
+  },
+  {
+    "id": 160,
+    "question": "Was bedeutet Mentuhotep, der Name mehrerer Könige der 11. Dynastie",
+    "answer": "„Month ist zufrieden“",
+    "choices": [
+      "„Month ist zufrieden“",
+      "„Month ist geboren“",
+      "„Sohn des Month“",
+      "„Geliebt von Month“"
+    ],
+    "explanation": "Mehrere Könige der 11. Dynastie trugen den Namen Mentuhotep, „Month ist zufrieden“."
+  },
+  {
+    "id": 161,
+    "question": "Welches Tier verkörperte die Kraft des Month",
+    "answer": "Der Stier",
+    "choices": [
+      "Der Stier",
+      "Der Löwe",
+      "Das Krokodil",
+      "Der Widder"
+    ],
+    "explanation": "Month wird manchmal als Mann mit Stierkopf dargestellt, dem Tier, das seine Kraft verkörperte."
+  },
+  {
+    "id": 162,
+    "question": "Satet und Anuket sind die Göttinnen welcher Region",
+    "answer": "Des ersten Katarakts",
+    "choices": [
+      "Des ersten Katarakts",
+      "Des Nildeltas",
+      "Der Oase Siwa",
+      "Des Fayum"
+    ],
+    "explanation": "Satet und Anuket wachten mit Chnum über den ersten Nilkatarakt an der Südgrenze Ägyptens."
+  },
+  {
+    "id": 163,
+    "question": "Was warf man während der Flut zu Ehren der Anuket in den Fluss",
+    "answer": "Gold und Schmuck",
+    "choices": [
+      "Gold und Schmuck",
+      "Lotosblüten",
+      "Brot und Bier",
+      "Brennende Lampen"
+    ],
+    "explanation": "Während der Flut feierte man Anuket, indem man Münzen, Gold und Schmuck in den Fluss warf."
+  },
+  {
+    "id": 164,
+    "question": "Was bedeutet der Name der Göttin Satet",
+    "answer": "„Die Ausgießende“",
+    "choices": [
+      "„Die Ausgießende“",
+      "„Die Mutter“",
+      "„Die Ferne“",
+      "„Die Beschützerin“"
+    ],
+    "explanation": "Satet, „die Ausgießende“, hatte die Aufgabe, die frischen Wasser der Flut über Ägypten zu gießen."
+  },
+  {
+    "id": 165,
+    "question": "Was bedeutet der Name der Göttin Mut",
+    "answer": "„Die Mutter“",
+    "choices": [
+      "„Die Mutter“",
+      "„Die Mächtige“",
+      "„Die Verborgene“",
+      "„Die Ausgießende“"
+    ],
+    "explanation": "Mut, „die Mutter“, ist die Gemahlin des Amun und die Mutter des Chons, mit denen sie die thebanische Triade bildet."
+  },
+  {
+    "id": 166,
+    "question": "Welcher Vogel, mit dem ihr Name geschrieben wird, ist Mut zugeordnet",
+    "answer": "Der Geier",
+    "choices": [
+      "Der Geier",
+      "Der Falke",
+      "Der Ibis",
+      "Die Gans"
+    ],
+    "explanation": "Mut trägt manchmal eine Geierhaube, denn der Geier, der ihren Namen schreibt, ist ein Symbol der Mutterschaft."
+  },
+  {
+    "id": 167,
+    "question": "Welcher Pharao ließ Hunderte Statuen der Sachmet im Tempel der Mut aufstellen",
+    "answer": "Amenophis III.",
+    "choices": [
+      "Amenophis III.",
+      "Ramses II.",
+      "Djoser",
+      "Echnaton"
+    ],
+    "explanation": "Mut konnte furchterregend sein wie Sachmet: Amenophis III. ließ in ihrem Tempel Hunderte Statuen der Löwengöttin aufstellen, um ihren Zorn zu besänftigen."
+  },
+  {
+    "id": 168,
+    "question": "Welchen Titel trug Amun-Re im Neuen Reich",
+    "answer": "„König der Götter“",
+    "choices": [
+      "„König der Götter“",
+      "„Herr der Duat“",
+      "„Herr der Ewigkeit“",
+      "„Fürst der Wüste“"
+    ],
+    "explanation": "Im Neuen Reich wurde Amun-Re, der „König der Götter“, zum höchsten Gott Ägyptens, Schöpfer der Welt und Vater des Pharaos."
+  },
+  {
+    "id": 169,
+    "question": "Wann wurde Amun mit Re verbunden, als Könige aus Theben die Macht übernahmen",
+    "answer": "Im Mittleren Reich",
+    "choices": [
+      "Im Mittleren Reich",
+      "Im Alten Reich",
+      "Im Neuen Reich",
+      "In ptolemäischer Zeit"
+    ],
+    "explanation": "Als Könige aus Theben im Mittleren Reich die Macht übernahmen, wurde ihr Gott Amun mit Re verbunden, um ihm landesweite Bedeutung zu verleihen."
+  },
+  {
+    "id": 170,
+    "question": "Wohin floh die ferne Göttin, in eine Löwin verwandelt",
+    "answer": "In die Wüsten Nubiens",
+    "choices": [
+      "In die Wüsten Nubiens",
+      "In die Sümpfe des Deltas",
+      "In die Libysche Wüste",
+      "In die Berge des Sinai"
+    ],
+    "explanation": "Gekränkt, weil eine andere ihren Platz eingenommen hatte, floh die Göttin in eine Löwin verwandelt in die Wüsten Nubiens, südlich von Ägypten."
+  },
+  {
+    "id": 171,
+    "question": "In welcher Gestalt näherte sich Thot der fernen Göttin",
+    "answer": "Als kleiner Pavian",
+    "choices": [
+      "Als kleiner Pavian",
+      "Als Ibis",
+      "Als Katze",
+      "Als Falke"
+    ],
+    "explanation": "Um sich der Löwin zu nähern, ohne sie zu erschrecken, nahm Thot die Gestalt eines kleinen Pavians an und besänftigte sie dann mit Worten und Fabeln."
+  },
+  {
+    "id": 172,
+    "question": "Welches Tier rettet in Thots Fabel den Löwen",
+    "answer": "Eine Maus",
+    "choices": [
+      "Eine Maus",
+      "Eine Schlange",
+      "Ein Vogel",
+      "Ein Krokodil"
+    ],
+    "explanation": "Ein Löwe verschont eine Maus, die ihn später rettet, indem sie die Stricke eines Netzes durchnagt: Selbst die Schwächsten haben ihren Platz in der Ordnung der Welt."
+  },
+  {
+    "id": 173,
+    "question": "In welcher Gestalt setzte Re sein Auge auf seine Stirn, damit es nie wieder fortginge",
+    "answer": "Als aufgerichtete Kobra",
+    "choices": [
+      "Als aufgerichtete Kobra",
+      "Als Geier",
+      "Als Sonnenscheibe",
+      "Als Skarabäus"
+    ],
+    "explanation": "Damit die Göttin nie wieder fortginge, setzte Re sie in Gestalt einer aufgerichteten Kobra, des Uräus, auf seine Stirn: Sie wurde zur Hüterin seiner Krone."
+  },
+  {
+    "id": 174,
+    "question": "Welches Fest feierte jedes Jahr die Rückkehr der fernen Göttin, vor allem in Dendera",
+    "answer": "Das Fest der Trunkenheit",
+    "choices": [
+      "Das Fest der Trunkenheit",
+      "Das Opetfest",
+      "Das Sedfest",
+      "Das Talfest"
+    ],
+    "explanation": "Die Rückkehr der Göttin fiel mit der Flut zusammen: Man feierte sie jedes Jahr mit einem Fest der Trunkenheit, vor allem in Dendera zu Ehren der Hathor."
+  },
+  {
+    "id": 175,
+    "question": "Unter welchem König spielt die Erzählung der Hungersnotstele",
+    "answer": "Djoser",
+    "choices": [
+      "Djoser",
+      "Snofru",
+      "Cheops",
+      "Ramses II."
+    ],
+    "explanation": "Die in ptolemäischer Zeit gemeißelte Stele erzählt von einer Hungersnot unter Djoser, dem Erbauer der ersten Pyramide."
+  },
+  {
+    "id": 176,
+    "question": "Wie viele Jahre blieb die Nilflut laut der Hungersnotstele aus",
+    "answer": "Sieben",
+    "choices": [
+      "Sieben",
+      "Drei",
+      "Neun",
+      "Zwölf"
+    ],
+    "explanation": "Seit sieben Jahren war die Flut ausgeblieben: Das Korn fehlte, und selbst die Tempel waren geschlossen."
+  },
+  {
+    "id": 177,
+    "question": "Welcher weise Berater enthüllte dem König das Geheimnis der Flut",
+    "answer": "Imhotep",
+    "choices": [
+      "Imhotep",
+      "Ptahhotep",
+      "Senenmut",
+      "Weni"
+    ],
+    "explanation": "Imhotep, Priester und Baumeister der Stufenpyramide von Sakkara, befragte die heiligen Bücher und enthüllte dem König das Geheimnis der Flut."
+  },
+  {
+    "id": 178,
+    "question": "Woraus entsprang der Nil laut Imhotep",
+    "answer": "Aus Höhlen unter Elephantine",
+    "choices": [
+      "Aus Höhlen unter Elephantine",
+      "Aus den Tränen der Isis",
+      "Aus einem See in der Wüste",
+      "Aus einer Quelle in Karnak"
+    ],
+    "explanation": "Imhotep enthüllte, dass der Nil zwei Höhlen unter der Insel Elephantine entsprang, deren Herr Chnum war."
+  },
+  {
+    "id": 179,
+    "question": "Warum ließen die Priester des Chnum laut den Historikern die Hungersnotstele meißeln",
+    "answer": "Um ihre Einkünfte zu sichern",
+    "choices": [
+      "Um ihre Einkünfte zu sichern",
+      "Um Djoser zu ehren",
+      "Um eine Flut anzukündigen",
+      "Um einen Sieg zu feiern"
+    ],
+    "explanation": "Im Wettstreit mit den Priestern der Isis in Philae schrieben die Priester des Chnum ihre Rechte auf die Region Djoser zu, um ihnen die Autorität des Alters zu verleihen: eine „fromme Fälschung“."
+  },
+  {
+    "id": 180,
+    "question": "Was bezeichnet das Wort „Demiurg“",
+    "answer": "Den Schöpfer des Universums",
+    "choices": [
+      "Den Schöpfer des Universums",
+      "Den ersten Pharao",
+      "Den Urozean",
+      "Den Hohepriester"
+    ],
+    "explanation": "In jeder Kosmogonie spielt der Gott der Stadt die Rolle des Demiurgen, also des Schöpfers des Universums (von griechisch <i>dēmiourgos</i>, „Handwerker“)."
+  },
+  {
+    "id": 181,
+    "question": "Welche ägyptische Kosmogonie war am weitesten verbreitet",
+    "answer": "Die von Heliopolis",
+    "choices": [
+      "Die von Heliopolis",
+      "Die von Hermopolis",
+      "Die von Memphis",
+      "Die von Theben"
+    ],
+    "explanation": "Am weitesten verbreitet ist die Kosmogonie von Heliopolis, deren Schöpfer der Sonnendemiurg Atum ist, der oft mit Re gleichgesetzt wird."
   }
 ]
