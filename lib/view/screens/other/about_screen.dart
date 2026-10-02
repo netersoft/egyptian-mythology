@@ -46,8 +46,8 @@ class AboutScreen extends StatelessWidget {
   // review quota gets a silent no-op with no way to tell, which is exactly
   // what happened when this was tried -- isAvailable()/requestReview() both
   // reported success but no dialog ever appeared. requestReview() is meant to
-  // be triggered automatically at a good moment (e.g. after a completed
-  // quiz), not from an explicit "Rate us" button -- so this always goes
+  // be triggered automatically at a good moment (ReviewService, after a beaten
+  // quiz record), not from an explicit "Rate us" button -- so this always goes
   // straight to the Play Store listing instead -- opened in the Play Store
   // app (externalApplication), as in_app_review's openStoreListing() did.
   // https://developer.android.com/guide/playcore/in-app-review

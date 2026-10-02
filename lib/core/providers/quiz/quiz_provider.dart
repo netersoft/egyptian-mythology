@@ -9,6 +9,7 @@ import '../../models/quiz_theme.dart';
 import '../../services/audio/audio_service.dart';
 import '../../services/di/locator.dart';
 import '../../services/quiz/quiz_service.dart';
+import '../../services/review/review_service.dart';
 import '../../services/scores/scores_repository.dart';
 import 'quiz_review_provider.dart';
 
@@ -43,6 +44,8 @@ class QuizController extends _$QuizController {
   ScoresRepository get _scoresRepository => locator<ScoresRepository>();
 
   AudioService get _audioService => locator<AudioService>();
+
+  ReviewService get _reviewService => locator<ReviewService>();
 
   @override
   QuizState build() {
@@ -187,7 +190,12 @@ class QuizController extends _$QuizController {
   Future<void> _finish({required bool allQuestionsAnswered}) async {
     _timer?.cancel();
     // Records are per theme, like the score history.
-    final isRecord = state.score > _scoresRepository.getBestScore(_theme);
+    final previousBest = _scoresRepository.getBestScore(_theme);
+    final isRecord = state.score > previousBest;
+    // Ask for a rating after beating a record, but not after the first one:
+    // any first score on a theme is a "record", which says nothing yet about
+    // whether the player enjoys the app.
+    if (isRecord && previousBest > 0) unawaited(_reviewService.requestAfterRecord());
     ref.read(quizReviewProvider.notifier).set(_mistakes);
     await _scoresRepository.add(state.score, _theme);
     if (!ref.mounted) return;
