@@ -1,7 +1,7 @@
 # Egyptian Mythology - Agent Guide
 
 Offline reference/quiz app about Egyptian mythology, a Flutter rewrite of a legacy
-native Android app (`.legacy/`, package `com.neteru.ankh`). No backend, no auth —
+native Android app (package `com.neteru.ankh`). No backend, no auth —
 see `README.md` for the full feature/architecture overview.
 
 ## Project Setup
