@@ -12,7 +12,7 @@ enum QuizTheme {
   bool includes(QuizQuestionModel question) => this == all || (question.ref?.startsWith('$name/') ?? false);
 
   String label(Translations t) => switch (this) {
-    all => t.allThemes,
+    all => t.fullQuiz,
     gods => t.gods,
     cosmogonies => t.cosmogonies,
     myths => t.myths,

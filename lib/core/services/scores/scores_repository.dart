@@ -21,6 +21,13 @@ class ScoresRepository {
     return raw.cast<ScoreEntryModel>().where((entry) => entry.quizTheme == theme).map(_withPlayedAt).toList();
   }
 
+  // Every game, whatever its theme, for the stats "All" view -- which shows
+  // no record, since scores of different themes aren't comparable.
+  List<ScoreEntryModel> getAllGames() {
+    final raw = _box.get(HiveKeys.scoresList, defaultValue: <ScoreEntryModel>[]) as List;
+    return raw.cast<ScoreEntryModel>().map(_withPlayedAt).toList();
+  }
+
   int getBestScore([QuizTheme theme = QuizTheme.all]) => _prefs.getInt(PrefKeys.bestScoreFor(theme), defaultValue: 0) ?? 0;
 
   Future<void> add(int score, [QuizTheme theme = QuizTheme.all]) async {
