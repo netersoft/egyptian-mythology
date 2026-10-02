@@ -12,6 +12,7 @@ void main() {
   setUp(() async {
     final mockScoresRepository = MockScoresRepository();
     when(mockScoresRepository.getAll).thenReturn([]);
+    when(mockScoresRepository.getAllGames).thenReturn([]);
     when(mockScoresRepository.getBestScore).thenReturn(0);
 
     await setupTestLocator(scoresRepository: mockScoresRepository);

@@ -139,6 +139,14 @@ void main() {
       expect(repository.getBestScore(QuizTheme.myths), 500);
     });
 
+    test('getAllGames returns every game, whatever its theme, in insertion order', () async {
+      await repository.add(100);
+      await repository.add(40, QuizTheme.gods);
+      await repository.add(500, QuizTheme.myths);
+
+      expect(repository.getAllGames().map((e) => (e.score, e.quizTheme)), [(100, QuizTheme.all), (40, QuizTheme.gods), (500, QuizTheme.myths)]);
+    });
+
     test('keeps the pre-themes record as the full game record', () async {
       prefs[PrefKeys.bestScore] = 420;
 

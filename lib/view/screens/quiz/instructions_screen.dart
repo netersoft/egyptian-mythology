@@ -53,7 +53,7 @@ class _InstructionsScreenState extends State<InstructionsScreen> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: QuizThemeChips(selected: _theme, onSelected: (theme) => setState(() => _theme = theme)),
+              child: QuizThemeChips(selected: _theme, onSelected: (theme) => setState(() => _theme = theme!)),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 12, bottom: 24),

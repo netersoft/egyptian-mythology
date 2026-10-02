@@ -29,6 +29,7 @@ void main() {
     bestScore = 0;
 
     // [bestScore] is the full game record; a theme's record is its best entry.
+    when(() => mockScoresRepository.getAllGames()).thenAnswer((_) => scores);
     when(() => mockScoresRepository.getAll(any())).thenAnswer(
       (invocation) => scores.where((e) => e.quizTheme == invocation.positionalArguments[0]).toList(),
     );
@@ -66,11 +67,20 @@ void main() {
     await settle(tester);
   }
 
+  // The screen opens on the "All" view; the record lives on each theme.
+  Future<void> showFullQuiz(WidgetTester tester) async {
+    await tester.tap(find.byKey(const ValueKey('stats_theme_all')));
+    await settle(tester);
+  }
+
   group('StatsScreen', () {
-    testWidgets('shows the empty state and a best score of 0 when no scores were recorded', (tester) async {
+    testWidgets('opens on every game, with no record, and shows the empty state when no scores were recorded', (tester) async {
       await pumpAt(tester, const StatsRoute().location);
 
       expect(find.text(t.noScore), findsOneWidget);
+      expect(find.text(t.allGames), findsOneWidget);
+
+      await showFullQuiz(tester);
       expect(find.text('Best Score: 0'), findsOneWidget);
     });
 
@@ -85,6 +95,7 @@ void main() {
 
       testWidgets('lists recorded scores and the current best score', (tester) async {
         await pumpAt(tester, const StatsRoute().location);
+        await showFullQuiz(tester);
 
         expect(find.text(t.noScore), findsNothing);
         expect(find.text('100'), findsOneWidget);
@@ -120,6 +131,8 @@ void main() {
 
         verify(() => mockScoresRepository.clear()).called(1);
         expect(find.text(t.noScore), findsOneWidget);
+
+        await showFullQuiz(tester);
         expect(find.text('Best Score: 0'), findsOneWidget);
       });
 
@@ -143,9 +156,22 @@ void main() {
         expect(find.text(t.scoresProgress), findsOneWidget);
       });
 
+      testWidgets('the All view lists every game with its theme', (tester) async {
+        scores = [...scores, ScoreEntryModel(score: 70, playedAt: DateTime(2024, 1, 3, 9), theme: QuizTheme.gods.name)];
+        await pumpAt(tester, const StatsRoute().location);
+
+        expect(find.text('100'), findsOneWidget);
+        expect(find.text('250'), findsOneWidget);
+        expect(find.text('70'), findsOneWidget);
+        expect(find.text(t.fullQuiz), findsNWidgets(3)); // two rows + the chip
+        expect(find.text(t.gods), findsNWidgets(2)); // one row + the chip
+        expect(find.textContaining('Best Score'), findsNothing);
+      });
+
       testWidgets('a theme chip shows only that theme\'s scores and record', (tester) async {
         scores = [...scores, ScoreEntryModel(score: 70, playedAt: DateTime(2024, 1, 3, 9), theme: QuizTheme.gods.name)];
         await pumpAt(tester, const StatsRoute().location);
+        await showFullQuiz(tester);
 
         expect(find.text('70'), findsNothing);
         expect(find.text('Best Score: 250'), findsOneWidget);

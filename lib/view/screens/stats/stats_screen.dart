@@ -28,8 +28,9 @@ class StatsScreen extends StatefulWidget {
 class _StatsScreenState extends State<StatsScreen> {
   final _repository = locator<ScoresRepository>();
 
-  // Each theme has its own history and record (see ScoresRepository).
-  QuizTheme _theme = QuizTheme.all;
+  // Each theme has its own history and record (see ScoresRepository); null is
+  // the "All" view, every game whatever its theme, which has no record.
+  QuizTheme? _theme;
   List<ScoreEntryModel> _scores = const [];
   int _bestScore = 0;
 
@@ -41,8 +42,9 @@ class _StatsScreenState extends State<StatsScreen> {
 
   void _refresh() {
     setState(() {
-      _scores = _repository.getAll(_theme);
-      _bestScore = _repository.getBestScore(_theme);
+      final theme = _theme;
+      _scores = theme == null ? _repository.getAllGames() : _repository.getAll(theme);
+      _bestScore = theme == null ? 0 : _repository.getBestScore(theme);
     });
   }
 
@@ -127,11 +129,12 @@ class _StatsScreenState extends State<StatsScreen> {
       child: SafeArea(
         child: Column(
           children: [
-            AppHeaderCard(title: context.t.bestScore(value: _bestScore)),
+            AppHeaderCard(title: _theme == null ? context.t.allGames : context.t.bestScore(value: _bestScore)),
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
               child: QuizThemeChips(
                 keyPrefix: 'stats_theme',
+                includeEverything: true,
                 selected: _theme,
                 onSelected: (theme) {
                   _theme = theme;
@@ -159,7 +162,18 @@ class _StatsScreenState extends State<StatsScreen> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(_formatDate(entry), style: const TextStyle(color: AppColors.goldenYellow)),
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(_formatDate(entry), style: const TextStyle(color: AppColors.goldenYellow)),
+                                      // In the "All" view, say which game each score comes from.
+                                      if (_theme == null)
+                                        Text(
+                                          entry.quizTheme.label(context.t),
+                                          style: const TextStyle(color: AppColors.goldenRod, fontSize: 12),
+                                        ),
+                                    ],
+                                  ),
                                   Text(
                                     '${entry.score}',
                                     style: const TextStyle(color: AppColors.goldenRod, fontWeight: FontWeight.bold),
