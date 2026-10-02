@@ -180,7 +180,7 @@ void main() {
         expect(state.phase, QuizPhase.gameOver);
         expect(state.allQuestionsAnswered, isFalse);
         expect(state.life, 0);
-        verify(() => mockScoresRepository.add(0, QuizTheme.all)).called(1);
+        verify(() => mockScoresRepository.add(0)).called(1);
       });
     });
 
@@ -246,10 +246,12 @@ void main() {
 
     test('a themed game is a record against that theme\'s best score only', () {
       fakeAsync((async) {
-        when(() => mockScoresRepository.getBestScore(QuizTheme.all)).thenReturn(1000000);
+        when(() => mockScoresRepository.getBestScore()).thenReturn(1000000);
         when(() => mockScoresRepository.getBestScore(QuizTheme.myths)).thenReturn(10);
         when(() => mockQuizService.loadQuestions()).thenAnswer(
-          (_) async => [QuizQuestionModel(id: 1, question: 'Question', answer: 'A', choices: ['A', 'B', 'C', 'D'], ref: 'myths/myth_mort')],
+          (_) async => [
+            const QuizQuestionModel(id: 1, question: 'Question', answer: 'A', choices: ['A', 'B', 'C', 'D'], ref: 'myths/myth_mort'),
+          ],
         );
         final container = makeContainer();
         container.read(quizControllerProvider.notifier).start(theme: QuizTheme.myths);
@@ -313,7 +315,7 @@ void main() {
         expect(state.phase, QuizPhase.gameOver);
         expect(state.allQuestionsAnswered, isTrue);
         expect(state.score, greaterThan(0));
-        verify(() => mockScoresRepository.add(state.score, QuizTheme.all)).called(1);
+        verify(() => mockScoresRepository.add(state.score)).called(1);
       });
     });
 
