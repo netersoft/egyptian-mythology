@@ -1,3 +1,5 @@
+import 'quiz_theme.dart';
+
 class ScoreEntryModel {
   final int score;
 
@@ -11,5 +13,12 @@ class ScoreEntryModel {
   // as a display fallback if one can't be parsed; new entries leave it empty.
   final String date;
 
-  const ScoreEntryModel({required this.score, this.playedAt, this.date = ''});
+  // QuizTheme.name of the game, stored as a plain string so the Hive adapter
+  // needs no enum adapter. Null on entries saved before themes existed, which
+  // were all full games.
+  final String? theme;
+
+  const ScoreEntryModel({required this.score, this.playedAt, this.date = '', this.theme});
+
+  QuizTheme get quizTheme => QuizTheme.values.asNameMap()[theme] ?? QuizTheme.all;
 }
