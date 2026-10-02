@@ -6,6 +6,7 @@ import '../documentation/documentation_service.dart';
 import '../documentation/reading_progress_repository.dart';
 import '../hive/service.dart';
 import '../quiz/quiz_service.dart';
+import '../review/review_service.dart';
 import '../scores/scores_repository.dart';
 import '../shared_preferences/service.dart';
 
@@ -36,4 +37,7 @@ abstract class AppModule {
 
   @singleton
   AudioService get audioService => AudioService();
+
+  @singleton
+  ReviewService get reviewService => ReviewService();
 }

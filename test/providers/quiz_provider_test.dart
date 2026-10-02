@@ -18,18 +18,21 @@ List<QuizQuestionModel> _questions(int count) => List.generate(
 void main() {
   late MockQuizService mockQuizService;
   late MockScoresRepository mockScoresRepository;
+  late MockReviewService mockReviewService;
 
   setUpAll(() => registerFallbackValue(QuizTheme.all));
 
   setUp(() async {
     mockQuizService = MockQuizService();
     mockScoresRepository = MockScoresRepository();
+    mockReviewService = MockReviewService();
+    when(() => mockReviewService.requestAfterRecord()).thenAnswer((_) async {});
 
     when(() => mockQuizService.loadQuestions()).thenAnswer((_) async => _questions(10));
     when(() => mockScoresRepository.getBestScore(any())).thenReturn(0);
     when(() => mockScoresRepository.add(any(), any())).thenAnswer((_) async {});
 
-    await setupTestLocator(quizService: mockQuizService, scoresRepository: mockScoresRepository);
+    await setupTestLocator(quizService: mockQuizService, scoresRepository: mockScoresRepository, reviewService: mockReviewService);
   });
 
   tearDown(teardownTestLocator);
@@ -333,6 +336,38 @@ void main() {
         async.elapse(const Duration(milliseconds: 2200));
 
         expect(container.read(quizControllerProvider).isRecord, isTrue);
+      });
+    });
+
+    group('rating request', () {
+      // One question answered right at once: a game over with a score > 0.
+      void playOneRightAnswer(FakeAsync async) {
+        final container = makeContainer();
+        container.read(quizControllerProvider.notifier).start();
+        async.flushMicrotasks();
+        final state = container.read(quizControllerProvider);
+        container.read(quizControllerProvider.notifier).answer(state.choices.indexOf('Answer0'));
+        async.elapse(const Duration(milliseconds: 2200));
+        expect(container.read(quizControllerProvider).phase, QuizPhase.gameOver);
+      }
+
+      setUp(() => when(() => mockQuizService.loadQuestions()).thenAnswer((_) async => _questions(1)));
+
+      test('asks for a rating when the player beats a previous record', () {
+        when(() => mockScoresRepository.getBestScore(any())).thenReturn(50);
+        fakeAsync(playOneRightAnswer);
+        verify(() => mockReviewService.requestAfterRecord()).called(1);
+      });
+
+      test('does not ask after the first record, set with no previous score', () {
+        fakeAsync(playOneRightAnswer);
+        verifyNever(() => mockReviewService.requestAfterRecord());
+      });
+
+      test('does not ask when the score is not a record', () {
+        when(() => mockScoresRepository.getBestScore(any())).thenReturn(1000000);
+        fakeAsync(playOneRightAnswer);
+        verifyNever(() => mockReviewService.requestAfterRecord());
       });
     });
 

@@ -6,6 +6,7 @@ import 'package:egyptian_mythology/core/services/documentation/documentation_ser
 import 'package:egyptian_mythology/core/services/documentation/reading_progress_repository.dart';
 import 'package:egyptian_mythology/core/services/hive/service.dart';
 import 'package:egyptian_mythology/core/services/quiz/quiz_service.dart';
+import 'package:egyptian_mythology/core/services/review/review_service.dart';
 import 'package:egyptian_mythology/core/services/scores/scores_repository.dart';
 import 'package:egyptian_mythology/core/services/shared_preferences/service.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -23,6 +24,8 @@ class MockScoresRepository extends Mock implements ScoresRepository {}
 
 class MockReadingProgressRepository extends Mock implements ReadingProgressRepository {}
 
+class MockReviewService extends Mock implements ReviewService {}
+
 Future<void> setupTestLocator({
   SharedPreferencesService? sharedPreferencesService,
   NavigationHelper? navigationHelper,
@@ -32,6 +35,7 @@ Future<void> setupTestLocator({
   QuizService? quizService,
   ScoresRepository? scoresRepository,
   ReadingProgressRepository? readingProgressRepository,
+  ReviewService? reviewService,
 }) async {
   await dotenv.load();
 
@@ -86,6 +90,14 @@ Future<void> setupTestLocator({
   if (!locator.isRegistered<ScoresRepository>()) {
     locator.registerSingleton<ScoresRepository>(scoresRepository ?? ScoresRepository());
   }
+
+  if (!locator.isRegistered<ReviewService>()) {
+    final review = reviewService ?? MockReviewService();
+    if (review is MockReviewService) {
+      when(review.requestAfterRecord).thenAnswer((_) async {});
+    }
+    locator.registerSingleton<ReviewService>(review);
+  }
 }
 
 void teardownTestLocator() {
@@ -112,5 +124,8 @@ void teardownTestLocator() {
   }
   if (locator.isRegistered<ScoresRepository>()) {
     locator.unregister<ScoresRepository>();
+  }
+  if (locator.isRegistered<ReviewService>()) {
+    locator.unregister<ReviewService>();
   }
 }
