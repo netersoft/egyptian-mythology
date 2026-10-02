@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:egyptian_mythology/core/models/quiz_theme.dart';
 import 'package:egyptian_mythology/core/models/score_entry_model.dart';
 import 'package:egyptian_mythology/core/services/di/locator.dart';
 import 'package:egyptian_mythology/core/services/hive/hive_adapters.dart';
@@ -18,7 +19,7 @@ void main() {
   late Directory tempDir;
   late MockSharedPreferencesService mockPrefs;
   late ScoresRepository repository;
-  int? bestScore;
+  late Map<String, int> prefs;
 
   setUpAll(Hive.registerAdapters);
 
@@ -29,10 +30,10 @@ void main() {
     final hiveService = HiveService()..scoresBox = await Hive.openBox(HiveKeys.scores);
 
     mockPrefs = MockSharedPreferencesService();
-    bestScore = 0;
-    when(() => mockPrefs.getInt(PrefKeys.bestScore, defaultValue: any(named: 'defaultValue'))).thenAnswer((_) => bestScore);
-    when(() => mockPrefs.setInt(PrefKeys.bestScore, any())).thenAnswer((invocation) async {
-      bestScore = invocation.positionalArguments[1] as int;
+    prefs = {};
+    when(() => mockPrefs.getInt(any(), defaultValue: any(named: 'defaultValue'))).thenAnswer((invocation) => prefs[invocation.positionalArguments[0]]);
+    when(() => mockPrefs.setInt(any(), any())).thenAnswer((invocation) async {
+      prefs[invocation.positionalArguments[0] as String] = invocation.positionalArguments[1] as int;
       return true;
     });
 
@@ -111,14 +112,38 @@ void main() {
       expect(repository.getBestScore(), 300);
     });
 
-    test('clear wipes both the score history and the best score', () async {
+    test('clear wipes the score history and the best score of every theme', () async {
       await repository.add(100);
       await repository.add(300);
+      await repository.add(80, QuizTheme.gods);
 
       await repository.clear();
 
       expect(repository.getAll(), isEmpty);
+      expect(repository.getAll(QuizTheme.gods), isEmpty);
       expect(repository.getBestScore(), 0);
+      expect(repository.getBestScore(QuizTheme.gods), 0);
+    });
+
+    test('keeps a separate history and record per theme', () async {
+      await repository.add(100);
+      await repository.add(40, QuizTheme.gods);
+      await repository.add(60, QuizTheme.gods);
+      await repository.add(500, QuizTheme.myths);
+
+      expect(repository.getAll().map((e) => e.score), [100]);
+      expect(repository.getAll(QuizTheme.gods).map((e) => e.score), [40, 60]);
+      expect(repository.getAll(QuizTheme.cosmogonies), isEmpty);
+      expect(repository.getBestScore(), 100);
+      expect(repository.getBestScore(QuizTheme.gods), 60);
+      expect(repository.getBestScore(QuizTheme.myths), 500);
+    });
+
+    test('keeps the pre-themes record as the full game record', () async {
+      prefs[PrefKeys.bestScore] = 420;
+
+      expect(repository.getBestScore(), 420);
+      expect(repository.getBestScore(QuizTheme.gods), 0);
     });
   });
 }

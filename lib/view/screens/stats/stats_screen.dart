@@ -4,6 +4,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import '../../../core/models/quiz_theme.dart';
 import '../../../core/models/score_entry_model.dart';
 import '../../../core/services/audio/audio_service.dart';
 import '../../../core/services/di/locator.dart';
@@ -13,6 +14,7 @@ import '../../components/backgrounds/pyramid_background.dart';
 import '../../components/dialogs/egyptian_alert_dialog.dart';
 import '../../components/misc/app_header_card.dart';
 import '../../components/misc/floating_modal.dart';
+import '../../components/misc/quiz_theme_chips.dart';
 import '../../themes/app_colors.dart';
 import '../../themes/app_decorations.dart';
 
@@ -26,6 +28,8 @@ class StatsScreen extends StatefulWidget {
 class _StatsScreenState extends State<StatsScreen> {
   final _repository = locator<ScoresRepository>();
 
+  // Each theme has its own history and record (see ScoresRepository).
+  QuizTheme _theme = QuizTheme.all;
   List<ScoreEntryModel> _scores = const [];
   int _bestScore = 0;
 
@@ -37,8 +41,8 @@ class _StatsScreenState extends State<StatsScreen> {
 
   void _refresh() {
     setState(() {
-      _scores = _repository.getAll();
-      _bestScore = _repository.getBestScore();
+      _scores = _repository.getAll(_theme);
+      _bestScore = _repository.getBestScore(_theme);
     });
   }
 
@@ -124,6 +128,17 @@ class _StatsScreenState extends State<StatsScreen> {
         child: Column(
           children: [
             AppHeaderCard(title: context.t.bestScore(value: _bestScore)),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+              child: QuizThemeChips(
+                keyPrefix: 'stats_theme',
+                selected: _theme,
+                onSelected: (theme) {
+                  _theme = theme;
+                  _refresh();
+                },
+              ),
+            ),
             Expanded(
               child: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 16),

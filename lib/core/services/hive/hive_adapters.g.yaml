@@ -5,7 +5,7 @@ nextTypeId: 139
 types:
   ScoreEntryModel:
     typeId: 138
-    nextIndex: 3
+    nextIndex: 4
     fields:
       date:
         index: 0
@@ -13,3 +13,5 @@ types:
         index: 1
       playedAt:
         index: 2
+      theme:
+        index: 3

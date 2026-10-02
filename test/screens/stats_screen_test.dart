@@ -1,3 +1,4 @@
+import 'package:egyptian_mythology/core/models/quiz_theme.dart';
 import 'package:egyptian_mythology/core/models/score_entry_model.dart';
 import 'package:egyptian_mythology/core/routes/app_route.dart';
 import 'package:egyptian_mythology/core/routes/router.dart';
@@ -17,15 +18,25 @@ void main() {
 
   // The real app gets intl date symbols loaded by GlobalMaterialLocalizations;
   // these tests pump a bare MaterialApp, so load them explicitly.
-  setUpAll(initializeDateFormatting);
+  setUpAll(() async {
+    registerFallbackValue(QuizTheme.all);
+    await initializeDateFormatting();
+  });
 
   setUp(() async {
     mockScoresRepository = MockScoresRepository();
     scores = [];
     bestScore = 0;
 
-    when(() => mockScoresRepository.getAll()).thenAnswer((_) => scores);
-    when(() => mockScoresRepository.getBestScore()).thenAnswer((_) => bestScore);
+    // [bestScore] is the full game record; a theme's record is its best entry.
+    when(() => mockScoresRepository.getAll(any())).thenAnswer(
+      (invocation) => scores.where((e) => e.quizTheme == invocation.positionalArguments[0]).toList(),
+    );
+    when(() => mockScoresRepository.getBestScore(any())).thenAnswer((invocation) {
+      final theme = invocation.positionalArguments[0] as QuizTheme;
+      if (theme == QuizTheme.all) return bestScore;
+      return scores.where((e) => e.quizTheme == theme).fold(0, (best, e) => e.score > best ? e.score : best);
+    });
     when(() => mockScoresRepository.clear()).thenAnswer((_) async {
       scores = [];
       bestScore = 0;
@@ -130,6 +141,27 @@ void main() {
         await settle(tester);
 
         expect(find.text(t.scoresProgress), findsOneWidget);
+      });
+
+      testWidgets('a theme chip shows only that theme\'s scores and record', (tester) async {
+        scores = [...scores, ScoreEntryModel(score: 70, playedAt: DateTime(2024, 1, 3, 9), theme: QuizTheme.gods.name)];
+        await pumpAt(tester, const StatsRoute().location);
+
+        expect(find.text('70'), findsNothing);
+        expect(find.text('Best Score: 250'), findsOneWidget);
+
+        await tester.tap(find.byKey(const ValueKey('stats_theme_gods')));
+        await settle(tester);
+
+        expect(find.text('70'), findsOneWidget);
+        expect(find.text('100'), findsNothing);
+        expect(find.text('Best Score: 70'), findsOneWidget);
+
+        await tester.tap(find.byKey(const ValueKey('stats_theme_myths')));
+        await settle(tester);
+
+        expect(find.text(t.noScore), findsOneWidget);
+        expect(find.text('Best Score: 0'), findsOneWidget);
       });
     });
   });

@@ -32,6 +32,7 @@ const _streakForLife = 5;
 @riverpod
 class QuizController extends _$QuizController {
   List<QuizQuestionModel> _questions = [];
+  QuizTheme _theme = QuizTheme.all;
   int _index = 0;
   int _correctStreak = 0;
   final _mistakes = <QuizMistake>[];
@@ -52,6 +53,7 @@ class QuizController extends _$QuizController {
   Future<void> start({QuizTheme theme = QuizTheme.all}) async {
     _questions = (await _quizService.loadQuestions()).where(theme.includes).toList();
     if (!ref.mounted) return;
+    _theme = theme;
     _index = 0;
     _correctStreak = 0;
     _mistakes.clear();
@@ -184,9 +186,10 @@ class QuizController extends _$QuizController {
 
   Future<void> _finish({required bool allQuestionsAnswered}) async {
     _timer?.cancel();
-    final isRecord = state.score > _scoresRepository.getBestScore();
+    // Records are per theme, like the score history.
+    final isRecord = state.score > _scoresRepository.getBestScore(_theme);
     ref.read(quizReviewProvider.notifier).set(_mistakes);
-    await _scoresRepository.add(state.score);
+    await _scoresRepository.add(state.score, _theme);
     if (!ref.mounted) return;
     state = state.copyWith(phase: QuizPhase.gameOver, allQuestionsAnswered: allQuestionsAnswered, isRecord: isRecord);
   }

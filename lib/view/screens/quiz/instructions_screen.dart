@@ -11,6 +11,7 @@ import '../../components/backgrounds/pyramid_background.dart';
 import '../../components/buttons/menu_button.dart';
 import '../../components/misc/app_header_card.dart';
 import '../../components/misc/centered_scrollable.dart';
+import '../../components/misc/quiz_theme_chips.dart';
 import '../../themes/app_colors.dart';
 import '../../themes/app_decorations.dart';
 
@@ -52,28 +53,7 @@ class _InstructionsScreenState extends State<InstructionsScreen> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Wrap(
-                alignment: WrapAlignment.center,
-                spacing: 8,
-                runSpacing: 4,
-                children: [
-                  for (final theme in QuizTheme.values)
-                    ChoiceChip(
-                      key: ValueKey('quiz_theme_${theme.name}'),
-                      label: Text(theme.label(context.t)),
-                      selected: theme == _theme,
-                      showCheckmark: false,
-                      selectedColor: AppColors.goldenRod,
-                      backgroundColor: AppColors.blackRussian,
-                      side: const BorderSide(color: AppColors.goldenRod),
-                      labelStyle: TextStyle(color: theme == _theme ? AppColors.black : AppColors.goldenYellow),
-                      onSelected: (_) {
-                        unawaited(locator<AudioService>().playClick());
-                        setState(() => _theme = theme);
-                      },
-                    ),
-                ],
-              ),
+              child: QuizThemeChips(selected: _theme, onSelected: (theme) => setState(() => _theme = theme)),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 12, bottom: 24),

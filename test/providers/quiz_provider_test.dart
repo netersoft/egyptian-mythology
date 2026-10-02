@@ -19,13 +19,15 @@ void main() {
   late MockQuizService mockQuizService;
   late MockScoresRepository mockScoresRepository;
 
+  setUpAll(() => registerFallbackValue(QuizTheme.all));
+
   setUp(() async {
     mockQuizService = MockQuizService();
     mockScoresRepository = MockScoresRepository();
 
     when(() => mockQuizService.loadQuestions()).thenAnswer((_) async => _questions(10));
-    when(() => mockScoresRepository.getBestScore()).thenReturn(0);
-    when(() => mockScoresRepository.add(any())).thenAnswer((_) async {});
+    when(() => mockScoresRepository.getBestScore(any())).thenReturn(0);
+    when(() => mockScoresRepository.add(any(), any())).thenAnswer((_) async {});
 
     await setupTestLocator(quizService: mockQuizService, scoresRepository: mockScoresRepository);
   });
@@ -238,6 +240,29 @@ void main() {
 
         expect(asked, {'Question 0', 'Question 2'});
         expect(container.read(quizControllerProvider).allQuestionsAnswered, isTrue);
+        verify(() => mockScoresRepository.add(any(), QuizTheme.gods)).called(1);
+      });
+    });
+
+    test('a themed game is a record against that theme\'s best score only', () {
+      fakeAsync((async) {
+        when(() => mockScoresRepository.getBestScore()).thenReturn(1000000);
+        when(() => mockScoresRepository.getBestScore(QuizTheme.myths)).thenReturn(10);
+        when(() => mockQuizService.loadQuestions()).thenAnswer(
+          (_) async => [
+            const QuizQuestionModel(id: 1, question: 'Question', answer: 'A', choices: ['A', 'B', 'C', 'D'], ref: 'myths/myth_mort'),
+          ],
+        );
+        final container = makeContainer();
+        container.read(quizControllerProvider.notifier).start(theme: QuizTheme.myths);
+        async.flushMicrotasks();
+
+        final state = container.read(quizControllerProvider);
+        container.read(quizControllerProvider.notifier).answer(state.choices.indexOf('A'));
+        async.elapse(const Duration(milliseconds: 2200));
+
+        expect(container.read(quizControllerProvider).phase, QuizPhase.gameOver);
+        expect(container.read(quizControllerProvider).isRecord, isTrue);
       });
     });
 
@@ -296,7 +321,7 @@ void main() {
 
     test('isRecord is true only when the final score beats the previous best', () {
       when(() => mockQuizService.loadQuestions()).thenAnswer((_) async => _questions(1));
-      when(() => mockScoresRepository.getBestScore()).thenReturn(50);
+      when(() => mockScoresRepository.getBestScore(any())).thenReturn(50);
 
       fakeAsync((async) {
         final container = makeContainer();
