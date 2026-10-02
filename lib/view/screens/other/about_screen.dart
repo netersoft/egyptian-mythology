@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
-import 'package:in_app_review/in_app_review.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -52,11 +51,12 @@ class AboutScreen extends StatelessWidget {
   // reported success but no dialog ever appeared. requestReview() is meant to
   // be triggered automatically at a good moment (e.g. after a completed
   // quiz), not from an explicit "Rate us" button -- so this always goes
-  // straight to the Play Store listing instead.
+  // straight to the Play Store listing instead -- opened in the Play Store
+  // app (externalApplication), as in_app_review's openStoreListing() did.
   // https://developer.android.com/guide/playcore/in-app-review
   Future<void> _rate() async {
     unawaited(locator<AudioService>().playClick());
-    await InAppReview.instance.openStoreListing();
+    await launchUrl(Uri.parse(_playStoreUrl), mode: LaunchMode.externalApplication);
   }
 
   @override
