@@ -17,7 +17,6 @@ This is a Flutter rewrite of a legacy native Android app (`com.neteru.ankh`), bu
 - Content: bundled JSON (quiz questions) and HTML assets (`flutter_widget_from_html_core`, documentation)
 - i18n: [Slang](https://pub.dev/packages/slang)
 - Audio: `audioplayers` (looping background music + click SFX)
-- Crash reporting / analytics: Firebase (Crashlytics + Analytics), no-op until a real Firebase project is configured
 
 ## Prerequisites
 
@@ -58,19 +57,6 @@ flutter test --coverage
 
 Not applicable — this is a fully offline app with no backend and no staging/production deployment targets. See [Release Builds](#release-builds) for how builds are produced.
 
-## Enabling crash reporting / analytics (optional)
-
-Firebase is wired up but ships with a placeholder `lib/firebase_options.dart`, so `CrashReportingService`/`AnalyticsService` stay safe no-ops until configured:
-
-```bash
-dart pub global activate flutterfire_cli
-flutterfire configure
-```
-
-See [Firebase (Crash Reporting + Analytics)](#firebase-crash-reporting--analytics).
-
-The [privacy policy](#privacy-policy) states that the app sends no analytics or crash reports: update it in every language before shipping a build with Firebase configured.
-
 ## Architecture
 
 The app is split into two main layers:
@@ -81,7 +67,7 @@ The app is split into two main layers:
 Runtime composition starts from:
 
 - `lib/main.dart`: entry point only.
-- `lib/core/bootstrap/app_bootstrap.dart`: Flutter, env, Firebase, Hive, DI, and locale bootstrap.
+- `lib/core/bootstrap/app_bootstrap.dart`: Flutter, env, Hive, DI, and locale bootstrap.
 - `lib/app.dart`: root app widget, theme, and router view.
 - `lib/core/lifecycle/app_lifecycle_layer.dart`: app lifecycle side effects.
 
@@ -95,7 +81,7 @@ lib/
 ├── app.dart                           # MaterialApp.router + TranslationProvider
 ├── core/
 │   ├── bootstrap/                     # App initialisation (env, Hive, DI, locale)
-│   ├── services/                      # DI, Hive, i18n, audio, quiz, scores, documentation, firebase
+│   ├── services/                      # DI, Hive, i18n, audio, quiz, scores, documentation
 │   ├── routes/                        # go_router_builder route defs + GoRouter factory
 │   ├── providers/                     # Riverpod providers (account/settings, navigation, quiz)
 │   ├── models/                        # JSON-serializable + plain models (quiz, docs, scores)
@@ -129,13 +115,6 @@ All providers use `@riverpod` code generation. Riverpod is the app-facing state 
 Routes are centralized in `lib/core/routes/app_route.dart` (type-safe `go_router_builder` definitions) and `lib/core/routes/router.dart` (GoRouter factory). There is no auth/access guard — every route is reachable directly, matching the legacy app.
 
 `QuizPlayRoute`/`GameOverRoute` are deliberately direct children of `MainRoute` (siblings of `InstructionsRoute`, not nested under it) so `context.go()` from `GameOverScreen` rebuilds a minimal `[Main, Play]`/`[Main, GameOver]` stack — matching the legacy app's `FLAG_ACTIVITY_CLEAR_TASK` behavior. The normal Instructions → Play flow still uses `context.push()`.
-
-## Firebase (Crash Reporting + Analytics)
-
-- `lib/core/services/firebase/service.dart` (`FirebaseSetup`) is the shared entry point: `FirebaseSetup.ensureInitialized()` calls `Firebase.initializeApp()` once, called early in `bootstrapApp()`. `FirebaseSetup.isConfigured` detects whether `lib/firebase_options.dart` is still the shipped placeholder (no real Firebase project) and gates every Firebase-backed service on it.
-- **Crash reporting**: `CrashReportingService.init()` (`lib/core/services/crash_reporting/service.dart`) wires `FlutterError.onError`/`PlatformDispatcher.instance.onError` to Crashlytics for uncaught errors. `LogHelper.e`/`LogHelper.f` also forward to Crashlytics as non-fatal errors, so caught-and-logged exceptions across the app get reported too.
-- **Analytics**: `AnalyticsService` (`lib/core/services/analytics/service.dart`) wraps `FirebaseAnalytics` (`logEvent`, `logScreenView`, `setUserId`, `setUserProperty`) -- every method is a silent no-op when unconfigured, so call sites never need to check `isConfigured` themselves. Screen views are tracked automatically through a `FirebaseAnalyticsObserver` added to the router's observers (see `lib/core/routes/router.dart`).
-- Until `flutterfire configure` is run (see [Enabling crash reporting / analytics](#enabling-crash-reporting--analytics-optional)), everything above stays a safe no-op instead of reporting to a project that doesn't exist.
 
 ## Features
 

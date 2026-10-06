@@ -46,7 +46,7 @@ jobs:
           echo "${{ secrets.ENV_FILE }}" > .env
           flutter test --coverage
 
-      # Generated files (*.g.dart, *.config.dart, firebase_options.dart) are
+      # Generated files (*.g.dart, *.config.dart) are
       # excluded from the count -- they're regenerated glue, not code this
       # repo's tests are meant to exercise. 10% is a floor below current
       # hand-written coverage (~14%), meant to catch regressions; raise it
@@ -54,7 +54,7 @@ jobs:
       - name: Enforce coverage floor
         run: |
           awk -v thresh=10 '
-            /^SF:/ { file=$0; sub("^SF:", "", file); skip = (file ~ /\.g\.dart$/ || file ~ /\.config\.dart$/ || file ~ /firebase_options\.dart$/) }
+            /^SF:/ { file=$0; sub("^SF:", "", file); skip = (file ~ /\.g\.dart$/ || file ~ /\.config\.dart$/) }
             /^LF:/ { n=$0; sub("^LF:", "", n); if (!skip) lf += n }
             /^LH:/ { n=$0; sub("^LH:", "", n); if (!skip) lh += n }
             END {
@@ -149,9 +149,8 @@ jobs:
       #
       # Retried: Xcode's own SPM package-graph resolution has a known, non-deterministic
       # crash (IDESwiftPackageCore's sortedInsert, an internal "count of array differs
-      # from count of index set" exception) that shows up on a cold package cache with
-      # a large graph -- this project's Firebase plugins alone pull in ~15 transitive
-      # SPM packages. Reproduced locally outside CI and confirmed transient: the exact
+      # from count of index set" exception) that shows up on a cold package cache.
+      # Reproduced locally outside CI and confirmed transient: the exact
       # same `xcodebuild -resolvePackageDependencies` command failed once, then
       # succeeded on every immediate retry with no changes. Nothing in this project's
       # config causes it, so a retry is the correct mitigation rather than a code fix.
