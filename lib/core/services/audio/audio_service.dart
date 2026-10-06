@@ -8,6 +8,8 @@ import '../shared_preferences/keys.dart';
 import '../shared_preferences/service.dart';
 
 class AudioService {
+  static const _tracks = ['audio/egypt_1.mp3', 'audio/egypt_2.mp3', 'audio/egypt_3.mp3'];
+
   final AudioPlayer _musicPlayer = AudioPlayer()..setReleaseMode(ReleaseMode.loop);
   final AudioPlayer _clickPlayer = AudioPlayer();
 
@@ -42,7 +44,7 @@ class AudioService {
   // so guard the same way here instead of restarting with a new random track.
   Future<void> startMusic() async {
     if (!isMusicEnabled || _musicPlayer.state == PlayerState.playing) return;
-    final track = Random().nextBool() ? 'audio/egypt_1.mp3' : 'audio/egypt_2.mp3';
+    final track = _tracks[Random().nextInt(_tracks.length)];
     await _musicPlayer.play(AssetSource(track));
   }
 
