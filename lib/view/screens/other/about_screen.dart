@@ -106,6 +106,17 @@ class AboutScreen extends StatelessWidget {
                           style: const TextStyle(color: AppColors.goldenRod, decoration: TextDecoration.underline),
                         ),
                       ),
+                      TextButton(
+                        key: const ValueKey('about_privacy'),
+                        onPressed: () {
+                          unawaited(locator<AudioService>().playClick());
+                          unawaited(const PrivacyPolicyRoute().push<void>(context));
+                        },
+                        child: Text(
+                          t.privacyPolicy,
+                          style: const TextStyle(color: AppColors.goldenRod, decoration: TextDecoration.underline),
+                        ),
+                      ),
                       const Divider(color: AppColors.yellow, height: 32),
                       HtmlWidget(
                         t.copyright,
