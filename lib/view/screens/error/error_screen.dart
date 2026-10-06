@@ -43,7 +43,7 @@ class ErrorScreenContent extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SvgPicture.asset('assets/images/404.svg', width: 350.0),
+          SvgPicture.asset('assets/images/404.svg', width: 200.0),
           const SizedBox(height: 10),
           Text(
             error?.message ?? context.t.anErrorOccurred,
