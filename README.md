@@ -198,3 +198,14 @@ To build a properly signed Android release (e.g. for a Play Store upload):
 This app was previously published as `com.neteru.ankh`; reusing the original upload key (or an app-signing-managed equivalent from the Play Console) is required for updates to land on the existing store listing rather than a new one.
 
 Add real signing (an Apple Developer account) and store-publishing steps once this app is ready to ship on iOS.
+
+## License
+
+Egyptian Mythology is free software by Netersoft.
+
+- **Code**: the source code (`lib/`, `test/`, `tool/` and the platform folders) is licensed under the [GNU General Public License v3.0](LICENSE).
+- **Content**: the texts, translations and pictures made by Netersoft for the app are licensed under [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- **Third-party files** keep their own licenses: the Kemet and Caladea fonts (SIL Open Font License 1.1, see [Fonts](#fonts)), and the pictures, music and sounds whose authors and licenses are listed in the in-app Sources and credits page (`assets/docs/<locale>/credits.html`).
+- **Names and icons**: the Netersoft name, the Egyptian Mythology name, and the app icons and logos (`assets/images/launcher/` and `assets/images/egyptian/ankh_launcher.png`) are not covered by these licenses. A modified version must use another name and icon.
+
+Copyright © 2018-2026 Netersoft.

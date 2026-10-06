@@ -79,7 +79,7 @@
   "about1": "Development: Noe Gnanih",
   "about2": "Musics: Desert City, Return of the Mummy - Kevin MacLeod; Desert Caravan - Aaron Kenny",
   "about3": "Images: Wikimedia Commons",
-  "copyright": "<span xmlns:dct=\"http://purl.org/dc/terms/\" property=\"dct:title\">Egyptian Mythology</span> by <a xmlns:cc=\"http://creativecommons.org/ns#\" href=\"https://play.google.com/store/apps/dev?id=8961324953037023272\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">Netersoft</a> is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution-ShareAlike 4.0 International License</a>.",
+  "copyright": "Free software under the GNU GPL v3 (code) and CC BY-SA 4.0 (content). © 2018-2026 Netersoft",
   "shareAppTitle": "Share the application",
   "shareAppMsg": "Learn more about Egyptian mythology with this application! ${value}",
   "toContact": "Contact us",
