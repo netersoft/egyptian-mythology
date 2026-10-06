@@ -126,6 +126,12 @@ Ported from the legacy Android app, then extended:
 - **Settings** (`view/screens/account/settings_screen.dart`) — language, music/sound toggles.
 - **About** (`view/screens/other/about_screen.dart`) — sources and credits page, privacy policy, contact (`mailto:`), rate (Play Store listing via `url_launcher`), share (`share_plus`).
 
+## Fonts
+
+The app-wide font is Kemet: [Macondo](https://fonts.google.com/specimen/Macondo) (John Vargas Beltrán) with the capital M of [Marcellus](https://fonts.google.com/specimen/Marcellus) (Astigmatic), whose inscriptional M is closer to the legacy app's Papyrus than Macondo's swashed one. `tool/build_font.py` builds it from the two sources in `tool/fonts/` (needs `pip install fonttools`). The splash title uses [Caladea](https://fonts.google.com/specimen/Caladea) Bold (Huerta Tipográfica).
+
+All three are under the SIL Open Font License: `assets/fonts/<font>/OFL.txt` must ship with them, and the OFL's Reserved Font Names are why the modified Macondo has its own name. They replace Papyrus and Cambria, commercial fonts the app had no license to embed; `AppTextScaler`'s 1.2 factor keeps Kemet at Papyrus's apparent size.
+
 ## Privacy policy
 
 The privacy policy ships in the app (`assets/docs/<locale>/privacy_policy.html`, one per app language, opened from the About page). The store listings link to the public copy at https://netersoft.github.io/egyptian-mythology/privacy/ (English: `/en/`), served by GitHub Pages from the public `netersoft/netersoft.github.io` repository. After editing the policy, regenerate the pages and push that repository:

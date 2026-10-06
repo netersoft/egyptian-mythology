@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('AppTextScaler', () {
-    test('applies the Papyrus compensation at the default system scale', () {
+    test('applies the font compensation at the default system scale', () {
       expect(AppTextScaler(TextScaler.noScaling).scale(10), closeTo(12, 1e-9));
     });
 
@@ -13,7 +13,7 @@ void main() {
     });
 
     test('caps the system text scale to keep fixed-height widgets from overflowing', () {
-      expect(AppTextScaler(const TextScaler.linear(3)).scale(10), closeTo(10 * maxSystemTextScale * papyrusCompensation, 1e-9));
+      expect(AppTextScaler(const TextScaler.linear(3)).scale(10), closeTo(10 * maxSystemTextScale * fontCompensation, 1e-9));
     });
 
     test('equal system scalers produce equal AppTextScalers', () {

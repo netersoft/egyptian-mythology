@@ -159,7 +159,6 @@ flutter:
     - assets/docs/pt/reference/
     - assets/docs/pt/privacy_policy.html
     - assets/docs/pt/credits.html
-    - assets/docs/res/fonts/papyrus/
     - assets/docs/res/pictures/gods/
     - assets/docs/res/pictures/cosmogonies/
     - assets/docs/res/pictures/myths/
@@ -172,13 +171,15 @@ flutter:
     - assets/audio/
 
   fonts:
-    - family: papyrus
+    # Kemet and Caladea are under the SIL Open Font License (OFL.txt next to each font).
+    - family: kemet
       fonts:
-        - asset: assets/fonts/egyptian/papyrus.ttf
+        - asset: assets/fonts/kemet/Kemet-Regular.ttf
 
-    - family: cambria
+    - family: caladea
       fonts:
-        - asset: assets/fonts/egyptian/cambria.ttf
+        - asset: assets/fonts/caladea/Caladea-Bold.ttf
+          weight: 700
 
     - family: montserrat
       fonts:

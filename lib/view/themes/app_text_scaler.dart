@@ -1,16 +1,17 @@
 import 'package:flutter/widgets.dart';
 
-// Papyrus (the app-wide default font, matching the legacy app's global
-// Calligraphy override) reads smaller than a standard UI sans at the same
-// point size, so scale all text up to compensate -- as the legacy app's
-// hand-picked sp values already did per-screen.
+// Kemet (the app-wide default font: Macondo with the M of Marcellus, free
+// faces standing in for the legacy app's Papyrus) reads smaller than a standard UI sans at the
+// same point size, so scale all text up to compensate -- as the legacy app's
+// hand-picked sp values already did per-screen. The factor was tuned for
+// Papyrus and keeps Kemet at the same apparent size.
 //
 // The compensation is applied on top of the user's system text scale rather
 // than replacing it, so accessibility font sizes still take effect (including
 // Android 14+'s nonlinear scaling, since the system scaler is kept as-is).
 // The system scale is capped so fixed-height widgets (quiz answer buttons,
 // menu buttons) don't overflow at the largest accessibility sizes.
-const papyrusCompensation = 1.2;
+const fontCompensation = 1.2;
 const maxSystemTextScale = 1.5;
 
 class AppTextScaler extends TextScaler {
@@ -19,12 +20,12 @@ class AppTextScaler extends TextScaler {
   AppTextScaler(TextScaler system) : system = system.clamp(maxScaleFactor: maxSystemTextScale);
 
   @override
-  double scale(double fontSize) => system.scale(fontSize * papyrusCompensation);
+  double scale(double fontSize) => system.scale(fontSize * fontCompensation);
 
   @Deprecated('Use scale() instead.')
   @override
   // ignore: deprecated_member_use
-  double get textScaleFactor => system.textScaleFactor * papyrusCompensation;
+  double get textScaleFactor => system.textScaleFactor * fontCompensation;
 
   @override
   bool operator ==(Object other) => other is AppTextScaler && other.system == system;
@@ -33,5 +34,5 @@ class AppTextScaler extends TextScaler {
   int get hashCode => Object.hash(AppTextScaler, system);
 
   @override
-  String toString() => 'AppTextScaler($system x $papyrusCompensation)';
+  String toString() => 'AppTextScaler($system x $fontCompensation)';
 }
