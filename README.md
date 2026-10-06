@@ -128,7 +128,9 @@ Ported from the legacy Android app, then extended:
 
 ## Fonts
 
-The app-wide font is [Macondo](https://fonts.google.com/specimen/Macondo) (John Vargas Beltrán) and the splash title uses [Caladea](https://fonts.google.com/specimen/Caladea) Bold (Huerta Tipográfica), both under the SIL Open Font License: `assets/fonts/<font>/OFL.txt` must ship with them. They replace Papyrus and Cambria, commercial fonts the app had no license to embed; `AppTextScaler`'s 1.2 factor keeps Macondo at Papyrus's apparent size.
+The app-wide font is Kemet: [Macondo](https://fonts.google.com/specimen/Macondo) (John Vargas Beltrán) with the capital M of [Marcellus](https://fonts.google.com/specimen/Marcellus) (Astigmatic), whose inscriptional M is closer to the legacy app's Papyrus than Macondo's swashed one. `tool/build_font.py` builds it from the two sources in `tool/fonts/` (needs `pip install fonttools`). The splash title uses [Caladea](https://fonts.google.com/specimen/Caladea) Bold (Huerta Tipográfica).
+
+All three are under the SIL Open Font License: `assets/fonts/<font>/OFL.txt` must ship with them, and the OFL's Reserved Font Names are why the modified Macondo has its own name. They replace Papyrus and Cambria, commercial fonts the app had no license to embed; `AppTextScaler`'s 1.2 factor keeps Kemet at Papyrus's apparent size.
 
 ## Privacy policy
 

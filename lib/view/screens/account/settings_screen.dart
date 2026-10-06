@@ -29,7 +29,7 @@ const _egyptianSettingsTheme = SettingsThemeData(
   settingsTileTextColor: AppColors.yellow,
   trailingTextColor: AppColors.goldenRod,
   leadingIconsColor: AppColors.goldenYellow,
-  tileTextStyle: TextStyle(fontFamily: 'macondo', fontSize: 18),
+  tileTextStyle: TextStyle(fontFamily: 'kemet', fontSize: 18),
 );
 
 class SettingsScreen extends StatelessWidget {
@@ -119,7 +119,7 @@ class _SettingsListWrapperState extends ConsumerState<SettingsListWrapper> {
                 children: [
                   Text(
                     currentLang?.label[currentLang.code] ?? '',
-                    style: const TextStyle(fontFamily: 'macondo'),
+                    style: const TextStyle(fontFamily: 'kemet'),
                   ),
                   const Icon(Icons.chevron_right),
                 ],

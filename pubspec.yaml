@@ -171,10 +171,10 @@ flutter:
     - assets/audio/
 
   fonts:
-    # Macondo and Caladea are under the SIL Open Font License (OFL.txt next to each font).
-    - family: macondo
+    # Kemet and Caladea are under the SIL Open Font License (OFL.txt next to each font).
+    - family: kemet
       fonts:
-        - asset: assets/fonts/macondo/Macondo-Regular.ttf
+        - asset: assets/fonts/kemet/Kemet-Regular.ttf
 
     - family: caladea
       fonts:

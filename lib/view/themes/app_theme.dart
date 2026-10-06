@@ -19,7 +19,7 @@ abstract class AppTheme {
     dotenv.get('APP_ACCENT_COLOR'),
   );
 
-  static const String _fontFamily = 'macondo';
+  static const String _fontFamily = 'kemet';
 
   static bool isLight() => SchedulerBinding.instance.platformDispatcher.platformBrightness == Brightness.light;
 

@@ -1,10 +1,10 @@
 import 'package:flutter/widgets.dart';
 
-// Macondo (the app-wide default font, a free calligraphic face standing in
-// for the legacy app's Papyrus) reads smaller than a standard UI sans at the
+// Kemet (the app-wide default font: Macondo with the M of Marcellus, free
+// faces standing in for the legacy app's Papyrus) reads smaller than a standard UI sans at the
 // same point size, so scale all text up to compensate -- as the legacy app's
 // hand-picked sp values already did per-screen. The factor was tuned for
-// Papyrus and keeps Macondo at the same apparent size.
+// Papyrus and keeps Kemet at the same apparent size.
 //
 // The compensation is applied on top of the user's system text scale rather
 // than replacing it, so accessibility font sizes still take effect (including
