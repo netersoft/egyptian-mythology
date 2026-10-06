@@ -9,6 +9,7 @@ import '../../view/screens/documentation/doc_viewer_screen.dart';
 import '../../view/screens/main_screen.dart';
 import '../../view/screens/other/about_screen.dart';
 import '../../view/screens/other/credits_screen.dart';
+import '../../view/screens/other/privacy_policy_screen.dart';
 import '../../view/screens/quiz/game_over_screen.dart';
 import '../../view/screens/quiz/instructions_screen.dart';
 import '../../view/screens/quiz/quiz_play_screen.dart';
@@ -42,6 +43,7 @@ class RedirectionRoute extends GoRouteData with $RedirectionRoute {
     TypedGoRoute<SettingsRoute>(path: 'other/settings'),
     TypedGoRoute<AboutRoute>(path: 'other/about'),
     TypedGoRoute<CreditsRoute>(path: 'other/credits'),
+    TypedGoRoute<PrivacyPolicyRoute>(path: 'other/privacy'),
     TypedGoRoute<DocSectionsRoute>(
       path: 'doc',
       routes: [
@@ -70,32 +72,35 @@ class SettingsRoute extends GoRouteData with $SettingsRoute {
   const SettingsRoute();
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(key: state.pageKey, builder: (context) => const SettingsScreen());
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(key: state.pageKey, builder: (context) => const SettingsScreen());
 }
 
 class AboutRoute extends GoRouteData with $AboutRoute {
   const AboutRoute();
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(key: state.pageKey, builder: (context) => const AboutScreen());
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(key: state.pageKey, builder: (context) => const AboutScreen());
 }
 
 class CreditsRoute extends GoRouteData with $CreditsRoute {
   const CreditsRoute();
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(key: state.pageKey, builder: (context) => const CreditsScreen());
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(key: state.pageKey, builder: (context) => const CreditsScreen());
+}
+
+class PrivacyPolicyRoute extends GoRouteData with $PrivacyPolicyRoute {
+  const PrivacyPolicyRoute();
+
+  @override
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(key: state.pageKey, builder: (context) => const PrivacyPolicyScreen());
 }
 
 class DocSectionsRoute extends GoRouteData with $DocSectionsRoute {
   const DocSectionsRoute();
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(key: state.pageKey, builder: (context) => const DocSectionsScreen());
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(key: state.pageKey, builder: (context) => const DocSectionsScreen());
 }
 
 class GodsDocRoute extends GoRouteData with $GodsDocRoute {
@@ -152,16 +157,14 @@ class DocSearchRoute extends GoRouteData with $DocSearchRoute {
   const DocSearchRoute();
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(key: state.pageKey, builder: (context) => const DocSearchScreen());
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(key: state.pageKey, builder: (context) => const DocSearchScreen());
 }
 
 class InstructionsRoute extends GoRouteData with $InstructionsRoute {
   const InstructionsRoute();
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(key: state.pageKey, builder: (context) => const InstructionsScreen());
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(key: state.pageKey, builder: (context) => const InstructionsScreen());
 }
 
 class QuizPlayRoute extends GoRouteData with $QuizPlayRoute {
@@ -170,8 +173,10 @@ class QuizPlayRoute extends GoRouteData with $QuizPlayRoute {
   final QuizTheme? theme;
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(key: state.pageKey, builder: (context) => QuizPlayScreen(theme: theme ?? QuizTheme.all));
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(
+    key: state.pageKey,
+    builder: (context) => QuizPlayScreen(theme: theme ?? QuizTheme.all),
+  );
 }
 
 class GameOverRoute extends GoRouteData with $GameOverRoute {
@@ -198,14 +203,12 @@ class QuizReviewRoute extends GoRouteData with $QuizReviewRoute {
   const QuizReviewRoute();
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(key: state.pageKey, builder: (context) => const QuizReviewScreen());
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(key: state.pageKey, builder: (context) => const QuizReviewScreen());
 }
 
 class StatsRoute extends GoRouteData with $StatsRoute {
   const StatsRoute();
 
   @override
-  Page<void> buildPage(BuildContext context, GoRouterState state) =>
-      SwipeablePage<void>(key: state.pageKey, builder: (context) => const StatsScreen());
+  Page<void> buildPage(BuildContext context, GoRouterState state) => SwipeablePage<void>(key: state.pageKey, builder: (context) => const StatsScreen());
 }

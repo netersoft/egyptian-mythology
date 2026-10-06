@@ -69,6 +69,8 @@ flutterfire configure
 
 See [Firebase (Crash Reporting + Analytics)](#firebase-crash-reporting--analytics).
 
+The [privacy policy](#privacy-policy) states that the app sends no analytics or crash reports: update it in every language before shipping a build with Firebase configured.
+
 ## Architecture
 
 The app is split into two main layers:
@@ -143,7 +145,15 @@ Ported from the legacy Android app, then extended:
 - **Quiz** (`view/screens/quiz/`) — 20s-per-question, 3-life state machine (`QuizController`), optionally restricted to one theme (gods, cosmogonies, myths); score persisted to Hive on game over, then a review of the missed questions with explanations and a link to the matching documentation page.
 - **Stats** (`view/screens/stats/`) — score history, best score, `fl_chart` progress graph, clear history.
 - **Settings** (`view/screens/account/settings_screen.dart`) — language, music/sound toggles.
-- **About** (`view/screens/other/about_screen.dart`) — sources and credits page, contact (`mailto:`), rate (Play Store listing via `url_launcher`), share (`share_plus`).
+- **About** (`view/screens/other/about_screen.dart`) — sources and credits page, privacy policy, contact (`mailto:`), rate (Play Store listing via `url_launcher`), share (`share_plus`).
+
+## Privacy policy
+
+The privacy policy ships in the app (`assets/docs/<locale>/privacy_policy.html`, one per app language, opened from the About page). The store listings link to the public copy at https://netersoft.github.io/egyptian-mythology/privacy/ (English: `/en/`), served by GitHub Pages from the public `netersoft/netersoft.github.io` repository. After editing the policy, regenerate the pages and push that repository:
+
+```bash
+python3 tool/build_privacy_pages.py ~/Dev/Projects/Web/netersoft.github.io
+```
 
 ## Quality
 

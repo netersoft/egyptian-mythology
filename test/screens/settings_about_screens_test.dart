@@ -2,6 +2,7 @@ import 'package:egyptian_mythology/core/routes/app_route.dart';
 import 'package:egyptian_mythology/core/routes/router.dart';
 import 'package:egyptian_mythology/core/services/i18n/translations.g.dart';
 import 'package:egyptian_mythology/view/screens/other/credits_screen.dart';
+import 'package:egyptian_mythology/view/screens/other/privacy_policy_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -98,6 +99,19 @@ void main() {
 
       expect(find.byType(CreditsScreen), findsOneWidget);
       expect(find.textContaining('Jeff Dahl', findRichText: true), findsWidgets);
+    });
+
+    testWidgets('opens the privacy policy', (tester) async {
+      await pumpAt(tester, const AboutRoute().location);
+
+      await tester.ensureVisible(find.byKey(const ValueKey('about_privacy')));
+      await tester.tap(find.byKey(const ValueKey('about_privacy')));
+      await settle(tester);
+      await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 200)));
+      await settle(tester);
+
+      expect(find.byType(PrivacyPolicyScreen), findsOneWidget);
+      expect(find.textContaining('No data collected', findRichText: true), findsWidgets);
     });
   });
 }
