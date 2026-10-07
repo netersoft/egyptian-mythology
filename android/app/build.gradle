@@ -79,16 +79,16 @@ android {
         dev {
             dimension "env"
             applicationIdSuffix ".dev"
-            resValue "string", "app_name", "App Name (Dev)"
+            resValue "string", "app_name", "Egyptian Mythology (Dev)"
         }
         staging {
             dimension "env"
             applicationIdSuffix ".staging"
-            resValue "string", "app_name", "App Name (Staging)"
+            resValue "string", "app_name", "Egyptian Mythology (Staging)"
         }
         prod {
             dimension "env"
-            resValue "string", "app_name", "App Name"
+            // app_name comes from src/prod/res/values*/strings.xml, one per app language.
         }
     }
 
