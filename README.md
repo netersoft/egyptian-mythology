@@ -71,7 +71,7 @@ Runtime composition starts from:
 - `lib/app.dart`: root app widget, theme, and router view.
 - `lib/core/lifecycle/app_lifecycle_layer.dart`: app lifecycle side effects.
 
-Internationalisation uses [Slang](https://pub.dev/packages/slang) with type-safe generated translations (`context.t`). Source files are in `assets/i18n/*.i18n.json` (base locale: fr). Locale is initialised from the device locale at bootstrap via `LocaleSettings.useDeviceLocale()`.
+Internationalisation uses [Slang](https://pub.dev/packages/slang) with type-safe generated translations (`context.t`). Source files are in `assets/i18n/*.i18n.json` (base locale: en, the fallback for unsupported device languages). Locale is initialised from the device locale at bootstrap via `LocaleSettings.useDeviceLocale()`.
 
 ## Project Structure
 
