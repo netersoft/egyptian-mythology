@@ -6,7 +6,7 @@
 
 A fully offline reference and quiz app about Egyptian mythology: a documentation viewer (Gods, Cosmogonies, Myths, plus a Reference section with a glossary, a map of sites and a timeline) with full-text search, a 20-second-per-question quiz with a 3-life system, themes and a review of missed questions, score history with a progress chart, and settings for language/music/sound — available in French, English, German, Spanish and Portuguese.
 
-This is a Flutter rewrite of a legacy native Android app (`com.neteru.ankh`), built on [edpage-hq/flutter-starter](https://github.com/edpage-hq/flutter-starter) with its authentication/REST API layer stripped out, since this app has no backend.
+This is a Flutter rewrite of a legacy native Android app (`com.neteru.ankh`). It has no backend.
 
 ## Tech stack
 
