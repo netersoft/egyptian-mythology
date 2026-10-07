@@ -79,12 +79,12 @@ android {
         dev {
             dimension "env"
             applicationIdSuffix ".dev"
-            resValue "string", "app_name", "Mythologie égyptienne (Dev)"
+            resValue "string", "app_name", "Egyptian Mythology (Dev)"
         }
         staging {
             dimension "env"
             applicationIdSuffix ".staging"
-            resValue "string", "app_name", "Mythologie égyptienne (Staging)"
+            resValue "string", "app_name", "Egyptian Mythology (Staging)"
         }
         prod {
             dimension "env"
