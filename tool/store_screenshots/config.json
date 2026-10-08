@@ -1,0 +1,51 @@
+{
+  "font": "assets/fonts/kemet/Kemet-Regular.ttf",
+  "title_color": "#ffd700",
+  "background_top": "#2c257b",
+  "background_bottom": "#120f33",
+  "bezel_color": "#0b0b0b",
+  "fit": "full",
+  "screens": ["menu", "god", "map", "quiz", "review", "progress"],
+  "titles": {
+    "fr": [
+      "Plongez dans la mythologie égyptienne",
+      "Les dieux, leurs mythes et leurs symboles",
+      "Une carte des sites et une chronologie",
+      "Testez vos connaissances en 20 secondes",
+      "Revoyez vos erreurs avec l’explication",
+      "Suivez vos progrès partie après partie"
+    ],
+    "en": [
+      "Dive into Egyptian mythology",
+      "The gods, their myths and their symbols",
+      "A map of the sites and a timeline",
+      "Test your knowledge in 20 seconds",
+      "Review your mistakes with explanations",
+      "Track your progress game after game"
+    ],
+    "de": [
+      "Tauchen Sie ein in die ägyptische Mythologie",
+      "Die Götter, ihre Mythen und Symbole",
+      "Eine Karte der Stätten und eine Zeitleiste",
+      "Testen Sie Ihr Wissen in 20 Sekunden",
+      "Fehler mit Erklärung nachlesen",
+      "Fortschritte Spiel für Spiel verfolgen"
+    ],
+    "es": [
+      "Sumérgete en la mitología egipcia",
+      "Los dioses, sus mitos y sus símbolos",
+      "Un mapa de los sitios y una cronología",
+      "Pon a prueba tus conocimientos en 20 segundos",
+      "Repasa tus errores con la explicación",
+      "Sigue tu progreso partida tras partida"
+    ],
+    "pt": [
+      "Mergulhe na mitologia egípcia",
+      "Os deuses, os seus mitos e símbolos",
+      "Um mapa dos locais e uma cronologia",
+      "Teste os seus conhecimentos em 20 segundos",
+      "Reveja os seus erros com a explicação",
+      "Acompanhe o seu progresso jogo a jogo"
+    ]
+  }
+}
