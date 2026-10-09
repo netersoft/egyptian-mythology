@@ -47,5 +47,23 @@
       "Reveja os seus erros com a explicação",
       "Acompanhe o seu progresso jogo a jogo"
     ]
+  },
+  "feature": {
+    "icon": "assets/images/launcher/icon.png",
+    "screens": ["god", "quiz"],
+    "name": {
+      "fr": "Mythologie égyptienne",
+      "en": "Egyptian Mythology",
+      "de": "Ägyptische Mythologie",
+      "es": "Mitología Egipcia",
+      "pt": "Mitologia Egípcia"
+    },
+    "tagline": {
+      "fr": "Les dieux, les mythes et un quiz pour tout retenir",
+      "en": "The gods, the myths, and a quiz to remember it all",
+      "de": "Die Götter, die Mythen und ein Quiz zum Merken",
+      "es": "Los dioses, los mitos y un quiz para recordarlo todo",
+      "pt": "Os deuses, os mitos e um quiz para recordar tudo"
+    }
   }
 }
