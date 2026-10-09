@@ -13,4 +13,18 @@ void main() {
       expect(policy.readAsStringSync(), contains('<h1>'), reason: locale);
     }
   });
+
+  // flutter_svg ignores <style> blocks: shapes styled by a class lose their colors
+  // (Heka, Montu, Satet & Anuket showed nothing). Colors must be presentation
+  // attributes (fill="…") or a style="" attribute.
+  test('no SVG relies on CSS', () {
+    final svgs = Directory('assets').listSync(recursive: true).whereType<File>().where((f) => f.path.endsWith('.svg')).toList();
+
+    expect(svgs, isNotEmpty);
+    for (final svg in svgs) {
+      final content = svg.readAsStringSync();
+      expect(content, isNot(contains('<style')), reason: svg.path);
+      expect(content, isNot(contains(' class="')), reason: svg.path);
+    }
+  });
 }
