@@ -8,6 +8,23 @@ A fully offline reference and quiz app about Egyptian mythology: a documentation
 
 This is a Flutter rewrite of a legacy native Android app (`com.neteru.ankh`). It has no backend.
 
+## Screenshots
+
+<table>
+  <tr>
+    <td><img src="store/screenshots/en/1_menu.png" width="260" alt="Dive into Egyptian mythology"></td>
+    <td><img src="store/screenshots/en/2_god.png" width="260" alt="The gods, their myths and their symbols"></td>
+    <td><img src="store/screenshots/en/3_map.png" width="260" alt="A map of the sites and a timeline"></td>
+  </tr>
+  <tr>
+    <td><img src="store/screenshots/en/4_quiz.png" width="260" alt="Test your knowledge in 20 seconds"></td>
+    <td><img src="store/screenshots/en/5_review.png" width="260" alt="Review your mistakes with explanations"></td>
+    <td><img src="store/screenshots/en/6_progress.png" width="260" alt="Track your progress game after game"></td>
+  </tr>
+</table>
+
+The Play Store images, in English; other languages are in `store/screenshots/<lang>/`.
+
 ## Tech stack
 
 - Mobile: Flutter, Dart SDK `>=3.8.0 <4.0.0`
